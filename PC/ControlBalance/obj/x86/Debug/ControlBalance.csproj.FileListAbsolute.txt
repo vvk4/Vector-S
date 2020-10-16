@@ -1,0 +1,35 @@
+C:\Users\tr\AppData\Local\Temporary Projects\ControlBalance\bin\Debug\ControlBalance.exe
+C:\Users\tr\AppData\Local\Temporary Projects\ControlBalance\bin\Debug\ControlBalance.pdb
+C:\Users\tr\AppData\Local\Temporary Projects\ControlBalance\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\tr\AppData\Local\Temporary Projects\ControlBalance\obj\x86\Debug\ControlBalance.Form1.resources
+C:\Users\tr\AppData\Local\Temporary Projects\ControlBalance\obj\x86\Debug\ControlBalance.Properties.Resources.resources
+C:\Users\tr\AppData\Local\Temporary Projects\ControlBalance\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\tr\AppData\Local\Temporary Projects\ControlBalance\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\tr\AppData\Local\Temporary Projects\ControlBalance\obj\x86\Debug\ControlBalance.exe
+C:\Users\tr\AppData\Local\Temporary Projects\ControlBalance\obj\x86\Debug\ControlBalance.pdb
+E:\prog\segway\VCsharp\ControlBalance\ControlBalance\obj\x86\Debug\ControlBalance.exe
+E:\prog\segway\VCsharp\ControlBalance\ControlBalance\obj\x86\Debug\ControlBalance.pdb
+E:\prog\segway\VCsharp\ControlBalance\ControlBalance\bin\Debug\ControlBalance.exe
+E:\prog\segway\VCsharp\ControlBalance\ControlBalance\bin\Debug\ControlBalance.pdb
+E:\prog\segway\VCsharp\ControlBalance\ControlBalance\obj\x86\Debug\ControlBalance.Form1.resources
+E:\prog\segway\VCsharp\ControlBalance\ControlBalance\obj\x86\Debug\ControlBalance.Properties.Resources.resources
+E:\prog\segway\VCsharp\ControlBalance\ControlBalance\bin\Debug\ControlBalance.exe.manifest
+E:\prog\segway\VCsharp\ControlBalance\ControlBalance\bin\Debug\ControlBalance.application
+E:\prog\segway\VCsharp\ControlBalance\ControlBalance\obj\x86\Debug\ControlBalance.exe.manifest
+E:\prog\segway\VCsharp\ControlBalance\ControlBalance\obj\x86\Debug\ControlBalance.application
+E:\prog\segway\VCsharp\ControlBalance\ControlBalance\obj\x86\Debug\ControlBalance.csprojResolveAssemblyReference.cache
+E:\prog\segway\VCsharp\ControlBalance\ControlBalance\obj\x86\Debug\ControlBalance.csproj.GenerateResource.Cache
+E:\prog\X2\VCsharp\ControlBalance\ControlBalance\obj\x86\Debug\ControlBalance.exe
+E:\prog\X2\VCsharp\ControlBalance\ControlBalance\obj\x86\Debug\ControlBalance.pdb
+E:\prog\X2\VCsharp\ControlBalance\ControlBalance\bin\Debug\ControlBalance.exe.manifest
+E:\prog\X2\VCsharp\ControlBalance\ControlBalance\bin\Debug\ControlBalance.application
+E:\prog\X2\VCsharp\ControlBalance\ControlBalance\bin\Debug\ControlBalance.exe
+E:\prog\X2\VCsharp\ControlBalance\ControlBalance\bin\Debug\ControlBalance.pdb
+E:\prog\X2\VCsharp\ControlBalance\ControlBalance\obj\x86\Debug\ControlBalance.csprojResolveAssemblyReference.cache
+E:\prog\X2\VCsharp\ControlBalance\ControlBalance\obj\x86\Debug\ControlBalance.Form1.resources
+E:\prog\X2\VCsharp\ControlBalance\ControlBalance\obj\x86\Debug\ControlBalance.Properties.Resources.resources
+E:\prog\X2\VCsharp\ControlBalance\ControlBalance\obj\x86\Debug\ControlBalance.csproj.GenerateResource.Cache
+E:\prog\X2\VCsharp\ControlBalance\ControlBalance\obj\x86\Debug\ControlBalance.exe.manifest
+E:\prog\X2\VCsharp\ControlBalance\ControlBalance\obj\x86\Debug\ControlBalance.application
+E:\prog\X1\VCsharp\ControlBalance\ControlBalance\obj\x86\Debug\ControlBalance.exe
+E:\prog\X1\VCsharp\ControlBalance\ControlBalance\obj\x86\Debug\ControlBalance.pdb

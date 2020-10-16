@@ -1,0 +1,405 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="About1333" xml:space="preserve">
+    <value>О программе</value>
+  </data>
+  <data name="AccCalibrate" xml:space="preserve">
+    <value>Убедитесь, что контроллер стоит неподвижно на ровной поверхности крышкой вверх. Продолжить?</value>
+  </data>
+  <data name="AutosettingsCompleted" xml:space="preserve">
+    <value>Автонастройка завершена</value>
+  </data>
+  <data name="AutosettingsCompletedMSG" xml:space="preserve">
+    <value>Настройка закончена, не забудьте сохранить изменения в памяти.</value>
+  </data>
+  <data name="BreakCalibration" xml:space="preserve">
+    <value>Нажмите ручку тормоза до упора и выберите ОК, для пропуска выберите NO</value>
+  </data>
+  <data name="CannotToConnect" xml:space="preserve">
+    <value>Не удалось установить соединение. Проверьте BlueTooth и откройте порт заново</value>
+  </data>
+  <data name="ChargingCompleted" xml:space="preserve">
+    <value>Зарядка завершена</value>
+  </data>
+  <data name="CHKErr" xml:space="preserve">
+    <value>Ошибка контрольной суммы</value>
+  </data>
+  <data name="ComplementaryMode" xml:space="preserve">
+    <value>Жесткий режим</value>
+  </data>
+  <data name="Connected" xml:space="preserve">
+    <value>Соединение установлено</value>
+  </data>
+  <data name="ConnectedController" xml:space="preserve">
+    <value>Связь с устройством установлена</value>
+  </data>
+  <data name="ConnectedWithMaster" xml:space="preserve">
+    <value>Связь с ведущим: ЕСТЬ</value>
+  </data>
+  <data name="ConnectionErr2" xml:space="preserve">
+    <value>Ошибка передачи 2. Проверьте BlueTooth и откройте порт заново</value>
+  </data>
+  <data name="Continue" xml:space="preserve">
+    <value>Продолжить</value>
+  </data>
+  <data name="ControllerNotDetected" xml:space="preserve">
+    <value>Контроллер не обнаружен</value>
+  </data>
+  <data name="CopySettings" xml:space="preserve">
+    <value>Скопировать настройки режима 1 в режимы 2 и 3?</value>
+  </data>
+  <data name="CopySettingsZ" xml:space="preserve">
+    <value>Копирование настроек</value>
+  </data>
+  <data name="CurrSenorCalibrate" xml:space="preserve">
+    <value>Калибровка датчика тока . . .</value>
+  </data>
+  <data name="CurrSenorCalibrateFinished" xml:space="preserve">
+    <value>Калибровка датчика тока закончена.</value>
+  </data>
+  <data name="DecreaseCurrentSettings" xml:space="preserve">
+    <value>Для защиты контроллера ограничения тока будут снижены</value>
+  </data>
+  <data name="Delay1s" xml:space="preserve">
+    <value>Задержка 1 сек.</value>
+  </data>
+  <data name="DelayU" xml:space="preserve">
+    <value>: Задержка. +++</value>
+  </data>
+  <data name="Disconnected" xml:space="preserve">
+    <value>Отключено</value>
+  </data>
+  <data name="DisconnectedController" xml:space="preserve">
+    <value>Связь с устройством потеряна. Проверьте BlueTooth и откройте порт заново</value>
+  </data>
+  <data name="DisconnectedWithMaster" xml:space="preserve">
+    <value>Связь с ведущим: НЕТ</value>
+  </data>
+  <data name="DisconnectedZeroWire" xml:space="preserve">
+    <value>Превышен предельных уровень ручки газа (2)</value>
+  </data>
+  <data name="Error255" xml:space="preserve">
+    <value>Ошибка 255. Произведите настройку сдвига фаз вручную</value>
+  </data>
+  <data name="Error256" xml:space="preserve">
+    <value>Ошибка 256. Произведите настройку сдвига фаз вручную</value>
+  </data>
+  <data name="ErrorMsg" xml:space="preserve">
+    <value>Ошибка</value>
+  </data>
+  <data name="FETsOverTemperature" xml:space="preserve">
+    <value>Перегрев контроллера (5)</value>
+  </data>
+  <data name="FindingOptimal" xml:space="preserve">
+    <value>Определение оптимальной...</value>
+  </data>
+  <data name="FirmwareNotConnected" xml:space="preserve">
+    <value>Версия прошивки: Нет соединения с контроллером</value>
+  </data>
+  <data name="FirmwareVer" xml:space="preserve">
+    <value>Версия прошивки:</value>
+  </data>
+  <data name="FoundOrders" xml:space="preserve">
+    <value>Обнаружено рабочих комбинаций:</value>
+  </data>
+  <data name="GyroCalibr" xml:space="preserve">
+    <value>Убедитесь, что контроллер стоит неподвижно. Продолжить?</value>
+  </data>
+  <data name="GyroCalibrTittle" xml:space="preserve">
+    <value>ВАЖНО!!!</value>
+  </data>
+  <data name="HighLevelFromThrottleAfterAutoSettings" xml:space="preserve">
+    <value>Высокий уровень сигнала с ручки газа после автонастройки (9)</value>
+  </data>
+  <data name="HighLevelHallBreak" xml:space="preserve">
+    <value>Верхний порог ручки тормоза:</value>
+  </data>
+  <data name="HighLevelThrottleOn" xml:space="preserve">
+    <value>Высокий уровень сигнала с ручки газа по включению (1)</value>
+  </data>
+  <data name="IncPWM" xml:space="preserve">
+    <value>Увеличение ШИМ...</value>
+  </data>
+  <data name="Inform" xml:space="preserve">
+    <value>Информация</value>
+  </data>
+  <data name="KMH" xml:space="preserve">
+    <value>км/ч</value>
+  </data>
+  <data name="Lock" xml:space="preserve">
+    <value>ЗАБЛОКИРОВАТЬ</value>
+  </data>
+  <data name="LowLevelHallBreak" xml:space="preserve">
+    <value>Нижний порог ручки тормоза:</value>
+  </data>
+  <data name="LowLevelThrottle" xml:space="preserve">
+    <value>Нижний порог ручки газа:</value>
+  </data>
+  <data name="LowMoreHighBreak" xml:space="preserve">
+    <value>Ошибка порогов ручки тормоза: нижний выше верхнего.</value>
+  </data>
+  <data name="LowMoreHighBreakMSG" xml:space="preserve">
+    <value>Ошибка порогов ручки тормоза: нижний выше верхнего. Произведите настройку порогов ручки тормоза вручную</value>
+  </data>
+  <data name="LowMoreHighThrottle" xml:space="preserve">
+    <value>Ошибка порогов ручки газа: нижний выше верхнего.</value>
+  </data>
+  <data name="LowMoreHighThrottleMSG" xml:space="preserve">
+    <value>Ошибка порогов ручки газа: нижний выше верхнего. Произведите настройку порогов ручки газа вручную</value>
+  </data>
+  <data name="MotorMovingOkNo" xml:space="preserve">
+    <value>Если двигатель вращается нормально, нажмите \"ОК\", если нет, то выберите \"NO\" и выполните настройку вручную</value>
+  </data>
+  <data name="MotorOverheated" xml:space="preserve">
+    <value>Перегрев двигателя (6)</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>Нет</value>
+  </data>
+  <data name="OperationNotPossible" xml:space="preserve">
+    <value>Операция невозможна, т.к. включен режим моноцилка</value>
+  </data>
+  <data name="OptionsLoaded" xml:space="preserve">
+    <value>Настройки загружены</value>
+  </data>
+  <data name="OptionsNotSaved" xml:space="preserve">
+    <value>Настройки не сохранены</value>
+  </data>
+  <data name="OptionsSaved" xml:space="preserve">
+    <value>Настройки сохранены</value>
+  </data>
+  <data name="OrderFound" xml:space="preserve">
+    <value>Определен рабочий порядок фаз:</value>
+  </data>
+  <data name="OrderNotDetected" xml:space="preserve">
+    <value>Рабочие комбинации фаз не обнаружены</value>
+  </data>
+  <data name="OrderNotDetectedMSG" xml:space="preserve">
+    <value>Не обнаружены рабочие комбинации фаз. Проверьте проводку или попробуйте настроить вручную.</value>
+  </data>
+  <data name="PortClosed" xml:space="preserve">
+    <value>Порт закрыт</value>
+  </data>
+  <data name="PortOpened" xml:space="preserve">
+    <value>Порт открыт</value>
+  </data>
+  <data name="PWMIncreased" xml:space="preserve">
+    <value>: Скважность ШИМ увеличена</value>
+  </data>
+  <data name="ReadTimeout" xml:space="preserve">
+    <value>Таймаут чтения порта. Проверьте BlueTooth и откройте порт заново</value>
+  </data>
+  <data name="RestartQ" xml:space="preserve">
+    <value>Запустить автонастройку заново?</value>
+  </data>
+  <data name="RestartSin2" xml:space="preserve">
+    <value>Режим работы двигателя \"Sin2\" после окончания заряда будет отключен. Для его включения нужно будет перезапустить контроллер или установить флажок \"Sin2\" на вкладке \"Двигатель\"</value>
+  </data>
+  <data name="ResultOK" xml:space="preserve">
+    <value>Результат: ---OK---</value>
+  </data>
+  <data name="ResultUnsuccessful" xml:space="preserve">
+    <value>Результат: неудачный</value>
+  </data>
+  <data name="StartingAutosettings" xml:space="preserve">
+    <value>--------  Старт автонастройки  ----------</value>
+  </data>
+  <data name="Stopping" xml:space="preserve">
+    <value>Остановка...</value>
+  </data>
+  <data name="Stp" xml:space="preserve">
+    <value>: Остановка</value>
+  </data>
+  <data name="ThrottleCalibration" xml:space="preserve">
+    <value>Нажмите ручку газа до упора и выберите ОК, для пропуска выберите NO</value>
+  </data>
+  <data name="ThrottleHighLevel" xml:space="preserve">
+    <value>Верхний порог ручки газа:</value>
+  </data>
+  <data name="TooHighBreak" xml:space="preserve">
+    <value>Слишком высокий порог отпущенной ручки тормоза</value>
+  </data>
+  <data name="TooHighBreakMSG" xml:space="preserve">
+    <value>Слишком высокий порог отпущенной ручки тормоза. Произведите настройку порогов ручки тормоза вручную</value>
+  </data>
+  <data name="TooHighThrottle" xml:space="preserve">
+    <value>Слишком высокий порог отпущенной ручки газа</value>
+  </data>
+  <data name="TooHighThrottleMsg" xml:space="preserve">
+    <value>Слишком высокий порог отпущенной ручки газа. Произведите настройку порогов ручки газа вручную</value>
+  </data>
+  <data name="TooHighVoltage" xml:space="preserve">
+    <value>Превышен максимальный порог напряжения батареи (8)</value>
+  </data>
+  <data name="TooLowBreak" xml:space="preserve">
+    <value>Слишком низкий порог нажатой ручки тормоза</value>
+  </data>
+  <data name="TooLowBreakMSG" xml:space="preserve">
+    <value>Слишком низкий порог нажатой ручки тормоза. Произведите настройку порогов ручки тормоза вручную</value>
+  </data>
+  <data name="TooLowThrottle" xml:space="preserve">
+    <value>Слишком низкий порог нажатой ручки газа</value>
+  </data>
+  <data name="TooLowThrottleMSG" xml:space="preserve">
+    <value>Слишком низкий порог нажатой ручки газа. Произведите настройку порогов ручки газа вручную.</value>
+  </data>
+  <data name="TooLowVoltage" xml:space="preserve">
+    <value>Низкое напряжение батареи (3)</value>
+  </data>
+  <data name="ToStop" xml:space="preserve">
+    <value>Остановить</value>
+  </data>
+  <data name="Unlock" xml:space="preserve">
+    <value>РАЗБЛОКИРОВАТЬ</value>
+  </data>
+  <data name="VectorMode" xml:space="preserve">
+    <value>Векторный, обычный, фильтр отключен, режим моноцикла выключен, ток ограничен</value>
+  </data>
+  <data name="Version" xml:space="preserve">
+    <value>Версия программы:</value>
+  </data>
+  <data name="WheelCanTurn" xml:space="preserve">
+    <value>Убедитесь, что колесо может свободно вращаться. Продолжить?</value>
+  </data>
+  <data name="WrongShift" xml:space="preserve">
+    <value>Неправильное задание сдвига фазы может привести к выходу контроллера или двигателя из строя. Это не является гарантийным случаем. Продолжить?</value>
+  </data>
+  <data name="ZeroSpeedTimeOut" xml:space="preserve">
+    <value>Таймаут нулевой скорости (7)</value>
+  </data>
+  <data name="TMout" xml:space="preserve">
+    <value>Port read timeout.  Check the BlueTooth and reopen the port.</value>
+  </data>
+  <data name="Err_CRERR_GYROACC_DISCONNECTED" xml:space="preserve">
+    <value>Неисправность акселерометра/гироскопа (10)</value>
+  </data>
+  <data name="Err_CRERR_MASTER_DISCONNECTED" xml:space="preserve">
+    <value>Потеря связи с ведущим (11)</value>
+  </data>
+  <data name="Err_CRERR_PWM_CHANGED_HIGH" xml:space="preserve">
+    <value>Резкое увеличение ШИМ</value>
+  </data>
+  <data name="SpeedLimitSin10kHz" xml:space="preserve">
+    <value>Скорость на синусе ограничена 40км/ч. Если выше, то переключение на трапецию.</value>
+  </data>
+  <data name="SpeedLimitSin5kHz" xml:space="preserve">
+    <value>Скорость на синусе ограничена 20км/ч. Если выше, то переключение на трапецию.</value>
+  </data>
+</root>

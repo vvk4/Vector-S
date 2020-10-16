@@ -2956,7 +2956,7 @@ usercode
 
 __FGS             0xf80004          0x2
  *(__FGS.sec*)
- __FGS.sec        0xf80004          0x2 /CW/_FGS˜LÐL__FGS.sec
+ __FGS.sec        0xf80004          0x2 /CW/_FGS˜|Ð|__FGS.sec
                   0xf80004                  __FGS.sec
 
 __FOSCSEL
@@ -2983,10 +2983,10 @@ __FUID0
 .comment
  *(.comment)
 
-.debug_info       0x000000      0x18734
+.debug_info       0x000000      0x18740
  *(.debug_info)
- .debug_info      0x000000      0x172a8 build/default/production/X1Main.o
- .debug_info      0x0172a8       0x148c build/default/production/Monocycle.o
+ .debug_info      0x000000      0x172ae build/default/production/X1Main.o
+ .debug_info      0x0172ae       0x1492 build/default/production/Monocycle.o
  *(.gnu.linkonce.wi.*)
 
 .debug_abbrev     0x000000        0x353
@@ -6367,7 +6367,7 @@ LOAD e:/program files (x86)/microchip/xc16/v1.41/bin/bin/../../lib\libm-elf.a
 LOAD e:/program files (x86)/microchip/xc16/v1.41/bin/bin/../../lib\libc-elf.a
 END GROUP
 OUTPUT(dist/default/production/X1.X.production.elf elf32-pic30)
-LOAD /CW/_FGS˜LÐL__FGS.sec
+LOAD /CW/_FGS˜|Ð|__FGS.sec
 LOAD default_isr
 LOAD data_init
 
@@ -7486,39 +7486,39 @@ __c30_signature
  .bss               0x4574          0x2 build/default/production/Monocycle.o
                     0x4574                  _MaxAngleStopBreak
 
-_04E37B40_at_address_00F80006
+_04D97B40_at_address_00F80006
                   0xf80006          0x2
- _04E37B40_at_address_00F80006
+ _04D97B40_at_address_00F80006
                   0xf80006          0x2 build/default/production/X1Main.o
                   0xf80006                  _FOSCSEL
 
-_04E37BA0_at_address_00F80008
+_04D97BA0_at_address_00F80008
                   0xf80008          0x2
- _04E37BA0_at_address_00F80008
+ _04D97BA0_at_address_00F80008
                   0xf80008          0x2 build/default/production/X1Main.o
                   0xf80008                  _FOSC
 
-_04E37C00_at_address_00F8000A
+_04D97C00_at_address_00F8000A
                   0xf8000a          0x2
- _04E37C00_at_address_00F8000A
+ _04D97C00_at_address_00F8000A
                   0xf8000a          0x2 build/default/production/X1Main.o
                   0xf8000a                  _FWDT
 
-_04E37C60_at_address_00F8000C
+_04D97C60_at_address_00F8000C
                   0xf8000c          0x2
- _04E37C60_at_address_00F8000C
+ _04D97C60_at_address_00F8000C
                   0xf8000c          0x2 build/default/production/X1Main.o
                   0xf8000c                  _FPOR
 
-_04E37CC0_at_address_00F8000E
+_04D97CC0_at_address_00F8000E
                   0xf8000e          0x2
- _04E37CC0_at_address_00F8000E
+ _04D97CC0_at_address_00F8000E
                   0xf8000e          0x2 build/default/production/X1Main.o
                   0xf8000e                  _FICD
 
-_04E37D20_at_address_00F80010
+_04D97D20_at_address_00F80010
                   0xf80010          0x2
- _04E37D20_at_address_00F80010
+ _04D97D20_at_address_00F80010
                   0xf80010          0x2 build/default/production/X1Main.o
                   0xf80010                  _FAS
 
