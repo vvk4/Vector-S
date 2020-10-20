@@ -534,7 +534,6 @@
             this.label915 = new System.Windows.Forms.Label();
             this.panel35 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
-            this.label813 = new System.Windows.Forms.Label();
             this.numericUpDown234 = new System.Windows.Forms.NumericUpDown();
             this.checkBox99 = new System.Windows.Forms.CheckBox();
             this.label894 = new System.Windows.Forms.Label();
@@ -1350,9 +1349,9 @@
             // 
             // button3
             // 
+            resources.ApplyResources(this.button3, "button3");
             this.button3.BackColor = System.Drawing.Color.Lime;
             this.button3.ImageKey = global::ControlBalance.MyStrings.About1333;
-            resources.ApplyResources(this.button3, "button3");
             this.button3.Name = "button3";
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
@@ -1387,38 +1386,38 @@
             // 
             // button4
             // 
+            resources.ApplyResources(this.button4, "button4");
             this.button4.BackColor = System.Drawing.Color.Lime;
             this.button4.ImageKey = global::ControlBalance.MyStrings.About1333;
-            resources.ApplyResources(this.button4, "button4");
             this.button4.Name = "button4";
             this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button5
             // 
+            resources.ApplyResources(this.button5, "button5");
             this.button5.BackColor = System.Drawing.Color.Lime;
             this.button5.ImageKey = global::ControlBalance.MyStrings.About1333;
-            resources.ApplyResources(this.button5, "button5");
             this.button5.Name = "button5";
             this.button5.UseVisualStyleBackColor = false;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button6
             // 
+            resources.ApplyResources(this.button6, "button6");
             this.button6.BackColor = System.Drawing.Color.Lime;
             this.button6.ImageKey = global::ControlBalance.MyStrings.About1333;
-            resources.ApplyResources(this.button6, "button6");
             this.button6.Name = "button6";
             this.button6.UseVisualStyleBackColor = false;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // panel1
             // 
+            resources.ApplyResources(this.panel1, "panel1");
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.label557);
             this.panel1.Controls.Add(this.checkBox14);
             this.panel1.Controls.Add(this.numericUpDown15);
-            resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Name = "panel1";
             // 
             // label557
@@ -1439,12 +1438,12 @@
             // 
             // numericUpDown15
             // 
+            resources.ApplyResources(this.numericUpDown15, "numericUpDown15");
             this.numericUpDown15.Increment = new decimal(new int[] {
             25,
             0,
             0,
             0});
-            resources.ApplyResources(this.numericUpDown15, "numericUpDown15");
             this.numericUpDown15.Maximum = new decimal(new int[] {
             1500,
             0,
@@ -1455,8 +1454,8 @@
             // 
             // button8
             // 
-            this.button8.ImageKey = global::ControlBalance.MyStrings.About1333;
             resources.ApplyResources(this.button8, "button8");
+            this.button8.ImageKey = global::ControlBalance.MyStrings.About1333;
             this.button8.Name = "button8";
             this.button8.UseVisualStyleBackColor = true;
             this.button8.Click += new System.EventHandler(this.button8_Click);
@@ -1535,8 +1534,8 @@
             // 
             // button9
             // 
-            this.button9.ImageKey = global::ControlBalance.MyStrings.About1333;
             resources.ApplyResources(this.button9, "button9");
+            this.button9.ImageKey = global::ControlBalance.MyStrings.About1333;
             this.button9.Name = "button9";
             this.button9.UseVisualStyleBackColor = true;
             this.button9.Click += new System.EventHandler(this.button9_Click);
@@ -1662,8 +1661,8 @@
             // 
             // button10
             // 
-            this.button10.ImageKey = global::ControlBalance.MyStrings.About1333;
             resources.ApplyResources(this.button10, "button10");
+            this.button10.ImageKey = global::ControlBalance.MyStrings.About1333;
             this.button10.Name = "button10";
             this.button10.UseVisualStyleBackColor = true;
             this.button10.Click += new System.EventHandler(this.button10_Click);
@@ -1690,6 +1689,7 @@
             // 
             // tabControl1
             // 
+            resources.ApplyResources(this.tabControl1, "tabControl1");
             this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage8);
@@ -1702,12 +1702,12 @@
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage11);
             this.tabControl1.Controls.Add(this.tabPage6);
-            resources.ApplyResources(this.tabControl1, "tabControl1");
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             // 
             // tabPage3
             // 
+            resources.ApplyResources(this.tabPage3, "tabPage3");
             this.tabPage3.Controls.Add(this.pictureBox1);
             this.tabPage3.Controls.Add(this.comboBox26);
             this.tabPage3.Controls.Add(this.button50);
@@ -1721,7 +1721,6 @@
             this.tabPage3.Controls.Add(this.comboBox2);
             this.tabPage3.Controls.Add(this.button12);
             this.tabPage3.ImageKey = global::ControlBalance.MyStrings.About1333;
-            resources.ApplyResources(this.tabPage3, "tabPage3");
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.ToolTipText = global::ControlBalance.MyStrings.About1333;
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -1735,16 +1734,16 @@
             // 
             // comboBox26
             // 
+            resources.ApplyResources(this.comboBox26, "comboBox26");
             this.comboBox26.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox26.FormattingEnabled = true;
-            resources.ApplyResources(this.comboBox26, "comboBox26");
             this.comboBox26.Name = "comboBox26";
             this.comboBox26.SelectedIndexChanged += new System.EventHandler(this.comboBox26_SelectedIndexChanged);
             // 
             // button50
             // 
-            this.button50.ImageKey = global::ControlBalance.MyStrings.About1333;
             resources.ApplyResources(this.button50, "button50");
+            this.button50.ImageKey = global::ControlBalance.MyStrings.About1333;
             this.button50.Name = "button50";
             this.button50.UseVisualStyleBackColor = true;
             this.button50.Click += new System.EventHandler(this.button50_Click);
@@ -1756,16 +1755,16 @@
             // 
             // button49
             // 
-            this.button49.ImageKey = global::ControlBalance.MyStrings.About1333;
             resources.ApplyResources(this.button49, "button49");
+            this.button49.ImageKey = global::ControlBalance.MyStrings.About1333;
             this.button49.Name = "button49";
             this.button49.UseVisualStyleBackColor = true;
             this.button49.Click += new System.EventHandler(this.button49_Click_1);
             // 
             // button31
             // 
-            this.button31.ImageKey = global::ControlBalance.MyStrings.About1333;
             resources.ApplyResources(this.button31, "button31");
+            this.button31.ImageKey = global::ControlBalance.MyStrings.About1333;
             this.button31.Name = "button31";
             this.button31.UseVisualStyleBackColor = true;
             this.button31.Click += new System.EventHandler(this.button31_Click);
@@ -1786,8 +1785,8 @@
             // 
             // button13
             // 
-            this.button13.ImageKey = global::ControlBalance.MyStrings.About1333;
             resources.ApplyResources(this.button13, "button13");
+            this.button13.ImageKey = global::ControlBalance.MyStrings.About1333;
             this.button13.Name = "button13";
             this.button13.UseVisualStyleBackColor = true;
             this.button13.Click += new System.EventHandler(this.button13_Click);
@@ -1802,8 +1801,8 @@
             // 
             // comboBox2
             // 
-            this.comboBox2.FormattingEnabled = true;
             resources.ApplyResources(this.comboBox2, "comboBox2");
+            this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
             // 
@@ -1817,6 +1816,7 @@
             // 
             // tabPage1
             // 
+            resources.ApplyResources(this.tabPage1, "tabPage1");
             this.tabPage1.Controls.Add(this.panel60);
             this.tabPage1.Controls.Add(this.label368);
             this.tabPage1.Controls.Add(this.label558);
@@ -1842,7 +1842,6 @@
             this.tabPage1.Controls.Add(this.label366);
             this.tabPage1.Controls.Add(this.button30);
             this.tabPage1.ImageKey = global::ControlBalance.MyStrings.About1333;
-            resources.ApplyResources(this.tabPage1, "tabPage1");
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.ToolTipText = global::ControlBalance.MyStrings.About1333;
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -1850,6 +1849,7 @@
             // 
             // panel60
             // 
+            resources.ApplyResources(this.panel60, "panel60");
             this.panel60.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel60.Controls.Add(this.label683);
             this.panel60.Controls.Add(this.label684);
@@ -1860,7 +1860,6 @@
             this.panel60.Controls.Add(this.label680);
             this.panel60.Controls.Add(this.label427);
             this.panel60.Controls.Add(this.label426);
-            resources.ApplyResources(this.panel60, "panel60");
             this.panel60.Name = "panel60";
             // 
             // label683
@@ -1937,16 +1936,16 @@
             // 
             // button24
             // 
-            this.button24.ImageKey = global::ControlBalance.MyStrings.About1333;
             resources.ApplyResources(this.button24, "button24");
+            this.button24.ImageKey = global::ControlBalance.MyStrings.About1333;
             this.button24.Name = "button24";
             this.button24.UseVisualStyleBackColor = true;
             this.button24.Click += new System.EventHandler(this.button24_Click);
             // 
             // button46
             // 
-            this.button46.ImageKey = global::ControlBalance.MyStrings.About1333;
             resources.ApplyResources(this.button46, "button46");
+            this.button46.ImageKey = global::ControlBalance.MyStrings.About1333;
             this.button46.Name = "button46";
             this.button46.UseVisualStyleBackColor = true;
             this.button46.Click += new System.EventHandler(this.button46_Click);
@@ -1985,8 +1984,8 @@
             // 
             // button23
             // 
-            this.button23.ImageKey = global::ControlBalance.MyStrings.About1333;
             resources.ApplyResources(this.button23, "button23");
+            this.button23.ImageKey = global::ControlBalance.MyStrings.About1333;
             this.button23.Name = "button23";
             this.button23.UseVisualStyleBackColor = true;
             this.button23.Click += new System.EventHandler(this.button23_Click);
@@ -2048,14 +2047,15 @@
             // 
             // button30
             // 
-            this.button30.ImageKey = global::ControlBalance.MyStrings.About1333;
             resources.ApplyResources(this.button30, "button30");
+            this.button30.ImageKey = global::ControlBalance.MyStrings.About1333;
             this.button30.Name = "button30";
             this.button30.UseVisualStyleBackColor = true;
             this.button30.Click += new System.EventHandler(this.button30_Click);
             // 
             // tabPage8
             // 
+            resources.ApplyResources(this.tabPage8, "tabPage8");
             this.tabPage8.Controls.Add(this.panel72);
             this.tabPage8.Controls.Add(this.panel68);
             this.tabPage8.Controls.Add(this.panel64);
@@ -2063,17 +2063,16 @@
             this.tabPage8.Controls.Add(this.panel9);
             this.tabPage8.Controls.Add(this.panel8);
             this.tabPage8.ImageKey = global::ControlBalance.MyStrings.About1333;
-            resources.ApplyResources(this.tabPage8, "tabPage8");
             this.tabPage8.Name = "tabPage8";
             this.tabPage8.ToolTipText = global::ControlBalance.MyStrings.About1333;
             this.tabPage8.UseVisualStyleBackColor = true;
             // 
             // panel72
             // 
+            resources.ApplyResources(this.panel72, "panel72");
             this.panel72.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel72.Controls.Add(this.checkBox95);
             this.panel72.Controls.Add(this.panel73);
-            resources.ApplyResources(this.panel72, "panel72");
             this.panel72.Name = "panel72";
             // 
             // checkBox95
@@ -2086,6 +2085,7 @@
             // 
             // panel73
             // 
+            resources.ApplyResources(this.panel73, "panel73");
             this.panel73.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel73.Controls.Add(this.radioButton28);
             this.panel73.Controls.Add(this.label807);
@@ -2095,7 +2095,6 @@
             this.panel73.Controls.Add(this.radioButton26);
             this.panel73.Controls.Add(this.radioButton25);
             this.panel73.Controls.Add(this.label805);
-            resources.ApplyResources(this.panel73, "panel73");
             this.panel73.Name = "panel73";
             // 
             // radioButton28
@@ -2172,6 +2171,7 @@
             // 
             // panel68
             // 
+            resources.ApplyResources(this.panel68, "panel68");
             this.panel68.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel68.Controls.Add(this.label784);
             this.panel68.Controls.Add(this.label782);
@@ -2182,7 +2182,6 @@
             this.panel68.Controls.Add(this.label781);
             this.panel68.Controls.Add(this.label779);
             this.panel68.Controls.Add(this.checkBox97);
-            resources.ApplyResources(this.panel68, "panel68");
             this.panel68.Name = "panel68";
             // 
             // label784
@@ -2263,6 +2262,7 @@
             // 
             // panel64
             // 
+            resources.ApplyResources(this.panel64, "panel64");
             this.panel64.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel64.Controls.Add(this.label511);
             this.panel64.Controls.Add(this.label513);
@@ -2275,7 +2275,6 @@
             this.panel64.Controls.Add(this.label721);
             this.panel64.Controls.Add(this.numericUpDown189);
             this.panel64.Controls.Add(this.label722);
-            resources.ApplyResources(this.panel64, "panel64");
             this.panel64.Name = "panel64";
             // 
             // label511
@@ -2292,12 +2291,12 @@
             // 
             // comboBox20
             // 
+            resources.ApplyResources(this.comboBox20, "comboBox20");
             this.comboBox20.FormattingEnabled = true;
             this.comboBox20.Items.AddRange(new object[] {
             resources.GetString("comboBox20.Items"),
             resources.GetString("comboBox20.Items1"),
             resources.GetString("comboBox20.Items2")});
-            resources.ApplyResources(this.comboBox20, "comboBox20");
             this.comboBox20.Name = "comboBox20";
             this.comboBox20.SelectedIndexChanged += new System.EventHandler(this.comboBox20_SelectedIndexChanged);
             this.comboBox20.SelectionChangeCommitted += new System.EventHandler(this.comboBox20_SelectionChangeCommitted);
@@ -2372,6 +2371,7 @@
             // 
             // panel10
             // 
+            resources.ApplyResources(this.panel10, "panel10");
             this.panel10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel10.Controls.Add(this.label785);
             this.panel10.Controls.Add(this.comboBox23);
@@ -2417,7 +2417,6 @@
             this.panel10.Controls.Add(this.checkBox64);
             this.panel10.Controls.Add(this.label512);
             this.panel10.Controls.Add(this.label484);
-            resources.ApplyResources(this.panel10, "panel10");
             this.panel10.Name = "panel10";
             this.panel10.Paint += new System.Windows.Forms.PaintEventHandler(this.panel10_Paint_1);
             // 
@@ -2430,11 +2429,11 @@
             // 
             // comboBox23
             // 
+            resources.ApplyResources(this.comboBox23, "comboBox23");
             this.comboBox23.FormattingEnabled = true;
             this.comboBox23.Items.AddRange(new object[] {
             resources.GetString("comboBox23.Items"),
             resources.GetString("comboBox23.Items1")});
-            resources.ApplyResources(this.comboBox23, "comboBox23");
             this.comboBox23.Name = "comboBox23";
             this.comboBox23.SelectedIndexChanged += new System.EventHandler(this.comboBox23_SelectedIndexChanged);
             this.comboBox23.SelectionChangeCommitted += new System.EventHandler(this.comboBox23_SelectionChangeCommitted);
@@ -2530,8 +2529,8 @@
             // 
             // panel37
             // 
-            this.panel37.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             resources.ApplyResources(this.panel37, "panel37");
+            this.panel37.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel37.Name = "panel37";
             // 
             // label617
@@ -2542,8 +2541,8 @@
             // 
             // panel40
             // 
-            this.panel40.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             resources.ApplyResources(this.panel40, "panel40");
+            this.panel40.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel40.Name = "panel40";
             // 
             // label529
@@ -2608,6 +2607,7 @@
             // 
             // comboBox15
             // 
+            resources.ApplyResources(this.comboBox15, "comboBox15");
             this.comboBox15.FormattingEnabled = true;
             this.comboBox15.Items.AddRange(new object[] {
             resources.GetString("comboBox15.Items"),
@@ -2618,7 +2618,6 @@
             resources.GetString("comboBox15.Items5"),
             resources.GetString("comboBox15.Items6"),
             resources.GetString("comboBox15.Items7")});
-            resources.ApplyResources(this.comboBox15, "comboBox15");
             this.comboBox15.Name = "comboBox15";
             this.comboBox15.SelectedIndexChanged += new System.EventHandler(this.comboBox15_SelectedIndexChanged);
             this.comboBox15.SelectionChangeCommitted += new System.EventHandler(this.comboBox15_SelectionChangeCommitted);
@@ -2849,6 +2848,7 @@
             // 
             // panel9
             // 
+            resources.ApplyResources(this.panel9, "panel9");
             this.panel9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel9.Controls.Add(this.label263);
             this.panel9.Controls.Add(this.label262);
@@ -2864,7 +2864,6 @@
             this.panel9.Controls.Add(this.label258);
             this.panel9.Controls.Add(this.label257);
             this.panel9.Controls.Add(this.numericUpDown73);
-            resources.ApplyResources(this.panel9, "panel9");
             this.panel9.Name = "panel9";
             // 
             // label263
@@ -2983,6 +2982,7 @@
             // 
             // panel8
             // 
+            resources.ApplyResources(this.panel8, "panel8");
             this.panel8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel8.Controls.Add(this.button36);
             this.panel8.Controls.Add(this.numericUpDown69);
@@ -3001,14 +3001,13 @@
             this.panel8.Controls.Add(this.label230);
             this.panel8.Controls.Add(this.numericUpDown8);
             this.panel8.Controls.Add(this.label76);
-            resources.ApplyResources(this.panel8, "panel8");
             this.panel8.Name = "panel8";
             this.panel8.Paint += new System.Windows.Forms.PaintEventHandler(this.panel8_Paint);
             // 
             // button36
             // 
-            this.button36.ImageKey = global::ControlBalance.MyStrings.About1333;
             resources.ApplyResources(this.button36, "button36");
+            this.button36.ImageKey = global::ControlBalance.MyStrings.About1333;
             this.button36.Name = "button36";
             this.button36.UseVisualStyleBackColor = true;
             this.button36.Click += new System.EventHandler(this.button36_Click);
@@ -3161,6 +3160,7 @@
             // 
             // tabPage4
             // 
+            resources.ApplyResources(this.tabPage4, "tabPage4");
             this.tabPage4.Controls.Add(this.panel47);
             this.tabPage4.Controls.Add(this.panel31);
             this.tabPage4.Controls.Add(this.panel19);
@@ -3172,13 +3172,13 @@
             this.tabPage4.Controls.Add(this.panel18);
             this.tabPage4.Controls.Add(this.checkBox51);
             this.tabPage4.ImageKey = global::ControlBalance.MyStrings.About1333;
-            resources.ApplyResources(this.tabPage4, "tabPage4");
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.ToolTipText = global::ControlBalance.MyStrings.About1333;
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
             // panel47
             // 
+            resources.ApplyResources(this.panel47, "panel47");
             this.panel47.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel47.Controls.Add(this.label799);
             this.panel47.Controls.Add(this.label800);
@@ -3202,7 +3202,6 @@
             this.panel47.Controls.Add(this.label591);
             this.panel47.Controls.Add(this.numericUpDown157);
             this.panel47.Controls.Add(this.numericUpDown155);
-            resources.ApplyResources(this.panel47, "panel47");
             this.panel47.Name = "panel47";
             // 
             // label799
@@ -3252,8 +3251,8 @@
             // 
             // numericUpDown196
             // 
-            this.numericUpDown196.ForeColor = System.Drawing.Color.Red;
             resources.ApplyResources(this.numericUpDown196, "numericUpDown196");
+            this.numericUpDown196.ForeColor = System.Drawing.Color.Red;
             this.numericUpDown196.Maximum = new decimal(new int[] {
             30000,
             0,
@@ -3288,8 +3287,8 @@
             // 
             // numericUpDown164
             // 
-            this.numericUpDown164.ForeColor = System.Drawing.Color.Red;
             resources.ApplyResources(this.numericUpDown164, "numericUpDown164");
+            this.numericUpDown164.ForeColor = System.Drawing.Color.Red;
             this.numericUpDown164.Maximum = new decimal(new int[] {
             300,
             0,
@@ -3305,10 +3304,10 @@
             // 
             // panel49
             // 
+            resources.ApplyResources(this.panel49, "panel49");
             this.panel49.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.panel49.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel49.ForeColor = System.Drawing.Color.Red;
-            resources.ApplyResources(this.panel49, "panel49");
             this.panel49.Name = "panel49";
             // 
             // checkBox81
@@ -3336,8 +3335,8 @@
             // 
             // numericUpDown162
             // 
-            this.numericUpDown162.ForeColor = System.Drawing.Color.Red;
             resources.ApplyResources(this.numericUpDown162, "numericUpDown162");
+            this.numericUpDown162.ForeColor = System.Drawing.Color.Red;
             this.numericUpDown162.Maximum = new decimal(new int[] {
             30000,
             0,
@@ -3404,8 +3403,8 @@
             // 
             // numericUpDown157
             // 
-            this.numericUpDown157.ForeColor = System.Drawing.Color.Red;
             resources.ApplyResources(this.numericUpDown157, "numericUpDown157");
+            this.numericUpDown157.ForeColor = System.Drawing.Color.Red;
             this.numericUpDown157.Maximum = new decimal(new int[] {
             10,
             0,
@@ -3426,8 +3425,8 @@
             // 
             // numericUpDown155
             // 
-            this.numericUpDown155.ForeColor = System.Drawing.Color.Red;
             resources.ApplyResources(this.numericUpDown155, "numericUpDown155");
+            this.numericUpDown155.ForeColor = System.Drawing.Color.Red;
             this.numericUpDown155.Maximum = new decimal(new int[] {
             30000,
             0,
@@ -3448,6 +3447,7 @@
             // 
             // panel31
             // 
+            resources.ApplyResources(this.panel31, "panel31");
             this.panel31.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel31.Controls.Add(this.label541);
             this.panel31.Controls.Add(this.label539);
@@ -3457,7 +3457,6 @@
             this.panel31.Controls.Add(this.label537);
             this.panel31.Controls.Add(this.numericUpDown138);
             this.panel31.Controls.Add(this.label538);
-            resources.ApplyResources(this.panel31, "panel31");
             this.panel31.Name = "panel31";
             // 
             // label541
@@ -3538,6 +3537,7 @@
             // 
             // panel19
             // 
+            resources.ApplyResources(this.panel19, "panel19");
             this.panel19.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel19.Controls.Add(this.checkBox55);
             this.panel19.Controls.Add(this.label550);
@@ -3561,7 +3561,6 @@
             this.panel19.Controls.Add(this.label12);
             this.panel19.Controls.Add(this.label23);
             this.panel19.Controls.Add(this.numericUpDown4);
-            resources.ApplyResources(this.panel19, "panel19");
             this.panel19.Name = "panel19";
             // 
             // checkBox55
@@ -3730,6 +3729,7 @@
             // 
             // panel33
             // 
+            resources.ApplyResources(this.panel33, "panel33");
             this.panel33.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel33.Controls.Add(this.radioButton6);
             this.panel33.Controls.Add(this.comboBox11);
@@ -3749,7 +3749,6 @@
             this.panel33.Controls.Add(this.label448);
             this.panel33.Controls.Add(this.label425);
             this.panel33.Controls.Add(this.radioButton9);
-            resources.ApplyResources(this.panel33, "panel33");
             this.panel33.Name = "panel33";
             // 
             // radioButton6
@@ -3785,10 +3784,10 @@
             // 
             // panel42
             // 
+            resources.ApplyResources(this.panel42, "panel42");
             this.panel42.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.panel42.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel42.ForeColor = System.Drawing.Color.Red;
-            resources.ApplyResources(this.panel42, "panel42");
             this.panel42.Name = "panel42";
             // 
             // label343
@@ -3849,13 +3848,13 @@
             // 
             // panel32
             // 
+            resources.ApplyResources(this.panel32, "panel32");
             this.panel32.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel32.Controls.Add(this.comboBox12);
             this.panel32.Controls.Add(this.label419);
             this.panel32.Controls.Add(this.label420);
             this.panel32.Controls.Add(this.label422);
             this.panel32.Controls.Add(this.label424);
-            resources.ApplyResources(this.panel32, "panel32");
             this.panel32.Name = "panel32";
             // 
             // comboBox12
@@ -3976,17 +3975,18 @@
             // 
             // panel30
             // 
+            resources.ApplyResources(this.panel30, "panel30");
             this.panel30.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel30.Controls.Add(this.comboBox10);
             this.panel30.Controls.Add(this.label265);
             this.panel30.Controls.Add(this.label323);
             this.panel30.Controls.Add(this.label324);
             this.panel30.Controls.Add(this.label342);
-            resources.ApplyResources(this.panel30, "panel30");
             this.panel30.Name = "panel30";
             // 
             // comboBox10
             // 
+            resources.ApplyResources(this.comboBox10, "comboBox10");
             this.comboBox10.ForeColor = System.Drawing.Color.Red;
             this.comboBox10.FormattingEnabled = true;
             this.comboBox10.Items.AddRange(new object[] {
@@ -4001,7 +4001,6 @@
             resources.GetString("comboBox10.Items8"),
             resources.GetString("comboBox10.Items9"),
             resources.GetString("comboBox10.Items10")});
-            resources.ApplyResources(this.comboBox10, "comboBox10");
             this.comboBox10.Name = "comboBox10";
             this.comboBox10.SelectedIndexChanged += new System.EventHandler(this.comboBox10_SelectedIndexChanged);
             this.comboBox10.SelectionChangeCommitted += new System.EventHandler(this.comboBox10_SelectionChangeCommitted);
@@ -4036,17 +4035,18 @@
             // 
             // panel29
             // 
+            resources.ApplyResources(this.panel29, "panel29");
             this.panel29.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel29.Controls.Add(this.comboBox7);
             this.panel29.Controls.Add(this.label253);
             this.panel29.Controls.Add(this.label240);
             this.panel29.Controls.Add(this.label242);
             this.panel29.Controls.Add(this.label252);
-            resources.ApplyResources(this.panel29, "panel29");
             this.panel29.Name = "panel29";
             // 
             // comboBox7
             // 
+            resources.ApplyResources(this.comboBox7, "comboBox7");
             this.comboBox7.ForeColor = System.Drawing.Color.Red;
             this.comboBox7.FormattingEnabled = true;
             this.comboBox7.Items.AddRange(new object[] {
@@ -4061,7 +4061,6 @@
             resources.GetString("comboBox7.Items8"),
             resources.GetString("comboBox7.Items9"),
             resources.GetString("comboBox7.Items10")});
-            resources.ApplyResources(this.comboBox7, "comboBox7");
             this.comboBox7.Name = "comboBox7";
             this.comboBox7.SelectedIndexChanged += new System.EventHandler(this.comboBox7_SelectedIndexChanged);
             this.comboBox7.SelectionChangeCommitted += new System.EventHandler(this.comboBox7_SelectionChangeCommitted);
@@ -4096,6 +4095,7 @@
             // 
             // panel28
             // 
+            resources.ApplyResources(this.panel28, "panel28");
             this.panel28.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel28.Controls.Add(this.checkBox111);
             this.panel28.Controls.Add(this.label806);
@@ -4112,7 +4112,6 @@
             this.panel28.Controls.Add(this.label226);
             this.panel28.Controls.Add(this.checkBox54);
             this.panel28.Controls.Add(this.checkBox71);
-            resources.ApplyResources(this.panel28, "panel28");
             this.panel28.Name = "panel28";
             this.panel28.Paint += new System.Windows.Forms.PaintEventHandler(this.panel28_Paint);
             // 
@@ -4160,12 +4159,12 @@
             // 
             // panel71
             // 
+            resources.ApplyResources(this.panel71, "panel71");
             this.panel71.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel71.Controls.Add(this.radioButton24);
             this.panel71.Controls.Add(this.radioButton23);
             this.panel71.Controls.Add(this.radioButton16);
             this.panel71.Controls.Add(this.label802);
-            resources.ApplyResources(this.panel71, "panel71");
             this.panel71.Name = "panel71";
             // 
             // radioButton24
@@ -4237,6 +4236,7 @@
             // 
             // panel41
             // 
+            resources.ApplyResources(this.panel41, "panel41");
             this.panel41.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel41.Controls.Add(this.label373);
             this.panel41.Controls.Add(this.label534);
@@ -4248,7 +4248,6 @@
             this.panel41.Controls.Add(this.label580);
             this.panel41.Controls.Add(this.label581);
             this.panel41.Controls.Add(this.numericUpDown150);
-            resources.ApplyResources(this.panel41, "panel41");
             this.panel41.Name = "panel41";
             // 
             // label373
@@ -4389,6 +4388,7 @@
             // 
             // panel17
             // 
+            resources.ApplyResources(this.panel17, "panel17");
             this.panel17.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel17.Controls.Add(this.label714);
             this.panel17.Controls.Add(this.label715);
@@ -4404,7 +4404,6 @@
             this.panel17.Controls.Add(this.label397);
             this.panel17.Controls.Add(this.label396);
             this.panel17.Controls.Add(this.numericUpDown104);
-            resources.ApplyResources(this.panel17, "panel17");
             this.panel17.Name = "panel17";
             // 
             // label714
@@ -4539,6 +4538,7 @@
             // 
             // panel18
             // 
+            resources.ApplyResources(this.panel18, "panel18");
             this.panel18.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel18.Controls.Add(this.label223);
             this.panel18.Controls.Add(this.label222);
@@ -4546,7 +4546,6 @@
             this.panel18.Controls.Add(this.label225);
             this.panel18.Controls.Add(this.label224);
             this.panel18.Controls.Add(this.numericUpDown55);
-            resources.ApplyResources(this.panel18, "panel18");
             this.panel18.Name = "panel18";
             // 
             // label223
@@ -4629,6 +4628,7 @@
             // 
             // tabPage7
             // 
+            resources.ApplyResources(this.tabPage7, "tabPage7");
             this.tabPage7.Controls.Add(this.label917);
             this.tabPage7.Controls.Add(this.comboBox25);
             this.tabPage7.Controls.Add(this.label625);
@@ -4645,7 +4645,6 @@
             this.tabPage7.Controls.Add(this.label322);
             this.tabPage7.Controls.Add(this.label321);
             this.tabPage7.ImageKey = global::ControlBalance.MyStrings.About1333;
-            resources.ApplyResources(this.tabPage7, "tabPage7");
             this.tabPage7.Name = "tabPage7";
             this.tabPage7.ToolTipText = global::ControlBalance.MyStrings.About1333;
             this.tabPage7.UseVisualStyleBackColor = true;
@@ -4659,12 +4658,12 @@
             // 
             // comboBox25
             // 
+            resources.ApplyResources(this.comboBox25, "comboBox25");
             this.comboBox25.FormattingEnabled = true;
             this.comboBox25.Items.AddRange(new object[] {
             resources.GetString("comboBox25.Items"),
             resources.GetString("comboBox25.Items1"),
             resources.GetString("comboBox25.Items2")});
-            resources.ApplyResources(this.comboBox25, "comboBox25");
             this.comboBox25.Name = "comboBox25";
             this.comboBox25.SelectedIndexChanged += new System.EventHandler(this.comboBox25_SelectedIndexChanged);
             this.comboBox25.SelectionChangeCommitted += new System.EventHandler(this.comboBox25_SelectionChangeCommitted);
@@ -4700,6 +4699,7 @@
             // 
             // panel26
             // 
+            resources.ApplyResources(this.panel26, "panel26");
             this.panel26.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel26.Controls.Add(this.checkBox82);
             this.panel26.Controls.Add(this.radioButton12);
@@ -4715,7 +4715,6 @@
             this.panel26.Controls.Add(this.numericUpDown161);
             this.panel26.Controls.Add(this.label454);
             this.panel26.Controls.Add(this.label611);
-            resources.ApplyResources(this.panel26, "panel26");
             this.panel26.Name = "panel26";
             this.panel26.Paint += new System.Windows.Forms.PaintEventHandler(this.panel26_Paint);
             // 
@@ -4740,8 +4739,8 @@
             // 
             // panel43
             // 
-            this.panel43.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             resources.ApplyResources(this.panel43, "panel43");
+            this.panel43.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel43.Name = "panel43";
             // 
             // label403
@@ -4854,6 +4853,7 @@
             // 
             // panel34
             // 
+            resources.ApplyResources(this.panel34, "panel34");
             this.panel34.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel34.Controls.Add(this.label718);
             this.panel34.Controls.Add(this.radioButton22);
@@ -4871,7 +4871,6 @@
             this.panel34.Controls.Add(this.radioButton4);
             this.panel34.Controls.Add(this.numericUpDown136);
             this.panel34.Controls.Add(this.label472);
-            resources.ApplyResources(this.panel34, "panel34");
             this.panel34.Name = "panel34";
             // 
             // label718
@@ -4900,14 +4899,14 @@
             // 
             // panel65
             // 
-            this.panel65.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             resources.ApplyResources(this.panel65, "panel65");
+            this.panel65.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel65.Name = "panel65";
             // 
             // numericUpDown185
             // 
-            this.numericUpDown185.ForeColor = System.Drawing.Color.Red;
             resources.ApplyResources(this.numericUpDown185, "numericUpDown185");
+            this.numericUpDown185.ForeColor = System.Drawing.Color.Red;
             this.numericUpDown185.Maximum = new decimal(new int[] {
             150,
             0,
@@ -4923,14 +4922,14 @@
             // 
             // panel39
             // 
-            this.panel39.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             resources.ApplyResources(this.panel39, "panel39");
+            this.panel39.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel39.Name = "panel39";
             // 
             // panel38
             // 
-            this.panel38.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             resources.ApplyResources(this.panel38, "panel38");
+            this.panel38.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel38.Name = "panel38";
             // 
             // label371
@@ -4966,8 +4965,8 @@
             // 
             // numericUpDown56
             // 
-            this.numericUpDown56.ForeColor = System.Drawing.Color.Red;
             resources.ApplyResources(this.numericUpDown56, "numericUpDown56");
+            this.numericUpDown56.ForeColor = System.Drawing.Color.Red;
             this.numericUpDown56.Maximum = new decimal(new int[] {
             200,
             0,
@@ -5000,8 +4999,8 @@
             // 
             // numericUpDown136
             // 
-            this.numericUpDown136.ForeColor = System.Drawing.Color.Red;
             resources.ApplyResources(this.numericUpDown136, "numericUpDown136");
+            this.numericUpDown136.ForeColor = System.Drawing.Color.Red;
             this.numericUpDown136.Name = "numericUpDown136";
             this.numericUpDown136.Value = new decimal(new int[] {
             1,
@@ -5019,6 +5018,7 @@
             // 
             // panel27
             // 
+            resources.ApplyResources(this.panel27, "panel27");
             this.panel27.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel27.Controls.Add(this.panel55);
             this.panel27.Controls.Add(this.label638);
@@ -5033,13 +5033,12 @@
             this.panel27.Controls.Add(this.label415);
             this.panel27.Controls.Add(this.panel50);
             this.panel27.Controls.Add(this.label52);
-            resources.ApplyResources(this.panel27, "panel27");
             this.panel27.Name = "panel27";
             // 
             // panel55
             // 
-            this.panel55.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             resources.ApplyResources(this.panel55, "panel55");
+            this.panel55.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel55.Name = "panel55";
             // 
             // label638
@@ -5066,13 +5065,13 @@
             // 
             // numericUpDown167
             // 
+            resources.ApplyResources(this.numericUpDown167, "numericUpDown167");
             this.numericUpDown167.ForeColor = System.Drawing.Color.Red;
             this.numericUpDown167.Increment = new decimal(new int[] {
             64,
             0,
             0,
             0});
-            resources.ApplyResources(this.numericUpDown167, "numericUpDown167");
             this.numericUpDown167.Maximum = new decimal(new int[] {
             300000,
             0,
@@ -5110,13 +5109,13 @@
             // 
             // numericUpDown127
             // 
+            resources.ApplyResources(this.numericUpDown127, "numericUpDown127");
             this.numericUpDown127.ForeColor = System.Drawing.Color.Red;
             this.numericUpDown127.Increment = new decimal(new int[] {
             64,
             0,
             0,
             0});
-            resources.ApplyResources(this.numericUpDown127, "numericUpDown127");
             this.numericUpDown127.Maximum = new decimal(new int[] {
             200000,
             0,
@@ -5145,6 +5144,7 @@
             // 
             // panel50
             // 
+            resources.ApplyResources(this.panel50, "panel50");
             this.panel50.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel50.Controls.Add(this.numericUpDown195);
             this.panel50.Controls.Add(this.label794);
@@ -5159,7 +5159,6 @@
             this.panel50.Controls.Add(this.label635);
             this.panel50.Controls.Add(this.numericUpDown169);
             this.panel50.Controls.Add(this.label636);
-            resources.ApplyResources(this.panel50, "panel50");
             this.panel50.Name = "panel50";
             this.panel50.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panel50_MouseClick);
             // 
@@ -5239,13 +5238,13 @@
             // 
             // numericUpDown168
             // 
+            resources.ApplyResources(this.numericUpDown168, "numericUpDown168");
             this.numericUpDown168.ForeColor = System.Drawing.Color.Red;
             this.numericUpDown168.Increment = new decimal(new int[] {
             64,
             0,
             0,
             0});
-            resources.ApplyResources(this.numericUpDown168, "numericUpDown168");
             this.numericUpDown168.Maximum = new decimal(new int[] {
             200000,
             0,
@@ -5278,13 +5277,13 @@
             // 
             // numericUpDown169
             // 
+            resources.ApplyResources(this.numericUpDown169, "numericUpDown169");
             this.numericUpDown169.ForeColor = System.Drawing.Color.Red;
             this.numericUpDown169.Increment = new decimal(new int[] {
             64,
             0,
             0,
             0});
-            resources.ApplyResources(this.numericUpDown169, "numericUpDown169");
             this.numericUpDown169.Maximum = new decimal(new int[] {
             90000,
             0,
@@ -5320,6 +5319,7 @@
             // 
             // panel16
             // 
+            resources.ApplyResources(this.panel16, "panel16");
             this.panel16.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel16.Controls.Add(this.checkBox110);
             this.panel16.Controls.Add(this.panel57);
@@ -5335,7 +5335,6 @@
             this.panel16.Controls.Add(this.comboBox9);
             this.panel16.Controls.Add(this.checkBox47);
             this.panel16.Controls.Add(this.label458);
-            resources.ApplyResources(this.panel16, "panel16");
             this.panel16.Name = "panel16";
             this.panel16.Paint += new System.Windows.Forms.PaintEventHandler(this.panel16_Paint);
             this.panel16.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panel16_MouseClick);
@@ -5349,11 +5348,11 @@
             // 
             // panel57
             // 
+            resources.ApplyResources(this.panel57, "panel57");
             this.panel57.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel57.Controls.Add(this.checkBox107);
             this.panel57.Controls.Add(this.checkBox108);
             this.panel57.Controls.Add(this.checkBox109);
-            resources.ApplyResources(this.panel57, "panel57");
             this.panel57.Name = "panel57";
             // 
             // checkBox107
@@ -5408,6 +5407,7 @@
             // 
             // panel52
             // 
+            resources.ApplyResources(this.panel52, "panel52");
             this.panel52.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel52.Controls.Add(this.label656);
             this.panel52.Controls.Add(this.label657);
@@ -5433,7 +5433,6 @@
             this.panel52.Controls.Add(this.label459);
             this.panel52.Controls.Add(this.label457);
             this.panel52.Controls.Add(this.label456);
-            resources.ApplyResources(this.panel52, "panel52");
             this.panel52.Name = "panel52";
             // 
             // label656
@@ -5459,8 +5458,8 @@
             // 
             // panel56
             // 
-            this.panel56.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             resources.ApplyResources(this.panel56, "panel56");
+            this.panel56.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel56.Name = "panel56";
             // 
             // numericUpDown173
@@ -5556,8 +5555,8 @@
             // 
             // panel54
             // 
-            this.panel54.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             resources.ApplyResources(this.panel54, "panel54");
+            this.panel54.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel54.Name = "panel54";
             // 
             // checkBox85
@@ -5572,9 +5571,9 @@
             // 
             // panel53
             // 
+            resources.ApplyResources(this.panel53, "panel53");
             this.panel53.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel53.ForeColor = System.Drawing.Color.ForestGreen;
-            resources.ApplyResources(this.panel53, "panel53");
             this.panel53.Name = "panel53";
             // 
             // label647
@@ -5657,8 +5656,8 @@
             // 
             // button48
             // 
-            this.button48.ImageKey = global::ControlBalance.MyStrings.About1333;
             resources.ApplyResources(this.button48, "button48");
+            this.button48.ImageKey = global::ControlBalance.MyStrings.About1333;
             this.button48.Name = "button48";
             this.button48.UseVisualStyleBackColor = true;
             this.button48.Click += new System.EventHandler(this.button48_Click);
@@ -5687,6 +5686,7 @@
             // 
             // comboBox8
             // 
+            resources.ApplyResources(this.comboBox8, "comboBox8");
             this.comboBox8.FormattingEnabled = true;
             this.comboBox8.Items.AddRange(new object[] {
             resources.GetString("comboBox8.Items"),
@@ -5695,12 +5695,12 @@
             resources.GetString("comboBox8.Items3"),
             resources.GetString("comboBox8.Items4"),
             resources.GetString("comboBox8.Items5")});
-            resources.ApplyResources(this.comboBox8, "comboBox8");
             this.comboBox8.Name = "comboBox8";
             this.comboBox8.SelectedIndexChanged += new System.EventHandler(this.comboBox8_SelectedIndexChanged);
             // 
             // comboBox9
             // 
+            resources.ApplyResources(this.comboBox9, "comboBox9");
             this.comboBox9.ForeColor = System.Drawing.Color.Red;
             this.comboBox9.FormattingEnabled = true;
             this.comboBox9.Items.AddRange(new object[] {
@@ -5712,7 +5712,6 @@
             resources.GetString("comboBox9.Items5"),
             resources.GetString("comboBox9.Items6"),
             resources.GetString("comboBox9.Items7")});
-            resources.ApplyResources(this.comboBox9, "comboBox9");
             this.comboBox9.Name = "comboBox9";
             this.comboBox9.SelectedIndexChanged += new System.EventHandler(this.comboBox9_SelectedIndexChanged);
             // 
@@ -5745,6 +5744,7 @@
             // 
             // tabPage9
             // 
+            resources.ApplyResources(this.tabPage9, "tabPage9");
             this.tabPage9.Controls.Add(this.label803);
             this.tabPage9.Controls.Add(this.label804);
             this.tabPage9.Controls.Add(this.numericUpDown198);
@@ -5769,7 +5769,6 @@
             this.tabPage9.Controls.Add(this.label56);
             this.tabPage9.Controls.Add(this.numericUpDown27);
             this.tabPage9.ImageKey = global::ControlBalance.MyStrings.About1333;
-            resources.ApplyResources(this.tabPage9, "tabPage9");
             this.tabPage9.Name = "tabPage9";
             this.tabPage9.ToolTipText = global::ControlBalance.MyStrings.About1333;
             this.tabPage9.UseVisualStyleBackColor = true;
@@ -5943,6 +5942,7 @@
             // 
             // tabPage5
             // 
+            resources.ApplyResources(this.tabPage5, "tabPage5");
             this.tabPage5.Controls.Add(this.numericUpDown244);
             this.tabPage5.Controls.Add(this.panel79);
             this.tabPage5.Controls.Add(this.label915);
@@ -5959,7 +5959,6 @@
             this.tabPage5.Controls.Add(this.label912);
             this.tabPage5.Controls.Add(this.checkBox70);
             this.tabPage5.ImageKey = global::ControlBalance.MyStrings.About1333;
-            resources.ApplyResources(this.tabPage5, "tabPage5");
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.ToolTipText = global::ControlBalance.MyStrings.About1333;
             this.tabPage5.UseVisualStyleBackColor = true;
@@ -5982,6 +5981,7 @@
             // 
             // panel79
             // 
+            resources.ApplyResources(this.panel79, "panel79");
             this.panel79.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel79.Controls.Add(this.checkBox112);
             this.panel79.Controls.Add(this.numericUpDown233);
@@ -5990,7 +5990,6 @@
             this.panel79.Controls.Add(this.label897);
             this.panel79.Controls.Add(this.label898);
             this.panel79.Controls.Add(this.numericUpDown235);
-            resources.ApplyResources(this.panel79, "panel79");
             this.panel79.Name = "panel79";
             // 
             // checkBox112
@@ -6065,9 +6064,9 @@
             // 
             // panel35
             // 
+            resources.ApplyResources(this.panel35, "panel35");
             this.panel35.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel35.Controls.Add(this.label2);
-            this.panel35.Controls.Add(this.label813);
             this.panel35.Controls.Add(this.numericUpDown234);
             this.panel35.Controls.Add(this.checkBox99);
             this.panel35.Controls.Add(this.label894);
@@ -6083,21 +6082,14 @@
             this.panel35.Controls.Add(this.label42);
             this.panel35.Controls.Add(this.label40);
             this.panel35.Controls.Add(this.numericUpDown26);
-            resources.ApplyResources(this.panel35, "panel35");
             this.panel35.Name = "panel35";
             this.panel35.Paint += new System.Windows.Forms.PaintEventHandler(this.panel35_Paint);
             // 
             // label2
             // 
-            this.label2.ImageKey = global::ControlBalance.MyStrings.About1333;
             resources.ApplyResources(this.label2, "label2");
+            this.label2.ImageKey = global::ControlBalance.MyStrings.About1333;
             this.label2.Name = "label2";
-            // 
-            // label813
-            // 
-            this.label813.ImageKey = global::ControlBalance.MyStrings.About1333;
-            resources.ApplyResources(this.label813, "label813");
-            this.label813.Name = "label813";
             // 
             // numericUpDown234
             // 
@@ -6192,6 +6184,7 @@
             // 
             // panel59
             // 
+            resources.ApplyResources(this.panel59, "panel59");
             this.panel59.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel59.Controls.Add(this.checkBox104);
             this.panel59.Controls.Add(this.label673);
@@ -6231,7 +6224,6 @@
             this.panel59.Controls.Add(this.label92);
             this.panel59.Controls.Add(this.label95);
             this.panel59.Controls.Add(this.label94);
-            resources.ApplyResources(this.panel59, "panel59");
             this.panel59.Name = "panel59";
             // 
             // checkBox104
@@ -6412,6 +6404,7 @@
             // 
             // panel46
             // 
+            resources.ApplyResources(this.panel46, "panel46");
             this.panel46.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel46.Controls.Add(this.checkBox101);
             this.panel46.Controls.Add(this.label589);
@@ -6420,7 +6413,6 @@
             this.panel46.Controls.Add(this.label573);
             this.panel46.Controls.Add(this.label583);
             this.panel46.Controls.Add(this.numericUpDown152);
-            resources.ApplyResources(this.panel46, "panel46");
             this.panel46.Name = "panel46";
             // 
             // checkBox101
@@ -6467,12 +6459,12 @@
             // 
             // numericUpDown152
             // 
+            resources.ApplyResources(this.numericUpDown152, "numericUpDown152");
             this.numericUpDown152.Increment = new decimal(new int[] {
             50,
             0,
             0,
             0});
-            resources.ApplyResources(this.numericUpDown152, "numericUpDown152");
             this.numericUpDown152.Maximum = new decimal(new int[] {
             33000,
             0,
@@ -6494,6 +6486,7 @@
             // 
             // panel44
             // 
+            resources.ApplyResources(this.panel44, "panel44");
             this.panel44.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel44.Controls.Add(this.label812);
             this.panel44.Controls.Add(this.label810);
@@ -6504,7 +6497,6 @@
             this.panel44.Controls.Add(this.label603);
             this.panel44.Controls.Add(this.label604);
             this.panel44.Controls.Add(this.numericUpDown156);
-            resources.ApplyResources(this.panel44, "panel44");
             this.panel44.Name = "panel44";
             // 
             // label812
@@ -6529,8 +6521,8 @@
             // 
             // numericUpDown201
             // 
-            this.numericUpDown201.ForeColor = System.Drawing.Color.Red;
             resources.ApplyResources(this.numericUpDown201, "numericUpDown201");
+            this.numericUpDown201.ForeColor = System.Drawing.Color.Red;
             this.numericUpDown201.Maximum = new decimal(new int[] {
             255,
             0,
@@ -6604,16 +6596,17 @@
             // 
             // tabPage12
             // 
+            resources.ApplyResources(this.tabPage12, "tabPage12");
             this.tabPage12.Controls.Add(this.panel75);
             this.tabPage12.Controls.Add(this.panel78);
             this.tabPage12.Controls.Add(this.panel45);
             this.tabPage12.Controls.Add(this.panel58);
-            resources.ApplyResources(this.tabPage12, "tabPage12");
             this.tabPage12.Name = "tabPage12";
             this.tabPage12.UseVisualStyleBackColor = true;
             // 
             // panel75
             // 
+            resources.ApplyResources(this.panel75, "panel75");
             this.panel75.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel75.Controls.Add(this.panel80);
             this.panel75.Controls.Add(this.numericUpDown231);
@@ -6631,11 +6624,11 @@
             this.panel75.Controls.Add(this.label885);
             this.panel75.Controls.Add(this.numericUpDown213);
             this.panel75.Controls.Add(this.label840);
-            resources.ApplyResources(this.panel75, "panel75");
             this.panel75.Name = "panel75";
             // 
             // panel80
             // 
+            resources.ApplyResources(this.panel80, "panel80");
             this.panel80.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel80.Controls.Add(this.label913);
             this.panel80.Controls.Add(this.numericUpDown243);
@@ -6648,7 +6641,6 @@
             this.panel80.Controls.Add(this.numericUpDown175);
             this.panel80.Controls.Add(this.label676);
             this.panel80.Controls.Add(this.label677);
-            resources.ApplyResources(this.panel80, "panel80");
             this.panel80.Name = "panel80";
             // 
             // label913
@@ -6917,6 +6909,7 @@
             // 
             // panel78
             // 
+            resources.ApplyResources(this.panel78, "panel78");
             this.panel78.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel78.Controls.Add(this.numericUpDown241);
             this.panel78.Controls.Add(this.label909);
@@ -6960,13 +6953,12 @@
             this.panel78.Controls.Add(this.numericUpDown218);
             this.panel78.Controls.Add(this.label864);
             this.panel78.Controls.Add(this.label865);
-            resources.ApplyResources(this.panel78, "panel78");
             this.panel78.Name = "panel78";
             // 
             // numericUpDown241
             // 
-            this.numericUpDown241.ForeColor = System.Drawing.Color.Black;
             resources.ApplyResources(this.numericUpDown241, "numericUpDown241");
+            this.numericUpDown241.ForeColor = System.Drawing.Color.Black;
             this.numericUpDown241.Maximum = new decimal(new int[] {
             30000,
             0,
@@ -7007,8 +6999,8 @@
             // 
             // numericUpDown202
             // 
-            this.numericUpDown202.ForeColor = System.Drawing.Color.Red;
             resources.ApplyResources(this.numericUpDown202, "numericUpDown202");
+            this.numericUpDown202.ForeColor = System.Drawing.Color.Red;
             this.numericUpDown202.Maximum = new decimal(new int[] {
             254,
             0,
@@ -7038,8 +7030,8 @@
             // 
             // numericUpDown225
             // 
-            this.numericUpDown225.ForeColor = System.Drawing.Color.Black;
             resources.ApplyResources(this.numericUpDown225, "numericUpDown225");
+            this.numericUpDown225.ForeColor = System.Drawing.Color.Black;
             this.numericUpDown225.Maximum = new decimal(new int[] {
             30000,
             0,
@@ -7057,6 +7049,7 @@
             // 
             // panel74
             // 
+            resources.ApplyResources(this.panel74, "panel74");
             this.panel74.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel74.Controls.Add(this.numericUpDown204);
             this.panel74.Controls.Add(this.label826);
@@ -7065,7 +7058,6 @@
             this.panel74.Controls.Add(this.label822);
             this.panel74.Controls.Add(this.label820);
             this.panel74.Controls.Add(this.label821);
-            resources.ApplyResources(this.panel74, "panel74");
             this.panel74.Name = "panel74";
             // 
             // numericUpDown204
@@ -7288,8 +7280,8 @@
             // 
             // numericUpDown226
             // 
-            this.numericUpDown226.ForeColor = System.Drawing.Color.Black;
             resources.ApplyResources(this.numericUpDown226, "numericUpDown226");
+            this.numericUpDown226.ForeColor = System.Drawing.Color.Black;
             this.numericUpDown226.Maximum = new decimal(new int[] {
             30000,
             0,
@@ -7429,8 +7421,8 @@
             // 
             // numericUpDown218
             // 
-            this.numericUpDown218.ForeColor = System.Drawing.Color.Black;
             resources.ApplyResources(this.numericUpDown218, "numericUpDown218");
+            this.numericUpDown218.ForeColor = System.Drawing.Color.Black;
             this.numericUpDown218.Maximum = new decimal(new int[] {
             30000,
             0,
@@ -7455,6 +7447,7 @@
             // 
             // panel45
             // 
+            resources.ApplyResources(this.panel45, "panel45");
             this.panel45.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel45.Controls.Add(this.numericUpDown239);
             this.panel45.Controls.Add(this.label904);
@@ -7491,7 +7484,6 @@
             this.panel45.Controls.Add(this.label825);
             this.panel45.Controls.Add(this.label824);
             this.panel45.Controls.Add(this.numericUpDown207);
-            resources.ApplyResources(this.panel45, "panel45");
             this.panel45.Name = "panel45";
             // 
             // numericUpDown239
@@ -7844,6 +7836,7 @@
             // 
             // panel58
             // 
+            resources.ApplyResources(this.panel58, "panel58");
             this.panel58.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel58.Controls.Add(this.label1);
             this.panel58.Controls.Add(this.label880);
@@ -7853,14 +7846,13 @@
             this.panel58.Controls.Add(this.label639);
             this.panel58.Controls.Add(this.label678);
             this.panel58.Controls.Add(this.label480);
-            resources.ApplyResources(this.panel58, "panel58");
             this.panel58.Name = "panel58";
             // 
             // label1
             // 
+            resources.ApplyResources(this.label1, "label1");
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.ImageKey = global::ControlBalance.MyStrings.About1333;
-            resources.ApplyResources(this.label1, "label1");
             this.label1.Name = "label1";
             // 
             // label880
@@ -7911,6 +7903,7 @@
             // 
             // tabPage10
             // 
+            resources.ApplyResources(this.tabPage10, "tabPage10");
             this.tabPage10.Controls.Add(this.panel76);
             this.tabPage10.Controls.Add(this.panel14);
             this.tabPage10.Controls.Add(this.panel67);
@@ -7930,13 +7923,13 @@
             this.tabPage10.Controls.Add(this.checkBox91);
             this.tabPage10.Controls.Add(this.panel62);
             this.tabPage10.ImageKey = global::ControlBalance.MyStrings.About1333;
-            resources.ApplyResources(this.tabPage10, "tabPage10");
             this.tabPage10.Name = "tabPage10";
             this.tabPage10.ToolTipText = global::ControlBalance.MyStrings.About1333;
             this.tabPage10.UseVisualStyleBackColor = true;
             // 
             // panel76
             // 
+            resources.ApplyResources(this.panel76, "panel76");
             this.panel76.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel76.Controls.Add(this.panel77);
             this.panel76.Controls.Add(this.label846);
@@ -7959,11 +7952,11 @@
             this.panel76.Controls.Add(this.label852);
             this.panel76.Controls.Add(this.numericUpDown219);
             this.panel76.Controls.Add(this.label849);
-            resources.ApplyResources(this.panel76, "panel76");
             this.panel76.Name = "panel76";
             // 
             // panel77
             // 
+            resources.ApplyResources(this.panel77, "panel77");
             this.panel77.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel77.Controls.Add(this.numericUpDown214);
             this.panel77.Controls.Add(this.label844);
@@ -7978,7 +7971,6 @@
             this.panel77.Controls.Add(this.label862);
             this.panel77.Controls.Add(this.numericUpDown223);
             this.panel77.Controls.Add(this.label863);
-            resources.ApplyResources(this.panel77, "panel77");
             this.panel77.Name = "panel77";
             // 
             // numericUpDown214
@@ -8148,8 +8140,8 @@
             // 
             // button1
             // 
-            this.button1.ImageKey = global::ControlBalance.MyStrings.About1333;
             resources.ApplyResources(this.button1, "button1");
+            this.button1.ImageKey = global::ControlBalance.MyStrings.About1333;
             this.button1.Name = "button1";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
@@ -8279,6 +8271,7 @@
             // 
             // panel14
             // 
+            resources.ApplyResources(this.panel14, "panel14");
             this.panel14.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel14.Controls.Add(this.label775);
             this.panel14.Controls.Add(this.comboBox22);
@@ -8288,7 +8281,6 @@
             this.panel14.Controls.Add(this.radioButton18);
             this.panel14.Controls.Add(this.label473);
             this.panel14.Controls.Add(this.radioButton17);
-            resources.ApplyResources(this.panel14, "panel14");
             this.panel14.Name = "panel14";
             // 
             // label775
@@ -8383,6 +8375,7 @@
             // 
             // panel67
             // 
+            resources.ApplyResources(this.panel67, "panel67");
             this.panel67.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel67.Controls.Add(this.button52);
             this.panel67.Controls.Add(this.label773);
@@ -8432,13 +8425,12 @@
             this.panel67.Controls.Add(this.label729);
             this.panel67.Controls.Add(this.label730);
             this.panel67.Controls.Add(this.label728);
-            resources.ApplyResources(this.panel67, "panel67");
             this.panel67.Name = "panel67";
             // 
             // button52
             // 
-            this.button52.ImageKey = global::ControlBalance.MyStrings.About1333;
             resources.ApplyResources(this.button52, "button52");
+            this.button52.ImageKey = global::ControlBalance.MyStrings.About1333;
             this.button52.Name = "button52";
             this.button52.UseVisualStyleBackColor = true;
             this.button52.Click += new System.EventHandler(this.button52_Click_1);
@@ -8759,8 +8751,8 @@
             // 
             // panel66
             // 
-            this.panel66.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             resources.ApplyResources(this.panel66, "panel66");
+            this.panel66.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel66.Name = "panel66";
             // 
             // label710
@@ -8839,8 +8831,8 @@
             // 
             // button51
             // 
-            this.button51.ImageKey = global::ControlBalance.MyStrings.About1333;
             resources.ApplyResources(this.button51, "button51");
+            this.button51.ImageKey = global::ControlBalance.MyStrings.About1333;
             this.button51.Name = "button51";
             this.button51.UseVisualStyleBackColor = true;
             this.button51.Click += new System.EventHandler(this.button51_Click);
@@ -8863,11 +8855,11 @@
             // 
             // panel62
             // 
+            resources.ApplyResources(this.panel62, "panel62");
             this.panel62.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel62.Controls.Add(this.radioButton19);
             this.panel62.Controls.Add(this.radioButton20);
             this.panel62.Controls.Add(this.radioButton21);
-            resources.ApplyResources(this.panel62, "panel62");
             this.panel62.Name = "panel62";
             // 
             // radioButton19
@@ -8898,6 +8890,7 @@
             // 
             // tabPage2
             // 
+            resources.ApplyResources(this.tabPage2, "tabPage2");
             this.tabPage2.Controls.Add(this.label623);
             this.tabPage2.Controls.Add(this.label624);
             this.tabPage2.Controls.Add(this.label563);
@@ -8966,7 +8959,6 @@
             this.tabPage2.Controls.Add(this.label122);
             this.tabPage2.Controls.Add(this.button11);
             this.tabPage2.ImageKey = global::ControlBalance.MyStrings.About1333;
-            resources.ApplyResources(this.tabPage2, "tabPage2");
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.ToolTipText = global::ControlBalance.MyStrings.About1333;
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -9145,16 +9137,16 @@
             // 
             // button18
             // 
-            this.button18.ImageKey = global::ControlBalance.MyStrings.About1333;
             resources.ApplyResources(this.button18, "button18");
+            this.button18.ImageKey = global::ControlBalance.MyStrings.About1333;
             this.button18.Name = "button18";
             this.button18.UseVisualStyleBackColor = true;
             this.button18.Click += new System.EventHandler(this.button18_Click);
             // 
             // button17
             // 
-            this.button17.ImageKey = global::ControlBalance.MyStrings.About1333;
             resources.ApplyResources(this.button17, "button17");
+            this.button17.ImageKey = global::ControlBalance.MyStrings.About1333;
             this.button17.Name = "button17";
             this.button17.UseVisualStyleBackColor = true;
             this.button17.Click += new System.EventHandler(this.button17_Click);
@@ -9365,14 +9357,15 @@
             // 
             // button11
             // 
-            this.button11.ImageKey = global::ControlBalance.MyStrings.About1333;
             resources.ApplyResources(this.button11, "button11");
+            this.button11.ImageKey = global::ControlBalance.MyStrings.About1333;
             this.button11.Name = "button11";
             this.button11.UseVisualStyleBackColor = true;
             this.button11.Click += new System.EventHandler(this.button11_Click);
             // 
             // tabPage11
             // 
+            resources.ApplyResources(this.tabPage11, "tabPage11");
             this.tabPage11.Controls.Add(this.label788);
             this.tabPage11.Controls.Add(this.numericUpDown194);
             this.tabPage11.Controls.Add(this.label786);
@@ -9381,7 +9374,6 @@
             this.tabPage11.Controls.Add(this.label787);
             this.tabPage11.Controls.Add(this.button20);
             this.tabPage11.ImageKey = global::ControlBalance.MyStrings.About1333;
-            resources.ApplyResources(this.tabPage11, "tabPage11");
             this.tabPage11.Name = "tabPage11";
             this.tabPage11.ToolTipText = global::ControlBalance.MyStrings.About1333;
             this.tabPage11.UseVisualStyleBackColor = true;
@@ -9394,12 +9386,12 @@
             // 
             // numericUpDown194
             // 
+            resources.ApplyResources(this.numericUpDown194, "numericUpDown194");
             this.numericUpDown194.Increment = new decimal(new int[] {
             25,
             0,
             0,
             0});
-            resources.ApplyResources(this.numericUpDown194, "numericUpDown194");
             this.numericUpDown194.Maximum = new decimal(new int[] {
             1500,
             0,
@@ -9451,6 +9443,7 @@
             // 
             // tabPage6
             // 
+            resources.ApplyResources(this.tabPage6, "tabPage6");
             this.tabPage6.Controls.Add(this.label872);
             this.tabPage6.Controls.Add(this.label873);
             this.tabPage6.Controls.Add(this.numericUpDown227);
@@ -9529,7 +9522,6 @@
             this.tabPage6.Controls.Add(this.label570);
             this.tabPage6.Controls.Add(this.button10);
             this.tabPage6.ImageKey = global::ControlBalance.MyStrings.About1333;
-            resources.ApplyResources(this.tabPage6, "tabPage6");
             this.tabPage6.Name = "tabPage6";
             this.tabPage6.ToolTipText = global::ControlBalance.MyStrings.About1333;
             this.tabPage6.UseVisualStyleBackColor = true;
@@ -9573,6 +9565,7 @@
             // 
             // panel70
             // 
+            resources.ApplyResources(this.panel70, "panel70");
             this.panel70.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel70.Controls.Add(this.label801);
             this.panel70.Controls.Add(this.numericUpDown106);
@@ -9581,7 +9574,6 @@
             this.panel70.Controls.Add(this.numericUpDown105);
             this.panel70.Controls.Add(this.label398);
             this.panel70.Controls.Add(this.label399);
-            resources.ApplyResources(this.panel70, "panel70");
             this.panel70.Name = "panel70";
             // 
             // label801
@@ -9659,6 +9651,7 @@
             // 
             // panel69
             // 
+            resources.ApplyResources(this.panel69, "panel69");
             this.panel69.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel69.Controls.Add(this.label796);
             this.panel69.Controls.Add(this.numericUpDown126);
@@ -9667,7 +9660,6 @@
             this.panel69.Controls.Add(this.label571);
             this.panel69.Controls.Add(this.numericUpDown148);
             this.panel69.Controls.Add(this.label572);
-            resources.ApplyResources(this.panel69, "panel69");
             this.panel69.Name = "panel69";
             // 
             // label796
@@ -9779,6 +9771,7 @@
             // 
             // panel36
             // 
+            resources.ApplyResources(this.panel36, "panel36");
             this.panel36.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel36.Controls.Add(this.checkBox44);
             this.panel36.Controls.Add(this.label556);
@@ -9815,7 +9808,6 @@
             this.panel36.Controls.Add(this.label491);
             this.panel36.Controls.Add(this.label485);
             this.panel36.Controls.Add(this.comboBox14);
-            resources.ApplyResources(this.panel36, "panel36");
             this.panel36.Name = "panel36";
             // 
             // checkBox44
@@ -10128,6 +10120,7 @@
             // 
             // comboBox14
             // 
+            resources.ApplyResources(this.comboBox14, "comboBox14");
             this.comboBox14.FormattingEnabled = true;
             this.comboBox14.Items.AddRange(new object[] {
             resources.GetString("comboBox14.Items"),
@@ -10145,7 +10138,6 @@
             resources.GetString("comboBox14.Items12"),
             resources.GetString("comboBox14.Items13"),
             resources.GetString("comboBox14.Items14")});
-            resources.ApplyResources(this.comboBox14, "comboBox14");
             this.comboBox14.Name = "comboBox14";
             this.comboBox14.SelectedIndexChanged += new System.EventHandler(this.comboBox14_SelectedIndexChanged);
             // 
@@ -10194,6 +10186,7 @@
             // 
             // panel63
             // 
+            resources.ApplyResources(this.panel63, "panel63");
             this.panel63.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel63.Controls.Add(this.label711);
             this.panel63.Controls.Add(this.label688);
@@ -10208,7 +10201,6 @@
             this.panel63.Controls.Add(this.label691);
             this.panel63.Controls.Add(this.numericUpDown179);
             this.panel63.Controls.Add(this.label690);
-            resources.ApplyResources(this.panel63, "panel63");
             this.panel63.Name = "panel63";
             // 
             // label711
@@ -10355,6 +10347,7 @@
             // 
             // comboBox19
             // 
+            resources.ApplyResources(this.comboBox19, "comboBox19");
             this.comboBox19.ForeColor = System.Drawing.SystemColors.ControlText;
             this.comboBox19.FormattingEnabled = true;
             this.comboBox19.Items.AddRange(new object[] {
@@ -10373,28 +10366,27 @@
             resources.GetString("comboBox19.Items12"),
             resources.GetString("comboBox19.Items13"),
             resources.GetString("comboBox19.Items14")});
-            resources.ApplyResources(this.comboBox19, "comboBox19");
             this.comboBox19.Name = "comboBox19";
             this.comboBox19.SelectionChangeCommitted += new System.EventHandler(this.comboBox19_SelectionChangeCommitted);
             // 
             // panel61
             // 
+            resources.ApplyResources(this.panel61, "panel61");
             this.panel61.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel61.Controls.Add(this.numericUpDown176);
             this.panel61.Controls.Add(this.label685);
             this.panel61.Controls.Add(this.checkBox90);
-            resources.ApplyResources(this.panel61, "panel61");
             this.panel61.Name = "panel61";
             // 
             // numericUpDown176
             // 
+            resources.ApplyResources(this.numericUpDown176, "numericUpDown176");
             this.numericUpDown176.ForeColor = System.Drawing.SystemColors.ControlText;
             this.numericUpDown176.Increment = new decimal(new int[] {
             64,
             0,
             0,
             0});
-            resources.ApplyResources(this.numericUpDown176, "numericUpDown176");
             this.numericUpDown176.Maximum = new decimal(new int[] {
             200000,
             0,
@@ -10439,6 +10431,7 @@
             // 
             // comboBox18
             // 
+            resources.ApplyResources(this.comboBox18, "comboBox18");
             this.comboBox18.ForeColor = System.Drawing.SystemColors.ControlText;
             this.comboBox18.FormattingEnabled = true;
             this.comboBox18.Items.AddRange(new object[] {
@@ -10446,7 +10439,6 @@
             resources.GetString("comboBox18.Items1"),
             resources.GetString("comboBox18.Items2"),
             resources.GetString("comboBox18.Items3")});
-            resources.ApplyResources(this.comboBox18, "comboBox18");
             this.comboBox18.Name = "comboBox18";
             this.comboBox18.SelectedIndexChanged += new System.EventHandler(this.comboBox18_SelectedIndexChanged);
             this.comboBox18.SelectionChangeCommitted += new System.EventHandler(this.comboBox18_SelectionChangeCommitted);
@@ -10465,20 +10457,20 @@
             // 
             // button47
             // 
-            this.button47.ImageKey = global::ControlBalance.MyStrings.About1333;
             resources.ApplyResources(this.button47, "button47");
+            this.button47.ImageKey = global::ControlBalance.MyStrings.About1333;
             this.button47.Name = "button47";
             this.button47.UseVisualStyleBackColor = true;
             this.button47.Click += new System.EventHandler(this.button47_Click);
             // 
             // panel51
             // 
+            resources.ApplyResources(this.panel51, "panel51");
             this.panel51.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel51.Controls.Add(this.radioButton15);
             this.panel51.Controls.Add(this.radioButton14);
             this.panel51.Controls.Add(this.radioButton13);
             this.panel51.Controls.Add(this.button40);
-            resources.ApplyResources(this.panel51, "panel51");
             this.panel51.Name = "panel51";
             // 
             // radioButton15
@@ -10512,8 +10504,8 @@
             // 
             // button40
             // 
-            this.button40.ImageKey = global::ControlBalance.MyStrings.About1333;
             resources.ApplyResources(this.button40, "button40");
+            this.button40.ImageKey = global::ControlBalance.MyStrings.About1333;
             this.button40.Name = "button40";
             this.button40.UseVisualStyleBackColor = true;
             this.button40.Click += new System.EventHandler(this.button40_Click);
@@ -10540,6 +10532,7 @@
             // 
             // panel48
             // 
+            resources.ApplyResources(this.panel48, "panel48");
             this.panel48.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel48.Controls.Add(this.label596);
             this.panel48.Controls.Add(this.label597);
@@ -10548,7 +10541,6 @@
             this.panel48.Controls.Add(this.label594);
             this.panel48.Controls.Add(this.label595);
             this.panel48.Controls.Add(this.numericUpDown158);
-            resources.ApplyResources(this.panel48, "panel48");
             this.panel48.Name = "panel48";
             // 
             // label596
@@ -10575,8 +10567,8 @@
             // 
             // numericUpDown159
             // 
-            this.numericUpDown159.ForeColor = System.Drawing.SystemColors.ControlText;
             resources.ApplyResources(this.numericUpDown159, "numericUpDown159");
+            this.numericUpDown159.ForeColor = System.Drawing.SystemColors.ControlText;
             this.numericUpDown159.Maximum = new decimal(new int[] {
             30000,
             0,
@@ -10646,12 +10638,12 @@
             // 
             // numericUpDown174
             // 
+            resources.ApplyResources(this.numericUpDown174, "numericUpDown174");
             this.numericUpDown174.Increment = new decimal(new int[] {
             25,
             0,
             0,
             0});
-            resources.ApplyResources(this.numericUpDown174, "numericUpDown174");
             this.numericUpDown174.Maximum = new decimal(new int[] {
             3000,
             0,
@@ -10819,20 +10811,20 @@
             // 
             // button39
             // 
-            this.button39.ImageKey = global::ControlBalance.MyStrings.About1333;
             resources.ApplyResources(this.button39, "button39");
+            this.button39.ImageKey = global::ControlBalance.MyStrings.About1333;
             this.button39.Name = "button39";
             this.button39.UseVisualStyleBackColor = true;
             this.button39.Click += new System.EventHandler(this.button39_Click_2);
             // 
             // numericUpDown145
             // 
+            resources.ApplyResources(this.numericUpDown145, "numericUpDown145");
             this.numericUpDown145.Increment = new decimal(new int[] {
             64,
             0,
             0,
             0});
-            resources.ApplyResources(this.numericUpDown145, "numericUpDown145");
             this.numericUpDown145.Maximum = new decimal(new int[] {
             80000,
             0,
@@ -10854,8 +10846,8 @@
             // 
             // button16
             // 
-            this.button16.ImageKey = global::ControlBalance.MyStrings.About1333;
             resources.ApplyResources(this.button16, "button16");
+            this.button16.ImageKey = global::ControlBalance.MyStrings.About1333;
             this.button16.Name = "button16";
             this.button16.UseVisualStyleBackColor = true;
             this.button16.Click += new System.EventHandler(this.button16_Click_1);
@@ -10868,8 +10860,8 @@
             // 
             // button38
             // 
-            this.button38.ImageKey = global::ControlBalance.MyStrings.About1333;
             resources.ApplyResources(this.button38, "button38");
+            this.button38.ImageKey = global::ControlBalance.MyStrings.About1333;
             this.button38.Name = "button38";
             this.button38.UseVisualStyleBackColor = true;
             this.button38.Click += new System.EventHandler(this.button38_Click_1);
@@ -10888,6 +10880,7 @@
             // 
             // comboBox5
             // 
+            resources.ApplyResources(this.comboBox5, "comboBox5");
             this.comboBox5.FormattingEnabled = true;
             this.comboBox5.Items.AddRange(new object[] {
             resources.GetString("comboBox5.Items"),
@@ -10955,7 +10948,6 @@
             resources.GetString("comboBox5.Items62"),
             resources.GetString("comboBox5.Items63"),
             resources.GetString("comboBox5.Items64")});
-            resources.ApplyResources(this.comboBox5, "comboBox5");
             this.comboBox5.Name = "comboBox5";
             // 
             // numericUpDown146
@@ -11016,8 +11008,8 @@
             // 
             // button19
             // 
-            this.button19.ImageKey = global::ControlBalance.MyStrings.About1333;
             resources.ApplyResources(this.button19, "button19");
+            this.button19.ImageKey = global::ControlBalance.MyStrings.About1333;
             this.button19.Name = "button19";
             this.button19.UseVisualStyleBackColor = true;
             this.button19.Click += new System.EventHandler(this.button19_Click);
@@ -11096,6 +11088,7 @@
             // 
             // comboBox4
             // 
+            resources.ApplyResources(this.comboBox4, "comboBox4");
             this.comboBox4.FormattingEnabled = true;
             this.comboBox4.Items.AddRange(new object[] {
             resources.GetString("comboBox4.Items"),
@@ -11119,12 +11112,12 @@
             resources.GetString("comboBox4.Items18"),
             resources.GetString("comboBox4.Items19"),
             resources.GetString("comboBox4.Items20")});
-            resources.ApplyResources(this.comboBox4, "comboBox4");
             this.comboBox4.Name = "comboBox4";
             this.comboBox4.SelectedIndexChanged += new System.EventHandler(this.comboBox4_SelectedIndexChanged);
             // 
             // comboBox3
             // 
+            resources.ApplyResources(this.comboBox3, "comboBox3");
             this.comboBox3.FormattingEnabled = true;
             this.comboBox3.Items.AddRange(new object[] {
             resources.GetString("comboBox3.Items"),
@@ -11148,15 +11141,14 @@
             resources.GetString("comboBox3.Items18"),
             resources.GetString("comboBox3.Items19"),
             resources.GetString("comboBox3.Items20")});
-            resources.ApplyResources(this.comboBox3, "comboBox3");
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.SelectedIndexChanged += new System.EventHandler(this.comboBox3_SelectedIndexChanged);
             // 
             // button15
             // 
+            resources.ApplyResources(this.button15, "button15");
             this.button15.BackColor = System.Drawing.Color.Lime;
             this.button15.ImageKey = global::ControlBalance.MyStrings.About1333;
-            resources.ApplyResources(this.button15, "button15");
             this.button15.Name = "button15";
             this.button15.UseVisualStyleBackColor = false;
             this.button15.Click += new System.EventHandler(this.button15_Click);
@@ -11168,40 +11160,40 @@
             // 
             // statusStrip1
             // 
+            resources.ApplyResources(this.statusStrip1, "statusStrip1");
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel1,
             this.toolStripProgressBar1,
             this.toolStripStatusLabel2,
             this.toolStripStatusLabel3});
-            resources.ApplyResources(this.statusStrip1, "statusStrip1");
             this.statusStrip1.Name = "statusStrip1";
             // 
             // toolStripStatusLabel1
             // 
+            resources.ApplyResources(this.toolStripStatusLabel1, "toolStripStatusLabel1");
             this.toolStripStatusLabel1.ForeColor = System.Drawing.Color.Red;
             this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            resources.ApplyResources(this.toolStripStatusLabel1, "toolStripStatusLabel1");
             // 
             // toolStripProgressBar1
             // 
+            resources.ApplyResources(this.toolStripProgressBar1, "toolStripProgressBar1");
             this.toolStripProgressBar1.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
             this.toolStripProgressBar1.ForeColor = System.Drawing.Color.Red;
             this.toolStripProgressBar1.Name = "toolStripProgressBar1";
-            resources.ApplyResources(this.toolStripProgressBar1, "toolStripProgressBar1");
             this.toolStripProgressBar1.Value = 100;
             // 
             // toolStripStatusLabel2
             // 
+            resources.ApplyResources(this.toolStripStatusLabel2, "toolStripStatusLabel2");
             this.toolStripStatusLabel2.ForeColor = System.Drawing.Color.Fuchsia;
             this.toolStripStatusLabel2.Name = "toolStripStatusLabel2";
-            resources.ApplyResources(this.toolStripStatusLabel2, "toolStripStatusLabel2");
             // 
             // toolStripStatusLabel3
             // 
+            resources.ApplyResources(this.toolStripStatusLabel3, "toolStripStatusLabel3");
             this.toolStripStatusLabel3.ActiveLinkColor = System.Drawing.Color.Red;
             this.toolStripStatusLabel3.ForeColor = System.Drawing.Color.Black;
             this.toolStripStatusLabel3.Name = "toolStripStatusLabel3";
-            resources.ApplyResources(this.toolStripStatusLabel3, "toolStripStatusLabel3");
             // 
             // label526
             // 
@@ -11239,18 +11231,18 @@
             // 
             // button41
             // 
+            resources.ApplyResources(this.button41, "button41");
             this.button41.BackColor = System.Drawing.Color.PaleGoldenrod;
             this.button41.ImageKey = global::ControlBalance.MyStrings.About1333;
-            resources.ApplyResources(this.button41, "button41");
             this.button41.Name = "button41";
             this.button41.UseVisualStyleBackColor = false;
             this.button41.Click += new System.EventHandler(this.button41_Click);
             // 
             // button42
             // 
+            resources.ApplyResources(this.button42, "button42");
             this.button42.BackColor = System.Drawing.Color.PaleGoldenrod;
             this.button42.ImageKey = global::ControlBalance.MyStrings.About1333;
-            resources.ApplyResources(this.button42, "button42");
             this.button42.Name = "button42";
             this.button42.UseVisualStyleBackColor = false;
             this.button42.Click += new System.EventHandler(this.button42_Click);
@@ -11276,9 +11268,9 @@
             // 
             // button44
             // 
+            resources.ApplyResources(this.button44, "button44");
             this.button44.BackColor = System.Drawing.Color.HotPink;
             this.button44.ImageKey = global::ControlBalance.MyStrings.About1333;
-            resources.ApplyResources(this.button44, "button44");
             this.button44.Name = "button44";
             this.button44.UseVisualStyleBackColor = false;
             this.button44.Click += new System.EventHandler(this.button44_Click);
@@ -11310,6 +11302,7 @@
             // 
             // chart1
             // 
+            resources.ApplyResources(this.chart1, "chart1");
             chartArea1.AxisY.ScaleBreakStyle.Enabled = true;
             chartArea1.CursorX.IsUserSelectionEnabled = true;
             chartArea1.CursorY.IsUserSelectionEnabled = true;
@@ -11317,7 +11310,6 @@
             this.chart1.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
             this.chart1.Legends.Add(legend1);
-            resources.ApplyResources(this.chart1, "chart1");
             this.chart1.Name = "chart1";
             series1.ChartArea = "ChartArea1";
             series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.FastLine;
@@ -12771,12 +12763,11 @@
         private System.Windows.Forms.ComboBox comboBox25;
         private System.Windows.Forms.CheckBox checkBox61;
         private System.Windows.Forms.ComboBox comboBox26;
-        private System.Windows.Forms.Label label813;
         private System.Windows.Forms.CheckBox checkBox88;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
+        private System.Windows.Forms.Label label2;
     }
 }
 

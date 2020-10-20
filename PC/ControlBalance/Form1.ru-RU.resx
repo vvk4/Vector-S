@@ -148,6 +148,9 @@
   <data name="numericUpDown15.Location" type="System.Drawing.Point, System.Drawing">
     <value>43, 40</value>
   </data>
+  <data name="button8.Location" type="System.Drawing.Point, System.Drawing">
+    <value>153, 234</value>
+  </data>
   <data name="label91.Location" type="System.Drawing.Point, System.Drawing">
     <value>10, 157</value>
   </data>
@@ -156,6 +159,9 @@
   </data>
   <data name="label95.Location" type="System.Drawing.Point, System.Drawing">
     <value>11, 197</value>
+  </data>
+  <data name="button9.Location" type="System.Drawing.Point, System.Drawing">
+    <value>17, 234</value>
   </data>
   <data name="label52.Location" type="System.Drawing.Point, System.Drawing">
     <value>58, 3</value>
@@ -6995,6 +7001,12 @@
   <data name="tabPage5.Text" xml:space="preserve">
     <value>Моноцикл</value>
   </data>
+  <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>141, 17</value>
+  </data>
+  <data name="label2.Text" xml:space="preserve">
+    <value>Горизонт (0.1град.):</value>
+  </data>
   <data name="checkBox99.Location" type="System.Drawing.Point, System.Drawing">
     <value>64, 60</value>
   </data>
@@ -7040,8 +7052,14 @@
   <data name="checkBox75.Location" type="System.Drawing.Point, System.Drawing">
     <value>56, 77</value>
   </data>
+  <data name="checkBox76.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9.75pt</value>
+  </data>
   <data name="checkBox76.Location" type="System.Drawing.Point, System.Drawing">
     <value>75, 23</value>
+  </data>
+  <data name="checkBox76.Size" type="System.Drawing.Size, System.Drawing">
+    <value>120, 20</value>
   </data>
   <data name="label573.Location" type="System.Drawing.Point, System.Drawing">
     <value>42, 41</value>
@@ -7051,6 +7069,12 @@
   </data>
   <data name="numericUpDown152.Location" type="System.Drawing.Point, System.Drawing">
     <value>164, 58</value>
+  </data>
+  <data name="label812.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt</value>
+  </data>
+  <data name="label812.Size" type="System.Drawing.Size, System.Drawing">
+    <value>103, 20</value>
   </data>
   <data name="tabPage12.Text" xml:space="preserve">
     <value>Моно ПИД</value>
@@ -7078,6 +7102,9 @@
   </data>
   <data name="numericUpDown240.Location" type="System.Drawing.Point, System.Drawing">
     <value>225, 126</value>
+  </data>
+  <data name="label823.Location" type="System.Drawing.Point, System.Drawing">
+    <value>137, 14</value>
   </data>
   <data name="label907.Location" type="System.Drawing.Point, System.Drawing">
     <value>185, 129</value>
@@ -7141,9 +7168,6 @@
   </data>
   <data name="label882.Text" xml:space="preserve">
     <value>Скорость увеличения Kd:</value>
-  </data>
-  <data name="label823.Location" type="System.Drawing.Point, System.Drawing">
-    <value>137, 14</value>
   </data>
   <data name="numericUpDown228.Location" type="System.Drawing.Point, System.Drawing">
     <value>225, 245</value>
@@ -7286,6 +7310,15 @@
   <data name="label905.Text" xml:space="preserve">
     <value>ELimit (0.01град.):</value>
   </data>
+  <data name="checkBox113.Location" type="System.Drawing.Point, System.Drawing">
+    <value>55, 334</value>
+  </data>
+  <data name="checkBox113.Size" type="System.Drawing.Size, System.Drawing">
+    <value>182, 17</value>
+  </data>
+  <data name="checkBox113.Text" xml:space="preserve">
+    <value>Звук, если ШИМ &gt;= I_PWMmax</value>
+  </data>
   <data name="label902.Location" type="System.Drawing.Point, System.Drawing">
     <value>150, 249</value>
   </data>
@@ -7309,15 +7342,6 @@
   </data>
   <data name="label899.Location" type="System.Drawing.Point, System.Drawing">
     <value>49, 271</value>
-  </data>
-  <data name="checkBox113.Location" type="System.Drawing.Point, System.Drawing">
-    <value>55, 334</value>
-  </data>
-  <data name="checkBox113.Size" type="System.Drawing.Size, System.Drawing">
-    <value>182, 17</value>
-  </data>
-  <data name="checkBox113.Text" xml:space="preserve">
-    <value>Звук, если ШИМ &gt;= I_PWMmax</value>
   </data>
   <data name="numericUpDown232.Location" type="System.Drawing.Point, System.Drawing">
     <value>190, 178</value>
@@ -7390,6 +7414,22 @@
   </data>
   <data name="panel58.Size" type="System.Drawing.Size, System.Drawing">
     <value>112, 104</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="label1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9.75pt</value>
+  </data>
+  <data name="label1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>68, 16</value>
+  </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>Текущие:</value>
   </data>
   <data name="label846.Location" type="System.Drawing.Point, System.Drawing">
     <value>268, 199</value>
@@ -7588,40 +7628,6 @@
   </data>
   <data name="checkBox88.Text" xml:space="preserve">
     <value>С паролем:</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="label1.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label1.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 9.75pt</value>
-  </data>
-  <data name="label1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>68, 16</value>
-  </data>
-  <data name="label1.Text" xml:space="preserve">
-    <value>Текущие:</value>
-  </data>
-  <data name="label2.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label2.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 10pt</value>
-  </data>
-  <data name="label2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>141, 17</value>
-  </data>
-  <data name="label2.Text" xml:space="preserve">
-    <value>Горизонт (0.1град.):</value>
-  </data>
-  <data name="chart1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>651, 368</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

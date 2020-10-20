@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
-  <asmv1:assemblyIdentity name="X1.exe" version="1.0.0.156" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="x86" type="win32" />
+  <asmv1:assemblyIdentity name="X1.exe" version="1.0.0.158" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="x86" type="win32" />
   <application />
   <entryPoint>
     <assemblyIdentity name="X1" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
@@ -42,26 +42,26 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="X1.exe" size="2327040">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="X1.exe" size="1977344">
       <assemblyIdentity name="X1" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>xUosNmyPlbq/2SaYHz/JeT/qOkU=</dsig:DigestValue>
+        <dsig:DigestValue>23ojr6q1WtiNgViUu+ZvV1A+/M8=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="en-US\X1.resources.dll" size="24064">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="en-US\X1.resources.dll" size="355328">
       <assemblyIdentity name="X1.resources" version="1.0.0.0" language="en-US" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>K+xwPmZLkUjhZVKxdLEGuIBsXYo=</dsig:DigestValue>
+        <dsig:DigestValue>rDneKXLbUj5cj5xUrFE3W8hxNhc=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -73,19 +73,19 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>mjVeFyY+HJLbAZNyFHEoLmQDI+U=</dsig:DigestValue>
+        <dsig:DigestValue>xjwHMw0gSNyWmzojAQi2foHam+E=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ru-RU\X1.resources.dll" size="407040">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ru-RU\X1.resources.dll" size="443904">
       <assemblyIdentity name="X1.resources" version="1.0.0.0" language="ru-RU" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>oUHNgP9Md82L3daAOq7tg5Aaztg=</dsig:DigestValue>
+        <dsig:DigestValue>HwwW4TiIiGb/LUzOQfjei204nBQ=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -97,7 +97,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>A/6O3fPnfTlSQ4dJHfc/8SyR4R8=</dsig:DigestValue>
+        <dsig:DigestValue>e9sahSgyfMKGjS6yUz0E+FekkZs=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
