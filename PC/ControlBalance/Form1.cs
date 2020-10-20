@@ -24,40 +24,40 @@ namespace ControlBalance
     {
 
         Form F2;
-        uint Theta1CntPWMSND;
+        uint  StartCNT=30;
 
         byte LightMode, Crr1Corr, PWMSignal, HallsLines, StopIfPWM100Time, CntKdSwitchCONST, PWMkHz;
         ushort LightSensorThresholdLo, LightSensorThresholdHi, CurrentMaxCurrentOnly, K_PWM_Nastr, SpdStartLevel, RegenOffMem, KpKpDeadZoneMem, KiKpDeadZoneMem, TimeHumanSensorOff;
-        ushort FaultStatus1Res, VGSStatus2Res, KiMax, DeadZoneHandleBarSegway, PWMChangedThreshold, Phase1Period1Up;
+        ushort FaultStatus1Res, VGSStatus2Res, KiMax, DeadZoneHandleBarSegway, PWMChangedThreshold;
         short JoystickCalibrX, JoystickCalibrY, JoistickDeadZone, KpSlowSpeed, KiKpMustBe, KRotMustBe, KpRotMustBe, KiRotMustBe, Eid, KdNoManR, KpDeadZone,PWMSignalTimer;
         public ushort AutoNastroykaState;
         public int StatFlags2;
         public Socket s;
         FileStream w;
         int CntMixedModeMax, MixedModeLevelOn, MixedModeLevelOff, CurrMixed, numericUpDown173PrevValue;
-        float Temperature1, Temperature2, Temperature3, TemperatureMaxOUT, TemperatureMaxIN, TemperatureMaxOUT_H, TemperatureMaxIN_H, Temperature4, Temperature5, Temperature6, Spd1USTKMH, K_ubt, _3VFl, _5VFl, _12VFl;
-        bool radioButton7CannotSndCMD, radioButton10CannotSndCMD, radioButton11CannotSndCMD, radioButton12CannotSndCMD, CanShowMsgChargingComplete, DataShown, OptionsShown;
+        float Temperature1, Temperature2, Temperature3, TemperatureMaxOUT, TemperatureMaxIN, TemperatureMaxOUT_H, TemperatureMaxIN_H, Temperature4, Temperature5, Temperature6, Spd1USTKMH, _3VFl, _5VFl, _12VFl;
+        bool radioButton7CannotSndCMD, radioButton10CannotSndCMD, radioButton11CannotSndCMD, radioButton12CannotSndCMD, CanShowMsgChargingComplete, DataShown;
         bool radioButton25CannotSndCMD, radioButton26CannotSndCMD, radioButton27CannotSndCMD, radioButton28CannotSndCMD;
-        bool GettingOptions = false, GettinPhase = false, RunningThread = false;
-        uint PhasesCnt2, Phase1Period1, Phase1Period2, Phase1Period3, Phase1Period4, Phase1Period5, Phase1PeriodTTL, TimeOutLoadOptions1, TimeOutLoadOptions2, DataShownCnt;
-        int BMSTimeOt, SummOk, SummNOk, TS4, KiCurr, KpCurr, CurrUst, CurrUstSpd0, CurrUstTek, SensorlessCurrUst, PhaseCnt, ConnectionCnt, MsgOpenPortCnt, KpTemperIN, KpTemperOUT, KiTemperIN, KiTemperOUT, BigCurrent;
+        bool GettinPhase = false, RunningThread = false;
+        uint PhasesCnt2, Phase1Period1, Phase1Period2, Phase1Period4, Phase1Period5, TimeOutLoadOptions1, TimeOutLoadOptions2, DataShownCnt;
+        int BMSTimeOt, SummOk, SummNOk, KiCurr, KpCurr, CurrUst, CurrUstSpd0, CurrUstTek, SensorlessCurrUst, ConnectionCnt, MsgOpenPortCnt, KpTemperIN, KpTemperOUT, KiTemperIN, KiTemperOUT, BigCurrent;
         int MAX_PWM_MEM, MaxSpdRevers, MAX_PWM_Revers, AutoPID_On_CntConst, SaveTimeOut, Phase1Period6, CurrPhaseLimit, CurrPhaseLimitSpd0, CurrPhaseLimitTek, CntNoChange;
-        short CurrA_P, CurrA_N, CurrC_P, CurrC_N, DoNotSendCmd, ThrottleLevelUpOff;
-        short KdNoManOneLeg, KdOneTwoLeg, KdOneTwoLeg_1, KdFreshman, Spd1Fl, Spd2Fl, EPID_Res, K_EPID_Res, V_MIN_OFF, V_MIN_Pre_OFF, V_MIN_Sound, V_min_OverV, SensorlessCntAlignConst, KpKpSpd, Spd1UST_Tmp;
-        short TiltYCorr, HighSpeed, GoalSpeed, StartRotHighSpeed, KRotHighSpeed, SpdLimImp, AlfaXResCorr, GyroYFl, GyroXFl, GyroZFl, Ki_PWM_Mode, KpKpZoneEnd;
-        ushort SpdRstSpeedLim, VibroT, VibroA, SpeedLimitSt4, KFirstBreak, SensorLessTimerConst, SensorLessTimerConst2, SensorlessSpdChngCntConst, BreakTMP, ADCThrottleBreak;
-        double Cr1, Cr2, GyroYAv;
-        uint V1, V2, V3, V4, V5, V6, V7, V8, V9, V10, V11, V12, V13, V14, V15, V16, V17, V18, Vmin, Vmax, BatteryKeys, UBatHi;
-        ushort BatErr, SensorThreshold, SensorThresholdUp, Sensor2ThresholdDn, Sensor2ThresholdUp, BreakThreshold, CntPhaseMEM, RCON_Mem;
-        byte ChagerKeys, KAccGyroSteer, KdAverage, SensOrder2, PhasePERMASS, PhasePERMASS_SHFT, HallDelay1_F, HallDelay1_B, HallA, HallDelay2_F, HallDelay2_B, CriticalError, ThrottleTmpChngMem, HallDelay1_Tek_F, HallDelay1_Tek_B;
-        byte Theta1Zero, Theta2Zero, PW_inc, But1Func, But2Func, But3Func, But4Func, But5Func, SensorllessSpdThreshold, CurrLimitTek, TemperatureTYPE, Profile, MaxAngleStopBreak, MixedModeSlowSpeed;
+        short CurrA_P, CurrA_N, CurrC_P, CurrC_N,  ThrottleLevelUpOff;
+        short  KdOneTwoLeg,  Spd1Fl, EPID_Res,  V_MIN_OFF, V_MIN_Pre_OFF, V_MIN_Sound, V_min_OverV, SensorlessCntAlignConst, KpKpSpd, Spd1UST_Tmp;
+        short TiltYCorr, HighSpeed, GoalSpeed, StartRotHighSpeed, KRotHighSpeed,  GyroYFl, GyroXFl, GyroZFl, Ki_PWM_Mode, KpKpZoneEnd;
+        ushort SpdRstSpeedLim,  SpeedLimitSt4, KFirstBreak, SensorLessTimerConst, SensorLessTimerConst2, SensorlessSpdChngCntConst, ADCThrottleBreak;
+        double Cr1, GyroYAv;
+        uint V8, V9, V10, V11, V12, V13, V14, V15, V16, V17, V18, BatteryKeys, UBatHi;
+        ushort BatErr, SensorThreshold, SensorThresholdUp, BreakThreshold, RCON_Mem;
+        byte ChagerKeys, KAccGyroSteer, KdAverage,  PhasePERMASS, PhasePERMASS_SHFT, HallDelay1_F, HallDelay1_B,   CriticalError, ThrottleTmpChngMem, HallDelay1_Tek_F, HallDelay1_Tek_B;
+        byte Theta1Zero, Theta2Zero,  But1Func, But2Func, But3Func, But4Func, But5Func, SensorllessSpdThreshold, CurrLimitTek, TemperatureTYPE, Profile, MaxAngleStopBreak, MixedModeSlowSpeed;
         byte _3psnSwitchBt3, _3psnSwitchBtNotPressed, _3psnSwitchBt4, _2WDMode;
         ushort UseTmr, TmrCntDelay = 5, DEADTIME_Si8233, Ki_PWM_ModeOff, KeyLightBrightness, ButtonBreakOnlyTime, SpdKiMin, KiMin, ELimitedMem;
-        uint CurrTuda1, CurrRegen1, CurrTuda2, CurrRegen2, Timer1Mem, Timer2Mem, TimerCnt, SerNumber, ProtectValue;
+        uint CurrTuda1, CurrRegen1, Timer1Mem, Timer2Mem, TimerCnt, SerNumber, ProtectValue;
 
-        int DiffAlfaConstL, DiffAlfaConstH, ShowHC05, TiltZadState5, Temperature;
+        int DiffAlfaConstL, DiffAlfaConstH, TiltZadState5, Temperature;
         int BeepPauseConstAlm, BzOnCntSeriaConstAlm, CntSingleBeepAlm;
-        int CntKRot_CHNG_Const, CntStartRot_CHNG_Const, KpSPD, ZeroCurr1, EpCurr1;
+        int  KpSPD, ZeroCurr1, EpCurr1;
 
 
         byte HallDelay1MaxSPD_F, HallDelay1MaxSPD_B, HallDelayMaxSPD, OCP_DEG, VDS_LVL, TemperatureTYPE_FETs;
@@ -69,33 +69,33 @@ namespace ControlBalance
 
         short ChagerCurr, P_Curr, I_Curr, P_U, I_U, BreakMonocycleSpd, TimeDecreaseKi, KdMax, KdMin, KiKd, VectorOnOffSpdLo, VectorOnOffSpdHi, KiUBTCoeff;
 
-        int Diametr1, PhasesPerRev1, TiltZadCHNG;
-        byte State, AutoPID_On_Speed, SlowStrtSpd, AntiPolicePower, MPU6050Err, CurrSensor, Halls;
+        int Diametr1, PhasesPerRev1;
+        byte AutoPID_On_Speed, SlowStrtSpd, AntiPolicePower, MPU6050Err, CurrSensor, Halls;
 
         float AutoPID_On_PWM;
 
-        int KpFreshman, KiFreshman, KpRotFreshman, KiRotFreshman;
-        int KRotFreshmanL, KRotFreshmanH, StartRotFreshmanL, StartRotFreshmanH;
+        
+        
 
-        short TiltZadAddNoManOneLeg, TiltZadAddOneTwoLeg, TiltZadAddOneTwoLeg_1, TiltZadAddFreshman, BreakThresholdDn, BreakThresholdUp, GyroZFlTurn, ECurr1Summ, KpNoManOneLeg;
-        int KpRotNoManOneLeg, KiRotNoManOneLeg, Preas1ADC, Preas2ADC;
-        int KRotNoManOneLeg, StartRotNoManOneLeg;
+        short TiltZadAddNoManOneLeg,   BreakThresholdDn, BreakThresholdUp, GyroZFlTurn, ECurr1Summ, KpNoManOneLeg;
+        int   Preas1ADC, Preas2ADC;
+        
 
-        int KpOneTwoLeg, KiOneTwoLeg, KpRotOneTwoLeg, KiRotOneTwoLeg;
-        int KRotOneTwoLeg, StartRotOneTwoLeg;
+        int    KiRotOneTwoLeg;
+        
 
-        int KpOneTwoLeg_1, KiOneTwoLeg_1, KpRotOneTwoLeg_1, KiRotOneTwoLeg_1;
-        int KRotOneTwoLeg_1, StartRotOneTwoLeg_1;
+        
+        
 
-        int LastMainTiltAngleMnErr, LastSteerTiltAngleMnErr, TiltAngleAvMnErr, StatFlgs, StatFlgs3,StatFlgs4, KpStp, AngleLimitStp, TiltZadAddNoMan;
+        int LastMainTiltAngleMnErr, LastSteerTiltAngleMnErr, TiltAngleAvMnErr, StatFlgs, StatFlgs3,StatFlgs4;
         int LastMainTiltAngleSteerErr, LastSteerTiltAngleSteerErr, TiltAngleAvSteerErr, TmrLocked;
         short AccX, AccY, AccZ;
         byte MainTiltNumErr, SteerTiltNumErr;
         double PhaseCr;
         ushort Spd0TimerConst, EpPWMmax, EiPWMmax, EdPWMmax, OnDelay;
-        uint CntSamples, DiffTiltLimit;
-        short AlfaXRes, AlfaYRes, GyroX, TiltXRes, PWM1, SenosrlessPWM1_1Const, SenosrlessPWM1_2Const, PWM2, Curr1, PhaseCurr, Curr2, Spd1Res, Spd2Res, GyroVert_Steer, GyroZFilter, AlfaYResPrevAv, DiffBetweenTilts, KiNoManOneLeg;
-        float UBT, SpdAv;
+        uint CntSamples;
+        short AlfaXRes, AlfaYRes, GyroX, TiltXRes, PWM1, SenosrlessPWM1_1Const, SenosrlessPWM1_2Const, Curr1, PhaseCurr, Spd1Res, GyroVert_Steer, GyroZFilter, AlfaYResPrevAv, DiffBetweenTilts, KiNoManOneLeg;
+        float UBT;
         byte[] TrmMass = new byte[255];
         byte[] SaveOptionsMass = new byte[1024];
         byte[] bytes = new byte[255];
@@ -111,14 +111,14 @@ namespace ControlBalance
         byte Sensor2_Prev, Sensor1_Prev, ErrOptions, ErrorCode, NoBalanceCode;
         uint Speed, FlgsErr, Flgs1Err, Flgs2Err;
         uint Flgs, Flgs1, Flgs2, Flgs4, Flgs5;
-        uint CntTilt, PhaseCnt1, Distance;
+        uint CntTilt, Distance;
         int CntSerialPort = 1;
         //Seg end
 
         public bool AutoNastroykaFl = false;
 
         bool GettingPacket_FL = false;
-        bool CHK_Err = false;
+        //bool CHK_Err = false;
         byte BtRcPrev = 0;
         int CntRec = 0;
         byte[] PacketRec = new byte[255];
@@ -129,24 +129,23 @@ namespace ControlBalance
 
         int _continue;
         int AngleLimitInt, AngleLimitReal, KpSPDReal, KdSPD, KiSPD, SpeedLimit1, SpeedLimit2, SpeedLimit3, NumSpeedLimit, XLimit, YLimit, UBatLow, KpBack, TiltBackLimit, SpdKpMax, SpdKdMax;
-        int KpMustBeMax, KpMax, CntKpMustBe, KpMin;
-        int KpMustBe, SpeedAdd, KpNoMan, KiNoMan, KGYRO, Kpx, Prorez = 0, PhaseCnt2, TiltXSteerCorr, KpRot, KFilterPrev;
+        int KpMax,  KpMin;
+        int KpMustBe, SpeedAdd, KpNoMan, KiNoMan, KGYRO, Kpx, Prorez = 0, TiltXSteerCorr, KpRot, KFilterPrev;
         short CalibrationAccX, CalibrationAccY, CalibrationAccZ, LightSensor, KdKpSpd;
         short CalibrationGyroX, CalibrationGyroY, CalibrationGyroZ;
         int KRot, StartRot, CurrLimit, Kp, CurrLimitSpd0, SensorlessCurrLimit, KiRot;
 
         ushort StrongModeSpdFilterOffMem;
-        bool KeyRL, KeyTudaSuda;
-        short CntPosConst, TiltYRes, Gyro4Y, PWMResR, CntUDPTrmConst, PWMRotR, PWMRotL, TiltZad, RotSpd, MoveAngle, TiltCorr, RudderToSend;
+        short CntPosConst, TiltYRes, Gyro4Y, PWMResR, CntUDPTrmConst, PWMRotR, PWMRotL, TiltZad, TiltCorr, RudderToSend;
         short PWMResL, Kp_PWM_Mode, KdMem;
         int CntPackets, E, Ep, CntImpR, CntImpL, Ediff, CntTST, StatFlags, Ki, StatFlags1;
         float ESumm, Ei, Kd, Ed, KdI;
         short KpKp2, KpKp2DeadZone, KpKp2ZoneEnd;
 
         float EPos, EPosPrev, EdPos, EPosSumm, EiPos, Angle, EpPos, T, Tj;
-        short KpPos, KdPos, KiPos, AngleLimit, TiltZadNew, MaxSpd, MaxSpdKMH, KTemperatureSPDControl;
+        short KpPos, KdPos, KiPos, AngleLimit,  MaxSpdKMH, KTemperatureSPDControl;
 
-        byte FirstTime, ShowSer, MovingON, Sensor1_PrevAfterSND, Sensor1Snd, Sensor1_PrevSND, Sensor1BeforeReadSnd, SlowSpeedForKp;
+        byte FirstTime, ShowSer, MovingON, Sensor1Snd,   SlowSpeedForKp;
         uint Odometr, OdometrMem;
 
         ushort FirmwareVersion, ButtonBreakOnlyPWM, BuzzerOnEvent;
@@ -161,17 +160,17 @@ namespace ControlBalance
         IPAddress broadcast;
         IPEndPoint ep;
 
-        const byte SEND_V_MIN_Pre_OFF = 1;
+        //const byte SEND_V_MIN_Pre_OFF = 1;
         const byte SEND_Kp = 2;
         const byte SEND_Kd = 3;
         const byte SEND_Ki = 4;
-        const byte SEND_KpPos = 5;
-        const byte SEND_KdPos = 6;
-        const byte SEND_KiPos = 7;
+//        const byte SEND_KpPos = 5;
+//        const byte SEND_KdPos = 6;
+//        const byte SEND_KiPos = 7;
         const byte SEND_StrtPOS = 8;
         const byte SEND_SensorlessCurrUst = 9;
         const byte SEND_CntUDPTrmConst = 10;
-        const byte SEND_AngleLimit = 11;
+        //const byte SEND_AngleLimit = 11;
         const byte SEND_SenosrlessPWM1_1Const = 12;
         const byte SEND_KGYRO = 13;
         const byte SEND_GetOptions = 14;
@@ -179,7 +178,7 @@ namespace ControlBalance
         const byte SEND_SensorlessCurrLimit = 16;
         const byte SEND_V_MIN_Sound = 17;
         const byte SEND_KpKpSpd = 18;
-        const byte SEND_V_min_OverV = 19;
+        //const byte SEND_V_min_OverV = 19;
         const byte SEND_NotAll = 20;
         const byte SEND_Clear = 21;
         const byte SEND_PWM1 = 22;
@@ -188,31 +187,31 @@ namespace ControlBalance
         const byte SEND_AutoPIDOff = 25;
         //const byte SEND_CalibrGyro = 26;
         const byte SEND_CalibrAcc = 27;
-        const byte SEND_KRot = 28;
+        //const byte SEND_KRot = 28;
         const byte SEND_But1Func = 29;
         const byte SEND_PhasePERMASS = 30;
         const byte SEND_HallDelay1_F = 31;
         const byte SEND_HallDelay1_B = 32;
         const byte SEND_But2Func = 33;
         const byte SEND_CurrLimit = 34;
-        const byte SEND_SpeedLimit1 = 35;
+        //const byte SEND_SpeedLimit1 = 35;
         const byte SEND_DirectMotor = 36;
         const byte SEND_NotDirectMotor = 37;
         const byte SEND_CalibrGyro = 38;
-        const byte SEND_Theta1Zero = 39;
+        //const byte SEND_Theta1Zero = 39;
         const byte SEND_UBatLow = 40;
         const byte SEND_SbrosOdometra = 41;
         const byte SEND_Beep_10m = 42;
         const byte SEND_No_Beep_10m = 43;
-        const byte SEND_Theta2Zero = 44;
+//        const byte SEND_Theta2Zero = 44;
         const byte SEND_VectorOn = 45;
         const byte SEND_VectorOff = 46;
-        const byte SEND_SpeedLimit3 = 47;
-        const byte SEND_NumSpeedLimit = 48;
+        //const byte SEND_SpeedLimit3 = 47;
+        //const byte SEND_NumSpeedLimit = 48;
         const byte SEND_GetErrors = 49;
         const byte SEND_AnalogBreakOn = 50;
         const byte SEND_KpMax = 51;
-        const byte SEND_V_MIN_OFF = 52;
+//        const byte SEND_V_MIN_OFF = 52;
         const byte SEND_SpdKpMax = 53;
         const byte SEND_GetDataPacket = 54;
         const byte SEND_AnalogBreakOff = 55;
@@ -222,9 +221,9 @@ namespace ControlBalance
         const byte SEND_MaxSpdRevers = 59;
         const byte SEND_ClearErrors = 60;
         const byte SEND_WriteErrors = 61;
-        const byte SEND_KpStp = 62;
+        //const byte SEND_KpStp = 62;
         const byte SEND_TemperatureMaxOUT_H = 63;
-        const byte SEND_TiltZadAddNoMan = 64;
+        //const byte SEND_TiltZadAddNoMan = 64;
         const byte SEND_KpNoManOneLeg = 65;
         const byte SEND_KiNoManOneLeg = 66;
         const byte SEND_KpTemperOUT = 67;
@@ -236,10 +235,10 @@ namespace ControlBalance
         const byte SEND_KiTemperOUT = 72;
         const byte SEND_CopyProfiles = 73;
         const byte SEND_SensorTSTKeys = 74;
-        const byte SEND_TiltZadAddOneTwoLeg = 75;
+        //const byte SEND_TiltZadAddOneTwoLeg = 75;
         const byte SEND_ZeroThroottleOn = 76;
         const byte SEND_KpRotOneTwoLeg = 77;
-        const byte SEND_KiRotOneTwoLeg = 78;
+        //const byte SEND_KiRotOneTwoLeg = 78;
 
         const byte SEND_PreasUpCntConst = 79;
         const byte SEND_PreasDnCntConst = 80;
@@ -249,9 +248,9 @@ namespace ControlBalance
 
         const byte SEND_StrongModePIDOn = 84;
         const byte SEND_StrongModePIDOff = 85;
-        const byte SEND_StartRotFreshmanL = 86;
-        const byte SEND_TiltZadAddFreshman = 87;
-        const byte SEND_KRotFreshmanL = 88;
+        //const byte SEND_StartRotFreshmanL = 86;
+        //const byte SEND_TiltZadAddFreshman = 87;
+        //const byte SEND_KRotFreshmanL = 88;
         const byte SEND_SmoothBreakOn = 89;
         const byte SEND_SmoothBreakOff = 90;
         const byte SEND_CurrUstSpd0 = 91;
@@ -288,10 +287,10 @@ namespace ControlBalance
         const byte SEND_SerBynber = 121;
 
         //const byte SEND_But5Func = 122;
-        const byte SEND_KiOneTwoLeg_1 = 123;
-        const byte SEND_StartRotOneTwoLeg_1 = 124;
+        //const byte SEND_KiOneTwoLeg_1 = 123;
+        //const byte SEND_StartRotOneTwoLeg_1 = 124;
         const byte SEND_SensorlessCntAlignConst = 125;
-        const byte SEND_KRotOneTwoLeg_1 = 126;
+        //const byte SEND_KRotOneTwoLeg_1 = 126;
         const byte SEND_KTemperatureSPDControl = 127;
         const byte SEND_TemperatureMaxIN_H = 128;
         const byte SEND_SensorlessSpdChngCntConst = 129;
@@ -312,34 +311,34 @@ namespace ControlBalance
         const byte SEND_TemperatureTYPE = 144;
         const byte SEND_KpTemperIN = 145;
         const byte SEND_Profile = 146;
-        const byte SEND_Key10_On = 147;
-        const byte SEND_Key10_Off = 148;
-        const byte SEND_Key11_On = 149;
-        const byte SEND_Key11_Off = 150;
-        const byte SEND_Key12_On = 151;
-        const byte SEND_Key12_Off = 152;
-        const byte SEND_Key13_On = 153;
-        const byte SEND_Key13_Off = 154;
-        const byte SEND_Key14_On = 155;
-        const byte SEND_Key14_Off = 156;
-        const byte SEND_Key15_On = 157;
-        const byte SEND_Key15_Off = 158;
-        const byte SEND_Key16_On = 159;
-        const byte SEND_Key16_Off = 160;
+//        const byte SEND_Key10_On = 147;
+  //      const byte SEND_Key10_Off = 148;
+        //const byte SEND_Key11_On = 149;
+//        const byte SEND_Key11_Off = 150;
+//        const byte SEND_Key12_On = 151;
+//        const byte SEND_Key12_Off = 152;
+//        const byte SEND_Key13_On = 153;
+//        const byte SEND_Key13_Off = 154;
+//        const byte SEND_Key14_On = 155;
+//        const byte SEND_Key14_Off = 156;
+//        const byte SEND_Key15_On = 157;
+//        const byte SEND_Key15_Off = 158;
+//        const byte SEND_Key16_On = 159;
+//        const byte SEND_Key16_Off = 160;
         const byte SEND_Options2 = 161;
         const byte SEND_BreakThresholdDn = 162;
-        const byte SEND_MAH = 163;
+        //const byte SEND_MAH = 163;
         const byte SEND_SensorThreshold = 164;
         const byte SEND_ManualStartOn = 165;
         const byte SEND_ManualStartOff = 166;
-        const byte SEND_Balance2 = 167;
+//        const byte SEND_Balance2 = 167;
         const byte SEND_StopBalance2 = 168;
-        const byte SEND_Balance3 = 169;
+        //const byte SEND_Balance3 = 169;
         const byte SEND_StopBalance3 = 170;
-        const byte SEND_Balance4 = 171;
+        //const byte SEND_Balance4 = 171;
         const byte SEND_StopBalance4 = 172;
-        const byte SEND_TiltZadState5 = 173;
-        const byte SEND_SpdRstSpeedLim = 174;
+        //const byte SEND_TiltZadState5 = 173;
+//        const byte SEND_SpdRstSpeedLim = 174;
         const byte SEND_PWMControlOn = 175;
         const byte SEND_SpeedControlOn = 176;
         const byte SEND_XLimit = 177;
@@ -348,11 +347,11 @@ namespace ControlBalance
         const byte SEND_MonocycleOn = 180;
         const byte SEND_MonocycleOff = 181;
         const byte SEND_BreakButtonMonocycleOn = 182;
-        const byte SEND_SpeedLimitSt4 = 183;
+//        const byte SEND_SpeedLimitSt4 = 183;
         const byte SEND_ResetDistance = 184;
-        const byte SEND_TestVibroLROn = 185;
+        //const byte SEND_TestVibroLROn = 185;
         const byte SEND_TestVibroLROff = 186;
-        const byte SEND_StopVibroOn = 187;
+        //const byte SEND_StopVibroOn = 187;
         const byte SEND_StopVibroOff = 188;
         const byte SEND_BreakButtonMonocycleOff = 189;
         const byte SEND_MonoStopDirectionOn = 190;
@@ -369,16 +368,16 @@ namespace ControlBalance
         const byte DoNotTestBMSOn = 201;
         const byte DoNotTestBMSOff = 202;
         const byte SEND_GetOptionsSteer = 203;
-        const byte SEND_KGyroSteer = 204;
+        //const byte SEND_KGyroSteer = 204;
         const byte SEND_WriteEEPROMSteer = 205;
         const byte SEND_CalibrGyroSteer = 206;
         const byte SEND_AlignmentOff = 207;
         const byte SEND_ThreePositionSwitchOn = 208;
         const byte SEND_ThreePositionSwitchOff = 209;
-        const byte SEND_KdOneTwoLeg = 210;
-        const byte SEND_KdOneTwoLeg_1 = 211;
-        const byte SEND_KdFreshman = 212;
-        const byte SEND_Num_KdAverage = 213;
+//        const byte SEND_KdOneTwoLeg = 210;
+//        const byte SEND_KdOneTwoLeg_1 = 211;
+        //const byte SEND_KdFreshman = 212;
+        //const byte SEND_Num_KdAverage = 213;
         const byte SEND_SensorThresholdUp = 214;
         const byte SEND_BreakInvBtnOn = 215;
         const byte SEND_BreakInvBtnOff = 216;
@@ -388,7 +387,7 @@ namespace ControlBalance
         const byte SEND_KFirstBreak = 220;
         const byte SEND_SensOrder2 = 221;
         const byte SEND_SensOrder1 = 222;
-        const byte SEND_Balance5 = 223;
+        //const byte SEND_Balance5 = 223;
         const byte SEND_StopBalance5 = 224;
         const byte SEND_SensorLessTimerConst = 225;
 
@@ -400,8 +399,8 @@ namespace ControlBalance
         const byte SEND_KpCurr = 231;
         const byte SEND_VectorTrapezoidaOn = 232;
         const byte SEND_VectorTrapezoidaOff = 233;
-        const byte SEND_CurrLimII_On = 234;
-        const byte SEND_CurrLimII_Off = 235;
+//        const byte SEND_CurrLimII_On = 234;
+  //      const byte SEND_CurrLimII_Off = 235;
         const byte SEND_KiCurr = 236;
         const byte SEND_CurrUst = 237;
         const byte SEND_ClbrHalls = 238;
@@ -633,9 +632,8 @@ namespace ControlBalance
         const byte SEND_PWMSignalTimer = 207;
 
         const bool REV1 = false;
-        const String Version = "4.04";//01.11.2020
+        const String Version = "4.05";//01.11.2020
         double CurrPerDigit = 111;//48.34;//64.45;//80.5664;//29.296;//14.648;
-        double CurrPerDigitMINI = 50.354;
 
         int[] sine_array = new int[]/*{
 	1,3,4,6,7,9,10,12,13,15,16,18,19,21,22,24,25,27,28,30,31,32,34,35,37,38,40,41,43,44,46,47,
@@ -711,11 +709,7 @@ namespace ControlBalance
             ep = new IPEndPoint(broadcast, 51731);
             ShowSer = 1;
             MovingON = 0;
-            KeyRL = false;
-            KeyTudaSuda = false;
 
-            RotSpd = 700;
-            MoveAngle = 15;
 
             SaveTimeOut = 0;
             TmrLocked = 0;
@@ -745,26 +739,6 @@ namespace ControlBalance
             radioButton7CannotSndCMD = false;
             radioButton10CannotSndCMD = radioButton11CannotSndCMD = radioButton12CannotSndCMD = false;
             radioButton25CannotSndCMD = radioButton26CannotSndCMD = radioButton27CannotSndCMD=false;
-
-            if (checkBox7.Checked)
-                chart1.Series[6].Enabled = true;
-            else
-                chart1.Series[6].Enabled = false;
-
-            if (checkBox8.Checked)
-                chart1.Series[7].Enabled = true;
-            else
-                chart1.Series[7].Enabled = false;
-
-            if (checkBox9.Checked)
-                chart1.Series[8].Enabled = true;
-            else
-                chart1.Series[8].Enabled = false;
-            if (checkBox10.Checked)
-                chart1.Series[9].Enabled = true;
-            else
-                chart1.Series[9].Enabled = false;
-
 
 
 
@@ -1024,7 +998,7 @@ namespace ControlBalance
 
         private unsafe void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
         {
-            int listenPort = 51722;
+            //int listenPort = 51722;
             short* TmpShort;
             int* TmpInt;
             uint* TmpUInt;
@@ -1982,23 +1956,16 @@ namespace ControlBalance
                     break;
 
                 case 22:
-                    label376.Text = BMSTimeOt.ToString();
-                    label377.Text = SummOk.ToString();
-                    label378.Text = SummNOk.ToString();
 
                     break;
 
                 case 200:
-                    label376.Text = PacketRec[1].ToString();
-                    label377.Text = PacketRec[2].ToString();
-                    label378.Text = PacketRec[3].ToString();
-                    label375.Text = PacketRec[4].ToString();
+                    
                     if (PacketRec[15] != 0)
                         PacketRec[15] = 0;
                     uint tm = ((uint)PacketRec[15]) << 16;
                     tm = tm + ((uint)PacketRec[14]) << 8;
                     tm = tm + ((uint)PacketRec[13]);
-                    label379.Text = tm.ToString();
 
                     break;
 
@@ -2006,79 +1973,20 @@ namespace ControlBalance
                 case 1:
 
                     label11.Text = Kp.ToString();
-                    label17.Text = Kd.ToString();
                     label23.Text = Ki.ToString();
 
-                    label29.Text = CntImpR.ToString();
-                    label31.Text = CntImpL.ToString();
-                    label33.Text = EpPos.ToString();
-                    label35.Text = EPos.ToString();
-                    label37.Text = KpPos.ToString();
-
-                    label39.Text = EPosPrev.ToString();
-                    label41.Text = EdPos.ToString();
-                    label43.Text = KdPos.ToString();
-                    label45.Text = EPosSumm.ToString();
-                    label47.Text = EiPos.ToString();
-                    label49.Text = KiPos.ToString();
-                    label51.Text = Angle.ToString();
-                    label53.Text = AngleLimit.ToString();
-                    label55.Text = CntUDPTrmConst.ToString();
-                    label59.Text = T.ToString();
                     label57.Text = Tj.ToString();
 
 
-                    label65.Text = PWMRotL.ToString();
-                    label66.Text = PWMRotR.ToString();
-                    label67.Text = TiltZad.ToString();
-                    label73.Text = TiltCorr.ToString();
-                    //label75.Text = CntTilt.ToString();
-                    label87.Text = RudderToSend.ToString();
-                    label383.Text = AlfaXResCorr.ToString();
-                    
 
-
-
-                    if (ShowSer == 1)
-                    {
-                        if (checkBox1.Checked)
-                            chart1.Series[0].Points.AddXY(CntPackets, TiltYRes);
-                        if (checkBox2.Checked)
-                            chart1.Series[1].Points.AddXY(CntPackets, Gyro4Y);
-                        if (checkBox3.Checked)
-                            chart1.Series[2].Points.AddXY(CntPackets, Ep);
-                        if (checkBox4.Checked)
-                            chart1.Series[3].Points.AddXY(CntPackets, Ed);
-                        if (checkBox5.Checked)
-                            chart1.Series[4].Points.AddXY(CntPackets, PWMResR);
-
-
-                        int CntImp = (CntImpR + CntImpL) >> 1;
-
-                        if (checkBox6.Checked)
-                            chart1.Series[5].Points.AddXY(CntPackets, CntTilt/*CntImp*/);
-                        if (checkBox7.Checked)
-                            chart1.Series[6].Points.AddXY(CntPackets, RudderToSend);
-                        if (checkBox8.Checked)
-                            chart1.Series[7].Points.AddXY(CntPackets, PWMResL);
-                        if (checkBox9.Checked)
-                            chart1.Series[8].Points.AddXY(CntPackets, Ediff);
-                        if (checkBox10.Checked)
-                            chart1.Series[9].Points.AddXY(CntPackets, Angle);
-                    }
 
                     if (FirstTime == 0)
                     {
                         FirstTime = 1;
 
                         numericUpDown2.Value = Kp;
-                        numericUpDown3.Value = (int)Kd;
+                        
                         numericUpDown4.Value = Ki;
-                        numericUpDown5.Value = KpPos;
-                        numericUpDown6.Value = KdPos;
-                        numericUpDown7.Value = KiPos;
-                        //       numericUpDown8.Value = CntUDPTrmConst;
-                        numericUpDown11.Value = (int)(T * 100);
                         numericUpDown10.Value = (int)(Tj * 100);
                     }
                     break;
@@ -2098,34 +2006,6 @@ namespace ControlBalance
                             if (Prorez == 1)
                             {
                                 Prorez = 0;
-                                if (checkBox1.Checked)
-                                    chart1.Series[0].Points.AddXY(CntPacketsMass[l], EpMass[l]);//TiltXMass[l]);
-                                if (checkBox2.Checked)
-                                    chart1.Series[1].Points.AddXY(CntPacketsMass[l], TiltYMass[l]);
-                                if (checkBox3.Checked)
-                                    chart1.Series[2].Points.AddXY(CntPacketsMass[l], EiMass[l]);//GyroXMass[l]);
-                                if (checkBox4.Checked)
-                                    chart1.Series[3].Points.AddXY(CntPacketsMass[l], EpMass[l] + EiMass[l]);//GyroYMass[l]);//PWMMass[l]);
-                                if (checkBox5.Checked)
-                                    chart1.Series[4].Points.AddXY(CntPacketsMass[l], PWMMass[l]);//_11[l]);//PWM2
-                                if (checkBox6.Checked)
-                                    chart1.Series[5].Points.AddXY(CntPacketsMass[l], _11[l]);//Curr1//GyroXMass[l]);//
-                                if (checkBox7.Checked)
-                                    chart1.Series[6].Points.AddXY(CntPacketsMass[l], _10[l]);//Curr2
-                                if (checkBox8.Checked)
-                                    chart1.Series[7].Points.AddXY(CntPacketsMass[l], _14[l]);
-                                if (checkBox9.Checked)
-                                    chart1.Series[8].Points.AddXY(CntPacketsMass[l], _15[l]);
-                                if (checkBox10.Checked)
-                                    chart1.Series[9].Points.AddXY(CntPacketsMass[l], _14[l]);
-                                if (checkBox13.Checked)
-                                    chart1.Series[10].Points.AddXY(CntPacketsMass[l], _16[l]);
-
-                                label77.Text = _14[l].ToString();
-                                label108.Text = _15[l].ToString();
-
-
-                                //label109.Text = _15[l].ToString();
                                 label110.Text = Odometr.ToString();
 
                             }
@@ -2136,14 +2016,9 @@ namespace ControlBalance
                     break;
                 case 3:
                     label11.Text = KpNoMan.ToString();
-                    label17.Text = KdI.ToString();
                     label23.Text = KiNoMan.ToString();
-                    label59.Text = SpeedAdd.ToString();
-                    label73.Text = TiltYCorr.ToString();
                     label57.Text = KGYRO.ToString();
-                    label62.Text = Kpx.ToString();
-                    label78.Text = TiltXSteerCorr.ToString();
-
+  
 
                     label82.Text = CalibrationGyroX.ToString();
                     label84.Text = CalibrationGyroY.ToString();
@@ -2151,20 +2026,8 @@ namespace ControlBalance
                     label90.Text = CalibrationAccX.ToString();
                     label92.Text = CalibrationAccY.ToString();
                     label94.Text = CalibrationAccZ.ToString();
-                    label96.Text = KRot.ToString();
-                    label98.Text = StartRot.ToString();
-                    label100.Text = KpRot.ToString();
-                    label102.Text = KFilterPrev.ToString();
-                    label106.Text = KiRot.ToString();
-                    label111.Text = KpBack.ToString();
-                    label113.Text = TiltBackLimit.ToString();
 
 
-                    label37.Text = KpSPDReal.ToString();
-                    label43.Text = KdSPD.ToString();
-                    label49.Text = KiSPD.ToString();
-                    label53.Text = AngleLimitInt.ToString();
-                    label30.Text = SpeedLimit1.ToString();
                     label46.Text = StatFlags.ToString();
 
                     label40.Text = YLimit.ToString();
@@ -2172,37 +2035,12 @@ namespace ControlBalance
                     label56.Text = UBatLow.ToString();
                     label560.Text = UBatHi.ToString();
 
-                    label115.Text = SpeedLimit2.ToString();
-                    label117.Text = SpeedLimit3.ToString();
-                    label119.Text = NumSpeedLimit.ToString();
 
 
-                    label141.Text = KpMustBeMax.ToString();
-                    label143.Text = KpMax.ToString();
-                    label145.Text = CntKpMustBe.ToString();
-                    label146.Text = SpdKpMax.ToString();
-
-                    label152.Text = DiffTiltLimit.ToString();
-                    label186.Text = KpStp.ToString();
-                    label189.Text = AngleLimitStp.ToString();
-                    label190.Text = TiltZadAddNoMan.ToString();
 
                     label206.Text = KpNoManOneLeg.ToString();
                     label198.Text = TiltZadAddNoManOneLeg.ToString();
-                    label202.Text = StartRotNoManOneLeg.ToString();
                     label194.Text = KiNoManOneLeg.ToString();
-                    label204.Text = KRotNoManOneLeg.ToString();
-                    label199.Text = KpRotNoManOneLeg.ToString();
-                    label192.Text = KiRotNoManOneLeg.ToString();
-
-
-                    label221.Text = KpOneTwoLeg.ToString();
-                    label213.Text = TiltZadAddOneTwoLeg.ToString();
-                    label217.Text = StartRotOneTwoLeg.ToString();
-                    label210.Text = KiOneTwoLeg.ToString();
-                    label219.Text = KRotOneTwoLeg.ToString();
-                    label214.Text = KpRotOneTwoLeg.ToString();
-                    label208.Text = KiRotOneTwoLeg.ToString();
 
                     label222.Text = Diametr1.ToString();
                     label224.Text = PhasesPerRev1.ToString();
@@ -2245,17 +2083,6 @@ namespace ControlBalance
                         comboBox18.SelectedIndex = CurrSensor;
 
 
-                    label22.Text = KpFreshman.ToString();
-                    label10.Text = TiltZadAddFreshman.ToString();
-                    label16.Text = StartRotFreshmanL.ToString();
-                    label7.Text = KiFreshman.ToString();
-                    label20.Text = KRotFreshmanL.ToString();
-                    label13.Text = KpRotFreshman.ToString();
-                    label2.Text = KiRotFreshman.ToString();
-                    label26.Text = StartRotFreshmanH.ToString();
-                    label28.Text = KRotFreshmanH.ToString();
-                    label228.Text = CntKRot_CHNG_Const.ToString();
-                    label63.Text = CntStartRot_CHNG_Const.ToString();
 
 
                     label231.Text = BeepPauseConstAlm.ToString();
@@ -2271,42 +2098,14 @@ namespace ControlBalance
 
 
 
-                    label280.Text = KpOneTwoLeg_1.ToString();
-                    label272.Text = TiltZadAddOneTwoLeg_1.ToString();
-                    label276.Text = StartRotOneTwoLeg_1.ToString();
-                    label269.Text = KiOneTwoLeg_1.ToString();
-                    label278.Text = KRotOneTwoLeg_1.ToString();
-                    label273.Text = KpRotOneTwoLeg_1.ToString();
-                    label267.Text = KiRotOneTwoLeg_1.ToString();
 
-                    label327.Text = MAH.ToString();
 
                     label333.Text = SensorThreshold.ToString();
 
                     label396.Text = SensorThresholdUp.ToString();
 
                     label400.Text = KFirstBreak.ToString();
-
-                    label341.Text = TiltZadState5.ToString();
-
-                    label345.Text = SpdRstSpeedLim.ToString();
-
-                    label351.Text = HighSpeed.ToString();
-                    label346.Text = GoalSpeed.ToString();
-                    label358.Text = StartRotHighSpeed.ToString();
-                    label360.Text = KRotHighSpeed.ToString();
-
-                    label350.Text = VibroT.ToString();
-                    label363.Text = VibroA.ToString();
-                    label365.Text = SpeedLimitSt4.ToString();
-                    label383.Text = AlfaXResCorr.ToString();
-
-
-                    label387.Text = KdNoManOneLeg.ToString();
-                    label389.Text = KdOneTwoLeg.ToString();
-                    label391.Text = KdOneTwoLeg_1.ToString();
-                    label393.Text = KdFreshman.ToString();
-
+                    
                     label398.Text = BreakThreshold.ToString();
 
                     if (SensOrder1 <= comboBox8.Items.Count)//MaxLength)
@@ -2316,10 +2115,6 @@ namespace ControlBalance
 
 
 
-                    label434.Text = V_MIN_OFF.ToString();
-                    label436.Text = V_MIN_Pre_OFF.ToString();
-                    label438.Text = V_MIN_Sound.ToString();
-                    label440.Text = V_min_OverV.ToString();
 
 
                     label636.Text = CurrUstSpd0.ToString();
@@ -2604,10 +2399,6 @@ namespace ControlBalance
 
                     TmrCntDelay = 5;
 
-                    if ((StatFlags & 0x100) == 0x100)
-                        checkBox24.Checked = true;
-                    else
-                        checkBox24.Checked = false;
 
 
                     if ((StatFlags & 0x400) == 0x400)
@@ -2888,25 +2679,13 @@ namespace ControlBalance
                         checkBox47.Checked = false;
 
 
-                    if ((StatFlags1 & 0x004) == 0x004)
-                        checkBox50.Checked = true;
-                    else
-                        checkBox50.Checked = false;
 
                     if ((StatFlags1 & 0x008) == 0x008)
                         checkBox51.Checked = true;
                     else
                         checkBox51.Checked = false;
 
-                    if ((StatFlags1 & 0x010) == 0x010)
-                        checkBox52.Checked = true;
-                    else
-                        checkBox52.Checked = false;
 
-                    if ((StatFlags1 & 0x020) == 0x020)
-                        checkBox53.Checked = true;
-                    else
-                        checkBox53.Checked = false;
 
                     if ((StatFlags1 & 0x040) == 0x040)
                         checkBox54.Checked = true;
@@ -3051,39 +2830,12 @@ namespace ControlBalance
 
 
 
-                    if ((StatFlags & 0x200) == 0x200)
-                        checkBox11.Checked = true;
-                    else
-                        checkBox11.Checked = false;
-
-                    //if ((StatFlags & 0x2000) == 0x2000)
-                    //    checkBox44.Checked = true;
-                    //else
-                    //    checkBox44.Checked = false;
-
-                    if ((StatFlags & 0x8000) == 0x8000)
-                        checkBox48.Checked = true;
-                    else
-                        checkBox48.Checked = false;
-
-
-                    if ((StatFlags & 0x4000) == 0x4000)
-                        checkBox45.Checked = true;
-                    else
-                        checkBox45.Checked = false;
-
-
-                    if ((StatFlags & 0x40) == 0x40)
-                        checkBox21.Checked = true;
-                    else
-                        checkBox21.Checked = false;
 
 
 
-                    if ((StatFlags & 0x20) == 0x20)
-                        checkBox23.Checked = true;
-                    else
-                        checkBox23.Checked = false;
+
+
+
 
                     if ((StatFlags & 0x200) == 0x200)
                         checkBox44.Checked = true;
@@ -3091,10 +2843,6 @@ namespace ControlBalance
                         checkBox44.Checked = false;
 
 
-                    if ((StatFlags & 0x10) == 0x10)
-                        checkBox22.Checked = true;
-                    else
-                        checkBox22.Checked = false;
 
                     if ((StatFlags & 0x08) == 0x8)
                         checkBox15.Checked = true;
@@ -3114,10 +2862,6 @@ namespace ControlBalance
 
 
 
-                    if ((StatFlags & 0x1000) == 0x1000)
-                        checkBox43.Checked = true;
-                    else
-                        checkBox43.Checked = false;
 
                     if ((StatFlags1 & 0x400) == 0x400)
                         checkBox57.Checked = true;
@@ -3130,10 +2874,6 @@ namespace ControlBalance
                     else
                         checkBox58.Checked = false;
 
-                    if ((StatFlags1 & 0x2000) == 0x2000)
-                        checkBox60.Checked = true;
-                    else
-                        checkBox60.Checked = false;
 
                     if ((StatFlags1 & 0x8000) == 0x8000)
                         checkBox61.Checked = true;
@@ -3390,8 +3130,6 @@ namespace ControlBalance
                     break;
 
                 case 4:
-                    //            label108.Text = Distance.ToString();
-                    //          label77.Text = Sensor2_Prev.ToString();
 
                     label122.Text = ErrOptions.ToString();
                     label124.Text = AlfaXResErr.ToString();
@@ -3426,7 +3164,7 @@ namespace ControlBalance
 
                 case 5:
 
-                    ShowHC05 = 1;
+                    
 
 
 
@@ -3503,248 +3241,14 @@ namespace ControlBalance
 
 
 
-                    uint ddd = Flgs1 & 0x10000;
-                    if (ddd != 0)
-                        label332.Text = "1";
-                    else
-                        label332.Text = "0";
-
-                    label281.Text = ((float)V1 / 1000).ToString();
-                    if ((BatteryKeys & 0x01) != 0)
-                        label281.BackColor = Color.Red;
-                    else
-                        label281.BackColor = Color.Transparent;
-
-                    label283.Text = ((float)V2 / 1000).ToString();
-                    if ((BatteryKeys & 0x02) != 0)
-                        label283.BackColor = Color.Red;
-                    else
-                        label283.BackColor = Color.Transparent;
-
-                    label285.Text = ((float)V3 / 1000).ToString();
-                    if ((BatteryKeys & 0x04) != 0)
-                        label285.BackColor = Color.Red;
-                    else
-                        label285.BackColor = Color.Transparent;
-
-                    label287.Text = ((float)V4 / 1000).ToString();
-                    if ((BatteryKeys & 0x08) != 0)
-                        label287.BackColor = Color.Red;
-                    else
-                        label287.BackColor = Color.Transparent;
-
-
-
-
-                    label289.Text = ((float)V5 / 1000).ToString();
-                    if ((BatteryKeys & 0x10) != 0)
-                        label289.BackColor = Color.Red;
-                    else
-                        label289.BackColor = Color.Transparent;
-
-                    label291.Text = ((float)V6 / 1000).ToString();
-                    if ((BatteryKeys & 0x20) != 0)
-                        label291.BackColor = Color.Red;
-                    else
-                        label291.BackColor = Color.Transparent;
-
-                    label293.Text = ((float)V7 / 1000).ToString();
-                    if ((BatteryKeys & 0x40) != 0)
-                        label293.BackColor = Color.Red;
-                    else
-                        label293.BackColor = Color.Transparent;
-
-                    label295.Text = ((float)V8 / 1000).ToString();
-                    if ((BatteryKeys & 0x80) != 0)
-                        label295.BackColor = Color.Red;
-                    else
-                        label295.BackColor = Color.Transparent;
-
-
-
-
-
-                    label297.Text = ((float)V9 / 1000).ToString();
-                    if ((BatteryKeys & 0x100) != 0)
-                        label297.BackColor = Color.Red;
-                    else
-                        label297.BackColor = Color.Transparent;
-
-                    label299.Text = ((float)V10 / 1000).ToString();
-                    if ((BatteryKeys & 0x200) != 0)
-                        label299.BackColor = Color.Red;
-                    else
-                        label299.BackColor = Color.Transparent;
-
-                    label301.Text = ((float)V11 / 1000).ToString();
-                    if ((BatteryKeys & 0x400) != 0)
-                        label301.BackColor = Color.Red;
-                    else
-                        label301.BackColor = Color.Transparent;
-
-                    label303.Text = ((float)V12 / 1000).ToString();
-                    if ((BatteryKeys & 0x800) != 0)
-                        label303.BackColor = Color.Red;
-                    else
-                        label303.BackColor = Color.Transparent;
 
 
 
 
 
 
-                    label305.Text = ((float)V13 / 1000).ToString();
-                    if ((BatteryKeys & 0x1000) != 0)
-                        label305.BackColor = Color.Red;
-                    else
-                        label305.BackColor = Color.Transparent;
-
-                    label307.Text = ((float)V14 / 1000).ToString();
-                    if ((BatteryKeys & 0x2000) != 0)
-                        label307.BackColor = Color.Red;
-                    else
-                        label307.BackColor = Color.Transparent;
-
-                    label309.Text = ((float)V15 / 1000).ToString();
-                    if ((BatteryKeys & 0x4000) != 0)
-                        label309.BackColor = Color.Red;
-                    else
-                        label309.BackColor = Color.Transparent;
-
-                    label311.Text = ((float)V16 / 1000).ToString();
-                    if ((BatteryKeys & 0x8000) != 0)
-                        label311.BackColor = Color.Red;
-                    else
-                        label311.BackColor = Color.Transparent;
-
-                    label412.Text = ((float)V17 / 1000).ToString();
-                    if ((BatteryKeys & 0x10000) != 0)
-                        label412.BackColor = Color.Red;
-                    else
-                        label412.BackColor = Color.Transparent;
-
-                    label410.Text = ((float)V18 / 1000).ToString();
-                    if ((BatteryKeys & 0x20000) != 0)
-                        label410.BackColor = Color.Red;
-                    else
-                        label410.BackColor = Color.Transparent;
 
 
-
-                    if ((ChagerKeys & 0x01) != 0)//Chager_Key
-                        label315.BackColor = Color.Red;
-                    else
-                        label315.BackColor = Color.Transparent;
-
-                    if ((ChagerKeys & 0x02) == 0)
-                        label313.BackColor = Color.Red;
-                    else
-                        label313.BackColor = Color.Transparent;
-
-                    if ((ChagerKeys & 0x04) == 0)//Chager_On
-                        label314.BackColor = Color.Red;
-                    else
-                        label314.BackColor = Color.Transparent;
-
-                    if ((ChagerKeys & 0x08) != 0)
-                        label316.BackColor = Color.Red;
-                    else
-                        label316.BackColor = Color.Transparent;
-
-                    if ((ChagerKeys & 0x10) != 0)
-                        label317.BackColor = Color.Red;
-                    else
-                        label317.BackColor = Color.Transparent;
-
-                    if ((ChagerKeys & 0x20) != 0)
-                        label318.BackColor = Color.Red;
-                    else
-                        label318.BackColor = Color.Transparent;
-
-                    if ((ChagerKeys & 0x40) != 0)
-                        label405.BackColor = Color.Red;
-                    else
-                        label405.BackColor = Color.Transparent;
-
-
-
-                    Vmin = V1;
-                    if (Vmin > V2)
-                        Vmin = V2;
-                    if (Vmin > V3)
-                        Vmin = V3;
-                    if (Vmin > V4)
-                        Vmin = V4;
-                    if (Vmin > V5)
-                        Vmin = V5;
-                    if (Vmin > V6)
-                        Vmin = V6;
-                    if (Vmin > V7)
-                        Vmin = V7;
-                    if (Vmin > V8)
-                        Vmin = V8;
-                    if (Vmin > V9)
-                        Vmin = V9;
-                    if (Vmin > V10)
-                        Vmin = V10;
-                    if (Vmin > V11)
-                        Vmin = V11;
-                    if (Vmin > V12)
-                        Vmin = V12;
-                    if (Vmin > V13)
-                        Vmin = V13;
-                    if (Vmin > V14)
-                        Vmin = V14;
-                    if (Vmin > V15)
-                        Vmin = V15;
-                    if (Vmin > V16)
-                        Vmin = V16;
-                    if (Vmin > V17)
-                        Vmin = V17;
-                    if (Vmin > V18)
-                        Vmin = V18;
-
-
-
-                    Vmax = V1;
-                    if (Vmax < V2)
-                        Vmax = V2;
-                    if (Vmax < V3)
-                        Vmax = V3;
-                    if (Vmax < V4)
-                        Vmax = V4;
-                    if (Vmax < V5)
-                        Vmax = V5;
-                    if (Vmax < V6)
-                        Vmax = V6;
-                    if (Vmax < V7)
-                        Vmax = V7;
-                    if (Vmax < V8)
-                        Vmax = V8;
-                    if (Vmax < V9)
-                        Vmax = V9;
-                    if (Vmax < V10)
-                        Vmax = V10;
-                    if (Vmax < V11)
-                        Vmax = V11;
-                    if (Vmax < V12)
-                        Vmax = V12;
-                    if (Vmax < V13)
-                        Vmax = V13;
-                    if (Vmax < V14)
-                        Vmax = V14;
-                    if (Vmax < V15)
-                        Vmax = V15;
-                    if (Vmax < V16)
-                        Vmax = V16;
-                    if (Vmax < V17)
-                        Vmax = V17;
-                    if (Vmax < V18)
-                        Vmax = V18;
-
-
-                    label443.Text = Vmin.ToString();
-                    label445.Text = Vmax.ToString();
 
                     float ObMin;
                     ObMin = Spd1Res * 600;
@@ -3753,11 +3257,8 @@ namespace ControlBalance
                     label368.Text = ObMin.ToString();
 
 
-                    label406.Text = ((float)(V1 + V2 + V3 + V4 + V5 + V6 + V7 + V8 + V9 + V10 + V11 + V12 + V13 + V14 + V15 + V16 + V17 + V18) / 1000).ToString();
                     label322.Text = Sensor1_Prev.ToString();
                     label380.Text = Temperature.ToString();
-                    label385.Text = KAccGyroSteer.ToString();
-                    label407.Text = TS4.ToString();
 
                     label423.Text = Spd1Fl.ToString() + " "+ MyStrings.KMH;
                     label426.Text = String.Format("{0:0.0}", UBT) + " V";
@@ -3854,10 +3355,6 @@ namespace ControlBalance
                     label456.Text = ewq.ToString();
 
 
-                    label451.Text = HallDelay2_F.ToString();
-                    label453.Text = HallDelay2_B.ToString();
-                    label461.Text = Theta1Zero.ToString();
-                    label463.Text = Theta2Zero.ToString();
 
 
                     label470.Text = MaxSpdPID.ToString();
@@ -4522,41 +4019,17 @@ namespace ControlBalance
                     else
                         button36.BackColor = Color.Transparent;
 
-                    label447.Text = Phase1Period4.ToString();
 
                     if ((Flgs3 & 0x100) == 0x100)
                     {
                         label621.Text = "Контроллер с гальваноразвязкой";
-                        K_ubt = (float)0.43346836;// 0.4167965;
                     }
                     else
                     {
                         label621.Text = "Not isolated";
-                        K_ubt = (float)0.0260498;
                     }
 
 
-                    switch (KdAverage)
-                    {
-                        case 1:
-                            label394.Text = "16";
-                            break;
-                        case 2:
-                            label394.Text = "32";
-                            break;
-                        case 3:
-                            label394.Text = "64";
-                            break;
-                        case 4:
-                            label394.Text = "128";
-                            break;
-                        case 5:
-                            label394.Text = "256";
-                            break;
-                        default:
-                            label394.Text = "Error";
-                            break;
-                    }
 
                     try
                     {
@@ -4809,22 +4282,22 @@ namespace ControlBalance
                                     chart1.Series[0].Points.AddXY(CntSamples, PWM1);
                                     break;
                                 case 8:
-                                    chart1.Series[0].Points.AddXY(CntSamples, PWM2);
+                                    //chart1.Series[0].Points.AddXY(CntSamples, PWM2);
                                     break;
                                 case 9:
                                     chart1.Series[0].Points.AddXY(CntSamples, Cr1 / 1000);
                                     break;
                                 case 10:
-                                    chart1.Series[0].Points.AddXY(CntSamples, Cr2);
+                                    //chart1.Series[0].Points.AddXY(CntSamples, Cr2);
                                     break;
                                 case 11:
                                     chart1.Series[0].Points.AddXY(CntSamples, Spd1Res);
                                     break;
                                 case 12:
-                                    chart1.Series[0].Points.AddXY(CntSamples, Spd2Res);
+                                    //chart1.Series[0].Points.AddXY(CntSamples, Spd2Res);
                                     break;
                                 case 13:
-                                    chart1.Series[0].Points.AddXY(CntSamples, SpdAv);
+                                    //chart1.Series[0].Points.AddXY(CntSamples, SpdAv);
                                     break;
                                 case 14:
                                     chart1.Series[0].Points.AddXY(CntSamples, Kp);
@@ -4911,7 +4384,7 @@ namespace ControlBalance
                                     chart1.Series[0].Points.AddXY(CntSamples, Spd1Fl);
                                     break;
                                 case 42:
-                                    chart1.Series[0].Points.AddXY(CntSamples, Spd2Fl);
+                                    //chart1.Series[0].Points.AddXY(CntSamples, Spd2Fl);
                                     break;
                                 case 43:
                                     int u = (int)CurrPerDigit;
@@ -4925,7 +4398,7 @@ namespace ControlBalance
                                     chart1.Series[0].Points.AddXY(CntSamples, Phase1Period2);
                                     break;
                                 case 46:
-                                    chart1.Series[0].Points.AddXY(CntSamples, Phase1Period3);
+                                    //chart1.Series[0].Points.AddXY(CntSamples, Phase1Period3);
                                     break;
                                 case 47:
                                     chart1.Series[0].Points.AddXY(CntSamples, Phase1Period4);
@@ -4937,7 +4410,7 @@ namespace ControlBalance
                                     chart1.Series[0].Points.AddXY(CntSamples, Phase1Period6);
                                     break;
                                 case 50:
-                                    chart1.Series[0].Points.AddXY(CntSamples, Phase1PeriodTTL);
+                                    //chart1.Series[0].Points.AddXY(CntSamples, Phase1PeriodTTL);
                                     break;
                                 case 51:
                                     chart1.Series[0].Points.AddXY(CntSamples, Spd1USTKMH);
@@ -4976,7 +4449,7 @@ namespace ControlBalance
                                     chart1.Series[0].Points.AddXY(CntSamples, Eid);
                                     break;
                                 case 63:
-                                    chart1.Series[0].Points.AddXY(CntSamples, Theta1CntPWMSND);
+                                    //chart1.Series[0].Points.AddXY(CntSamples, Theta1CntPWMSND);
                                     break;
 
                                     
@@ -5088,22 +4561,22 @@ namespace ControlBalance
                                     chart1.Series[1].Points.AddXY(CntSamples, PWM1);
                                     break;
                                 case 8:
-                                    chart1.Series[1].Points.AddXY(CntSamples, PWM2);
+                                    //chart1.Series[1].Points.AddXY(CntSamples, PWM2);
                                     break;
                                 case 9:
                                     chart1.Series[1].Points.AddXY(CntSamples, Cr1 / 1000);
                                     break;
                                 case 10:
-                                    chart1.Series[1].Points.AddXY(CntSamples, Cr2);
+                                    //chart1.Series[1].Points.AddXY(CntSamples, Cr2);
                                     break;
                                 case 11:
                                     chart1.Series[1].Points.AddXY(CntSamples, Spd1Res);
                                     break;
                                 case 12:
-                                    chart1.Series[1].Points.AddXY(CntSamples, Spd2Res);
+                                    //chart1.Series[1].Points.AddXY(CntSamples, Spd2Res);
                                     break;
                                 case 13:
-                                    chart1.Series[1].Points.AddXY(CntSamples, SpdAv);
+                                    //chart1.Series[1].Points.AddXY(CntSamples, SpdAv);
                                     break;
                                 case 14:
                                     chart1.Series[1].Points.AddXY(CntSamples, Kp);
@@ -5190,7 +4663,7 @@ namespace ControlBalance
                                     chart1.Series[1].Points.AddXY(CntSamples, Spd1Fl);
                                     break;
                                 case 42:
-                                    chart1.Series[1].Points.AddXY(CntSamples, Spd2Fl);
+                                    //chart1.Series[1].Points.AddXY(CntSamples, Spd2Fl);
                                     break;
                                 case 43:
                                     int u = (int)CurrPerDigit;
@@ -5204,7 +4677,7 @@ namespace ControlBalance
                                     chart1.Series[1].Points.AddXY(CntSamples, Phase1Period2);
                                     break;
                                 case 46:
-                                    chart1.Series[1].Points.AddXY(CntSamples, Phase1Period3);
+                                    //chart1.Series[1].Points.AddXY(CntSamples, Phase1Period3);
                                     break;
                                 case 47:
                                     chart1.Series[1].Points.AddXY(CntSamples, Phase1Period4);
@@ -5216,7 +4689,7 @@ namespace ControlBalance
                                     chart1.Series[1].Points.AddXY(CntSamples, Phase1Period6);
                                     break;
                                 case 50:
-                                    chart1.Series[1].Points.AddXY(CntSamples, Phase1PeriodTTL);
+                                    //chart1.Series[1].Points.AddXY(CntSamples, Phase1PeriodTTL);
                                     break;
                                 case 51:
                                     chart1.Series[1].Points.AddXY(CntSamples, Spd1USTKMH);
@@ -5255,7 +4728,7 @@ namespace ControlBalance
                                     chart1.Series[1].Points.AddXY(CntSamples, Eid);
                                     break;
                                 case 63:
-                                    chart1.Series[1].Points.AddXY(CntSamples, Phase1Period1Up);
+                                    //chart1.Series[1].Points.AddXY(CntSamples, Phase1Period1Up);
                                     break;
 
 
@@ -5292,22 +4765,22 @@ namespace ControlBalance
                                     chart1.Series[2].Points.AddXY(CntSamples, PWM1);
                                     break;
                                 case 8:
-                                    chart1.Series[2].Points.AddXY(CntSamples, PWM2);
+                                    //chart1.Series[2].Points.AddXY(CntSamples, PWM2);
                                     break;
                                 case 9:
                                     chart1.Series[2].Points.AddXY(CntSamples, Cr1 / 1000);
                                     break;
                                 case 10:
-                                    chart1.Series[2].Points.AddXY(CntSamples, Cr2);
+                                    //chart1.Series[2].Points.AddXY(CntSamples, Cr2);
                                     break;
                                 case 11:
                                     chart1.Series[2].Points.AddXY(CntSamples, Spd1Res);
                                     break;
                                 case 12:
-                                    chart1.Series[2].Points.AddXY(CntSamples, Spd2Res);
+                                    //chart1.Series[2].Points.AddXY(CntSamples, Spd2Res);
                                     break;
                                 case 13:
-                                    chart1.Series[2].Points.AddXY(CntSamples, SpdAv);
+                                    //chart1.Series[2].Points.AddXY(CntSamples, SpdAv);
                                     break;
                                 case 14:
                                     chart1.Series[2].Points.AddXY(CntSamples, Kp);
@@ -5394,7 +4867,7 @@ namespace ControlBalance
                                     chart1.Series[2].Points.AddXY(CntSamples, Spd1Fl);
                                     break;
                                 case 42:
-                                    chart1.Series[2].Points.AddXY(CntSamples, Spd2Fl);
+                                    //chart1.Series[2].Points.AddXY(CntSamples, Spd2Fl);
                                     break;
                                 case 43:
                                     int u = (int)CurrPerDigit;
@@ -5408,7 +4881,7 @@ namespace ControlBalance
                                     chart1.Series[2].Points.AddXY(CntSamples, Phase1Period2);
                                     break;
                                 case 46:
-                                    chart1.Series[2].Points.AddXY(CntSamples, Phase1Period3);
+                                    //chart1.Series[2].Points.AddXY(CntSamples, Phase1Period3);
                                     break;
                                 case 47:
                                     chart1.Series[2].Points.AddXY(CntSamples, Phase1Period4);
@@ -5420,7 +4893,7 @@ namespace ControlBalance
                                     chart1.Series[2].Points.AddXY(CntSamples, Phase1Period6);
                                     break;
                                 case 50:
-                                    chart1.Series[2].Points.AddXY(CntSamples, Phase1PeriodTTL);
+                                    //chart1.Series[2].Points.AddXY(CntSamples, Phase1PeriodTTL);
                                     break;
                                 case 51:
                                     chart1.Series[2].Points.AddXY(CntSamples, Spd1USTKMH);
@@ -5460,7 +4933,7 @@ namespace ControlBalance
                                     break;
 
                                 case 63:
-                                    chart1.Series[0].Points.AddXY(CntSamples, Theta1CntPWMSND);
+                                    //chart1.Series[0].Points.AddXY(CntSamples, Theta1CntPWMSND);
                                     break;
 
 
@@ -5479,12 +4952,10 @@ namespace ControlBalance
 
                     label251.Text = String.Format("{0:0.000}", ut) + " A";
                     label696.Text = String.Format("{0:0.000}", ut) + " A";
-                    ut = (float)Cr2;
-                    ut = ut / 1000;
+                    //ut = (float)Cr2;
+                    //ut = ut / 1000;
 
-                    label77.Text = SpdAv.ToString();
-                    //label108.Text = _15[l].ToString();
-
+                    
                     label241.Text = ZeroCurr1.ToString();
 
 
@@ -5505,17 +4976,15 @@ namespace ControlBalance
                     C2 = ttf;
 
 
-                    tt = CurrTuda2;
-                    tt = (tt / 36000) * CurrPerDigit;
-                    ttf = ((float)tt) / 1000;
-                    label247.Text = ttf.ToString();
+//                    tt = CurrTuda2;
+  //                  tt = (tt / 36000) * CurrPerDigit;
+    //                ttf = ((float)tt) / 1000;
 
                     C3 = ttf;
 
-                    tt = CurrRegen2;
-                    tt = (tt / 36000) * CurrPerDigit;
-                    ttf = ((float)tt) / 1000;
-                    label248.Text = ttf.ToString();
+//                    tt = CurrRegen2;
+  //                  tt = (tt / 36000) * CurrPerDigit;
+    //                ttf = ((float)tt) / 1000;
 
                     C1 = C1 - C2 + C3 - ttf;
 
@@ -5541,9 +5010,6 @@ namespace ControlBalance
 
                     label366.Text = ((int)wp).ToString() + " m";
 
-                    label374.Text = SpdLimImp.ToString();
-                    label108.Text = State.ToString();
-
                     if ((Flgs3 & 0x4000000) == 0x4000000)
                     {
                         label787.Text = "On";
@@ -5557,7 +5023,7 @@ namespace ControlBalance
 
 
                     //label483.Text = CntPhaseMEM.ToString();
-                    label483.Text = Phase1Period3.ToString();
+                    //label483.Text = Phase1Period3.ToString();
                     if ((radioButton20.Checked) && (!((Flgs4 & 0x01) == 0x01)))
                     {
                         label553.ForeColor = Color.Blue;
@@ -5589,8 +5055,8 @@ namespace ControlBalance
                         label577.Text = ADCThrottleBreak.ToString();
                         if (checkBox71.Checked)
                             label534.Text = Preas2ADC.ToString();
-                        else
-                            label534.Text = BreakTMP.ToString();
+  //                      else
+//                            label534.Text = BreakTMP.ToString();
                     }
 
 
@@ -5599,7 +5065,7 @@ namespace ControlBalance
                     label625.Text = HallErrCnt.ToString();
 
 
-                    ShowHC05 = 0;
+                    
 
                     DataShown = true;
 
@@ -5709,34 +5175,6 @@ namespace ControlBalance
 
         }
 
-        private unsafe void numericUpDown3_ValueChanged(object sender, EventArgs e)
-        {
-            short* TmpShort;
-            short Trmm = Decimal.ToInt16(numericUpDown3.Value);
-            byte[] sendbuf = new byte[sizeof(short) + 2];
-            if (checkBox19.Checked)
-            {
-                sendbuf[0] = SEND_Kd;
-                fixed (byte* p = &sendbuf[2])
-                {
-                    TmpShort = (short*)p;
-                    *TmpShort = Trmm;
-                }
-
-                s.SendTo(sendbuf, ep);
-            }
-            else
-            {
-                TrmMass[0] = 0xff;
-                TrmMass[1] = 0xff;
-                TrmMass[2] = 3;//N
-                TrmMass[3] = SEND_Kd;
-                TrmMass[4] = (byte)Trmm;
-                TrmMass[5] = (byte)(Trmm >> 8);
-                TrmMass[6] = CalcCheckSummTrm();
-                Trm();
-            }
-        }
 
         private unsafe void numericUpDown4_ValueChanged(object sender, EventArgs e)
         {
@@ -5768,152 +5206,6 @@ namespace ControlBalance
 
         }
 
-        private unsafe void numericUpDown5_ValueChanged(object sender, EventArgs e)
-        {
-            short* TmpShort;
-            short Trmm = Decimal.ToInt16(numericUpDown5.Value);
-            byte[] sendbuf = new byte[sizeof(short) + 2];
-            if (checkBox19.Checked)
-            {
-                sendbuf[0] = SEND_KpPos;
-                fixed (byte* p = &sendbuf[2])
-                {
-                    TmpShort = (short*)p;
-                    *TmpShort = Trmm;
-                }
-
-                s.SendTo(sendbuf, ep);
-
-            }
-            else
-            {
-                TrmMass[0] = 0xff;
-                TrmMass[1] = 0xff;
-                TrmMass[2] = 3;//N
-                TrmMass[3] = SEND_KpPos;
-                TrmMass[4] = (byte)Trmm;
-                TrmMass[5] = (byte)(Trmm >> 8);
-                TrmMass[6] = CalcCheckSummTrm();
-                Trm();
-            }
-
-        }
-
-        private unsafe void numericUpDown6_ValueChanged(object sender, EventArgs e)
-        {
-            short* TmpShort;
-            short Trmm = Decimal.ToInt16(numericUpDown6.Value);
-            byte[] sendbuf = new byte[sizeof(short) + 2];
-            if (checkBox19.Checked)
-            {
-                sendbuf[0] = SEND_KdPos;
-                fixed (byte* p = &sendbuf[2])
-                {
-                    TmpShort = (short*)p;
-                    *TmpShort = Trmm;
-                }
-
-                s.SendTo(sendbuf, ep);
-            }
-            else
-            {
-                TrmMass[0] = 0xff;
-                TrmMass[1] = 0xff;
-                TrmMass[2] = 3;//N
-                TrmMass[3] = SEND_KdPos;
-                TrmMass[4] = (byte)Trmm;
-                TrmMass[5] = (byte)(Trmm >> 8);
-                TrmMass[6] = CalcCheckSummTrm();
-                Trm();
-            }
-
-        }
-
-        private unsafe void numericUpDown7_ValueChanged(object sender, EventArgs e)
-        {
-            short* TmpShort;
-            short Trmm = Decimal.ToInt16(numericUpDown7.Value);
-            byte[] sendbuf = new byte[sizeof(short) + 2];
-            if (checkBox19.Checked)
-            {
-                sendbuf[0] = SEND_KiPos;
-                fixed (byte* p = &sendbuf[2])
-                {
-                    TmpShort = (short*)p;
-                    *TmpShort = Trmm;
-                }
-
-                s.SendTo(sendbuf, ep);
-            }
-            else
-            {
-                TrmMass[0] = 0xff;
-                TrmMass[1] = 0xff;
-                TrmMass[2] = 3;//N
-                TrmMass[3] = SEND_KiPos;
-                TrmMass[4] = (byte)Trmm;
-                TrmMass[5] = (byte)(Trmm >> 8);
-                TrmMass[6] = CalcCheckSummTrm();
-                Trm();
-            }
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-        }
-
-        private unsafe void numericUpDown8_ValueChanged(object sender, EventArgs e)
-        {
-        }
-
-        private void checkBox1_CheckedChanged(object sender, EventArgs e)
-        {
-            if (checkBox1.Checked)
-            {
-                chart1.Series[0].Enabled = true;
-            }
-            else
-            {
-                chart1.Series[0].Enabled = false;
-            }
-
-        }
-
-        private void checkBox2_CheckedChanged(object sender, EventArgs e)
-        {
-            if (checkBox2.Checked)
-                chart1.Series[1].Enabled = true;
-            else
-                chart1.Series[1].Enabled = false;
-
-        }
-
-        private void checkBox3_CheckedChanged(object sender, EventArgs e)
-        {
-            if (checkBox3.Checked)
-                chart1.Series[2].Enabled = true;
-            else
-                chart1.Series[2].Enabled = false;
-
-        }
-
-        private void checkBox4_CheckedChanged(object sender, EventArgs e)
-        {
-            if (checkBox4.Checked)
-                chart1.Series[3].Enabled = true;
-            else
-                chart1.Series[3].Enabled = false;
-
-        }
-
-        private void checkBox5_CheckedChanged(object sender, EventArgs e)
-        {
-            if (checkBox5.Checked)
-                chart1.Series[4].Enabled = true;
-            else
-                chart1.Series[4].Enabled = false;
-
-        }
 
         private void button3_Click(object sender, EventArgs e)
         {
@@ -5951,39 +5243,6 @@ namespace ControlBalance
 
         }
 
-        private unsafe void numericUpDown9_ValueChanged(object sender, EventArgs e)
-        {
-            short* TmpShort;
-            short Trmm = Decimal.ToInt16(numericUpDown9.Value);
-            byte[] sendbuf = new byte[sizeof(short) + 2];
-            if (checkBox19.Checked)
-            {
-                sendbuf[0] = SEND_AngleLimit;
-                fixed (byte* p = &sendbuf[2])
-                {
-                    TmpShort = (short*)p;
-                    *TmpShort = Trmm;
-                }
-
-                s.SendTo(sendbuf, ep);
-            }
-            else
-            {
-                TrmMass[0] = 0xff;
-                TrmMass[1] = 0xff;
-                TrmMass[2] = 3;//N
-                TrmMass[3] = SEND_AngleLimit;
-                TrmMass[4] = (byte)Trmm;
-                TrmMass[5] = (byte)(Trmm >> 8);
-                TrmMass[6] = CalcCheckSummTrm();
-                Trm();
-            }
-
-        }
-
-        private unsafe void numericUpDown11_ValueChanged(object sender, EventArgs e)
-        {
-        }
 
         private unsafe void numericUpDown10_ValueChanged(object sender, EventArgs e)
         {
@@ -6029,48 +5288,6 @@ namespace ControlBalance
             }
         }
 
-        private void checkBox6_CheckedChanged(object sender, EventArgs e)
-        {
-            if (checkBox6.Checked)
-                chart1.Series[5].Enabled = true;
-            else
-                chart1.Series[5].Enabled = false;
-        }
-
-        private void checkBox7_CheckedChanged(object sender, EventArgs e)
-        {
-            if (checkBox7.Checked)
-                chart1.Series[6].Enabled = true;
-            else
-                chart1.Series[6].Enabled = false;
-
-        }
-
-        private void checkBox8_CheckedChanged(object sender, EventArgs e)
-        {
-            if (checkBox8.Checked)
-                chart1.Series[7].Enabled = true;
-            else
-                chart1.Series[7].Enabled = false;
-
-        }
-
-        private void checkBox9_CheckedChanged(object sender, EventArgs e)
-        {
-            if (checkBox9.Checked)
-                chart1.Series[8].Enabled = true;
-            else
-                chart1.Series[8].Enabled = false;
-
-        }
-
-        private void checkBox10_CheckedChanged(object sender, EventArgs e)
-        {
-            if (checkBox10.Checked)
-                chart1.Series[9].Enabled = true;
-            else
-                chart1.Series[9].Enabled = false;
-        }
 
         private void button5_Click(object sender, EventArgs e)
         {
@@ -6101,7 +5318,7 @@ namespace ControlBalance
                 {
                     serialPort1.Write(TrmMass, j, 1);
                 }
-                catch (System.TimeoutException e)//IOException e)
+                catch (System.TimeoutException)//IOException e)
                 {
                     _continue = 0;
                     try
@@ -6114,7 +5331,7 @@ namespace ControlBalance
                     //                    MessageBox.Show("Ошибка передачи. Проверьте BlueTooth и откройте порт заново", "Ошибка", MessageBoxButtons.OK);
                     return;
                 }
-                catch (System.IO.IOException e)
+                catch (System.IO.IOException)
                 {
                     _continue = 0;
                     try
@@ -6142,7 +5359,7 @@ namespace ControlBalance
                 {
                     serialPort1.Write(TrmMass, 0, (TrmMass[2] + 4));
                 }
-                catch (System.TimeoutException e)//IOException e)
+                catch (System.TimeoutException)//IOException e)
                 {
                     _continue = 0;
                     try
@@ -6155,7 +5372,7 @@ namespace ControlBalance
                     //                    MessageBox.Show("Ошибка передачи. Проверьте BlueTooth и откройте порт заново", "Ошибка", MessageBoxButtons.OK);
                     return;
                 }
-                catch (System.IO.IOException e)
+                catch (System.IO.IOException)
                 {
                     _continue = 0;
                     try
@@ -6203,12 +5420,10 @@ namespace ControlBalance
             if (MovingON == 1)
             {
                 MovingON = 0;
-                button7.Text = "Moving On";
             }
             else
             {
                 MovingON = 1;
-                button7.Text = "Moving Off";
             }
 
         }
@@ -6349,35 +5564,7 @@ namespace ControlBalance
             }
         }
 
-        private unsafe void numericUpDown18_ValueChanged(object sender, EventArgs e)
-        {
-            short* TmpShort;
-            short Trmm = Decimal.ToInt16(numericUpDown18.Value);
-            byte[] sendbuf = new byte[sizeof(short) + 2];
-            if (checkBox19.Checked)
-            {
-                sendbuf[0] = SEND_KRot;
-                fixed (byte* p = &sendbuf[2])
-                {
-                    TmpShort = (short*)p;
-                    *TmpShort = Trmm;
-                }
-
-                s.SendTo(sendbuf, ep);
-            }
-            else
-            {
-                TrmMass[0] = 0xff;
-                TrmMass[1] = 0xff;
-                TrmMass[2] = 3;//N
-                TrmMass[3] = SEND_KRot;
-                TrmMass[4] = (byte)Trmm;
-                TrmMass[5] = (byte)(Trmm >> 8);
-                TrmMass[6] = CalcCheckSummTrm();
-                Trm();
-            }
-
-        }
+       
 
         private unsafe void numericUpDown19_ValueChanged(object sender, EventArgs e)
         {
@@ -6555,44 +5742,7 @@ namespace ControlBalance
             //}
         }
 
-        private unsafe void numericUpDown24_ValueChanged(object sender, EventArgs e)
-        {
-            short* TmpShort;
-            short Trmm = Decimal.ToInt16(numericUpDown24.Value);
-            byte[] sendbuf = new byte[sizeof(short) + 2];
-            if (checkBox19.Checked)
-            {
-                sendbuf[0] = SEND_SpeedLimit1;
-                fixed (byte* p = &sendbuf[2])
-                {
-                    TmpShort = (short*)p;
-                    *TmpShort = Trmm;
-                }
 
-                s.SendTo(sendbuf, ep);
-            }
-            else
-            {
-                TrmMass[0] = 0xff;
-                TrmMass[1] = 0xff;
-                TrmMass[2] = 3;//N
-                TrmMass[3] = SEND_SpeedLimit1;
-                TrmMass[4] = (byte)Trmm;
-                TrmMass[5] = (byte)(Trmm >> 8);
-                TrmMass[6] = CalcCheckSummTrm();
-                Trm();
-            }
-
-        }
-
-        private void checkBox13_CheckedChanged(object sender, EventArgs e)
-        {
-            if (checkBox13.Checked)
-                chart1.Series[10].Enabled = true;
-            else
-                chart1.Series[10].Enabled = false;
-
-        }
 
         private void checkBox14_CheckedChanged(object sender, EventArgs e)
         {
@@ -6881,35 +6031,7 @@ namespace ControlBalance
 
         }
 
-        private unsafe void numericUpDown31_ValueChanged(object sender, EventArgs e)
-        {
-            short* TmpShort;
-            short Trmm = Decimal.ToInt16(numericUpDown31.Value);
-            byte[] sendbuf = new byte[sizeof(short) + 2];
-            if (checkBox19.Checked)
-            {
-                sendbuf[0] = SEND_SpeedLimit3;
-                fixed (byte* p = &sendbuf[2])
-                {
-                    TmpShort = (short*)p;
-                    *TmpShort = Trmm;
-                }
-
-                s.SendTo(sendbuf, ep);
-            }
-            else
-            {
-                TrmMass[0] = 0xff;
-                TrmMass[1] = 0xff;
-                TrmMass[2] = 3;//N
-                TrmMass[3] = SEND_SpeedLimit3;
-                TrmMass[4] = (byte)Trmm;
-                TrmMass[5] = (byte)(Trmm >> 8);
-                TrmMass[6] = CalcCheckSummTrm();
-                Trm();
-            }
-
-        }
+       
 
         private void numericUpDown165_ValueChanged(object sender, EventArgs e)
         {
@@ -8218,35 +7340,6 @@ namespace ControlBalance
 
         }
 
-        private unsafe void numericUpDown32_ValueChanged(object sender, EventArgs e)
-        {
-            short* TmpShort;
-            short Trmm = Decimal.ToInt16(numericUpDown32.Value);
-            byte[] sendbuf = new byte[sizeof(short) + 2];
-            if (checkBox19.Checked)
-            {
-                sendbuf[0] = SEND_NumSpeedLimit;
-                fixed (byte* p = &sendbuf[2])
-                {
-                    TmpShort = (short*)p;
-                    *TmpShort = Trmm;
-                }
-
-                s.SendTo(sendbuf, ep);
-            }
-            else
-            {
-                TrmMass[0] = 0xff;
-                TrmMass[1] = 0xff;
-                TrmMass[2] = 3;//N
-                TrmMass[3] = SEND_NumSpeedLimit;
-                TrmMass[4] = (byte)Trmm;
-                TrmMass[5] = (byte)(Trmm >> 8);
-                TrmMass[6] = CalcCheckSummTrm();
-                Trm();
-            }
-        }
-
         private void button11_Click(object sender, EventArgs e)
         {
             byte[] sendbuf = Encoding.ASCII.GetBytes("Is anybody there?");
@@ -8272,69 +7365,8 @@ namespace ControlBalance
 
         }
 
-        private unsafe void numericUpDown33_ValueChanged(object sender, EventArgs e)
-        {
 
 
-
-        }
-
-        private unsafe void numericUpDown34_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label143_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label145_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label141_Click(object sender, EventArgs e)
-        {
-
-        }
-
-
-        private unsafe void numericUpDown35_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private unsafe void numericUpDown36_ValueChanged(object sender, EventArgs e)
-        {
-
-            short* TmpShort;
-            short Trmm = Decimal.ToInt16(numericUpDown36.Value);
-            byte[] sendbuf = new byte[sizeof(short) + 2];
-            if (checkBox19.Checked)
-            {
-                sendbuf[0] = SEND_SpdKpMax;
-                fixed (byte* p = &sendbuf[2])
-                {
-                    TmpShort = (short*)p;
-                    *TmpShort = Trmm;
-                }
-
-                s.SendTo(sendbuf, ep);
-            }
-            else
-            {
-                TrmMass[0] = 0xff;
-                TrmMass[1] = 0xff;
-                TrmMass[2] = 3;//N
-                TrmMass[3] = SEND_SpdKpMax;
-                TrmMass[4] = (byte)Trmm;
-                TrmMass[5] = (byte)(Trmm >> 8);
-                TrmMass[6] = CalcCheckSummTrm();
-                Trm();
-            }
-
-        }
 
 
         private void COMPorts()
@@ -8380,7 +7412,7 @@ namespace ControlBalance
                 {
                     serialPort1.Open();
                 }
-                catch (IOException e)
+                catch (IOException)
                 {
                     _continue = 0;
                     try
@@ -8466,11 +7498,11 @@ namespace ControlBalance
                         {
                             BtRc = serialPort1.ReadByte();
                         }
-                        catch (System.ArgumentNullException e)
+                        catch (System.ArgumentNullException)
                         {
                             //MessageBox.Show(e.ToString, MyStrings.ErrorMsg, MessageBoxButtons.OK);
                         }
-                        catch (System.IO.IOException e)
+                        catch (System.IO.IOException)
                         {
                             _continue = 0;
                             try
@@ -8495,7 +7527,7 @@ namespace ControlBalance
                         {
                             serialPort1.Close();
                         }
-                        catch (System.IO.IOException e)
+                        catch (System.IO.IOException)
                         {
                         }
                         MessageBox.Show(MyStrings.DisconnectedController, MyStrings.ErrorMsg, MessageBoxButtons.OK);
@@ -8540,11 +7572,11 @@ namespace ControlBalance
 
                                 if (CalcCheckSummRec() != PacketRec[PacketRec[0] + 1])
                                 {
-                                    CHK_Err = true;
+//                                    CHK_Err = true;
                                 }
                                 else
                                 {
-                                    CHK_Err = false;
+//                                    CHK_Err = false;
                                     RaspakHC05();
 
 
@@ -8644,6 +7676,9 @@ namespace ControlBalance
 
         private void timer1_Tick(object sender, EventArgs e)
         {
+            if (StartCNT!=0)
+                StartCNT--;
+
 
             if (checkBox114.Checked)
             {
@@ -8952,7 +7987,7 @@ namespace ControlBalance
                     tt = (short)((short)PacketRec[Cnt++] + (((short)PacketRec[Cnt++]) << 8));        //10
                     Spd1USTKMH = ((float)tt) / 10;
 
-                    Cr2 = (double)Curr2 * CurrPerDigit;
+                    //Cr2 = (double)Curr2 * CurrPerDigit;
 
 
 
@@ -9164,7 +8199,7 @@ namespace ControlBalance
 
                     wt = ((double)KdI) / (double)100;
 
-                    GyroYAv = ((double)GyroYAv);// * wt;
+//                    GyroYAv = ((double)GyroYAv);// * wt;
 
                     Tmp = PacketRec[Cnt++] + (((int)PacketRec[Cnt++]) << 8);        //79
                     KdI = (float)(short)Tmp;
@@ -9908,7 +8943,7 @@ namespace ControlBalance
 
 
 
-                    GettingOptions = true;
+                    
 
 
                     backgroundWorker1.ReportProgress(3);
@@ -10510,7 +9545,7 @@ namespace ControlBalance
             chart1.Series[9].Points.Clear();
             chart1.Series[10].Points.Clear();
 
-            PhaseCnt = 0;
+            
             CntSamples = 0;
             byte[] sendbuf = Encoding.ASCII.GetBytes("Is anybody there?");
 
@@ -10594,144 +9629,6 @@ namespace ControlBalance
 
         }
 
-        private unsafe void numericUpDown38_ValueChanged(object sender, EventArgs e)
-        {
-            short* TmpShort;
-            short Trmm = Decimal.ToInt16(numericUpDown38.Value);
-            byte[] sendbuf = new byte[sizeof(short) + 2];
-            if (checkBox19.Checked)
-            {
-                sendbuf[0] = SEND_KpStp;
-                fixed (byte* p = &sendbuf[2])
-                {
-                    TmpShort = (short*)p;
-                    *TmpShort = Trmm;
-                }
-
-                s.SendTo(sendbuf, ep);
-
-            }
-            else
-            {
-                TrmMass[0] = 0xff;
-                TrmMass[1] = 0xff;
-                TrmMass[2] = 3;//N
-                TrmMass[3] = SEND_KpStp;
-                TrmMass[4] = (byte)Trmm;
-                TrmMass[5] = (byte)(Trmm >> 8);
-                TrmMass[6] = CalcCheckSummTrm();
-                Trm();
-            }
-
-        }
-
-        private unsafe void numericUpDown39_ValueChanged(object sender, EventArgs e)
-        {
-            /*short* TmpShort;
-            short Trmm = Decimal.ToInt16(numericUpDown39.Value);
-            byte[] sendbuf = new byte[sizeof(short) + 2];
-            if (checkBox19.Checked)
-            {
-                sendbuf[0] = SEND_AngleLimitStp;
-                fixed (byte* p = &sendbuf[2])
-                {
-                    TmpShort = (short*)p;
-                    *TmpShort = Trmm;
-                }
-
-                s.SendTo(sendbuf, ep);
-
-            }
-            else
-            {
-                TrmMass[0] = 0xff;
-                TrmMass[1] = 0xff;
-                TrmMass[2] = 3;//N
-                TrmMass[3] = SEND_AngleLimitStp;
-                TrmMass[4] = (byte)Trmm;
-                TrmMass[5] = (byte)(Trmm >> 8);
-                TrmMass[6] = CalcCheckSummTrm();
-                Trm();
-            }
-            */
-        }
-
-        private unsafe void numericUpDown37_ValueChanged(object sender, EventArgs e)
-        {
-            short* TmpShort;
-            short Trmm = Decimal.ToInt16(numericUpDown37.Value);
-            byte[] sendbuf = new byte[sizeof(short) + 2];
-            if (checkBox19.Checked)
-            {
-                sendbuf[0] = SEND_TiltZadAddNoMan;
-                fixed (byte* p = &sendbuf[2])
-                {
-                    TmpShort = (short*)p;
-                    *TmpShort = Trmm;
-                }
-
-                s.SendTo(sendbuf, ep);
-
-            }
-            else
-            {
-                TrmMass[0] = 0xff;
-                TrmMass[1] = 0xff;
-                TrmMass[2] = 3;//N
-                TrmMass[3] = SEND_TiltZadAddNoMan;
-                TrmMass[4] = (byte)Trmm;
-                TrmMass[5] = (byte)(Trmm >> 8);
-                TrmMass[6] = CalcCheckSummTrm();
-                Trm();
-            }
-
-        }
-
-        //private unsafe void numericUpDown41_ValueChanged(object sender, EventArgs e)
-        //{
-        //    short* TmpShort;
-        //    short Trmm = Decimal.ToInt16(numericUpDown41.Value);
-        //    byte[] sendbuf = new byte[sizeof(short) + 2];
-        //    if (checkBox19.Checked)
-        //    {
-        //        sendbuf[0] = SEND_TiltZadAddNoMan;
-        //        fixed (byte* p = &sendbuf[2])
-        //        {
-        //            TmpShort = (short*)p;
-        //            *TmpShort = Trmm;
-        //        }
-
-        //        s.SendTo(sendbuf, ep);
-
-        //    }
-        //    else
-        //    {
-        //        TrmMass[0] = 0xff;
-        //        TrmMass[1] = 0xff;
-        //        TrmMass[2] = 3;//N
-        //        TrmMass[3] = SEND_TiltZadAddNoMan;
-        //        TrmMass[4] = (byte)Trmm;
-        //        TrmMass[5] = (byte)(Trmm >> 8);
-        //        TrmMass[6] = CalcCheckSummTrm();
-        //        Trm();
-        //    }
-
-        //}
-
-        private void label98_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label99_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label101_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private unsafe void numericUpDown46_ValueChanged(object sender, EventArgs e)
         {
@@ -10862,55 +9759,6 @@ namespace ControlBalance
 
         }
 
-        private void panel4_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private unsafe void numericUpDown51_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private unsafe void numericUpDown53_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private unsafe void numericUpDown49_ValueChanged(object sender, EventArgs e)
-        {
-            short* TmpShort;
-            short Trmm = Decimal.ToInt16(numericUpDown49.Value);
-            byte[] sendbuf = new byte[sizeof(short) + 2];
-
-            if (checkBox19.Checked)
-            {
-
-                sendbuf[0] = SEND_TiltZadAddOneTwoLeg;
-                fixed (byte* p = &sendbuf[2])
-                {
-                    TmpShort = (short*)p;
-                    *TmpShort = Trmm;
-                }
-
-                s.SendTo(sendbuf, ep);
-
-
-            }
-            else
-            {
-                TrmMass[0] = 0xff;
-                TrmMass[1] = 0xff;
-                TrmMass[2] = 3;//N
-                TrmMass[3] = SEND_TiltZadAddOneTwoLeg;
-                TrmMass[4] = (byte)Trmm;
-                TrmMass[5] = (byte)(Trmm >> 8);
-                TrmMass[6] = CalcCheckSummTrm();
-                Trm();
-            }
-
-
-        }
 
         private unsafe void numericUpDown48_ValueChanged(object sender, EventArgs e)
         {
@@ -10924,44 +9772,6 @@ namespace ControlBalance
 
         }
 
-        private unsafe void numericUpDown50_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private unsafe void numericUpDown47_ValueChanged(object sender, EventArgs e)
-        {
-            short* TmpShort;
-            short Trmm = Decimal.ToInt16(numericUpDown47.Value);
-            byte[] sendbuf = new byte[sizeof(short) + 2];
-
-            if (checkBox19.Checked)
-            {
-
-                sendbuf[0] = SEND_KiRotOneTwoLeg;
-                fixed (byte* p = &sendbuf[2])
-                {
-                    TmpShort = (short*)p;
-                    *TmpShort = Trmm;
-                }
-
-                s.SendTo(sendbuf, ep);
-
-
-            }
-            else
-            {
-                TrmMass[0] = 0xff;
-                TrmMass[1] = 0xff;
-                TrmMass[2] = 3;//N
-                TrmMass[3] = SEND_KiRotOneTwoLeg;
-                TrmMass[4] = (byte)Trmm;
-                TrmMass[5] = (byte)(Trmm >> 8);
-                TrmMass[6] = CalcCheckSummTrm();
-                Trm();
-            }
-
-        }
 
         private unsafe void numericUpDown54_ValueChanged(object sender, EventArgs e)
         {
@@ -11032,277 +9842,7 @@ namespace ControlBalance
 
         }
 
-        private unsafe void numericUpDown63_ValueChanged(object sender, EventArgs e)
-        {
 
-
-        }
-
-        private unsafe void numericUpDown59_ValueChanged(object sender, EventArgs e)
-        {
-            short* TmpShort;
-            short Trmm = Decimal.ToInt16(numericUpDown59.Value);
-            byte[] sendbuf = new byte[sizeof(short) + 2];
-
-            if (checkBox19.Checked)
-            {
-
-                sendbuf[0] = SEND_TiltZadAddFreshman;
-                fixed (byte* p = &sendbuf[2])
-                {
-                    TmpShort = (short*)p;
-                    *TmpShort = Trmm;
-                }
-
-                s.SendTo(sendbuf, ep);
-
-
-            }
-            else
-            {
-                TrmMass[0] = 0xff;
-                TrmMass[1] = 0xff;
-                TrmMass[2] = 3;//N
-                TrmMass[3] = SEND_TiltZadAddFreshman;
-                TrmMass[4] = (byte)Trmm;
-                TrmMass[5] = (byte)(Trmm >> 8);
-                TrmMass[6] = CalcCheckSummTrm();
-                Trm();
-            }
-
-        }
-
-        private unsafe void numericUpDown61_ValueChanged(object sender, EventArgs e)
-        {
-            short* TmpShort;
-            short Trmm = Decimal.ToInt16(numericUpDown61.Value);
-            byte[] sendbuf = new byte[sizeof(short) + 2];
-
-            if (checkBox19.Checked)
-            {
-
-                sendbuf[0] = SEND_StartRotFreshmanL;
-                fixed (byte* p = &sendbuf[2])
-                {
-                    TmpShort = (short*)p;
-                    *TmpShort = Trmm;
-                }
-
-                s.SendTo(sendbuf, ep);
-
-
-            }
-            else
-            {
-                TrmMass[0] = 0xff;
-                TrmMass[1] = 0xff;
-                TrmMass[2] = 3;//N
-                TrmMass[3] = SEND_StartRotFreshmanL;
-                TrmMass[4] = (byte)Trmm;
-                TrmMass[5] = (byte)(Trmm >> 8);
-                TrmMass[6] = CalcCheckSummTrm();
-                Trm();
-            }
-
-        }
-
-        private unsafe void numericUpDown58_ValueChanged(object sender, EventArgs e)
-        {
-            //short* TmpShort;
-            //short Trmm = Decimal.ToInt16(numericUpDown58.Value);
-            //byte[] sendbuf = new byte[sizeof(short) + 2];
-
-            //if (checkBox19.Checked)
-            //{
-
-            //    sendbuf[0] = SEND_KiFreshman;
-            //    fixed (byte* p = &sendbuf[2])
-            //    {
-            //        TmpShort = (short*)p;
-            //        *TmpShort = Trmm;
-            //    }
-
-            //    s.SendTo(sendbuf, ep);
-
-
-            //}
-            //else
-            //{
-            //    TrmMass[0] = 0xff;
-            //    TrmMass[1] = 0xff;
-            //    TrmMass[2] = 3;//N
-            //    TrmMass[3] = SEND_KiFreshman;
-            //    TrmMass[4] = (byte)Trmm;
-            //    TrmMass[5] = (byte)(Trmm >> 8);
-            //    TrmMass[6] = CalcCheckSummTrm();
-            //    Trm();
-            //}
-
-        }
-
-        private unsafe void numericUpDown62_ValueChanged(object sender, EventArgs e)
-        {
-            short* TmpShort;
-            short Trmm = Decimal.ToInt16(numericUpDown62.Value);
-            byte[] sendbuf = new byte[sizeof(short) + 2];
-
-            if (checkBox19.Checked)
-            {
-
-                sendbuf[0] = SEND_KRotFreshmanL;
-                fixed (byte* p = &sendbuf[2])
-                {
-                    TmpShort = (short*)p;
-                    *TmpShort = Trmm;
-                }
-
-                s.SendTo(sendbuf, ep);
-
-
-            }
-            else
-            {
-                TrmMass[0] = 0xff;
-                TrmMass[1] = 0xff;
-                TrmMass[2] = 3;//N
-                TrmMass[3] = SEND_KRotFreshmanL;
-                TrmMass[4] = (byte)Trmm;
-                TrmMass[5] = (byte)(Trmm >> 8);
-                TrmMass[6] = CalcCheckSummTrm();
-                Trm();
-            }
-
-        }
-
-        private unsafe void numericUpDown60_ValueChanged(object sender, EventArgs e)
-        {
-
-
-        }
-
-        private unsafe void numericUpDown57_ValueChanged(object sender, EventArgs e)
-        {
-
-
-        }
-
-        private unsafe void numericUpDown64_ValueChanged(object sender, EventArgs e)
-        {
-            /*short* TmpShort;
-            short Trmm = Decimal.ToInt16(numericUpDown64.Value);
-            byte[] sendbuf = new byte[sizeof(short) + 2];
-
-            if (checkBox19.Checked)
-            {
-
-                sendbuf[0] = SEND_StartRotFreshmanH;
-                fixed (byte* p = &sendbuf[2])
-                {
-                    TmpShort = (short*)p;
-                    *TmpShort = Trmm;
-                }
-
-                s.SendTo(sendbuf, ep);
-
-
-            }
-            else
-            {
-                TrmMass[0] = 0xff;
-                TrmMass[1] = 0xff;
-                TrmMass[2] = 3;//N
-                TrmMass[3] = SEND_StartRotFreshmanH;
-                TrmMass[4] = (byte)Trmm;
-                TrmMass[5] = (byte)(Trmm >> 8);
-                TrmMass[6] = CalcCheckSummTrm();
-                Trm();
-            }
-            */
-        }
-
-        private unsafe void numericUpDown65_ValueChanged(object sender, EventArgs e)
-        {
-            /*short* TmpShort;
-            short Trmm = Decimal.ToInt16(numericUpDown65.Value);
-            byte[] sendbuf = new byte[sizeof(short) + 2];
-
-            if (checkBox19.Checked)
-            {
-
-                sendbuf[0] = SEND_KRotFreshmanH;
-                fixed (byte* p = &sendbuf[2])
-                {
-                    TmpShort = (short*)p;
-                    *TmpShort = Trmm;
-                }
-
-                s.SendTo(sendbuf, ep);
-
-
-            }
-            else
-            {
-                TrmMass[0] = 0xff;
-                TrmMass[1] = 0xff;
-                TrmMass[2] = 3;//N
-                TrmMass[3] = SEND_KRotFreshmanH;
-                TrmMass[4] = (byte)Trmm;
-                TrmMass[5] = (byte)(Trmm >> 8);
-                TrmMass[6] = CalcCheckSummTrm();
-                Trm();
-            }
-            */
-        }
-
-        private unsafe void numericUpDown67_ValueChanged(object sender, EventArgs e)
-        {
-            /*          short* TmpShort;
-                      short Trmm = Decimal.ToInt16(numericUpDown67.Value);
-                      byte[] sendbuf = new byte[sizeof(short) + 2];
-
-                      if (checkBox19.Checked)
-                      {
-
-                          sendbuf[0] = SEND_CntKRot_CHNG_Const;
-                          fixed (byte* p = &sendbuf[2])
-                          {
-                              TmpShort = (short*)p;
-                              *TmpShort = Trmm;
-                          }
-
-                          s.SendTo(sendbuf, ep);
-
-
-                      }
-                      else
-                      {
-                          TrmMass[0] = 0xff;
-                          TrmMass[1] = 0xff;
-                          TrmMass[2] = 3;//N
-                          TrmMass[3] = SEND_CntKRot_CHNG_Const;
-                          TrmMass[4] = (byte)Trmm;
-                          TrmMass[5] = (byte)(Trmm >> 8);
-                          TrmMass[6] = CalcCheckSummTrm();
-                          Trm();
-                      }
-          */
-        }
-
-        private unsafe void numericUpDown66_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void checkBox23_CheckedChanged(object sender, EventArgs e)
-        {
-
-
-        }
-
-        private void checkBox11_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private void button2_Click_1(object sender, EventArgs e)
         {
@@ -11856,456 +10396,7 @@ namespace ControlBalance
 
         }
 
-        private unsafe void numericUpDown80_ValueChanged(object sender, EventArgs e)
-        {
 
-
-        }
-
-        private unsafe void numericUpDown76_ValueChanged(object sender, EventArgs e)
-        {
-
-
-        }
-
-        private unsafe void numericUpDown78_ValueChanged(object sender, EventArgs e)
-        {
-            short* TmpShort;
-            short Trmm = Decimal.ToInt16(numericUpDown78.Value);
-            byte[] sendbuf = new byte[sizeof(short) + 2];
-
-            if (checkBox19.Checked)
-            {
-
-                sendbuf[0] = SEND_StartRotOneTwoLeg_1;
-                fixed (byte* p = &sendbuf[2])
-                {
-                    TmpShort = (short*)p;
-                    *TmpShort = Trmm;
-                }
-
-                s.SendTo(sendbuf, ep);
-
-
-            }
-            else
-            {
-                TrmMass[0] = 0xff;
-                TrmMass[1] = 0xff;
-                TrmMass[2] = 3;//N
-                TrmMass[3] = SEND_StartRotOneTwoLeg_1;
-                TrmMass[4] = (byte)Trmm;
-                TrmMass[5] = (byte)(Trmm >> 8);
-                TrmMass[6] = CalcCheckSummTrm();
-                Trm();
-            }
-
-        }
-
-        private unsafe void numericUpDown75_ValueChanged(object sender, EventArgs e)
-        {
-            short* TmpShort;
-            short Trmm = Decimal.ToInt16(numericUpDown75.Value);
-            byte[] sendbuf = new byte[sizeof(short) + 2];
-
-            if (checkBox19.Checked)
-            {
-
-                sendbuf[0] = SEND_KiOneTwoLeg_1;
-                fixed (byte* p = &sendbuf[2])
-                {
-                    TmpShort = (short*)p;
-                    *TmpShort = Trmm;
-                }
-
-                s.SendTo(sendbuf, ep);
-
-
-            }
-            else
-            {
-                TrmMass[0] = 0xff;
-                TrmMass[1] = 0xff;
-                TrmMass[2] = 3;//N
-                TrmMass[3] = SEND_KiOneTwoLeg_1;
-                TrmMass[4] = (byte)Trmm;
-                TrmMass[5] = (byte)(Trmm >> 8);
-                TrmMass[6] = CalcCheckSummTrm();
-                Trm();
-            }
-
-
-        }
-
-        private unsafe void numericUpDown79_ValueChanged(object sender, EventArgs e)
-        {
-            short* TmpShort;
-            short Trmm = Decimal.ToInt16(numericUpDown79.Value);
-            byte[] sendbuf = new byte[sizeof(short) + 2];
-
-            if (checkBox19.Checked)
-            {
-
-                sendbuf[0] = SEND_KRotOneTwoLeg_1;
-                fixed (byte* p = &sendbuf[2])
-                {
-                    TmpShort = (short*)p;
-                    *TmpShort = Trmm;
-                }
-
-                s.SendTo(sendbuf, ep);
-
-
-            }
-            else
-            {
-                TrmMass[0] = 0xff;
-                TrmMass[1] = 0xff;
-                TrmMass[2] = 3;//N
-                TrmMass[3] = SEND_KRotOneTwoLeg_1;
-                TrmMass[4] = (byte)Trmm;
-                TrmMass[5] = (byte)(Trmm >> 8);
-                TrmMass[6] = CalcCheckSummTrm();
-                Trm();
-            }
-
-        }
-
-        private unsafe void numericUpDown77_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private unsafe void numericUpDown74_ValueChanged(object sender, EventArgs e)
-        {
-            /*short* TmpShort;
-            short Trmm = Decimal.ToInt16(numericUpDown74.Value);
-            byte[] sendbuf = new byte[sizeof(short) + 2];
-
-            if (checkBox19.Checked)
-            {
-
-                sendbuf[0] = SEND_KiRotOneTwoLeg_1;
-                fixed (byte* p = &sendbuf[2])
-                {
-                    TmpShort = (short*)p;
-                    *TmpShort = Trmm;
-                }
-
-                s.SendTo(sendbuf, ep);
-
-
-            }
-            else
-            {
-                TrmMass[0] = 0xff;
-                TrmMass[1] = 0xff;
-                TrmMass[2] = 3;//N
-                TrmMass[3] = SEND_KiRotOneTwoLeg_1;
-                TrmMass[4] = (byte)Trmm;
-                TrmMass[5] = (byte)(Trmm >> 8);
-                TrmMass[6] = CalcCheckSummTrm();
-                Trm();
-            }
-            */
-        }
-
-        private void checkBox27_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void checkBox28_CheckedChanged(object sender, EventArgs e)
-        {
-
-
-        }
-
-        private void checkBox29_CheckedChanged(object sender, EventArgs e)
-        {
-
-
-        }
-
-        private void checkBox30_CheckedChanged(object sender, EventArgs e)
-        {
-
-
-        }
-
-        private void checkBox31_CheckedChanged(object sender, EventArgs e)
-        {
-
-
-        }
-
-        private void checkBox32_CheckedChanged(object sender, EventArgs e)
-        {
-
-
-        }
-
-        private void checkBox33_CheckedChanged(object sender, EventArgs e)
-        {
-
-
-        }
-
-        private void checkBox34_CheckedChanged(object sender, EventArgs e)
-        {
-
-
-        }
-
-        private void checkBox35_CheckedChanged(object sender, EventArgs e)
-        {
-
-
-        }
-
-        private void checkBox36_CheckedChanged(object sender, EventArgs e)
-        {
-            byte[] sendbuf = Encoding.ASCII.GetBytes("Is anybody there?");
-            if (checkBox19.Checked)
-            {
-                if (checkBox36.Checked)
-                    sendbuf[0] = SEND_Key10_On;
-                else
-                    sendbuf[0] = SEND_Key10_Off;
-
-                s.SendTo(sendbuf, ep);
-            }
-            else
-            {
-                TrmMass[0] = 0xff;
-                TrmMass[1] = 0xff;
-                TrmMass[2] = 1;//N
-                if (checkBox36.Checked)
-                    TrmMass[3] = SEND_Key10_On;
-                else
-                    TrmMass[3] = SEND_Key10_Off;
-
-                TrmMass[4] = CalcCheckSummTrm();
-                Trm();
-            }
-
-
-        }
-
-        private void checkBox37_CheckedChanged(object sender, EventArgs e)
-        {
-            byte[] sendbuf = Encoding.ASCII.GetBytes("Is anybody there?");
-            if (checkBox19.Checked)
-            {
-                if (checkBox37.Checked)
-                    sendbuf[0] = SEND_Key11_On;
-                else
-                    sendbuf[0] = SEND_Key11_Off;
-
-                s.SendTo(sendbuf, ep);
-            }
-            else
-            {
-                TrmMass[0] = 0xff;
-                TrmMass[1] = 0xff;
-                TrmMass[2] = 1;//N
-                if (checkBox37.Checked)
-                    TrmMass[3] = SEND_Key11_On;
-                else
-                    TrmMass[3] = SEND_Key11_Off;
-
-                TrmMass[4] = CalcCheckSummTrm();
-                Trm();
-            }
-
-        }
-
-        private void checkBox38_CheckedChanged(object sender, EventArgs e)
-        {
-            byte[] sendbuf = Encoding.ASCII.GetBytes("Is anybody there?");
-            if (checkBox19.Checked)
-            {
-                if (checkBox38.Checked)
-                    sendbuf[0] = SEND_Key12_On;
-                else
-                    sendbuf[0] = SEND_Key12_Off;
-
-                s.SendTo(sendbuf, ep);
-            }
-            else
-            {
-                TrmMass[0] = 0xff;
-                TrmMass[1] = 0xff;
-                TrmMass[2] = 1;//N
-                if (checkBox38.Checked)
-                    TrmMass[3] = SEND_Key12_On;
-                else
-                    TrmMass[3] = SEND_Key12_Off;
-
-                TrmMass[4] = CalcCheckSummTrm();
-                Trm();
-            }
-
-
-        }
-
-        private void checkBox39_CheckedChanged(object sender, EventArgs e)
-        {
-            byte[] sendbuf = Encoding.ASCII.GetBytes("Is anybody there?");
-            if (checkBox19.Checked)
-            {
-                if (checkBox39.Checked)
-                    sendbuf[0] = SEND_Key13_On;
-                else
-                    sendbuf[0] = SEND_Key13_Off;
-
-                s.SendTo(sendbuf, ep);
-            }
-            else
-            {
-                TrmMass[0] = 0xff;
-                TrmMass[1] = 0xff;
-                TrmMass[2] = 1;//N
-                if (checkBox39.Checked)
-                    TrmMass[3] = SEND_Key13_On;
-                else
-                    TrmMass[3] = SEND_Key13_Off;
-
-                TrmMass[4] = CalcCheckSummTrm();
-                Trm();
-            }
-
-        }
-
-        private void checkBox40_CheckedChanged(object sender, EventArgs e)
-        {
-            byte[] sendbuf = Encoding.ASCII.GetBytes("Is anybody there?");
-            if (checkBox19.Checked)
-            {
-                if (checkBox40.Checked)
-                    sendbuf[0] = SEND_Key14_On;
-                else
-                    sendbuf[0] = SEND_Key14_Off;
-
-                s.SendTo(sendbuf, ep);
-            }
-            else
-            {
-                TrmMass[0] = 0xff;
-                TrmMass[1] = 0xff;
-                TrmMass[2] = 1;//N
-                if (checkBox40.Checked)
-                    TrmMass[3] = SEND_Key14_On;
-                else
-                    TrmMass[3] = SEND_Key14_Off;
-
-                TrmMass[4] = CalcCheckSummTrm();
-                Trm();
-            }
-
-        }
-
-        private void checkBox41_CheckedChanged(object sender, EventArgs e)
-        {
-            byte[] sendbuf = Encoding.ASCII.GetBytes("Is anybody there?");
-            if (checkBox19.Checked)
-            {
-                if (checkBox41.Checked)
-                    sendbuf[0] = SEND_Key15_On;
-                else
-                    sendbuf[0] = SEND_Key15_Off;
-
-                s.SendTo(sendbuf, ep);
-            }
-            else
-            {
-                TrmMass[0] = 0xff;
-                TrmMass[1] = 0xff;
-                TrmMass[2] = 1;//N
-                if (checkBox41.Checked)
-                    TrmMass[3] = SEND_Key15_On;
-                else
-                    TrmMass[3] = SEND_Key15_Off;
-
-                TrmMass[4] = CalcCheckSummTrm();
-                Trm();
-            }
-
-        }
-
-        private void checkBox42_CheckedChanged(object sender, EventArgs e)
-        {
-            byte[] sendbuf = Encoding.ASCII.GetBytes("Is anybody there?");
-            if (checkBox19.Checked)
-            {
-                if (checkBox42.Checked)
-                    sendbuf[0] = SEND_Key16_On;
-                else
-                    sendbuf[0] = SEND_Key16_Off;
-
-                s.SendTo(sendbuf, ep);
-            }
-            else
-            {
-                TrmMass[0] = 0xff;
-                TrmMass[1] = 0xff;
-                TrmMass[2] = 1;//N
-                if (checkBox42.Checked)
-                    TrmMass[3] = SEND_Key16_On;
-                else
-                    TrmMass[3] = SEND_Key16_Off;
-
-                TrmMass[4] = CalcCheckSummTrm();
-                Trm();
-            }
-
-        }
-
-        private void label313_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label314_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void checkBox43_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private unsafe void numericUpDown81_ValueChanged(object sender, EventArgs e)
-        {
-            short* TmpShort;
-            short Trmm = Decimal.ToInt16(numericUpDown81.Value);
-            byte[] sendbuf = new byte[sizeof(short) + 2];
-
-            if (checkBox19.Checked)
-            {
-                sendbuf[0] = SEND_MAH;
-                fixed (byte* p = &sendbuf[2])
-                {
-                    TmpShort = (short*)p;
-                    *TmpShort = Trmm;
-                }
-
-                s.SendTo(sendbuf, ep);
-            }
-            else
-            {
-                TrmMass[0] = 0xff;
-                TrmMass[1] = 0xff;
-                TrmMass[2] = 3;//N
-                TrmMass[3] = SEND_MAH;
-                TrmMass[4] = (byte)Trmm;
-                TrmMass[5] = (byte)(Trmm >> 8);
-                TrmMass[6] = CalcCheckSummTrm();
-                Trm();
-            }
-
-        }
 
         private unsafe void numericUpDown82_ValueChanged(object sender, EventArgs e)
         {
@@ -12337,107 +10428,7 @@ namespace ControlBalance
 
         }
 
-        private unsafe void numericUpDown83_ValueChanged(object sender, EventArgs e)
-        {
 
-
-        }
-
-        private void button25_Click(object sender, EventArgs e)
-        {
-
-
-        }
-
-        private unsafe void numericUpDown84_ValueChanged(object sender, EventArgs e)
-        {
-            short* TmpShort;
-            short Trmm = Decimal.ToInt16(numericUpDown84.Value);
-            byte[] sendbuf = new byte[sizeof(short) + 2];
-            if (checkBox19.Checked)
-            {
-                sendbuf[0] = SEND_Balance2;
-                fixed (byte* p = &sendbuf[2])
-                {
-                    TmpShort = (short*)p;
-                    *TmpShort = Trmm;
-                }
-
-                s.SendTo(sendbuf, ep);
-            }
-            else
-            {
-                TrmMass[0] = 0xff;
-                TrmMass[1] = 0xff;
-                TrmMass[2] = 3;//N
-                TrmMass[3] = SEND_Balance2;
-                TrmMass[4] = (byte)Trmm;
-                TrmMass[5] = (byte)(Trmm >> 8);
-                TrmMass[6] = CalcCheckSummTrm();
-                Trm();
-            }
-
-        }
-
-        private unsafe void numericUpDown85_ValueChanged(object sender, EventArgs e)
-        {
-            short* TmpShort;
-            short Trmm = Decimal.ToInt16(numericUpDown85.Value);
-            byte[] sendbuf = new byte[sizeof(short) + 2];
-            if (checkBox19.Checked)
-            {
-                sendbuf[0] = SEND_Balance3;
-                fixed (byte* p = &sendbuf[2])
-                {
-                    TmpShort = (short*)p;
-                    *TmpShort = Trmm;
-                }
-
-                s.SendTo(sendbuf, ep);
-            }
-            else
-            {
-                TrmMass[0] = 0xff;
-                TrmMass[1] = 0xff;
-                TrmMass[2] = 3;//N
-                TrmMass[3] = SEND_Balance3;
-                TrmMass[4] = (byte)Trmm;
-                TrmMass[5] = (byte)(Trmm >> 8);
-                TrmMass[6] = CalcCheckSummTrm();
-                Trm();
-            }
-
-        }
-
-        private unsafe void numericUpDown86_ValueChanged(object sender, EventArgs e)
-        {
-            short* TmpShort;
-            short Trmm = Decimal.ToInt16(numericUpDown86.Value);
-            byte[] sendbuf = new byte[sizeof(short) + 2];
-            if (checkBox19.Checked)
-            {
-                sendbuf[0] = SEND_Balance4;
-                fixed (byte* p = &sendbuf[2])
-                {
-                    TmpShort = (short*)p;
-                    *TmpShort = Trmm;
-                }
-
-                s.SendTo(sendbuf, ep);
-            }
-            else
-            {
-                TrmMass[0] = 0xff;
-                TrmMass[1] = 0xff;
-                TrmMass[2] = 3;//N
-                TrmMass[3] = SEND_Balance4;
-                TrmMass[4] = (byte)Trmm;
-                TrmMass[5] = (byte)(Trmm >> 8);
-                TrmMass[6] = CalcCheckSummTrm();
-                Trm();
-            }
-
-        }
 
         private void button26_Click(object sender, EventArgs e)
         {
@@ -12499,46 +10490,6 @@ namespace ControlBalance
 
         }
 
-        private void label339_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private unsafe void numericUpDown87_ValueChanged(object sender, EventArgs e)
-        {
-            short* TmpShort;
-            short Trmm = Decimal.ToInt16(numericUpDown87.Value);
-            byte[] sendbuf = new byte[sizeof(short) + 2];
-
-            if (checkBox19.Checked)
-            {
-
-                sendbuf[0] = SEND_TiltZadState5;
-                fixed (byte* p = &sendbuf[2])
-                {
-                    TmpShort = (short*)p;
-                    *TmpShort = Trmm;
-                }
-
-                s.SendTo(sendbuf, ep);
-
-
-            }
-            else
-            {
-                TrmMass[0] = 0xff;
-                TrmMass[1] = 0xff;
-                TrmMass[2] = 3;//N
-                TrmMass[3] = SEND_TiltZadState5;
-                TrmMass[4] = (byte)Trmm;
-                TrmMass[5] = (byte)(Trmm >> 8);
-                TrmMass[6] = CalcCheckSummTrm();
-                Trm();
-            }
-
-
-        }
-
         private void button29_Click(object sender, EventArgs e)
         {
             TrmMass[0] = 0xff;
@@ -12547,54 +10498,6 @@ namespace ControlBalance
             TrmMass[3] = 9;
             TrmMass[4] = CalcCheckSummTrm();
             Trm();
-
-        }
-
-        private void label344_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label345_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private unsafe void numericUpDown88_ValueChanged(object sender, EventArgs e)
-        {
-
-            short* TmpShort;
-            short Trmm = Decimal.ToInt16(numericUpDown88.Value);
-            byte[] sendbuf = new byte[sizeof(short) + 2];
-            if (checkBox19.Checked)
-            {
-                sendbuf[0] = SEND_SpdRstSpeedLim;
-                fixed (byte* p = &sendbuf[2])
-                {
-                    TmpShort = (short*)p;
-                    *TmpShort = Trmm;
-                }
-
-                s.SendTo(sendbuf, ep);
-
-            }
-            else
-            {
-                TrmMass[0] = 0xff;
-                TrmMass[1] = 0xff;
-                TrmMass[2] = 3;//N
-                TrmMass[3] = SEND_SpdRstSpeedLim;
-                TrmMass[4] = (byte)Trmm;
-                TrmMass[5] = (byte)(Trmm >> 8);
-                TrmMass[6] = CalcCheckSummTrm();
-                Trm();
-            }
-
-
-        }
-
-        private unsafe void numericUpDown91_ValueChanged(object sender, EventArgs e)
-        {
 
         }
 
@@ -12676,44 +10579,6 @@ namespace ControlBalance
 
         }
 
-        private void checkBox44_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private unsafe void numericUpDown97_ValueChanged(object sender, EventArgs e)
-        {
-            short* TmpShort;
-            short Trmm = Decimal.ToInt16(numericUpDown97.Value);
-            byte[] sendbuf = new byte[sizeof(short) + 2];
-
-            if (checkBox19.Checked)
-            {
-
-                sendbuf[0] = SEND_SpeedLimitSt4;
-                fixed (byte* p = &sendbuf[2])
-                {
-                    TmpShort = (short*)p;
-                    *TmpShort = Trmm;
-                }
-
-                s.SendTo(sendbuf, ep);
-
-
-            }
-            else
-            {
-                TrmMass[0] = 0xff;
-                TrmMass[1] = 0xff;
-                TrmMass[2] = 3;//N
-                TrmMass[3] = SEND_SpeedLimitSt4;
-                TrmMass[4] = (byte)Trmm;
-                TrmMass[5] = (byte)(Trmm >> 8);
-                TrmMass[6] = CalcCheckSummTrm();
-                Trm();
-            }
-        }
-
         private void button30_Click(object sender, EventArgs e)
         {
             byte[] sendbuf = Encoding.ASCII.GetBytes("Is anybody there?");
@@ -12735,66 +10600,7 @@ namespace ControlBalance
 
         }
 
-        private void checkBox45_CheckedChanged(object sender, EventArgs e)
-        {
-            byte[] sendbuf = Encoding.ASCII.GetBytes("Is anybody there?");
-            if (checkBox19.Checked)
-            {
-                if (checkBox45.Checked)
-                    sendbuf[0] = SEND_StopVibroOn;
-                else
-                    sendbuf[0] = SEND_StopVibroOff;
 
-                s.SendTo(sendbuf, ep);
-            }
-            else
-            {
-                TrmMass[0] = 0xff;
-                TrmMass[1] = 0xff;
-                TrmMass[2] = 1;//N
-                if (checkBox45.Checked)
-                    TrmMass[3] = SEND_StopVibroOn;
-                else
-                    TrmMass[3] = SEND_StopVibroOff;
-
-                TrmMass[4] = CalcCheckSummTrm();
-                Trm();
-            }
-
-        }
-
-        private void checkBox48_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void checkBox46_CheckedChanged(object sender, EventArgs e)
-        {
-            byte[] sendbuf = Encoding.ASCII.GetBytes("Is anybody there?");
-            if (checkBox19.Checked)
-            {
-                if (checkBox46.Checked)
-                    sendbuf[0] = SEND_TestVibroLROn;
-                else
-                    sendbuf[0] = SEND_TestVibroLROff;
-
-                s.SendTo(sendbuf, ep);
-            }
-            else
-            {
-                TrmMass[0] = 0xff;
-                TrmMass[1] = 0xff;
-                TrmMass[2] = 1;//N
-                if (checkBox46.Checked)
-                    TrmMass[3] = SEND_TestVibroLROn;
-                else
-                    TrmMass[3] = SEND_TestVibroLROff;
-
-                TrmMass[4] = CalcCheckSummTrm();
-                Trm();
-            }
-
-        }
 
         private void checkBox47_CheckedChanged(object sender, EventArgs e)
         {
@@ -12859,30 +10665,7 @@ namespace ControlBalance
 
         private void checkBox50_CheckedChanged(object sender, EventArgs e)
         {
-            //byte[] sendbuf = Encoding.ASCII.GetBytes("Is anybody there?");
-            //if (checkBox19.Checked)
-            //{
-            //    if (checkBox50.Checked)
-            //        sendbuf[0] = SEND_SpeeDLimitTiltDirSecondOn;
-            //    else
-            //        sendbuf[0] = SEND_SpeeDLimitTiltDirSecondOff;
-
-            //    s.SendTo(sendbuf, ep);
-            //}
-            //else
-            //{
-            //    TrmMass[0] = 0xff;
-            //    TrmMass[1] = 0xff;
-            //    TrmMass[2] = 1;//N
-            //    if (checkBox50.Checked)
-            //        TrmMass[3] = SEND_SpeeDLimitTiltDirSecondOn;
-            //    else
-            //        TrmMass[3] = SEND_SpeeDLimitTiltDirSecondOff;
-
-            //    TrmMass[4] = CalcCheckSummTrm();
-            //    Trm();
-            //}
-
+          
         }
 
         private void checkBox51_CheckedChanged(object sender, EventArgs e)
@@ -12914,34 +10697,6 @@ namespace ControlBalance
 
         }
 
-        private void checkBox52_CheckedChanged(object sender, EventArgs e)
-        {
-            byte[] sendbuf = Encoding.ASCII.GetBytes("Is anybody there?");
-            if (checkBox19.Checked)
-            {
-                if (checkBox52.Checked)
-                    sendbuf[0] = DoNotTestBMSOn;
-                else
-                    sendbuf[0] = DoNotTestBMSOff;
-
-                s.SendTo(sendbuf, ep);
-            }
-            else
-            {
-                TrmMass[0] = 0xff;
-                TrmMass[1] = 0xff;
-                TrmMass[2] = 1;//N
-                if (checkBox52.Checked)
-                    TrmMass[3] = DoNotTestBMSOn;
-                else
-                    TrmMass[3] = DoNotTestBMSOff;
-
-                TrmMass[4] = CalcCheckSummTrm();
-                Trm();
-            }
-
-        }
-
         private void button32_Click(object sender, EventArgs e)
         {
             byte[] sendbuf = Encoding.ASCII.GetBytes("Is anybody there?");
@@ -12962,35 +10717,6 @@ namespace ControlBalance
 
         }
 
-        private unsafe void numericUpDown99_ValueChanged(object sender, EventArgs e)
-        {
-            short* TmpShort;
-            short Trmm = Decimal.ToInt16(numericUpDown99.Value);
-            byte[] sendbuf = new byte[sizeof(short) + 2];
-            if (checkBox19.Checked)
-            {
-                sendbuf[0] = SEND_KGyroSteer;
-                fixed (byte* p = &sendbuf[2])
-                {
-                    TmpShort = (short*)p;
-                    *TmpShort = Trmm;
-                }
-
-                s.SendTo(sendbuf, ep);
-
-            }
-            else
-            {
-                TrmMass[0] = 0xff;
-                TrmMass[1] = 0xff;
-                TrmMass[2] = 2;//N
-                TrmMass[3] = SEND_KGyroSteer;
-                TrmMass[4] = (byte)Trmm;
-                TrmMass[5] = CalcCheckSummTrm();
-                Trm();
-            }
-
-        }
 
         private void button33_Click(object sender, EventArgs e)
         {
@@ -13061,134 +10787,6 @@ namespace ControlBalance
             */
         }
 
-        private unsafe void numericUpDown100_ValueChanged(object sender, EventArgs e)
-        {
-
-
-        }
-
-        private unsafe void numericUpDown101_ValueChanged(object sender, EventArgs e)
-        {
-            short* TmpShort;
-            short Trmm = Decimal.ToInt16(numericUpDown101.Value);
-            byte[] sendbuf = new byte[sizeof(short) + 2];
-            if (checkBox19.Checked)
-            {
-                sendbuf[0] = SEND_KdOneTwoLeg;
-                fixed (byte* p = &sendbuf[2])
-                {
-                    TmpShort = (short*)p;
-                    *TmpShort = Trmm;
-                }
-
-                s.SendTo(sendbuf, ep);
-            }
-            else
-            {
-                TrmMass[0] = 0xff;
-                TrmMass[1] = 0xff;
-                TrmMass[2] = 3;//N
-                TrmMass[3] = SEND_KdOneTwoLeg;
-                TrmMass[4] = (byte)Trmm;
-                TrmMass[5] = (byte)(Trmm >> 8);
-                TrmMass[6] = CalcCheckSummTrm();
-                Trm();
-            }
-
-        }
-
-        private unsafe void numericUpDown102_ValueChanged(object sender, EventArgs e)
-        {
-            short* TmpShort;
-            short Trmm = Decimal.ToInt16(numericUpDown102.Value);
-            byte[] sendbuf = new byte[sizeof(short) + 2];
-            if (checkBox19.Checked)
-            {
-                sendbuf[0] = SEND_KdOneTwoLeg_1;
-                fixed (byte* p = &sendbuf[2])
-                {
-                    TmpShort = (short*)p;
-                    *TmpShort = Trmm;
-                }
-
-                s.SendTo(sendbuf, ep);
-            }
-            else
-            {
-                TrmMass[0] = 0xff;
-                TrmMass[1] = 0xff;
-                TrmMass[2] = 3;//N
-                TrmMass[3] = SEND_KdOneTwoLeg_1;
-                TrmMass[4] = (byte)Trmm;
-                TrmMass[5] = (byte)(Trmm >> 8);
-                TrmMass[6] = CalcCheckSummTrm();
-                Trm();
-            }
-
-        }
-
-        private unsafe void numericUpDown103_ValueChanged(object sender, EventArgs e)
-        {
-            short* TmpShort;
-            short Trmm = Decimal.ToInt16(numericUpDown103.Value);
-            byte[] sendbuf = new byte[sizeof(short) + 2];
-            if (checkBox19.Checked)
-            {
-                sendbuf[0] = SEND_KdFreshman;
-                fixed (byte* p = &sendbuf[2])
-                {
-                    TmpShort = (short*)p;
-                    *TmpShort = Trmm;
-                }
-
-                s.SendTo(sendbuf, ep);
-            }
-            else
-            {
-                TrmMass[0] = 0xff;
-                TrmMass[1] = 0xff;
-                TrmMass[2] = 3;//N
-                TrmMass[3] = SEND_KdFreshman;
-                TrmMass[4] = (byte)Trmm;
-                TrmMass[5] = (byte)(Trmm >> 8);
-                TrmMass[6] = CalcCheckSummTrm();
-                Trm();
-            }
-
-
-        }
-
-        private unsafe void comboBox6_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            short* TmpShort;
-            short Trmm = Decimal.ToInt16(comboBox6.SelectedIndex);
-            Trmm++;
-
-            byte[] sendbuf = new byte[sizeof(short) + 2];
-            if (checkBox19.Checked)
-            {
-                sendbuf[0] = SEND_Num_KdAverage;
-                fixed (byte* p = &sendbuf[2])
-                {
-                    TmpShort = (short*)p;
-                    *TmpShort = Trmm;
-                }
-
-                s.SendTo(sendbuf, ep);
-            }
-            else
-            {
-                TrmMass[0] = 0xff;
-                TrmMass[1] = 0xff;
-                TrmMass[2] = 3;//N
-                TrmMass[3] = SEND_Num_KdAverage;
-                TrmMass[4] = (byte)Trmm;
-                TrmMass[5] = (byte)(Trmm >> 8);
-                TrmMass[6] = CalcCheckSummTrm();
-                Trm();
-            }
-
-        }
 
         private unsafe void numericUpDown104_ValueChanged(object sender, EventArgs e)
         {
@@ -13348,36 +10946,6 @@ namespace ControlBalance
 
         }
 
-        private unsafe void numericUpDown107_ValueChanged(object sender, EventArgs e)
-        {
-            short* TmpShort;
-            short Trmm = Decimal.ToInt16(numericUpDown107.Value);
-            byte[] sendbuf = new byte[sizeof(short) + 2];
-            if (checkBox19.Checked)
-            {
-                sendbuf[0] = SEND_Balance5;
-                fixed (byte* p = &sendbuf[2])
-                {
-                    TmpShort = (short*)p;
-                    *TmpShort = Trmm;
-                }
-
-                s.SendTo(sendbuf, ep);
-            }
-            else
-            {
-                TrmMass[0] = 0xff;
-                TrmMass[1] = 0xff;
-                TrmMass[2] = 3;//N
-                TrmMass[3] = SEND_Balance5;
-                TrmMass[4] = (byte)Trmm;
-                TrmMass[5] = (byte)(Trmm >> 8);
-                TrmMass[6] = CalcCheckSummTrm();
-                Trm();
-            }
-
-        }
-
         private void button35_Click(object sender, EventArgs e)
         {
             if (checkBox19.Checked)
@@ -13413,15 +10981,6 @@ namespace ControlBalance
 
         }
 
-        private void label227_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label226_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void label223_Click(object sender, EventArgs e)
         {
@@ -13429,145 +10988,6 @@ namespace ControlBalance
         }
 
 
-
-        private void numericUpDown113_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private unsafe void numericUpDown109_ValueChanged(object sender, EventArgs e)
-        {
-            short* TmpShort;
-            short Trmm = Decimal.ToInt16(numericUpDown109.Value);
-            byte[] sendbuf = new byte[sizeof(short) + 2];
-            if (checkBox19.Checked)
-            {
-                sendbuf[0] = SEND_V_MIN_OFF;
-                fixed (byte* p = &sendbuf[2])
-                {
-                    TmpShort = (short*)p;
-                    *TmpShort = Trmm;
-                }
-
-                s.SendTo(sendbuf, ep);
-            }
-            else
-            {
-                TrmMass[0] = 0xff;
-                TrmMass[1] = 0xff;
-                TrmMass[2] = 3;//N
-                TrmMass[3] = SEND_V_MIN_OFF;
-                TrmMass[4] = (byte)Trmm;
-                TrmMass[5] = (byte)(Trmm >> 8);
-                TrmMass[6] = CalcCheckSummTrm();
-                Trm();
-            }
-
-
-
-        }
-
-        private unsafe void numericUpDown110_ValueChanged(object sender, EventArgs e)
-        {
-
-            short* TmpShort;
-            short Trmm = Decimal.ToInt16(numericUpDown110.Value);
-            byte[] sendbuf = new byte[sizeof(short) + 2];
-            if (checkBox19.Checked)
-            {
-                sendbuf[0] = SEND_V_MIN_Pre_OFF;
-                fixed (byte* p = &sendbuf[2])
-                {
-                    TmpShort = (short*)p;
-                    *TmpShort = Trmm;
-                }
-
-                s.SendTo(sendbuf, ep);
-            }
-            else
-            {
-                TrmMass[0] = 0xff;
-                TrmMass[1] = 0xff;
-                TrmMass[2] = 3;//N
-                TrmMass[3] = SEND_V_MIN_Pre_OFF;
-                TrmMass[4] = (byte)Trmm;
-                TrmMass[5] = (byte)(Trmm >> 8);
-                TrmMass[6] = CalcCheckSummTrm();
-                Trm();
-            }
-
-
-
-        }
-
-
-
-
-
-        private unsafe void numericUpDown111_ValueChanged(object sender, EventArgs e)
-        {
-
-            short* TmpShort;
-            short Trmm = Decimal.ToInt16(numericUpDown111.Value);
-            byte[] sendbuf = new byte[sizeof(short) + 2];
-            if (checkBox19.Checked)
-            {
-                sendbuf[0] = SEND_V_MIN_Sound;
-                fixed (byte* p = &sendbuf[2])
-                {
-                    TmpShort = (short*)p;
-                    *TmpShort = Trmm;
-                }
-
-                s.SendTo(sendbuf, ep);
-            }
-            else
-            {
-                TrmMass[0] = 0xff;
-                TrmMass[1] = 0xff;
-                TrmMass[2] = 3;//N
-                TrmMass[3] = SEND_V_MIN_Sound;
-                TrmMass[4] = (byte)Trmm;
-                TrmMass[5] = (byte)(Trmm >> 8);
-                TrmMass[6] = CalcCheckSummTrm();
-                Trm();
-            }
-
-
-        }
-
-        private unsafe void numericUpDown112_ValueChanged(object sender, EventArgs e)
-        {
-
-            short* TmpShort;
-            short Trmm = Decimal.ToInt16(numericUpDown112.Value);
-            byte[] sendbuf = new byte[sizeof(short) + 2];
-            if (checkBox19.Checked)
-            {
-                sendbuf[0] = SEND_V_min_OverV;
-                fixed (byte* p = &sendbuf[2])
-                {
-                    TmpShort = (short*)p;
-                    *TmpShort = Trmm;
-                }
-
-                s.SendTo(sendbuf, ep);
-            }
-            else
-            {
-                TrmMass[0] = 0xff;
-                TrmMass[1] = 0xff;
-                TrmMass[2] = 3;//N
-                TrmMass[3] = SEND_V_min_OverV;
-                TrmMass[4] = (byte)Trmm;
-                TrmMass[5] = (byte)(Trmm >> 8);
-                TrmMass[6] = CalcCheckSummTrm();
-                Trm();
-            }
-
-
-
-        }
 
 
 
@@ -13774,70 +11194,6 @@ namespace ControlBalance
 
         }
 
-        private unsafe void numericUpDown119_ValueChanged(object sender, EventArgs e)
-        {
-
-
-        }
-
-        private unsafe void numericUpDown120_ValueChanged(object sender, EventArgs e)
-        {
-            short* TmpShort;
-            short Trmm = Decimal.ToInt16(numericUpDown120.Value);
-            byte[] sendbuf = new byte[sizeof(short) + 2];
-            if (checkBox19.Checked)
-            {
-                sendbuf[0] = SEND_Theta1Zero;
-                fixed (byte* p = &sendbuf[2])
-                {
-                    TmpShort = (short*)p;
-                    *TmpShort = Trmm;
-                }
-
-                s.SendTo(sendbuf, ep);
-            }
-            else
-            {
-                TrmMass[0] = 0xff;
-                TrmMass[1] = 0xff;
-                TrmMass[2] = 2;//N
-                TrmMass[3] = SEND_Theta1Zero;
-                TrmMass[4] = (byte)Trmm;
-                TrmMass[5] = CalcCheckSummTrm();
-                Trm();
-            }
-
-        }
-
-        private unsafe void numericUpDown121_ValueChanged(object sender, EventArgs e)
-        {
-            short* TmpShort;
-            short Trmm = Decimal.ToInt16(numericUpDown121.Value);
-            byte[] sendbuf = new byte[sizeof(short) + 2];
-            if (checkBox19.Checked)
-            {
-                sendbuf[0] = SEND_Theta2Zero;
-                fixed (byte* p = &sendbuf[2])
-                {
-                    TmpShort = (short*)p;
-                    *TmpShort = Trmm;
-                }
-
-                s.SendTo(sendbuf, ep);
-            }
-            else
-            {
-                TrmMass[0] = 0xff;
-                TrmMass[1] = 0xff;
-                TrmMass[2] = 2;//N
-                TrmMass[3] = SEND_Theta2Zero;
-                TrmMass[4] = (byte)Trmm;
-                TrmMass[5] = CalcCheckSummTrm();
-                Trm();
-            }
-
-        }
-
         private void checkBox57_CheckedChanged(object sender, EventArgs e)
         {
             byte[] sendbuf = Encoding.ASCII.GetBytes("Is anybody there?");
@@ -13914,35 +11270,6 @@ namespace ControlBalance
             }
 
             //DecreaseCurrent();
-
-
-        }
-
-        private void checkBox60_CheckedChanged(object sender, EventArgs e)
-        {
-            byte[] sendbuf = Encoding.ASCII.GetBytes("Is anybody there?");
-            if (checkBox19.Checked)
-            {
-                if (checkBox60.Checked)
-                    sendbuf[0] = SEND_CurrLimII_On;
-                else
-                    sendbuf[0] = SEND_CurrLimII_Off;
-
-                s.SendTo(sendbuf, ep);
-            }
-            else
-            {
-                TrmMass[0] = 0xff;
-                TrmMass[1] = 0xff;
-                TrmMass[2] = 1;//N
-                if (checkBox60.Checked)
-                    TrmMass[3] = SEND_CurrLimII_On;
-                else
-                    TrmMass[3] = SEND_CurrLimII_Off;
-
-                TrmMass[4] = CalcCheckSummTrm();
-                Trm();
-            }
 
 
         }
@@ -14072,21 +11399,6 @@ namespace ControlBalance
             }
 
 
-            if (checkBox19.Checked)
-            {
-                sendbuf[0] = SEND_CurrLimII_On;
-                s.SendTo(sendbuf, ep);
-            }
-            else
-            {
-                TrmMass[0] = 0xff;
-                TrmMass[1] = 0xff;
-                TrmMass[2] = 1;//N
-                TrmMass[3] = SEND_CurrLimII_On;
-
-                TrmMass[4] = CalcCheckSummTrm();
-                Trm();
-            }
 
         }
 
@@ -14227,7 +11539,7 @@ namespace ControlBalance
                 GettinPhase = true;
             else
                 GettinPhase = false;
-            PhaseCnt = 0;
+            
 
         }
 
@@ -18425,7 +15737,8 @@ namespace ControlBalance
 
         private void comboBox26_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+            if (StartCNT==0)
+            MessageBox.Show(MyStrings.CloseOpen, MyStrings.Inform, MessageBoxButtons.OK);
         }
 
     }

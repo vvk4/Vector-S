@@ -116,7 +116,7 @@ namespace X1
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Unable to open link that was clicked.");
+                MessageBox.Show("Unable to open link that was clicked: "+ ex.Message);
             }
 
         }

@@ -46,50 +46,18 @@
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label29 = new System.Windows.Forms.Label();
-            this.label31 = new System.Windows.Forms.Label();
-            this.label33 = new System.Windows.Forms.Label();
-            this.label39 = new System.Windows.Forms.Label();
-            this.label41 = new System.Windows.Forms.Label();
-            this.label45 = new System.Windows.Forms.Label();
-            this.label47 = new System.Windows.Forms.Label();
-            this.label51 = new System.Windows.Forms.Label();
             this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
-            this.label55 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.numericUpDown10 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown11 = new System.Windows.Forms.NumericUpDown();
             this.label57 = new System.Windows.Forms.Label();
             this.label58 = new System.Windows.Forms.Label();
-            this.label59 = new System.Windows.Forms.Label();
-            this.label60 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
-            this.label65 = new System.Windows.Forms.Label();
-            this.label66 = new System.Windows.Forms.Label();
-            this.button7 = new System.Windows.Forms.Button();
-            this.label67 = new System.Windows.Forms.Label();
-            this.label68 = new System.Windows.Forms.Label();
-            this.label69 = new System.Windows.Forms.Label();
-            this.label70 = new System.Windows.Forms.Label();
-            this.label71 = new System.Windows.Forms.Label();
-            this.label72 = new System.Windows.Forms.Label();
-            this.checkBox12 = new System.Windows.Forms.CheckBox();
-            this.label75 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label557 = new System.Windows.Forms.Label();
             this.checkBox14 = new System.Windows.Forms.CheckBox();
             this.numericUpDown15 = new System.Windows.Forms.NumericUpDown();
-            this.label87 = new System.Windows.Forms.Label();
-            this.label86 = new System.Windows.Forms.Label();
-            this.numericUpDown12 = new System.Windows.Forms.NumericUpDown();
-            this.label61 = new System.Windows.Forms.Label();
-            this.label62 = new System.Windows.Forms.Label();
-            this.label77 = new System.Windows.Forms.Label();
             this.button8 = new System.Windows.Forms.Button();
             this.label82 = new System.Windows.Forms.Label();
             this.label83 = new System.Windows.Forms.Label();
@@ -104,18 +72,6 @@
             this.label94 = new System.Windows.Forms.Label();
             this.label95 = new System.Windows.Forms.Label();
             this.button9 = new System.Windows.Forms.Button();
-            this.numericUpDown18 = new System.Windows.Forms.NumericUpDown();
-            this.label96 = new System.Windows.Forms.Label();
-            this.label97 = new System.Windows.Forms.Label();
-            this.numericUpDown19 = new System.Windows.Forms.NumericUpDown();
-            this.label98 = new System.Windows.Forms.Label();
-            this.label99 = new System.Windows.Forms.Label();
-            this.numericUpDown21 = new System.Windows.Forms.NumericUpDown();
-            this.label102 = new System.Windows.Forms.Label();
-            this.label103 = new System.Windows.Forms.Label();
-            this.numericUpDown22 = new System.Windows.Forms.NumericUpDown();
-            this.label104 = new System.Windows.Forms.Label();
-            this.label35 = new System.Windows.Forms.Label();
             this.numericUpDown25 = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown26 = new System.Windows.Forms.NumericUpDown();
             this.label34 = new System.Windows.Forms.Label();
@@ -129,18 +85,12 @@
             this.label56 = new System.Windows.Forms.Label();
             this.label107 = new System.Windows.Forms.Label();
             this.button10 = new System.Windows.Forms.Button();
-            this.label108 = new System.Windows.Forms.Label();
             this.label109 = new System.Windows.Forms.Label();
             this.label110 = new System.Windows.Forms.Label();
             this.checkBox15 = new System.Windows.Forms.CheckBox();
-            this.numericUpDown28 = new System.Windows.Forms.NumericUpDown();
-            this.label111 = new System.Windows.Forms.Label();
-            this.label112 = new System.Windows.Forms.Label();
-            this.numericUpDown29 = new System.Windows.Forms.NumericUpDown();
-            this.label113 = new System.Windows.Forms.Label();
-            this.label114 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.comboBox26 = new System.Windows.Forms.ComboBox();
             this.button50 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -486,7 +436,6 @@
             this.numericUpDown167 = new System.Windows.Forms.NumericUpDown();
             this.label654 = new System.Windows.Forms.Label();
             this.label632 = new System.Windows.Forms.Label();
-            this.checkBox60 = new System.Windows.Forms.CheckBox();
             this.label465 = new System.Windows.Forms.Label();
             this.numericUpDown127 = new System.Windows.Forms.NumericUpDown();
             this.label466 = new System.Windows.Forms.Label();
@@ -572,7 +521,6 @@
             this.checkBox89 = new System.Windows.Forms.CheckBox();
             this.label560 = new System.Windows.Forms.Label();
             this.numericUpDown143 = new System.Windows.Forms.NumericUpDown();
-            this.checkBox52 = new System.Windows.Forms.CheckBox();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.numericUpDown244 = new System.Windows.Forms.NumericUpDown();
             this.panel79 = new System.Windows.Forms.Panel();
@@ -585,6 +533,8 @@
             this.numericUpDown235 = new System.Windows.Forms.NumericUpDown();
             this.label915 = new System.Windows.Forms.Label();
             this.panel35 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label813 = new System.Windows.Forms.Label();
             this.numericUpDown234 = new System.Windows.Forms.NumericUpDown();
             this.checkBox99 = new System.Windows.Forms.CheckBox();
             this.label894 = new System.Windows.Forms.Label();
@@ -649,6 +599,7 @@
             this.numericUpDown243 = new System.Windows.Forms.NumericUpDown();
             this.label914 = new System.Windows.Forms.Label();
             this.numericUpDown240 = new System.Windows.Forms.NumericUpDown();
+            this.label823 = new System.Windows.Forms.Label();
             this.label907 = new System.Windows.Forms.Label();
             this.checkBox114 = new System.Windows.Forms.CheckBox();
             this.label908 = new System.Windows.Forms.Label();
@@ -662,7 +613,6 @@
             this.label886 = new System.Windows.Forms.Label();
             this.label887 = new System.Windows.Forms.Label();
             this.label882 = new System.Windows.Forms.Label();
-            this.label823 = new System.Windows.Forms.Label();
             this.numericUpDown228 = new System.Windows.Forms.NumericUpDown();
             this.label839 = new System.Windows.Forms.Label();
             this.label883 = new System.Windows.Forms.Label();
@@ -726,6 +676,7 @@
             this.label904 = new System.Windows.Forms.Label();
             this.numericUpDown238 = new System.Windows.Forms.NumericUpDown();
             this.label905 = new System.Windows.Forms.Label();
+            this.checkBox113 = new System.Windows.Forms.CheckBox();
             this.label902 = new System.Windows.Forms.Label();
             this.label903 = new System.Windows.Forms.Label();
             this.numericUpDown237 = new System.Windows.Forms.NumericUpDown();
@@ -734,7 +685,6 @@
             this.numericUpDown236 = new System.Windows.Forms.NumericUpDown();
             this.label896 = new System.Windows.Forms.Label();
             this.label899 = new System.Windows.Forms.Label();
-            this.checkBox113 = new System.Windows.Forms.CheckBox();
             this.numericUpDown232 = new System.Windows.Forms.NumericUpDown();
             this.label890 = new System.Windows.Forms.Label();
             this.label891 = new System.Windows.Forms.Label();
@@ -758,6 +708,7 @@
             this.label824 = new System.Windows.Forms.Label();
             this.numericUpDown207 = new System.Windows.Forms.NumericUpDown();
             this.panel58 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.label880 = new System.Windows.Forms.Label();
             this.label879 = new System.Windows.Forms.Label();
             this.label878 = new System.Windows.Forms.Label();
@@ -766,6 +717,7 @@
             this.label678 = new System.Windows.Forms.Label();
             this.label480 = new System.Windows.Forms.Label();
             this.tabPage10 = new System.Windows.Forms.TabPage();
+            this.panel76 = new System.Windows.Forms.Panel();
             this.panel77 = new System.Windows.Forms.Panel();
             this.numericUpDown214 = new System.Windows.Forms.NumericUpDown();
             this.label844 = new System.Windows.Forms.Label();
@@ -780,7 +732,6 @@
             this.label862 = new System.Windows.Forms.Label();
             this.numericUpDown223 = new System.Windows.Forms.NumericUpDown();
             this.label863 = new System.Windows.Forms.Label();
-            this.panel76 = new System.Windows.Forms.Panel();
             this.label846 = new System.Windows.Forms.Label();
             this.numericUpDown216 = new System.Windows.Forms.NumericUpDown();
             this.label850 = new System.Windows.Forms.Label();
@@ -885,10 +836,8 @@
             this.label329 = new System.Windows.Forms.Label();
             this.label330 = new System.Windows.Forms.Label();
             this.label789 = new System.Windows.Forms.Label();
-            this.checkBox21 = new System.Windows.Forms.CheckBox();
             this.label179 = new System.Windows.Forms.Label();
             this.label790 = new System.Windows.Forms.Label();
-            this.checkBox20 = new System.Windows.Forms.CheckBox();
             this.label180 = new System.Windows.Forms.Label();
             this.label181 = new System.Windows.Forms.Label();
             this.label182 = new System.Windows.Forms.Label();
@@ -1085,7 +1034,6 @@
             this.label507 = new System.Windows.Forms.Label();
             this.label575 = new System.Windows.Forms.Label();
             this.checkBox62 = new System.Windows.Forms.CheckBox();
-            this.button2 = new System.Windows.Forms.Button();
             this.label565 = new System.Windows.Forms.Label();
             this.checkBox18 = new System.Windows.Forms.CheckBox();
             this.button39 = new System.Windows.Forms.Button();
@@ -1109,298 +1057,6 @@
             this.label479 = new System.Windows.Forms.Label();
             this.label471 = new System.Windows.Forms.Label();
             this.label474 = new System.Windows.Forms.Label();
-            this.numericUpDown112 = new System.Windows.Forms.NumericUpDown();
-            this.label440 = new System.Windows.Forms.Label();
-            this.label441 = new System.Windows.Forms.Label();
-            this.label445 = new System.Windows.Forms.Label();
-            this.label446 = new System.Windows.Forms.Label();
-            this.label443 = new System.Windows.Forms.Label();
-            this.label444 = new System.Windows.Forms.Label();
-            this.panel25 = new System.Windows.Forms.Panel();
-            this.label442 = new System.Windows.Forms.Label();
-            this.label435 = new System.Windows.Forms.Label();
-            this.label434 = new System.Windows.Forms.Label();
-            this.numericUpDown111 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown109 = new System.Windows.Forms.NumericUpDown();
-            this.label438 = new System.Windows.Forms.Label();
-            this.panel24 = new System.Windows.Forms.Panel();
-            this.label433 = new System.Windows.Forms.Label();
-            this.label306 = new System.Windows.Forms.Label();
-            this.label305 = new System.Windows.Forms.Label();
-            this.label319 = new System.Windows.Forms.Label();
-            this.label308 = new System.Windows.Forms.Label();
-            this.label307 = new System.Windows.Forms.Label();
-            this.label310 = new System.Windows.Forms.Label();
-            this.label309 = new System.Windows.Forms.Label();
-            this.label312 = new System.Windows.Forms.Label();
-            this.label311 = new System.Windows.Forms.Label();
-            this.panel20 = new System.Windows.Forms.Panel();
-            this.label430 = new System.Windows.Forms.Label();
-            this.label413 = new System.Windows.Forms.Label();
-            this.label412 = new System.Windows.Forms.Label();
-            this.label411 = new System.Windows.Forms.Label();
-            this.button35 = new System.Windows.Forms.Button();
-            this.label410 = new System.Windows.Forms.Label();
-            this.numericUpDown107 = new System.Windows.Forms.NumericUpDown();
-            this.label405 = new System.Windows.Forms.Label();
-            this.label404 = new System.Windows.Forms.Label();
-            this.label318 = new System.Windows.Forms.Label();
-            this.label338 = new System.Windows.Forms.Label();
-            this.numericUpDown86 = new System.Windows.Forms.NumericUpDown();
-            this.button28 = new System.Windows.Forms.Button();
-            this.label437 = new System.Windows.Forms.Label();
-            this.label439 = new System.Windows.Forms.Label();
-            this.panel22 = new System.Windows.Forms.Panel();
-            this.label431 = new System.Windows.Forms.Label();
-            this.label290 = new System.Windows.Forms.Label();
-            this.label289 = new System.Windows.Forms.Label();
-            this.label292 = new System.Windows.Forms.Label();
-            this.label291 = new System.Windows.Forms.Label();
-            this.label294 = new System.Windows.Forms.Label();
-            this.label293 = new System.Windows.Forms.Label();
-            this.label296 = new System.Windows.Forms.Label();
-            this.label295 = new System.Windows.Forms.Label();
-            this.label316 = new System.Windows.Forms.Label();
-            this.label335 = new System.Windows.Forms.Label();
-            this.numericUpDown84 = new System.Windows.Forms.NumericUpDown();
-            this.button26 = new System.Windows.Forms.Button();
-            this.label436 = new System.Windows.Forms.Label();
-            this.numericUpDown110 = new System.Windows.Forms.NumericUpDown();
-            this.panel21 = new System.Windows.Forms.Panel();
-            this.label429 = new System.Windows.Forms.Label();
-            this.label282 = new System.Windows.Forms.Label();
-            this.label281 = new System.Windows.Forms.Label();
-            this.button25 = new System.Windows.Forms.Button();
-            this.numericUpDown83 = new System.Windows.Forms.NumericUpDown();
-            this.label284 = new System.Windows.Forms.Label();
-            this.label336 = new System.Windows.Forms.Label();
-            this.label315 = new System.Windows.Forms.Label();
-            this.label283 = new System.Windows.Forms.Label();
-            this.label314 = new System.Windows.Forms.Label();
-            this.label313 = new System.Windows.Forms.Label();
-            this.label286 = new System.Windows.Forms.Label();
-            this.label287 = new System.Windows.Forms.Label();
-            this.label288 = new System.Windows.Forms.Label();
-            this.label285 = new System.Windows.Forms.Label();
-            this.label406 = new System.Windows.Forms.Label();
-            this.panel23 = new System.Windows.Forms.Panel();
-            this.label432 = new System.Windows.Forms.Label();
-            this.label298 = new System.Windows.Forms.Label();
-            this.label297 = new System.Windows.Forms.Label();
-            this.label300 = new System.Windows.Forms.Label();
-            this.label299 = new System.Windows.Forms.Label();
-            this.label302 = new System.Windows.Forms.Label();
-            this.label301 = new System.Windows.Forms.Label();
-            this.label304 = new System.Windows.Forms.Label();
-            this.label303 = new System.Windows.Forms.Label();
-            this.label317 = new System.Windows.Forms.Label();
-            this.label337 = new System.Windows.Forms.Label();
-            this.numericUpDown85 = new System.Windows.Forms.NumericUpDown();
-            this.button27 = new System.Windows.Forms.Button();
-            this.label320 = new System.Windows.Forms.Label();
-            this.button32 = new System.Windows.Forms.Button();
-            this.button34 = new System.Windows.Forms.Button();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.label388 = new System.Windows.Forms.Label();
-            this.numericUpDown101 = new System.Windows.Forms.NumericUpDown();
-            this.label207 = new System.Windows.Forms.Label();
-            this.label208 = new System.Windows.Forms.Label();
-            this.label389 = new System.Windows.Forms.Label();
-            this.label210 = new System.Windows.Forms.Label();
-            this.panel12 = new System.Windows.Forms.Panel();
-            this.comboBox6 = new System.Windows.Forms.ComboBox();
-            this.panel15 = new System.Windows.Forms.Panel();
-            this.label369 = new System.Windows.Forms.Label();
-            this.checkBox46 = new System.Windows.Forms.CheckBox();
-            this.label394 = new System.Windows.Forms.Label();
-            this.checkBox48 = new System.Windows.Forms.CheckBox();
-            this.checkBox11 = new System.Windows.Forms.CheckBox();
-            this.label395 = new System.Windows.Forms.Label();
-            this.checkBox24 = new System.Windows.Forms.CheckBox();
-            this.checkBox43 = new System.Windows.Forms.CheckBox();
-            this.checkBox45 = new System.Windows.Forms.CheckBox();
-            this.label362 = new System.Windows.Forms.Label();
-            this.numericUpDown96 = new System.Windows.Forms.NumericUpDown();
-            this.label363 = new System.Windows.Forms.Label();
-            this.label361 = new System.Windows.Forms.Label();
-            this.numericUpDown92 = new System.Windows.Forms.NumericUpDown();
-            this.label340 = new System.Windows.Forms.Label();
-            this.numericUpDown87 = new System.Windows.Forms.NumericUpDown();
-            this.label341 = new System.Windows.Forms.Label();
-            this.label350 = new System.Windows.Forms.Label();
-            this.label339 = new System.Windows.Forms.Label();
-            this.label354 = new System.Windows.Forms.Label();
-            this.numericUpDown47 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown48 = new System.Windows.Forms.NumericUpDown();
-            this.label211 = new System.Windows.Forms.Label();
-            this.label116 = new System.Windows.Forms.Label();
-            this.label212 = new System.Windows.Forms.Label();
-            this.label115 = new System.Windows.Forms.Label();
-            this.numericUpDown49 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown30 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown50 = new System.Windows.Forms.NumericUpDown();
-            this.label213 = new System.Windows.Forms.Label();
-            this.label214 = new System.Windows.Forms.Label();
-            this.label215 = new System.Windows.Forms.Label();
-            this.label216 = new System.Windows.Forms.Label();
-            this.numericUpDown51 = new System.Windows.Forms.NumericUpDown();
-            this.label217 = new System.Windows.Forms.Label();
-            this.label218 = new System.Windows.Forms.Label();
-            this.numericUpDown52 = new System.Windows.Forms.NumericUpDown();
-            this.label219 = new System.Windows.Forms.Label();
-            this.label220 = new System.Windows.Forms.Label();
-            this.numericUpDown53 = new System.Windows.Forms.NumericUpDown();
-            this.label221 = new System.Windows.Forms.Label();
-            this.label364 = new System.Windows.Forms.Label();
-            this.numericUpDown97 = new System.Windows.Forms.NumericUpDown();
-            this.checkBox22 = new System.Windows.Forms.CheckBox();
-            this.label365 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.panel13 = new System.Windows.Forms.Panel();
-            this.numericUpDown90 = new System.Windows.Forms.NumericUpDown();
-            this.label346 = new System.Windows.Forms.Label();
-            this.label460 = new System.Windows.Forms.Label();
-            this.label349 = new System.Windows.Forms.Label();
-            this.label347 = new System.Windows.Forms.Label();
-            this.numericUpDown120 = new System.Windows.Forms.NumericUpDown();
-            this.label348 = new System.Windows.Forms.Label();
-            this.numericUpDown89 = new System.Windows.Forms.NumericUpDown();
-            this.label461 = new System.Windows.Forms.Label();
-            this.numericUpDown91 = new System.Windows.Forms.NumericUpDown();
-            this.label351 = new System.Windows.Forms.Label();
-            this.label462 = new System.Windows.Forms.Label();
-            this.label352 = new System.Windows.Forms.Label();
-            this.label353 = new System.Windows.Forms.Label();
-            this.numericUpDown121 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown93 = new System.Windows.Forms.NumericUpDown();
-            this.label355 = new System.Windows.Forms.Label();
-            this.label463 = new System.Windows.Forms.Label();
-            this.label356 = new System.Windows.Forms.Label();
-            this.label357 = new System.Windows.Forms.Label();
-            this.label450 = new System.Windows.Forms.Label();
-            this.numericUpDown94 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown118 = new System.Windows.Forms.NumericUpDown();
-            this.label359 = new System.Windows.Forms.Label();
-            this.label358 = new System.Windows.Forms.Label();
-            this.numericUpDown95 = new System.Windows.Forms.NumericUpDown();
-            this.label451 = new System.Windows.Forms.Label();
-            this.label360 = new System.Windows.Forms.Label();
-            this.label254 = new System.Windows.Forms.Label();
-            this.label452 = new System.Windows.Forms.Label();
-            this.numericUpDown119 = new System.Windows.Forms.NumericUpDown();
-            this.label453 = new System.Windows.Forms.Label();
-            this.panel11 = new System.Windows.Forms.Panel();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.label392 = new System.Windows.Forms.Label();
-            this.numericUpDown103 = new System.Windows.Forms.NumericUpDown();
-            this.label63 = new System.Windows.Forms.Label();
-            this.label393 = new System.Windows.Forms.Label();
-            this.numericUpDown66 = new System.Windows.Forms.NumericUpDown();
-            this.label64 = new System.Windows.Forms.Label();
-            this.numericUpDown67 = new System.Windows.Forms.NumericUpDown();
-            this.label228 = new System.Windows.Forms.Label();
-            this.label229 = new System.Windows.Forms.Label();
-            this.numericUpDown24 = new System.Windows.Forms.NumericUpDown();
-            this.label27 = new System.Windows.Forms.Label();
-            this.label32 = new System.Windows.Forms.Label();
-            this.numericUpDown65 = new System.Windows.Forms.NumericUpDown();
-            this.label30 = new System.Windows.Forms.Label();
-            this.label28 = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
-            this.numericUpDown64 = new System.Windows.Forms.NumericUpDown();
-            this.label26 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.numericUpDown57 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown58 = new System.Windows.Forms.NumericUpDown();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.numericUpDown59 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown60 = new System.Windows.Forms.NumericUpDown();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.numericUpDown61 = new System.Windows.Forms.NumericUpDown();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.numericUpDown62 = new System.Windows.Forms.NumericUpDown();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.numericUpDown63 = new System.Windows.Forms.NumericUpDown();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label390 = new System.Windows.Forms.Label();
-            this.numericUpDown102 = new System.Windows.Forms.NumericUpDown();
-            this.label391 = new System.Windows.Forms.Label();
-            this.label266 = new System.Windows.Forms.Label();
-            this.label267 = new System.Windows.Forms.Label();
-            this.label268 = new System.Windows.Forms.Label();
-            this.label269 = new System.Windows.Forms.Label();
-            this.numericUpDown74 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown75 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown31 = new System.Windows.Forms.NumericUpDown();
-            this.label270 = new System.Windows.Forms.Label();
-            this.label117 = new System.Windows.Forms.Label();
-            this.label271 = new System.Windows.Forms.Label();
-            this.label118 = new System.Windows.Forms.Label();
-            this.numericUpDown76 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown77 = new System.Windows.Forms.NumericUpDown();
-            this.label272 = new System.Windows.Forms.Label();
-            this.label273 = new System.Windows.Forms.Label();
-            this.label274 = new System.Windows.Forms.Label();
-            this.label275 = new System.Windows.Forms.Label();
-            this.numericUpDown78 = new System.Windows.Forms.NumericUpDown();
-            this.label276 = new System.Windows.Forms.Label();
-            this.label277 = new System.Windows.Forms.Label();
-            this.numericUpDown79 = new System.Windows.Forms.NumericUpDown();
-            this.label278 = new System.Windows.Forms.Label();
-            this.label279 = new System.Windows.Forms.Label();
-            this.numericUpDown80 = new System.Windows.Forms.NumericUpDown();
-            this.label280 = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.checkBox23 = new System.Windows.Forms.CheckBox();
-            this.label106 = new System.Windows.Forms.Label();
-            this.label195 = new System.Windows.Forms.Label();
-            this.numericUpDown23 = new System.Windows.Forms.NumericUpDown();
-            this.label188 = new System.Windows.Forms.Label();
-            this.label105 = new System.Windows.Forms.Label();
-            this.numericUpDown37 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown20 = new System.Windows.Forms.NumericUpDown();
-            this.label190 = new System.Windows.Forms.Label();
-            this.label100 = new System.Windows.Forms.Label();
-            this.label101 = new System.Windows.Forms.Label();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.label386 = new System.Windows.Forms.Label();
-            this.numericUpDown100 = new System.Windows.Forms.NumericUpDown();
-            this.label192 = new System.Windows.Forms.Label();
-            this.label193 = new System.Windows.Forms.Label();
-            this.label387 = new System.Windows.Forms.Label();
-            this.numericUpDown40 = new System.Windows.Forms.NumericUpDown();
-            this.label197 = new System.Windows.Forms.Label();
-            this.numericUpDown43 = new System.Windows.Forms.NumericUpDown();
-            this.label199 = new System.Windows.Forms.Label();
-            this.label200 = new System.Windows.Forms.Label();
-            this.label201 = new System.Windows.Forms.Label();
-            this.numericUpDown44 = new System.Windows.Forms.NumericUpDown();
-            this.label202 = new System.Windows.Forms.Label();
-            this.label203 = new System.Windows.Forms.Label();
-            this.numericUpDown45 = new System.Windows.Forms.NumericUpDown();
-            this.label204 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label185 = new System.Windows.Forms.Label();
-            this.numericUpDown39 = new System.Windows.Forms.NumericUpDown();
-            this.label186 = new System.Windows.Forms.Label();
-            this.numericUpDown38 = new System.Windows.Forms.NumericUpDown();
-            this.label187 = new System.Windows.Forms.Label();
-            this.label189 = new System.Windows.Forms.Label();
-            this.numericUpDown88 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown32 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown99 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown33 = new System.Windows.Forms.NumericUpDown();
-            this.button22 = new System.Windows.Forms.Button();
             this.label475 = new System.Windows.Forms.Label();
             this.label477 = new System.Windows.Forms.Label();
             this.checkBox17 = new System.Windows.Forms.CheckBox();
@@ -1408,104 +1064,8 @@
             this.comboBox4 = new System.Windows.Forms.ComboBox();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.button15 = new System.Windows.Forms.Button();
-            this.button37 = new System.Windows.Forms.Button();
-            this.checkBox50 = new System.Windows.Forms.CheckBox();
-            this.label374 = new System.Windows.Forms.Label();
-            this.label344 = new System.Windows.Forms.Label();
-            this.label345 = new System.Windows.Forms.Label();
-            this.label38 = new System.Windows.Forms.Label();
-            this.label37 = new System.Windows.Forms.Label();
-            this.label44 = new System.Windows.Forms.Label();
-            this.label43 = new System.Windows.Forms.Label();
-            this.label50 = new System.Windows.Forms.Label();
-            this.label49 = new System.Windows.Forms.Label();
-            this.label54 = new System.Windows.Forms.Label();
-            this.label53 = new System.Windows.Forms.Label();
-            this.numericUpDown5 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown6 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown7 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown9 = new System.Windows.Forms.NumericUpDown();
-            this.label209 = new System.Windows.Forms.Label();
-            this.label119 = new System.Windows.Forms.Label();
-            this.label120 = new System.Windows.Forms.Label();
-            this.checkBox53 = new System.Windows.Forms.CheckBox();
-            this.button33 = new System.Windows.Forms.Button();
-            this.label384 = new System.Windows.Forms.Label();
-            this.label385 = new System.Windows.Forms.Label();
-            this.numericUpDown81 = new System.Windows.Forms.NumericUpDown();
-            this.label327 = new System.Windows.Forms.Label();
-            this.label328 = new System.Windows.Forms.Label();
-            this.checkBox30 = new System.Windows.Forms.CheckBox();
-            this.checkBox29 = new System.Windows.Forms.CheckBox();
-            this.checkBox28 = new System.Windows.Forms.CheckBox();
-            this.checkBox27 = new System.Windows.Forms.CheckBox();
-            this.label382 = new System.Windows.Forms.Label();
-            this.label383 = new System.Windows.Forms.Label();
-            this.numericUpDown98 = new System.Windows.Forms.NumericUpDown();
-            this.label74 = new System.Windows.Forms.Label();
-            this.numericUpDown17 = new System.Windows.Forms.NumericUpDown();
-            this.label73 = new System.Windows.Forms.Label();
-            this.label80 = new System.Windows.Forms.Label();
-            this.numericUpDown14 = new System.Windows.Forms.NumericUpDown();
-            this.label81 = new System.Windows.Forms.Label();
-            this.numericUpDown16 = new System.Windows.Forms.NumericUpDown();
-            this.label78 = new System.Windows.Forms.Label();
-            this.label79 = new System.Windows.Forms.Label();
-            this.numericUpDown13 = new System.Windows.Forms.NumericUpDown();
-            this.label152 = new System.Windows.Forms.Label();
-            this.label151 = new System.Windows.Forms.Label();
-            this.label379 = new System.Windows.Forms.Label();
-            this.label375 = new System.Windows.Forms.Label();
-            this.label376 = new System.Windows.Forms.Label();
-            this.label377 = new System.Windows.Forms.Label();
-            this.button21 = new System.Windows.Forms.Button();
-            this.label378 = new System.Windows.Forms.Label();
-            this.button14 = new System.Windows.Forms.Button();
-            this.button29 = new System.Windows.Forms.Button();
-            this.label139 = new System.Windows.Forms.Label();
-            this.numericUpDown35 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown34 = new System.Windows.Forms.NumericUpDown();
-            this.label145 = new System.Windows.Forms.Label();
-            this.label144 = new System.Windows.Forms.Label();
-            this.label143 = new System.Windows.Forms.Label();
-            this.label142 = new System.Windows.Forms.Label();
-            this.label141 = new System.Windows.Forms.Label();
-            this.numericUpDown36 = new System.Windows.Forms.NumericUpDown();
-            this.label146 = new System.Windows.Forms.Label();
-            this.label140 = new System.Windows.Forms.Label();
-            this.label247 = new System.Windows.Forms.Label();
-            this.label248 = new System.Windows.Forms.Label();
-            this.label249 = new System.Windows.Forms.Label();
-            this.label250 = new System.Windows.Forms.Label();
-            this.checkBox42 = new System.Windows.Forms.CheckBox();
-            this.checkBox41 = new System.Windows.Forms.CheckBox();
-            this.checkBox40 = new System.Windows.Forms.CheckBox();
-            this.checkBox39 = new System.Windows.Forms.CheckBox();
-            this.checkBox38 = new System.Windows.Forms.CheckBox();
-            this.checkBox37 = new System.Windows.Forms.CheckBox();
-            this.checkBox36 = new System.Windows.Forms.CheckBox();
-            this.checkBox35 = new System.Windows.Forms.CheckBox();
-            this.checkBox34 = new System.Windows.Forms.CheckBox();
-            this.checkBox33 = new System.Windows.Forms.CheckBox();
-            this.checkBox32 = new System.Windows.Forms.CheckBox();
-            this.checkBox31 = new System.Windows.Forms.CheckBox();
-            this.checkBox13 = new System.Windows.Forms.CheckBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.checkBox4 = new System.Windows.Forms.CheckBox();
-            this.checkBox5 = new System.Windows.Forms.CheckBox();
-            this.checkBox8 = new System.Windows.Forms.CheckBox();
-            this.checkBox9 = new System.Windows.Forms.CheckBox();
-            this.checkBox7 = new System.Windows.Forms.CheckBox();
-            this.checkBox10 = new System.Windows.Forms.CheckBox();
-            this.checkBox6 = new System.Windows.Forms.CheckBox();
             this.serialPort1 = new System.IO.Ports.SerialPort(this.components);
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.label331 = new System.Windows.Forms.Label();
-            this.label332 = new System.Windows.Forms.Label();
-            this.label407 = new System.Windows.Forms.Label();
-            this.label447 = new System.Windows.Forms.Label();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripProgressBar1 = new System.Windows.Forms.ToolStripProgressBar();
@@ -1520,29 +1080,21 @@
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.button44 = new System.Windows.Forms.Button();
-            this.checkBox88 = new System.Windows.Forms.CheckBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.label858 = new System.Windows.Forms.Label();
             this.label860 = new System.Windows.Forms.Label();
+            this.checkBox88 = new System.Windows.Forms.CheckBox();
+            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown11)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown15)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown12)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown18)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown19)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown21)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown22)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown25)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown26)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown27)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown28)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown29)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabPage1.SuspendLayout();
             this.panel60.SuspendLayout();
             this.tabPage8.SuspendLayout();
@@ -1694,12 +1246,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown207)).BeginInit();
             this.panel58.SuspendLayout();
             this.tabPage10.SuspendLayout();
+            this.panel76.SuspendLayout();
             this.panel77.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown214)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown217)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown222)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown223)).BeginInit();
-            this.panel76.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown216)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown220)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown221)).BeginInit();
@@ -1751,103 +1303,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown146)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown147)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown71)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown112)).BeginInit();
-            this.panel25.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown111)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown109)).BeginInit();
-            this.panel24.SuspendLayout();
-            this.panel20.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown107)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown86)).BeginInit();
-            this.panel22.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown84)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown110)).BeginInit();
-            this.panel21.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown83)).BeginInit();
-            this.panel23.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown85)).BeginInit();
-            this.panel6.SuspendLayout();
-            this.panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown101)).BeginInit();
-            this.panel12.SuspendLayout();
-            this.panel15.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown96)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown92)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown87)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown47)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown48)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown49)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown30)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown50)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown51)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown52)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown53)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown97)).BeginInit();
-            this.panel13.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown90)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown120)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown89)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown91)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown121)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown93)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown94)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown118)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown95)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown119)).BeginInit();
-            this.panel11.SuspendLayout();
-            this.panel7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown103)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown66)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown67)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown24)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown65)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown64)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown57)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown58)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown59)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown60)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown61)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown62)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown63)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown102)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown74)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown75)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown31)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown76)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown77)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown78)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown79)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown80)).BeginInit();
-            this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown23)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown37)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown20)).BeginInit();
-            this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown100)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown40)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown43)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown44)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown45)).BeginInit();
-            this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown39)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown38)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown88)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown32)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown99)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown33)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown81)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown98)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown17)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown14)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown16)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown13)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown35)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown34)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown36)).BeginInit();
             this.statusStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown135)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
@@ -1872,67 +1327,6 @@
             this.label12.ImageKey = global::ControlBalance.MyStrings.About1333;
             this.label12.Name = "label12";
             // 
-            // label17
-            // 
-            resources.ApplyResources(this.label17, "label17");
-            this.label17.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label17.Name = "label17";
-            // 
-            // label18
-            // 
-            resources.ApplyResources(this.label18, "label18");
-            this.label18.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label18.Name = "label18";
-            this.label18.Click += new System.EventHandler(this.label18_Click);
-            // 
-            // label29
-            // 
-            resources.ApplyResources(this.label29, "label29");
-            this.label29.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label29.Name = "label29";
-            // 
-            // label31
-            // 
-            resources.ApplyResources(this.label31, "label31");
-            this.label31.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label31.Name = "label31";
-            // 
-            // label33
-            // 
-            resources.ApplyResources(this.label33, "label33");
-            this.label33.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label33.Name = "label33";
-            // 
-            // label39
-            // 
-            resources.ApplyResources(this.label39, "label39");
-            this.label39.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label39.Name = "label39";
-            // 
-            // label41
-            // 
-            resources.ApplyResources(this.label41, "label41");
-            this.label41.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label41.Name = "label41";
-            // 
-            // label45
-            // 
-            resources.ApplyResources(this.label45, "label45");
-            this.label45.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label45.Name = "label45";
-            // 
-            // label47
-            // 
-            resources.ApplyResources(this.label47, "label47");
-            this.label47.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label47.Name = "label47";
-            // 
-            // label51
-            // 
-            resources.ApplyResources(this.label51, "label51");
-            this.label51.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label51.Name = "label51";
-            // 
             // numericUpDown2
             // 
             resources.ApplyResources(this.numericUpDown2, "numericUpDown2");
@@ -1953,28 +1347,6 @@
             0,
             0});
             this.numericUpDown2.ValueChanged += new System.EventHandler(this.numericUpDown2_ValueChanged);
-            // 
-            // numericUpDown3
-            // 
-            resources.ApplyResources(this.numericUpDown3, "numericUpDown3");
-            this.numericUpDown3.Maximum = new decimal(new int[] {
-            30000,
-            0,
-            0,
-            0});
-            this.numericUpDown3.Name = "numericUpDown3";
-            this.numericUpDown3.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numericUpDown3.ValueChanged += new System.EventHandler(this.numericUpDown3_ValueChanged);
-            // 
-            // label55
-            // 
-            resources.ApplyResources(this.label55, "label55");
-            this.label55.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label55.Name = "label55";
             // 
             // button3
             // 
@@ -2001,22 +1373,6 @@
             0});
             this.numericUpDown10.ValueChanged += new System.EventHandler(this.numericUpDown10_ValueChanged);
             // 
-            // numericUpDown11
-            // 
-            resources.ApplyResources(this.numericUpDown11, "numericUpDown11");
-            this.numericUpDown11.Maximum = new decimal(new int[] {
-            65536,
-            0,
-            0,
-            0});
-            this.numericUpDown11.Name = "numericUpDown11";
-            this.numericUpDown11.Value = new decimal(new int[] {
-            100,
-            0,
-            0,
-            0});
-            this.numericUpDown11.ValueChanged += new System.EventHandler(this.numericUpDown11_ValueChanged);
-            // 
             // label57
             // 
             resources.ApplyResources(this.label57, "label57");
@@ -2028,18 +1384,6 @@
             resources.ApplyResources(this.label58, "label58");
             this.label58.ImageKey = global::ControlBalance.MyStrings.About1333;
             this.label58.Name = "label58";
-            // 
-            // label59
-            // 
-            resources.ApplyResources(this.label59, "label59");
-            this.label59.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label59.Name = "label59";
-            // 
-            // label60
-            // 
-            resources.ApplyResources(this.label60, "label60");
-            this.label60.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label60.Name = "label60";
             // 
             // button4
             // 
@@ -2067,78 +1411,6 @@
             this.button6.Name = "button6";
             this.button6.UseVisualStyleBackColor = false;
             this.button6.Click += new System.EventHandler(this.button6_Click);
-            // 
-            // label65
-            // 
-            resources.ApplyResources(this.label65, "label65");
-            this.label65.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label65.Name = "label65";
-            // 
-            // label66
-            // 
-            resources.ApplyResources(this.label66, "label66");
-            this.label66.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label66.Name = "label66";
-            // 
-            // button7
-            // 
-            resources.ApplyResources(this.button7, "button7");
-            this.button7.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.button7.Name = "button7";
-            this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
-            // 
-            // label67
-            // 
-            resources.ApplyResources(this.label67, "label67");
-            this.label67.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label67.Name = "label67";
-            // 
-            // label68
-            // 
-            resources.ApplyResources(this.label68, "label68");
-            this.label68.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label68.Name = "label68";
-            // 
-            // label69
-            // 
-            resources.ApplyResources(this.label69, "label69");
-            this.label69.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label69.Name = "label69";
-            // 
-            // label70
-            // 
-            resources.ApplyResources(this.label70, "label70");
-            this.label70.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label70.Name = "label70";
-            // 
-            // label71
-            // 
-            resources.ApplyResources(this.label71, "label71");
-            this.label71.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label71.Name = "label71";
-            // 
-            // label72
-            // 
-            resources.ApplyResources(this.label72, "label72");
-            this.label72.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label72.Name = "label72";
-            // 
-            // checkBox12
-            // 
-            resources.ApplyResources(this.checkBox12, "checkBox12");
-            this.checkBox12.Checked = true;
-            this.checkBox12.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox12.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.checkBox12.Name = "checkBox12";
-            this.checkBox12.UseVisualStyleBackColor = true;
-            this.checkBox12.CheckedChanged += new System.EventHandler(this.checkBox12_CheckedChanged);
-            // 
-            // label75
-            // 
-            resources.ApplyResources(this.label75, "label75");
-            this.label75.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label75.Name = "label75";
             // 
             // panel1
             // 
@@ -2180,57 +1452,6 @@
             0});
             this.numericUpDown15.Name = "numericUpDown15";
             this.numericUpDown15.ValueChanged += new System.EventHandler(this.numericUpDown15_ValueChanged);
-            // 
-            // label87
-            // 
-            resources.ApplyResources(this.label87, "label87");
-            this.label87.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label87.Name = "label87";
-            // 
-            // label86
-            // 
-            resources.ApplyResources(this.label86, "label86");
-            this.label86.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label86.Name = "label86";
-            // 
-            // numericUpDown12
-            // 
-            resources.ApplyResources(this.numericUpDown12, "numericUpDown12");
-            this.numericUpDown12.Increment = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-            this.numericUpDown12.Maximum = new decimal(new int[] {
-            20000,
-            0,
-            0,
-            0});
-            this.numericUpDown12.Name = "numericUpDown12";
-            this.numericUpDown12.Value = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-            this.numericUpDown12.ValueChanged += new System.EventHandler(this.numericUpDown12_ValueChanged);
-            // 
-            // label61
-            // 
-            resources.ApplyResources(this.label61, "label61");
-            this.label61.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label61.Name = "label61";
-            // 
-            // label62
-            // 
-            resources.ApplyResources(this.label62, "label62");
-            this.label62.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label62.Name = "label62";
-            // 
-            // label77
-            // 
-            resources.ApplyResources(this.label77, "label77");
-            this.label77.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label77.Name = "label77";
             // 
             // button8
             // 
@@ -2319,126 +1540,6 @@
             this.button9.Name = "button9";
             this.button9.UseVisualStyleBackColor = true;
             this.button9.Click += new System.EventHandler(this.button9_Click);
-            // 
-            // numericUpDown18
-            // 
-            resources.ApplyResources(this.numericUpDown18, "numericUpDown18");
-            this.numericUpDown18.Maximum = new decimal(new int[] {
-            30000,
-            0,
-            0,
-            0});
-            this.numericUpDown18.Minimum = new decimal(new int[] {
-            50000,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown18.Name = "numericUpDown18";
-            this.numericUpDown18.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numericUpDown18.ValueChanged += new System.EventHandler(this.numericUpDown18_ValueChanged);
-            // 
-            // label96
-            // 
-            resources.ApplyResources(this.label96, "label96");
-            this.label96.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label96.Name = "label96";
-            // 
-            // label97
-            // 
-            resources.ApplyResources(this.label97, "label97");
-            this.label97.BackColor = System.Drawing.Color.Transparent;
-            this.label97.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label97.Name = "label97";
-            // 
-            // numericUpDown19
-            // 
-            resources.ApplyResources(this.numericUpDown19, "numericUpDown19");
-            this.numericUpDown19.Maximum = new decimal(new int[] {
-            3000,
-            0,
-            0,
-            0});
-            this.numericUpDown19.Name = "numericUpDown19";
-            this.numericUpDown19.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numericUpDown19.ValueChanged += new System.EventHandler(this.numericUpDown19_ValueChanged);
-            // 
-            // label98
-            // 
-            resources.ApplyResources(this.label98, "label98");
-            this.label98.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label98.Name = "label98";
-            this.label98.Click += new System.EventHandler(this.label98_Click);
-            // 
-            // label99
-            // 
-            resources.ApplyResources(this.label99, "label99");
-            this.label99.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label99.Name = "label99";
-            this.label99.Click += new System.EventHandler(this.label99_Click);
-            // 
-            // numericUpDown21
-            // 
-            resources.ApplyResources(this.numericUpDown21, "numericUpDown21");
-            this.numericUpDown21.Maximum = new decimal(new int[] {
-            128,
-            0,
-            0,
-            0});
-            this.numericUpDown21.Name = "numericUpDown21";
-            this.numericUpDown21.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numericUpDown21.ValueChanged += new System.EventHandler(this.numericUpDown21_ValueChanged);
-            // 
-            // label102
-            // 
-            resources.ApplyResources(this.label102, "label102");
-            this.label102.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label102.Name = "label102";
-            // 
-            // label103
-            // 
-            resources.ApplyResources(this.label103, "label103");
-            this.label103.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label103.Name = "label103";
-            // 
-            // numericUpDown22
-            // 
-            resources.ApplyResources(this.numericUpDown22, "numericUpDown22");
-            this.numericUpDown22.Maximum = new decimal(new int[] {
-            30000,
-            0,
-            0,
-            0});
-            this.numericUpDown22.Name = "numericUpDown22";
-            this.numericUpDown22.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numericUpDown22.ValueChanged += new System.EventHandler(this.numericUpDown22_ValueChanged);
-            // 
-            // label104
-            // 
-            resources.ApplyResources(this.label104, "label104");
-            this.label104.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label104.Name = "label104";
-            // 
-            // label35
-            // 
-            resources.ApplyResources(this.label35, "label35");
-            this.label35.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label35.Name = "label35";
             // 
             // numericUpDown25
             // 
@@ -2567,12 +1668,6 @@
             this.button10.UseVisualStyleBackColor = true;
             this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
-            // label108
-            // 
-            resources.ApplyResources(this.label108, "label108");
-            this.label108.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label108.Name = "label108";
-            // 
             // label109
             // 
             resources.ApplyResources(this.label109, "label109");
@@ -2592,62 +1687,6 @@
             this.checkBox15.Name = "checkBox15";
             this.checkBox15.UseVisualStyleBackColor = true;
             this.checkBox15.CheckedChanged += new System.EventHandler(this.checkBox15_CheckedChanged);
-            // 
-            // numericUpDown28
-            // 
-            resources.ApplyResources(this.numericUpDown28, "numericUpDown28");
-            this.numericUpDown28.Maximum = new decimal(new int[] {
-            30000,
-            0,
-            0,
-            0});
-            this.numericUpDown28.Name = "numericUpDown28";
-            this.numericUpDown28.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numericUpDown28.ValueChanged += new System.EventHandler(this.numericUpDown28_ValueChanged);
-            // 
-            // label111
-            // 
-            resources.ApplyResources(this.label111, "label111");
-            this.label111.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label111.Name = "label111";
-            // 
-            // label112
-            // 
-            resources.ApplyResources(this.label112, "label112");
-            this.label112.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label112.Name = "label112";
-            // 
-            // numericUpDown29
-            // 
-            resources.ApplyResources(this.numericUpDown29, "numericUpDown29");
-            this.numericUpDown29.Maximum = new decimal(new int[] {
-            30000,
-            0,
-            0,
-            0});
-            this.numericUpDown29.Name = "numericUpDown29";
-            this.numericUpDown29.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numericUpDown29.ValueChanged += new System.EventHandler(this.numericUpDown29_ValueChanged);
-            // 
-            // label113
-            // 
-            resources.ApplyResources(this.label113, "label113");
-            this.label113.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label113.Name = "label113";
-            // 
-            // label114
-            // 
-            resources.ApplyResources(this.label114, "label114");
-            this.label114.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label114.Name = "label114";
             // 
             // tabControl1
             // 
@@ -2669,6 +1708,7 @@
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.pictureBox1);
             this.tabPage3.Controls.Add(this.comboBox26);
             this.tabPage3.Controls.Add(this.button50);
             this.tabPage3.Controls.Add(this.textBox1);
@@ -2686,6 +1726,12 @@
             this.tabPage3.ToolTipText = global::ControlBalance.MyStrings.About1333;
             this.tabPage3.UseVisualStyleBackColor = true;
             this.tabPage3.Click += new System.EventHandler(this.tabPage3_Click);
+            // 
+            // pictureBox1
+            // 
+            resources.ApplyResources(this.pictureBox1, "pictureBox1");
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.TabStop = false;
             // 
             // comboBox26
             // 
@@ -5981,7 +5027,6 @@
             this.panel27.Controls.Add(this.numericUpDown167);
             this.panel27.Controls.Add(this.label654);
             this.panel27.Controls.Add(this.label632);
-            this.panel27.Controls.Add(this.checkBox60);
             this.panel27.Controls.Add(this.label465);
             this.panel27.Controls.Add(this.numericUpDown127);
             this.panel27.Controls.Add(this.label466);
@@ -6054,14 +5099,6 @@
             this.label632.ForeColor = System.Drawing.Color.Red;
             this.label632.ImageKey = global::ControlBalance.MyStrings.About1333;
             this.label632.Name = "label632";
-            // 
-            // checkBox60
-            // 
-            resources.ApplyResources(this.checkBox60, "checkBox60");
-            this.checkBox60.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.checkBox60.Name = "checkBox60";
-            this.checkBox60.UseVisualStyleBackColor = true;
-            this.checkBox60.CheckedChanged += new System.EventHandler(this.checkBox60_CheckedChanged);
             // 
             // label465
             // 
@@ -6728,7 +5765,6 @@
             this.tabPage9.Controls.Add(this.checkBox89);
             this.tabPage9.Controls.Add(this.label560);
             this.tabPage9.Controls.Add(this.numericUpDown143);
-            this.tabPage9.Controls.Add(this.checkBox52);
             this.tabPage9.Controls.Add(this.label107);
             this.tabPage9.Controls.Add(this.label56);
             this.tabPage9.Controls.Add(this.numericUpDown27);
@@ -6905,14 +5941,6 @@
             0});
             this.numericUpDown143.ValueChanged += new System.EventHandler(this.numericUpDown143_ValueChanged);
             // 
-            // checkBox52
-            // 
-            resources.ApplyResources(this.checkBox52, "checkBox52");
-            this.checkBox52.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.checkBox52.Name = "checkBox52";
-            this.checkBox52.UseVisualStyleBackColor = true;
-            this.checkBox52.CheckedChanged += new System.EventHandler(this.checkBox52_CheckedChanged);
-            // 
             // tabPage5
             // 
             this.tabPage5.Controls.Add(this.numericUpDown244);
@@ -7038,6 +6066,8 @@
             // panel35
             // 
             this.panel35.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel35.Controls.Add(this.label2);
+            this.panel35.Controls.Add(this.label813);
             this.panel35.Controls.Add(this.numericUpDown234);
             this.panel35.Controls.Add(this.checkBox99);
             this.panel35.Controls.Add(this.label894);
@@ -7056,6 +6086,18 @@
             resources.ApplyResources(this.panel35, "panel35");
             this.panel35.Name = "panel35";
             this.panel35.Paint += new System.Windows.Forms.PaintEventHandler(this.panel35_Paint);
+            // 
+            // label2
+            // 
+            this.label2.ImageKey = global::ControlBalance.MyStrings.About1333;
+            resources.ApplyResources(this.label2, "label2");
+            this.label2.Name = "label2";
+            // 
+            // label813
+            // 
+            this.label813.ImageKey = global::ControlBalance.MyStrings.About1333;
+            resources.ApplyResources(this.label813, "label813");
+            this.label813.Name = "label813";
             // 
             // numericUpDown234
             // 
@@ -7581,7 +6623,6 @@
             this.panel75.Controls.Add(this.label886);
             this.panel75.Controls.Add(this.label887);
             this.panel75.Controls.Add(this.label882);
-            this.panel75.Controls.Add(this.label823);
             this.panel75.Controls.Add(this.numericUpDown228);
             this.panel75.Controls.Add(this.label839);
             this.panel75.Controls.Add(this.label883);
@@ -7600,6 +6641,7 @@
             this.panel80.Controls.Add(this.numericUpDown243);
             this.panel80.Controls.Add(this.label914);
             this.panel80.Controls.Add(this.numericUpDown240);
+            this.panel80.Controls.Add(this.label823);
             this.panel80.Controls.Add(this.label907);
             this.panel80.Controls.Add(this.checkBox114);
             this.panel80.Controls.Add(this.label908);
@@ -7660,6 +6702,12 @@
             0,
             0});
             this.numericUpDown240.ValueChanged += new System.EventHandler(this.numericUpDown240_ValueChanged);
+            // 
+            // label823
+            // 
+            resources.ApplyResources(this.label823, "label823");
+            this.label823.ImageKey = global::ControlBalance.MyStrings.About1333;
+            this.label823.Name = "label823";
             // 
             // label907
             // 
@@ -7775,12 +6823,6 @@
             this.label882.ForeColor = System.Drawing.Color.Black;
             this.label882.ImageKey = global::ControlBalance.MyStrings.About1333;
             this.label882.Name = "label882";
-            // 
-            // label823
-            // 
-            resources.ApplyResources(this.label823, "label823");
-            this.label823.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label823.Name = "label823";
             // 
             // numericUpDown228
             // 
@@ -8418,6 +7460,7 @@
             this.panel45.Controls.Add(this.label904);
             this.panel45.Controls.Add(this.numericUpDown238);
             this.panel45.Controls.Add(this.label905);
+            this.panel45.Controls.Add(this.checkBox113);
             this.panel45.Controls.Add(this.label902);
             this.panel45.Controls.Add(this.label903);
             this.panel45.Controls.Add(this.numericUpDown237);
@@ -8426,7 +7469,6 @@
             this.panel45.Controls.Add(this.numericUpDown236);
             this.panel45.Controls.Add(this.label896);
             this.panel45.Controls.Add(this.label899);
-            this.panel45.Controls.Add(this.checkBox113);
             this.panel45.Controls.Add(this.numericUpDown232);
             this.panel45.Controls.Add(this.label890);
             this.panel45.Controls.Add(this.label891);
@@ -8495,6 +7537,15 @@
             resources.ApplyResources(this.label905, "label905");
             this.label905.ImageKey = global::ControlBalance.MyStrings.About1333;
             this.label905.Name = "label905";
+            // 
+            // checkBox113
+            // 
+            resources.ApplyResources(this.checkBox113, "checkBox113");
+            this.checkBox113.ForeColor = System.Drawing.Color.Black;
+            this.checkBox113.ImageKey = global::ControlBalance.MyStrings.About1333;
+            this.checkBox113.Name = "checkBox113";
+            this.checkBox113.UseVisualStyleBackColor = true;
+            this.checkBox113.CheckedChanged += new System.EventHandler(this.checkBox113_CheckedChanged);
             // 
             // label902
             // 
@@ -8568,15 +7619,6 @@
             resources.ApplyResources(this.label899, "label899");
             this.label899.ImageKey = global::ControlBalance.MyStrings.About1333;
             this.label899.Name = "label899";
-            // 
-            // checkBox113
-            // 
-            resources.ApplyResources(this.checkBox113, "checkBox113");
-            this.checkBox113.ForeColor = System.Drawing.Color.Black;
-            this.checkBox113.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.checkBox113.Name = "checkBox113";
-            this.checkBox113.UseVisualStyleBackColor = true;
-            this.checkBox113.CheckedChanged += new System.EventHandler(this.checkBox113_CheckedChanged);
             // 
             // numericUpDown232
             // 
@@ -8803,6 +7845,7 @@
             // panel58
             // 
             this.panel58.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel58.Controls.Add(this.label1);
             this.panel58.Controls.Add(this.label880);
             this.panel58.Controls.Add(this.label879);
             this.panel58.Controls.Add(this.label878);
@@ -8812,6 +7855,13 @@
             this.panel58.Controls.Add(this.label480);
             resources.ApplyResources(this.panel58, "panel58");
             this.panel58.Name = "panel58";
+            // 
+            // label1
+            // 
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.ImageKey = global::ControlBalance.MyStrings.About1333;
+            resources.ApplyResources(this.label1, "label1");
+            this.label1.Name = "label1";
             // 
             // label880
             // 
@@ -8861,7 +7911,6 @@
             // 
             // tabPage10
             // 
-            this.tabPage10.Controls.Add(this.panel77);
             this.tabPage10.Controls.Add(this.panel76);
             this.tabPage10.Controls.Add(this.panel14);
             this.tabPage10.Controls.Add(this.panel67);
@@ -8885,6 +7934,33 @@
             this.tabPage10.Name = "tabPage10";
             this.tabPage10.ToolTipText = global::ControlBalance.MyStrings.About1333;
             this.tabPage10.UseVisualStyleBackColor = true;
+            // 
+            // panel76
+            // 
+            this.panel76.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel76.Controls.Add(this.panel77);
+            this.panel76.Controls.Add(this.label846);
+            this.panel76.Controls.Add(this.numericUpDown216);
+            this.panel76.Controls.Add(this.label850);
+            this.panel76.Controls.Add(this.checkBox105);
+            this.panel76.Controls.Add(this.label841);
+            this.panel76.Controls.Add(this.label842);
+            this.panel76.Controls.Add(this.button1);
+            this.panel76.Controls.Add(this.checkBox103);
+            this.panel76.Controls.Add(this.numericUpDown220);
+            this.panel76.Controls.Add(this.label855);
+            this.panel76.Controls.Add(this.label843);
+            this.panel76.Controls.Add(this.label853);
+            this.panel76.Controls.Add(this.numericUpDown221);
+            this.panel76.Controls.Add(this.label857);
+            this.panel76.Controls.Add(this.label856);
+            this.panel76.Controls.Add(this.numericUpDown215);
+            this.panel76.Controls.Add(this.label854);
+            this.panel76.Controls.Add(this.label852);
+            this.panel76.Controls.Add(this.numericUpDown219);
+            this.panel76.Controls.Add(this.label849);
+            resources.ApplyResources(this.panel76, "panel76");
+            this.panel76.Name = "panel76";
             // 
             // panel77
             // 
@@ -9019,32 +8095,6 @@
             // 
             resources.ApplyResources(this.label863, "label863");
             this.label863.Name = "label863";
-            // 
-            // panel76
-            // 
-            this.panel76.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel76.Controls.Add(this.label846);
-            this.panel76.Controls.Add(this.numericUpDown216);
-            this.panel76.Controls.Add(this.label850);
-            this.panel76.Controls.Add(this.checkBox105);
-            this.panel76.Controls.Add(this.label841);
-            this.panel76.Controls.Add(this.label842);
-            this.panel76.Controls.Add(this.button1);
-            this.panel76.Controls.Add(this.checkBox103);
-            this.panel76.Controls.Add(this.numericUpDown220);
-            this.panel76.Controls.Add(this.label855);
-            this.panel76.Controls.Add(this.label843);
-            this.panel76.Controls.Add(this.label853);
-            this.panel76.Controls.Add(this.numericUpDown221);
-            this.panel76.Controls.Add(this.label857);
-            this.panel76.Controls.Add(this.label856);
-            this.panel76.Controls.Add(this.numericUpDown215);
-            this.panel76.Controls.Add(this.label854);
-            this.panel76.Controls.Add(this.label852);
-            this.panel76.Controls.Add(this.numericUpDown219);
-            this.panel76.Controls.Add(this.label849);
-            resources.ApplyResources(this.panel76, "panel76");
-            this.panel76.Name = "panel76";
             // 
             // label846
             // 
@@ -9855,10 +8905,8 @@
             this.tabPage2.Controls.Add(this.label329);
             this.tabPage2.Controls.Add(this.label330);
             this.tabPage2.Controls.Add(this.label789);
-            this.tabPage2.Controls.Add(this.checkBox21);
             this.tabPage2.Controls.Add(this.label179);
             this.tabPage2.Controls.Add(this.label790);
-            this.tabPage2.Controls.Add(this.checkBox20);
             this.tabPage2.Controls.Add(this.label180);
             this.tabPage2.Controls.Add(this.label181);
             this.tabPage2.Controls.Add(this.label182);
@@ -9969,15 +9017,6 @@
             this.label789.ImageKey = global::ControlBalance.MyStrings.About1333;
             this.label789.Name = "label789";
             // 
-            // checkBox21
-            // 
-            resources.ApplyResources(this.checkBox21, "checkBox21");
-            this.checkBox21.ForeColor = System.Drawing.Color.Red;
-            this.checkBox21.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.checkBox21.Name = "checkBox21";
-            this.checkBox21.UseVisualStyleBackColor = true;
-            this.checkBox21.CheckedChanged += new System.EventHandler(this.checkBox21_CheckedChanged);
-            // 
             // label179
             // 
             resources.ApplyResources(this.label179, "label179");
@@ -9989,15 +9028,6 @@
             resources.ApplyResources(this.label790, "label790");
             this.label790.ImageKey = global::ControlBalance.MyStrings.About1333;
             this.label790.Name = "label790";
-            // 
-            // checkBox20
-            // 
-            resources.ApplyResources(this.checkBox20, "checkBox20");
-            this.checkBox20.ForeColor = System.Drawing.Color.Red;
-            this.checkBox20.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.checkBox20.Name = "checkBox20";
-            this.checkBox20.UseVisualStyleBackColor = true;
-            this.checkBox20.CheckedChanged += new System.EventHandler(this.checkBox20_CheckedChanged);
             // 
             // label180
             // 
@@ -10476,7 +9506,6 @@
             this.tabPage6.Controls.Add(this.label507);
             this.tabPage6.Controls.Add(this.label575);
             this.tabPage6.Controls.Add(this.checkBox62);
-            this.tabPage6.Controls.Add(this.button2);
             this.tabPage6.Controls.Add(this.label565);
             this.tabPage6.Controls.Add(this.checkBox18);
             this.tabPage6.Controls.Add(this.button39);
@@ -11774,14 +10803,6 @@
             this.checkBox62.UseVisualStyleBackColor = true;
             this.checkBox62.CheckedChanged += new System.EventHandler(this.checkBox62_CheckedChanged);
             // 
-            // button2
-            // 
-            resources.ApplyResources(this.button2, "button2");
-            this.button2.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.button2.Name = "button2";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click_1);
-            // 
             // label565
             // 
             resources.ApplyResources(this.label565, "label565");
@@ -12041,3000 +11062,6 @@
             this.label474.ImageKey = global::ControlBalance.MyStrings.About1333;
             this.label474.Name = "label474";
             // 
-            // numericUpDown112
-            // 
-            resources.ApplyResources(this.numericUpDown112, "numericUpDown112");
-            this.numericUpDown112.Maximum = new decimal(new int[] {
-            7000,
-            0,
-            0,
-            0});
-            this.numericUpDown112.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numericUpDown112.Name = "numericUpDown112";
-            this.numericUpDown112.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numericUpDown112.ValueChanged += new System.EventHandler(this.numericUpDown112_ValueChanged);
-            // 
-            // label440
-            // 
-            resources.ApplyResources(this.label440, "label440");
-            this.label440.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label440.Name = "label440";
-            // 
-            // label441
-            // 
-            resources.ApplyResources(this.label441, "label441");
-            this.label441.BackColor = System.Drawing.Color.DarkOrange;
-            this.label441.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label441.Name = "label441";
-            // 
-            // label445
-            // 
-            resources.ApplyResources(this.label445, "label445");
-            this.label445.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label445.Name = "label445";
-            // 
-            // label446
-            // 
-            resources.ApplyResources(this.label446, "label446");
-            this.label446.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label446.Name = "label446";
-            // 
-            // label443
-            // 
-            resources.ApplyResources(this.label443, "label443");
-            this.label443.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label443.Name = "label443";
-            // 
-            // label444
-            // 
-            resources.ApplyResources(this.label444, "label444");
-            this.label444.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label444.Name = "label444";
-            // 
-            // panel25
-            // 
-            this.panel25.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel25.Controls.Add(this.label442);
-            this.panel25.Controls.Add(this.label435);
-            this.panel25.Controls.Add(this.label434);
-            this.panel25.Controls.Add(this.label445);
-            this.panel25.Controls.Add(this.numericUpDown111);
-            this.panel25.Controls.Add(this.label446);
-            this.panel25.Controls.Add(this.numericUpDown109);
-            this.panel25.Controls.Add(this.label443);
-            this.panel25.Controls.Add(this.label438);
-            this.panel25.Controls.Add(this.label444);
-            this.panel25.Controls.Add(this.panel24);
-            this.panel25.Controls.Add(this.label437);
-            this.panel25.Controls.Add(this.label439);
-            this.panel25.Controls.Add(this.panel22);
-            this.panel25.Controls.Add(this.label436);
-            this.panel25.Controls.Add(this.numericUpDown110);
-            this.panel25.Controls.Add(this.panel21);
-            this.panel25.Controls.Add(this.label406);
-            this.panel25.Controls.Add(this.panel23);
-            this.panel25.Controls.Add(this.label320);
-            this.panel25.Controls.Add(this.button32);
-            this.panel25.Controls.Add(this.button34);
-            this.panel25.Controls.Add(this.panel6);
-            this.panel25.Controls.Add(this.numericUpDown112);
-            this.panel25.Controls.Add(this.panel2);
-            this.panel25.Controls.Add(this.label440);
-            this.panel25.Controls.Add(this.numericUpDown32);
-            this.panel25.Controls.Add(this.numericUpDown99);
-            this.panel25.Controls.Add(this.label441);
-            this.panel25.Controls.Add(this.numericUpDown33);
-            this.panel25.Controls.Add(this.button22);
-            this.panel25.Controls.Add(this.button7);
-            resources.ApplyResources(this.panel25, "panel25");
-            this.panel25.Name = "panel25";
-            // 
-            // label442
-            // 
-            resources.ApplyResources(this.label442, "label442");
-            this.label442.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label442.Name = "label442";
-            // 
-            // label435
-            // 
-            resources.ApplyResources(this.label435, "label435");
-            this.label435.BackColor = System.Drawing.Color.DarkOrange;
-            this.label435.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label435.Name = "label435";
-            // 
-            // label434
-            // 
-            resources.ApplyResources(this.label434, "label434");
-            this.label434.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label434.Name = "label434";
-            // 
-            // numericUpDown111
-            // 
-            resources.ApplyResources(this.numericUpDown111, "numericUpDown111");
-            this.numericUpDown111.Maximum = new decimal(new int[] {
-            7000,
-            0,
-            0,
-            0});
-            this.numericUpDown111.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numericUpDown111.Name = "numericUpDown111";
-            this.numericUpDown111.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numericUpDown111.ValueChanged += new System.EventHandler(this.numericUpDown111_ValueChanged);
-            // 
-            // numericUpDown109
-            // 
-            resources.ApplyResources(this.numericUpDown109, "numericUpDown109");
-            this.numericUpDown109.Maximum = new decimal(new int[] {
-            7000,
-            0,
-            0,
-            0});
-            this.numericUpDown109.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numericUpDown109.Name = "numericUpDown109";
-            this.numericUpDown109.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numericUpDown109.ValueChanged += new System.EventHandler(this.numericUpDown109_ValueChanged);
-            // 
-            // label438
-            // 
-            resources.ApplyResources(this.label438, "label438");
-            this.label438.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label438.Name = "label438";
-            // 
-            // panel24
-            // 
-            this.panel24.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel24.Controls.Add(this.label433);
-            this.panel24.Controls.Add(this.label306);
-            this.panel24.Controls.Add(this.label305);
-            this.panel24.Controls.Add(this.label319);
-            this.panel24.Controls.Add(this.label308);
-            this.panel24.Controls.Add(this.label307);
-            this.panel24.Controls.Add(this.label310);
-            this.panel24.Controls.Add(this.label309);
-            this.panel24.Controls.Add(this.label312);
-            this.panel24.Controls.Add(this.label311);
-            this.panel24.Controls.Add(this.panel20);
-            this.panel24.Controls.Add(this.label318);
-            this.panel24.Controls.Add(this.label338);
-            this.panel24.Controls.Add(this.numericUpDown86);
-            this.panel24.Controls.Add(this.button28);
-            resources.ApplyResources(this.panel24, "panel24");
-            this.panel24.Name = "panel24";
-            // 
-            // label433
-            // 
-            resources.ApplyResources(this.label433, "label433");
-            this.label433.ForeColor = System.Drawing.Color.ForestGreen;
-            this.label433.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label433.Name = "label433";
-            // 
-            // label306
-            // 
-            resources.ApplyResources(this.label306, "label306");
-            this.label306.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label306.Name = "label306";
-            // 
-            // label305
-            // 
-            resources.ApplyResources(this.label305, "label305");
-            this.label305.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label305.Name = "label305";
-            // 
-            // label319
-            // 
-            resources.ApplyResources(this.label319, "label319");
-            this.label319.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label319.Name = "label319";
-            // 
-            // label308
-            // 
-            resources.ApplyResources(this.label308, "label308");
-            this.label308.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label308.Name = "label308";
-            // 
-            // label307
-            // 
-            resources.ApplyResources(this.label307, "label307");
-            this.label307.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label307.Name = "label307";
-            // 
-            // label310
-            // 
-            resources.ApplyResources(this.label310, "label310");
-            this.label310.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label310.Name = "label310";
-            // 
-            // label309
-            // 
-            resources.ApplyResources(this.label309, "label309");
-            this.label309.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label309.Name = "label309";
-            // 
-            // label312
-            // 
-            resources.ApplyResources(this.label312, "label312");
-            this.label312.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label312.Name = "label312";
-            // 
-            // label311
-            // 
-            resources.ApplyResources(this.label311, "label311");
-            this.label311.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label311.Name = "label311";
-            // 
-            // panel20
-            // 
-            this.panel20.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel20.Controls.Add(this.label430);
-            this.panel20.Controls.Add(this.label413);
-            this.panel20.Controls.Add(this.label412);
-            this.panel20.Controls.Add(this.label411);
-            this.panel20.Controls.Add(this.button35);
-            this.panel20.Controls.Add(this.label410);
-            this.panel20.Controls.Add(this.numericUpDown107);
-            this.panel20.Controls.Add(this.label405);
-            this.panel20.Controls.Add(this.label404);
-            resources.ApplyResources(this.panel20, "panel20");
-            this.panel20.Name = "panel20";
-            // 
-            // label430
-            // 
-            resources.ApplyResources(this.label430, "label430");
-            this.label430.ForeColor = System.Drawing.Color.ForestGreen;
-            this.label430.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label430.Name = "label430";
-            // 
-            // label413
-            // 
-            resources.ApplyResources(this.label413, "label413");
-            this.label413.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label413.Name = "label413";
-            // 
-            // label412
-            // 
-            resources.ApplyResources(this.label412, "label412");
-            this.label412.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label412.Name = "label412";
-            // 
-            // label411
-            // 
-            resources.ApplyResources(this.label411, "label411");
-            this.label411.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label411.Name = "label411";
-            // 
-            // button35
-            // 
-            this.button35.ImageKey = global::ControlBalance.MyStrings.About1333;
-            resources.ApplyResources(this.button35, "button35");
-            this.button35.Name = "button35";
-            this.button35.UseVisualStyleBackColor = true;
-            this.button35.Click += new System.EventHandler(this.button35_Click);
-            // 
-            // label410
-            // 
-            resources.ApplyResources(this.label410, "label410");
-            this.label410.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label410.Name = "label410";
-            // 
-            // numericUpDown107
-            // 
-            resources.ApplyResources(this.numericUpDown107, "numericUpDown107");
-            this.numericUpDown107.Maximum = new decimal(new int[] {
-            30000,
-            0,
-            0,
-            0});
-            this.numericUpDown107.Minimum = new decimal(new int[] {
-            2000,
-            0,
-            0,
-            0});
-            this.numericUpDown107.Name = "numericUpDown107";
-            this.numericUpDown107.Value = new decimal(new int[] {
-            3000,
-            0,
-            0,
-            0});
-            this.numericUpDown107.ValueChanged += new System.EventHandler(this.numericUpDown107_ValueChanged);
-            // 
-            // label405
-            // 
-            resources.ApplyResources(this.label405, "label405");
-            this.label405.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label405.Name = "label405";
-            // 
-            // label404
-            // 
-            resources.ApplyResources(this.label404, "label404");
-            this.label404.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label404.Name = "label404";
-            // 
-            // label318
-            // 
-            resources.ApplyResources(this.label318, "label318");
-            this.label318.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label318.Name = "label318";
-            // 
-            // label338
-            // 
-            resources.ApplyResources(this.label338, "label338");
-            this.label338.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label338.Name = "label338";
-            // 
-            // numericUpDown86
-            // 
-            resources.ApplyResources(this.numericUpDown86, "numericUpDown86");
-            this.numericUpDown86.Maximum = new decimal(new int[] {
-            30000,
-            0,
-            0,
-            0});
-            this.numericUpDown86.Minimum = new decimal(new int[] {
-            2000,
-            0,
-            0,
-            0});
-            this.numericUpDown86.Name = "numericUpDown86";
-            this.numericUpDown86.Value = new decimal(new int[] {
-            3000,
-            0,
-            0,
-            0});
-            this.numericUpDown86.ValueChanged += new System.EventHandler(this.numericUpDown86_ValueChanged);
-            // 
-            // button28
-            // 
-            this.button28.ImageKey = global::ControlBalance.MyStrings.About1333;
-            resources.ApplyResources(this.button28, "button28");
-            this.button28.Name = "button28";
-            this.button28.UseVisualStyleBackColor = true;
-            this.button28.Click += new System.EventHandler(this.button28_Click);
-            // 
-            // label437
-            // 
-            resources.ApplyResources(this.label437, "label437");
-            this.label437.BackColor = System.Drawing.Color.DarkOrange;
-            this.label437.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label437.Name = "label437";
-            // 
-            // label439
-            // 
-            resources.ApplyResources(this.label439, "label439");
-            this.label439.BackColor = System.Drawing.Color.DarkOrange;
-            this.label439.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label439.Name = "label439";
-            // 
-            // panel22
-            // 
-            this.panel22.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel22.Controls.Add(this.label431);
-            this.panel22.Controls.Add(this.label290);
-            this.panel22.Controls.Add(this.label289);
-            this.panel22.Controls.Add(this.label292);
-            this.panel22.Controls.Add(this.label291);
-            this.panel22.Controls.Add(this.label294);
-            this.panel22.Controls.Add(this.label293);
-            this.panel22.Controls.Add(this.label296);
-            this.panel22.Controls.Add(this.label295);
-            this.panel22.Controls.Add(this.label316);
-            this.panel22.Controls.Add(this.label335);
-            this.panel22.Controls.Add(this.numericUpDown84);
-            this.panel22.Controls.Add(this.button26);
-            resources.ApplyResources(this.panel22, "panel22");
-            this.panel22.Name = "panel22";
-            // 
-            // label431
-            // 
-            resources.ApplyResources(this.label431, "label431");
-            this.label431.ForeColor = System.Drawing.Color.ForestGreen;
-            this.label431.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label431.Name = "label431";
-            // 
-            // label290
-            // 
-            resources.ApplyResources(this.label290, "label290");
-            this.label290.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label290.Name = "label290";
-            // 
-            // label289
-            // 
-            resources.ApplyResources(this.label289, "label289");
-            this.label289.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label289.Name = "label289";
-            // 
-            // label292
-            // 
-            resources.ApplyResources(this.label292, "label292");
-            this.label292.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label292.Name = "label292";
-            // 
-            // label291
-            // 
-            resources.ApplyResources(this.label291, "label291");
-            this.label291.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label291.Name = "label291";
-            // 
-            // label294
-            // 
-            resources.ApplyResources(this.label294, "label294");
-            this.label294.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label294.Name = "label294";
-            // 
-            // label293
-            // 
-            resources.ApplyResources(this.label293, "label293");
-            this.label293.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label293.Name = "label293";
-            // 
-            // label296
-            // 
-            resources.ApplyResources(this.label296, "label296");
-            this.label296.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label296.Name = "label296";
-            // 
-            // label295
-            // 
-            resources.ApplyResources(this.label295, "label295");
-            this.label295.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label295.Name = "label295";
-            // 
-            // label316
-            // 
-            resources.ApplyResources(this.label316, "label316");
-            this.label316.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label316.Name = "label316";
-            // 
-            // label335
-            // 
-            resources.ApplyResources(this.label335, "label335");
-            this.label335.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label335.Name = "label335";
-            // 
-            // numericUpDown84
-            // 
-            resources.ApplyResources(this.numericUpDown84, "numericUpDown84");
-            this.numericUpDown84.Maximum = new decimal(new int[] {
-            30000,
-            0,
-            0,
-            0});
-            this.numericUpDown84.Minimum = new decimal(new int[] {
-            2000,
-            0,
-            0,
-            0});
-            this.numericUpDown84.Name = "numericUpDown84";
-            this.numericUpDown84.Value = new decimal(new int[] {
-            3000,
-            0,
-            0,
-            0});
-            this.numericUpDown84.ValueChanged += new System.EventHandler(this.numericUpDown84_ValueChanged);
-            // 
-            // button26
-            // 
-            this.button26.ImageKey = global::ControlBalance.MyStrings.About1333;
-            resources.ApplyResources(this.button26, "button26");
-            this.button26.Name = "button26";
-            this.button26.UseVisualStyleBackColor = true;
-            this.button26.Click += new System.EventHandler(this.button26_Click);
-            // 
-            // label436
-            // 
-            resources.ApplyResources(this.label436, "label436");
-            this.label436.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label436.Name = "label436";
-            // 
-            // numericUpDown110
-            // 
-            resources.ApplyResources(this.numericUpDown110, "numericUpDown110");
-            this.numericUpDown110.Maximum = new decimal(new int[] {
-            7000,
-            0,
-            0,
-            0});
-            this.numericUpDown110.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numericUpDown110.Name = "numericUpDown110";
-            this.numericUpDown110.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numericUpDown110.ValueChanged += new System.EventHandler(this.numericUpDown110_ValueChanged);
-            // 
-            // panel21
-            // 
-            this.panel21.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel21.Controls.Add(this.label429);
-            this.panel21.Controls.Add(this.label282);
-            this.panel21.Controls.Add(this.label281);
-            this.panel21.Controls.Add(this.button25);
-            this.panel21.Controls.Add(this.numericUpDown83);
-            this.panel21.Controls.Add(this.label284);
-            this.panel21.Controls.Add(this.label336);
-            this.panel21.Controls.Add(this.label315);
-            this.panel21.Controls.Add(this.label283);
-            this.panel21.Controls.Add(this.label314);
-            this.panel21.Controls.Add(this.label313);
-            this.panel21.Controls.Add(this.label286);
-            this.panel21.Controls.Add(this.label287);
-            this.panel21.Controls.Add(this.label288);
-            this.panel21.Controls.Add(this.label285);
-            resources.ApplyResources(this.panel21, "panel21");
-            this.panel21.Name = "panel21";
-            // 
-            // label429
-            // 
-            resources.ApplyResources(this.label429, "label429");
-            this.label429.ForeColor = System.Drawing.Color.ForestGreen;
-            this.label429.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label429.Name = "label429";
-            // 
-            // label282
-            // 
-            resources.ApplyResources(this.label282, "label282");
-            this.label282.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label282.Name = "label282";
-            // 
-            // label281
-            // 
-            resources.ApplyResources(this.label281, "label281");
-            this.label281.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label281.Name = "label281";
-            // 
-            // button25
-            // 
-            this.button25.ImageKey = global::ControlBalance.MyStrings.About1333;
-            resources.ApplyResources(this.button25, "button25");
-            this.button25.Name = "button25";
-            this.button25.UseVisualStyleBackColor = true;
-            this.button25.Click += new System.EventHandler(this.button25_Click);
-            // 
-            // numericUpDown83
-            // 
-            resources.ApplyResources(this.numericUpDown83, "numericUpDown83");
-            this.numericUpDown83.Maximum = new decimal(new int[] {
-            30000,
-            0,
-            0,
-            0});
-            this.numericUpDown83.Minimum = new decimal(new int[] {
-            2000,
-            0,
-            0,
-            0});
-            this.numericUpDown83.Name = "numericUpDown83";
-            this.numericUpDown83.Value = new decimal(new int[] {
-            3000,
-            0,
-            0,
-            0});
-            this.numericUpDown83.ValueChanged += new System.EventHandler(this.numericUpDown83_ValueChanged);
-            // 
-            // label284
-            // 
-            resources.ApplyResources(this.label284, "label284");
-            this.label284.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label284.Name = "label284";
-            // 
-            // label336
-            // 
-            resources.ApplyResources(this.label336, "label336");
-            this.label336.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label336.Name = "label336";
-            // 
-            // label315
-            // 
-            resources.ApplyResources(this.label315, "label315");
-            this.label315.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label315.Name = "label315";
-            // 
-            // label283
-            // 
-            resources.ApplyResources(this.label283, "label283");
-            this.label283.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label283.Name = "label283";
-            // 
-            // label314
-            // 
-            resources.ApplyResources(this.label314, "label314");
-            this.label314.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label314.Name = "label314";
-            this.label314.Click += new System.EventHandler(this.label314_Click);
-            // 
-            // label313
-            // 
-            resources.ApplyResources(this.label313, "label313");
-            this.label313.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label313.Name = "label313";
-            this.label313.Click += new System.EventHandler(this.label313_Click);
-            // 
-            // label286
-            // 
-            resources.ApplyResources(this.label286, "label286");
-            this.label286.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label286.Name = "label286";
-            // 
-            // label287
-            // 
-            resources.ApplyResources(this.label287, "label287");
-            this.label287.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label287.Name = "label287";
-            // 
-            // label288
-            // 
-            resources.ApplyResources(this.label288, "label288");
-            this.label288.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label288.Name = "label288";
-            // 
-            // label285
-            // 
-            resources.ApplyResources(this.label285, "label285");
-            this.label285.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label285.Name = "label285";
-            // 
-            // label406
-            // 
-            resources.ApplyResources(this.label406, "label406");
-            this.label406.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label406.Name = "label406";
-            // 
-            // panel23
-            // 
-            this.panel23.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel23.Controls.Add(this.label432);
-            this.panel23.Controls.Add(this.label298);
-            this.panel23.Controls.Add(this.label297);
-            this.panel23.Controls.Add(this.label300);
-            this.panel23.Controls.Add(this.label299);
-            this.panel23.Controls.Add(this.label302);
-            this.panel23.Controls.Add(this.label301);
-            this.panel23.Controls.Add(this.label304);
-            this.panel23.Controls.Add(this.label303);
-            this.panel23.Controls.Add(this.label317);
-            this.panel23.Controls.Add(this.label337);
-            this.panel23.Controls.Add(this.numericUpDown85);
-            this.panel23.Controls.Add(this.button27);
-            resources.ApplyResources(this.panel23, "panel23");
-            this.panel23.Name = "panel23";
-            // 
-            // label432
-            // 
-            resources.ApplyResources(this.label432, "label432");
-            this.label432.ForeColor = System.Drawing.Color.ForestGreen;
-            this.label432.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label432.Name = "label432";
-            // 
-            // label298
-            // 
-            resources.ApplyResources(this.label298, "label298");
-            this.label298.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label298.Name = "label298";
-            // 
-            // label297
-            // 
-            resources.ApplyResources(this.label297, "label297");
-            this.label297.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label297.Name = "label297";
-            // 
-            // label300
-            // 
-            resources.ApplyResources(this.label300, "label300");
-            this.label300.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label300.Name = "label300";
-            // 
-            // label299
-            // 
-            resources.ApplyResources(this.label299, "label299");
-            this.label299.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label299.Name = "label299";
-            // 
-            // label302
-            // 
-            resources.ApplyResources(this.label302, "label302");
-            this.label302.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label302.Name = "label302";
-            // 
-            // label301
-            // 
-            resources.ApplyResources(this.label301, "label301");
-            this.label301.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label301.Name = "label301";
-            // 
-            // label304
-            // 
-            resources.ApplyResources(this.label304, "label304");
-            this.label304.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label304.Name = "label304";
-            // 
-            // label303
-            // 
-            resources.ApplyResources(this.label303, "label303");
-            this.label303.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label303.Name = "label303";
-            // 
-            // label317
-            // 
-            resources.ApplyResources(this.label317, "label317");
-            this.label317.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label317.Name = "label317";
-            // 
-            // label337
-            // 
-            resources.ApplyResources(this.label337, "label337");
-            this.label337.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label337.Name = "label337";
-            // 
-            // numericUpDown85
-            // 
-            resources.ApplyResources(this.numericUpDown85, "numericUpDown85");
-            this.numericUpDown85.Maximum = new decimal(new int[] {
-            30000,
-            0,
-            0,
-            0});
-            this.numericUpDown85.Minimum = new decimal(new int[] {
-            2000,
-            0,
-            0,
-            0});
-            this.numericUpDown85.Name = "numericUpDown85";
-            this.numericUpDown85.Value = new decimal(new int[] {
-            3000,
-            0,
-            0,
-            0});
-            this.numericUpDown85.ValueChanged += new System.EventHandler(this.numericUpDown85_ValueChanged);
-            // 
-            // button27
-            // 
-            this.button27.ImageKey = global::ControlBalance.MyStrings.About1333;
-            resources.ApplyResources(this.button27, "button27");
-            this.button27.Name = "button27";
-            this.button27.UseVisualStyleBackColor = true;
-            this.button27.Click += new System.EventHandler(this.button27_Click);
-            // 
-            // label320
-            // 
-            resources.ApplyResources(this.label320, "label320");
-            this.label320.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label320.Name = "label320";
-            // 
-            // button32
-            // 
-            this.button32.ImageKey = global::ControlBalance.MyStrings.About1333;
-            resources.ApplyResources(this.button32, "button32");
-            this.button32.Name = "button32";
-            this.button32.UseVisualStyleBackColor = true;
-            this.button32.Click += new System.EventHandler(this.button32_Click);
-            // 
-            // button34
-            // 
-            this.button34.ImageKey = global::ControlBalance.MyStrings.About1333;
-            resources.ApplyResources(this.button34, "button34");
-            this.button34.Name = "button34";
-            this.button34.UseVisualStyleBackColor = true;
-            this.button34.Click += new System.EventHandler(this.button34_Click);
-            // 
-            // panel6
-            // 
-            this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel6.Controls.Add(this.panel5);
-            this.panel6.Controls.Add(this.label364);
-            this.panel6.Controls.Add(this.numericUpDown97);
-            this.panel6.Controls.Add(this.checkBox22);
-            this.panel6.Controls.Add(this.label365);
-            this.panel6.Controls.Add(this.label3);
-            this.panel6.Controls.Add(this.panel13);
-            this.panel6.Controls.Add(this.panel11);
-            this.panel6.Controls.Add(this.label77);
-            resources.ApplyResources(this.panel6, "panel6");
-            this.panel6.Name = "panel6";
-            // 
-            // panel5
-            // 
-            this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel5.Controls.Add(this.label388);
-            this.panel5.Controls.Add(this.numericUpDown101);
-            this.panel5.Controls.Add(this.label207);
-            this.panel5.Controls.Add(this.label208);
-            this.panel5.Controls.Add(this.label389);
-            this.panel5.Controls.Add(this.label210);
-            this.panel5.Controls.Add(this.panel12);
-            this.panel5.Controls.Add(this.numericUpDown47);
-            this.panel5.Controls.Add(this.numericUpDown48);
-            this.panel5.Controls.Add(this.label211);
-            this.panel5.Controls.Add(this.label116);
-            this.panel5.Controls.Add(this.label212);
-            this.panel5.Controls.Add(this.label115);
-            this.panel5.Controls.Add(this.numericUpDown49);
-            this.panel5.Controls.Add(this.numericUpDown30);
-            this.panel5.Controls.Add(this.numericUpDown50);
-            this.panel5.Controls.Add(this.label213);
-            this.panel5.Controls.Add(this.label214);
-            this.panel5.Controls.Add(this.label215);
-            this.panel5.Controls.Add(this.label216);
-            this.panel5.Controls.Add(this.numericUpDown51);
-            this.panel5.Controls.Add(this.label217);
-            this.panel5.Controls.Add(this.label218);
-            this.panel5.Controls.Add(this.numericUpDown52);
-            this.panel5.Controls.Add(this.label219);
-            this.panel5.Controls.Add(this.label220);
-            this.panel5.Controls.Add(this.numericUpDown53);
-            this.panel5.Controls.Add(this.label221);
-            resources.ApplyResources(this.panel5, "panel5");
-            this.panel5.Name = "panel5";
-            // 
-            // label388
-            // 
-            resources.ApplyResources(this.label388, "label388");
-            this.label388.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label388.Name = "label388";
-            // 
-            // numericUpDown101
-            // 
-            resources.ApplyResources(this.numericUpDown101, "numericUpDown101");
-            this.numericUpDown101.Maximum = new decimal(new int[] {
-            30000,
-            0,
-            0,
-            0});
-            this.numericUpDown101.Name = "numericUpDown101";
-            this.numericUpDown101.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numericUpDown101.ValueChanged += new System.EventHandler(this.numericUpDown101_ValueChanged);
-            // 
-            // label207
-            // 
-            resources.ApplyResources(this.label207, "label207");
-            this.label207.BackColor = System.Drawing.Color.Transparent;
-            this.label207.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label207.Name = "label207";
-            // 
-            // label208
-            // 
-            resources.ApplyResources(this.label208, "label208");
-            this.label208.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label208.Name = "label208";
-            // 
-            // label389
-            // 
-            resources.ApplyResources(this.label389, "label389");
-            this.label389.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label389.Name = "label389";
-            // 
-            // label210
-            // 
-            resources.ApplyResources(this.label210, "label210");
-            this.label210.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label210.Name = "label210";
-            // 
-            // panel12
-            // 
-            this.panel12.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel12.Controls.Add(this.comboBox6);
-            this.panel12.Controls.Add(this.panel15);
-            this.panel12.Controls.Add(this.checkBox45);
-            this.panel12.Controls.Add(this.label362);
-            this.panel12.Controls.Add(this.numericUpDown96);
-            this.panel12.Controls.Add(this.label363);
-            this.panel12.Controls.Add(this.label361);
-            this.panel12.Controls.Add(this.numericUpDown92);
-            this.panel12.Controls.Add(this.label340);
-            this.panel12.Controls.Add(this.numericUpDown87);
-            this.panel12.Controls.Add(this.label341);
-            this.panel12.Controls.Add(this.label350);
-            this.panel12.Controls.Add(this.label339);
-            this.panel12.Controls.Add(this.label354);
-            resources.ApplyResources(this.panel12, "panel12");
-            this.panel12.Name = "panel12";
-            // 
-            // comboBox6
-            // 
-            this.comboBox6.FormattingEnabled = true;
-            this.comboBox6.Items.AddRange(new object[] {
-            resources.GetString("comboBox6.Items"),
-            resources.GetString("comboBox6.Items1"),
-            resources.GetString("comboBox6.Items2"),
-            resources.GetString("comboBox6.Items3"),
-            resources.GetString("comboBox6.Items4")});
-            resources.ApplyResources(this.comboBox6, "comboBox6");
-            this.comboBox6.Name = "comboBox6";
-            this.comboBox6.SelectedIndexChanged += new System.EventHandler(this.comboBox6_SelectedIndexChanged);
-            // 
-            // panel15
-            // 
-            this.panel15.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel15.Controls.Add(this.label369);
-            this.panel15.Controls.Add(this.checkBox46);
-            this.panel15.Controls.Add(this.label394);
-            this.panel15.Controls.Add(this.checkBox48);
-            this.panel15.Controls.Add(this.checkBox11);
-            this.panel15.Controls.Add(this.label395);
-            this.panel15.Controls.Add(this.checkBox24);
-            this.panel15.Controls.Add(this.checkBox43);
-            resources.ApplyResources(this.panel15, "panel15");
-            this.panel15.Name = "panel15";
-            // 
-            // label369
-            // 
-            resources.ApplyResources(this.label369, "label369");
-            this.label369.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label369.Name = "label369";
-            // 
-            // checkBox46
-            // 
-            resources.ApplyResources(this.checkBox46, "checkBox46");
-            this.checkBox46.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.checkBox46.Name = "checkBox46";
-            this.checkBox46.UseVisualStyleBackColor = true;
-            this.checkBox46.CheckedChanged += new System.EventHandler(this.checkBox46_CheckedChanged);
-            // 
-            // label394
-            // 
-            resources.ApplyResources(this.label394, "label394");
-            this.label394.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label394.Name = "label394";
-            // 
-            // checkBox48
-            // 
-            resources.ApplyResources(this.checkBox48, "checkBox48");
-            this.checkBox48.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.checkBox48.Name = "checkBox48";
-            this.checkBox48.UseVisualStyleBackColor = true;
-            this.checkBox48.CheckedChanged += new System.EventHandler(this.checkBox48_CheckedChanged);
-            // 
-            // checkBox11
-            // 
-            resources.ApplyResources(this.checkBox11, "checkBox11");
-            this.checkBox11.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.checkBox11.Name = "checkBox11";
-            this.checkBox11.UseVisualStyleBackColor = true;
-            this.checkBox11.CheckedChanged += new System.EventHandler(this.checkBox11_CheckedChanged_1);
-            // 
-            // label395
-            // 
-            resources.ApplyResources(this.label395, "label395");
-            this.label395.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label395.Name = "label395";
-            // 
-            // checkBox24
-            // 
-            resources.ApplyResources(this.checkBox24, "checkBox24");
-            this.checkBox24.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.checkBox24.Name = "checkBox24";
-            this.checkBox24.UseVisualStyleBackColor = true;
-            this.checkBox24.CheckedChanged += new System.EventHandler(this.checkBox24_CheckedChanged);
-            // 
-            // checkBox43
-            // 
-            resources.ApplyResources(this.checkBox43, "checkBox43");
-            this.checkBox43.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.checkBox43.Name = "checkBox43";
-            this.checkBox43.UseVisualStyleBackColor = true;
-            this.checkBox43.CheckedChanged += new System.EventHandler(this.checkBox43_CheckedChanged);
-            // 
-            // checkBox45
-            // 
-            resources.ApplyResources(this.checkBox45, "checkBox45");
-            this.checkBox45.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.checkBox45.Name = "checkBox45";
-            this.checkBox45.UseVisualStyleBackColor = true;
-            this.checkBox45.CheckedChanged += new System.EventHandler(this.checkBox45_CheckedChanged);
-            // 
-            // label362
-            // 
-            resources.ApplyResources(this.label362, "label362");
-            this.label362.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label362.Name = "label362";
-            // 
-            // numericUpDown96
-            // 
-            resources.ApplyResources(this.numericUpDown96, "numericUpDown96");
-            this.numericUpDown96.Maximum = new decimal(new int[] {
-            255,
-            0,
-            0,
-            0});
-            this.numericUpDown96.Name = "numericUpDown96";
-            this.numericUpDown96.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numericUpDown96.ValueChanged += new System.EventHandler(this.numericUpDown96_ValueChanged);
-            // 
-            // label363
-            // 
-            resources.ApplyResources(this.label363, "label363");
-            this.label363.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label363.Name = "label363";
-            // 
-            // label361
-            // 
-            resources.ApplyResources(this.label361, "label361");
-            this.label361.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label361.Name = "label361";
-            // 
-            // numericUpDown92
-            // 
-            resources.ApplyResources(this.numericUpDown92, "numericUpDown92");
-            this.numericUpDown92.Maximum = new decimal(new int[] {
-            255,
-            0,
-            0,
-            0});
-            this.numericUpDown92.Name = "numericUpDown92";
-            this.numericUpDown92.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numericUpDown92.ValueChanged += new System.EventHandler(this.numericUpDown92_ValueChanged);
-            // 
-            // label340
-            // 
-            resources.ApplyResources(this.label340, "label340");
-            this.label340.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label340.Name = "label340";
-            // 
-            // numericUpDown87
-            // 
-            resources.ApplyResources(this.numericUpDown87, "numericUpDown87");
-            this.numericUpDown87.Maximum = new decimal(new int[] {
-            65536,
-            0,
-            0,
-            0});
-            this.numericUpDown87.Minimum = new decimal(new int[] {
-            65536,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown87.Name = "numericUpDown87";
-            this.numericUpDown87.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numericUpDown87.ValueChanged += new System.EventHandler(this.numericUpDown87_ValueChanged);
-            // 
-            // label341
-            // 
-            resources.ApplyResources(this.label341, "label341");
-            this.label341.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label341.Name = "label341";
-            // 
-            // label350
-            // 
-            resources.ApplyResources(this.label350, "label350");
-            this.label350.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label350.Name = "label350";
-            // 
-            // label339
-            // 
-            resources.ApplyResources(this.label339, "label339");
-            this.label339.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label339.Name = "label339";
-            this.label339.Click += new System.EventHandler(this.label339_Click);
-            // 
-            // label354
-            // 
-            resources.ApplyResources(this.label354, "label354");
-            this.label354.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label354.Name = "label354";
-            // 
-            // numericUpDown47
-            // 
-            resources.ApplyResources(this.numericUpDown47, "numericUpDown47");
-            this.numericUpDown47.Maximum = new decimal(new int[] {
-            60000,
-            0,
-            0,
-            0});
-            this.numericUpDown47.Minimum = new decimal(new int[] {
-            60000,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown47.Name = "numericUpDown47";
-            this.numericUpDown47.ValueChanged += new System.EventHandler(this.numericUpDown47_ValueChanged);
-            // 
-            // numericUpDown48
-            // 
-            this.numericUpDown48.Increment = new decimal(new int[] {
-            50,
-            0,
-            0,
-            0});
-            resources.ApplyResources(this.numericUpDown48, "numericUpDown48");
-            this.numericUpDown48.Maximum = new decimal(new int[] {
-            65536,
-            0,
-            0,
-            0});
-            this.numericUpDown48.Minimum = new decimal(new int[] {
-            50000,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown48.Name = "numericUpDown48";
-            this.numericUpDown48.Value = new decimal(new int[] {
-            50,
-            0,
-            0,
-            0});
-            this.numericUpDown48.ValueChanged += new System.EventHandler(this.numericUpDown48_ValueChanged);
-            // 
-            // label211
-            // 
-            resources.ApplyResources(this.label211, "label211");
-            this.label211.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label211.Name = "label211";
-            // 
-            // label116
-            // 
-            resources.ApplyResources(this.label116, "label116");
-            this.label116.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label116.Name = "label116";
-            // 
-            // label212
-            // 
-            resources.ApplyResources(this.label212, "label212");
-            this.label212.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label212.Name = "label212";
-            // 
-            // label115
-            // 
-            resources.ApplyResources(this.label115, "label115");
-            this.label115.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label115.Name = "label115";
-            // 
-            // numericUpDown49
-            // 
-            resources.ApplyResources(this.numericUpDown49, "numericUpDown49");
-            this.numericUpDown49.Maximum = new decimal(new int[] {
-            65536,
-            0,
-            0,
-            0});
-            this.numericUpDown49.Minimum = new decimal(new int[] {
-            65536,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown49.Name = "numericUpDown49";
-            this.numericUpDown49.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numericUpDown49.ValueChanged += new System.EventHandler(this.numericUpDown49_ValueChanged);
-            // 
-            // numericUpDown30
-            // 
-            resources.ApplyResources(this.numericUpDown30, "numericUpDown30");
-            this.numericUpDown30.Maximum = new decimal(new int[] {
-            65536,
-            0,
-            0,
-            0});
-            this.numericUpDown30.Name = "numericUpDown30";
-            this.numericUpDown30.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numericUpDown30.ValueChanged += new System.EventHandler(this.numericUpDown30_ValueChanged);
-            // 
-            // numericUpDown50
-            // 
-            resources.ApplyResources(this.numericUpDown50, "numericUpDown50");
-            this.numericUpDown50.Maximum = new decimal(new int[] {
-            60000,
-            0,
-            0,
-            0});
-            this.numericUpDown50.Minimum = new decimal(new int[] {
-            60000,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown50.Name = "numericUpDown50";
-            this.numericUpDown50.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numericUpDown50.ValueChanged += new System.EventHandler(this.numericUpDown50_ValueChanged);
-            // 
-            // label213
-            // 
-            resources.ApplyResources(this.label213, "label213");
-            this.label213.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label213.Name = "label213";
-            // 
-            // label214
-            // 
-            resources.ApplyResources(this.label214, "label214");
-            this.label214.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label214.Name = "label214";
-            // 
-            // label215
-            // 
-            resources.ApplyResources(this.label215, "label215");
-            this.label215.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label215.Name = "label215";
-            // 
-            // label216
-            // 
-            resources.ApplyResources(this.label216, "label216");
-            this.label216.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label216.Name = "label216";
-            // 
-            // numericUpDown51
-            // 
-            resources.ApplyResources(this.numericUpDown51, "numericUpDown51");
-            this.numericUpDown51.Maximum = new decimal(new int[] {
-            3000,
-            0,
-            0,
-            0});
-            this.numericUpDown51.Name = "numericUpDown51";
-            this.numericUpDown51.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numericUpDown51.ValueChanged += new System.EventHandler(this.numericUpDown51_ValueChanged);
-            // 
-            // label217
-            // 
-            resources.ApplyResources(this.label217, "label217");
-            this.label217.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label217.Name = "label217";
-            // 
-            // label218
-            // 
-            resources.ApplyResources(this.label218, "label218");
-            this.label218.BackColor = System.Drawing.Color.Transparent;
-            this.label218.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label218.Name = "label218";
-            // 
-            // numericUpDown52
-            // 
-            resources.ApplyResources(this.numericUpDown52, "numericUpDown52");
-            this.numericUpDown52.Maximum = new decimal(new int[] {
-            60000,
-            0,
-            0,
-            0});
-            this.numericUpDown52.Minimum = new decimal(new int[] {
-            60000,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown52.Name = "numericUpDown52";
-            this.numericUpDown52.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numericUpDown52.ValueChanged += new System.EventHandler(this.numericUpDown52_ValueChanged);
-            // 
-            // label219
-            // 
-            resources.ApplyResources(this.label219, "label219");
-            this.label219.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label219.Name = "label219";
-            // 
-            // label220
-            // 
-            resources.ApplyResources(this.label220, "label220");
-            this.label220.BackColor = System.Drawing.Color.Transparent;
-            this.label220.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label220.Name = "label220";
-            // 
-            // numericUpDown53
-            // 
-            resources.ApplyResources(this.numericUpDown53, "numericUpDown53");
-            this.numericUpDown53.Maximum = new decimal(new int[] {
-            60000,
-            0,
-            0,
-            0});
-            this.numericUpDown53.Minimum = new decimal(new int[] {
-            60000,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown53.Name = "numericUpDown53";
-            this.numericUpDown53.Value = new decimal(new int[] {
-            100,
-            0,
-            0,
-            0});
-            this.numericUpDown53.ValueChanged += new System.EventHandler(this.numericUpDown53_ValueChanged);
-            // 
-            // label221
-            // 
-            resources.ApplyResources(this.label221, "label221");
-            this.label221.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label221.Name = "label221";
-            // 
-            // label364
-            // 
-            resources.ApplyResources(this.label364, "label364");
-            this.label364.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label364.Name = "label364";
-            // 
-            // numericUpDown97
-            // 
-            resources.ApplyResources(this.numericUpDown97, "numericUpDown97");
-            this.numericUpDown97.Maximum = new decimal(new int[] {
-            65536,
-            0,
-            0,
-            0});
-            this.numericUpDown97.Minimum = new decimal(new int[] {
-            65536,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown97.Name = "numericUpDown97";
-            this.numericUpDown97.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numericUpDown97.ValueChanged += new System.EventHandler(this.numericUpDown97_ValueChanged);
-            // 
-            // checkBox22
-            // 
-            resources.ApplyResources(this.checkBox22, "checkBox22");
-            this.checkBox22.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.checkBox22.Name = "checkBox22";
-            this.checkBox22.UseVisualStyleBackColor = true;
-            this.checkBox22.CheckedChanged += new System.EventHandler(this.checkBox22_CheckedChanged);
-            // 
-            // label365
-            // 
-            resources.ApplyResources(this.label365, "label365");
-            this.label365.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label365.Name = "label365";
-            // 
-            // label3
-            // 
-            resources.ApplyResources(this.label3, "label3");
-            this.label3.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label3.Name = "label3";
-            // 
-            // panel13
-            // 
-            this.panel13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel13.Controls.Add(this.numericUpDown90);
-            this.panel13.Controls.Add(this.label346);
-            this.panel13.Controls.Add(this.label460);
-            this.panel13.Controls.Add(this.label349);
-            this.panel13.Controls.Add(this.label347);
-            this.panel13.Controls.Add(this.numericUpDown120);
-            this.panel13.Controls.Add(this.label348);
-            this.panel13.Controls.Add(this.numericUpDown89);
-            this.panel13.Controls.Add(this.label461);
-            this.panel13.Controls.Add(this.numericUpDown91);
-            this.panel13.Controls.Add(this.label351);
-            this.panel13.Controls.Add(this.label462);
-            this.panel13.Controls.Add(this.label352);
-            this.panel13.Controls.Add(this.label353);
-            this.panel13.Controls.Add(this.numericUpDown121);
-            this.panel13.Controls.Add(this.numericUpDown93);
-            this.panel13.Controls.Add(this.label355);
-            this.panel13.Controls.Add(this.label463);
-            this.panel13.Controls.Add(this.label356);
-            this.panel13.Controls.Add(this.label357);
-            this.panel13.Controls.Add(this.label450);
-            this.panel13.Controls.Add(this.numericUpDown94);
-            this.panel13.Controls.Add(this.numericUpDown118);
-            this.panel13.Controls.Add(this.label359);
-            this.panel13.Controls.Add(this.label358);
-            this.panel13.Controls.Add(this.numericUpDown95);
-            this.panel13.Controls.Add(this.label451);
-            this.panel13.Controls.Add(this.label360);
-            this.panel13.Controls.Add(this.label254);
-            this.panel13.Controls.Add(this.label452);
-            this.panel13.Controls.Add(this.numericUpDown119);
-            this.panel13.Controls.Add(this.label108);
-            this.panel13.Controls.Add(this.label453);
-            resources.ApplyResources(this.panel13, "panel13");
-            this.panel13.Name = "panel13";
-            // 
-            // numericUpDown90
-            // 
-            resources.ApplyResources(this.numericUpDown90, "numericUpDown90");
-            this.numericUpDown90.Maximum = new decimal(new int[] {
-            65536,
-            0,
-            0,
-            0});
-            this.numericUpDown90.Name = "numericUpDown90";
-            this.numericUpDown90.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numericUpDown90.ValueChanged += new System.EventHandler(this.numericUpDown90_ValueChanged);
-            // 
-            // label346
-            // 
-            resources.ApplyResources(this.label346, "label346");
-            this.label346.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label346.Name = "label346";
-            // 
-            // label460
-            // 
-            resources.ApplyResources(this.label460, "label460");
-            this.label460.BackColor = System.Drawing.Color.Transparent;
-            this.label460.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label460.Name = "label460";
-            // 
-            // label349
-            // 
-            resources.ApplyResources(this.label349, "label349");
-            this.label349.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label349.Name = "label349";
-            // 
-            // label347
-            // 
-            resources.ApplyResources(this.label347, "label347");
-            this.label347.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label347.Name = "label347";
-            // 
-            // numericUpDown120
-            // 
-            resources.ApplyResources(this.numericUpDown120, "numericUpDown120");
-            this.numericUpDown120.Maximum = new decimal(new int[] {
-            63,
-            0,
-            0,
-            0});
-            this.numericUpDown120.Minimum = new decimal(new int[] {
-            63,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown120.Name = "numericUpDown120";
-            this.numericUpDown120.ValueChanged += new System.EventHandler(this.numericUpDown120_ValueChanged);
-            // 
-            // label348
-            // 
-            resources.ApplyResources(this.label348, "label348");
-            this.label348.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label348.Name = "label348";
-            // 
-            // numericUpDown89
-            // 
-            resources.ApplyResources(this.numericUpDown89, "numericUpDown89");
-            this.numericUpDown89.Maximum = new decimal(new int[] {
-            60000,
-            0,
-            0,
-            0});
-            this.numericUpDown89.Minimum = new decimal(new int[] {
-            60000,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown89.Name = "numericUpDown89";
-            // 
-            // label461
-            // 
-            resources.ApplyResources(this.label461, "label461");
-            this.label461.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label461.Name = "label461";
-            // 
-            // numericUpDown91
-            // 
-            resources.ApplyResources(this.numericUpDown91, "numericUpDown91");
-            this.numericUpDown91.Maximum = new decimal(new int[] {
-            65536,
-            0,
-            0,
-            0});
-            this.numericUpDown91.Name = "numericUpDown91";
-            this.numericUpDown91.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numericUpDown91.ValueChanged += new System.EventHandler(this.numericUpDown91_ValueChanged);
-            // 
-            // label351
-            // 
-            resources.ApplyResources(this.label351, "label351");
-            this.label351.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label351.Name = "label351";
-            // 
-            // label462
-            // 
-            resources.ApplyResources(this.label462, "label462");
-            this.label462.BackColor = System.Drawing.Color.Transparent;
-            this.label462.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label462.Name = "label462";
-            // 
-            // label352
-            // 
-            resources.ApplyResources(this.label352, "label352");
-            this.label352.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label352.Name = "label352";
-            // 
-            // label353
-            // 
-            resources.ApplyResources(this.label353, "label353");
-            this.label353.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label353.Name = "label353";
-            // 
-            // numericUpDown121
-            // 
-            resources.ApplyResources(this.numericUpDown121, "numericUpDown121");
-            this.numericUpDown121.Maximum = new decimal(new int[] {
-            63,
-            0,
-            0,
-            0});
-            this.numericUpDown121.Minimum = new decimal(new int[] {
-            63,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown121.Name = "numericUpDown121";
-            this.numericUpDown121.ValueChanged += new System.EventHandler(this.numericUpDown121_ValueChanged);
-            // 
-            // numericUpDown93
-            // 
-            resources.ApplyResources(this.numericUpDown93, "numericUpDown93");
-            this.numericUpDown93.Maximum = new decimal(new int[] {
-            60000,
-            0,
-            0,
-            0});
-            this.numericUpDown93.Minimum = new decimal(new int[] {
-            60000,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown93.Name = "numericUpDown93";
-            this.numericUpDown93.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            // 
-            // label355
-            // 
-            resources.ApplyResources(this.label355, "label355");
-            this.label355.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label355.Name = "label355";
-            // 
-            // label463
-            // 
-            resources.ApplyResources(this.label463, "label463");
-            this.label463.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label463.Name = "label463";
-            // 
-            // label356
-            // 
-            resources.ApplyResources(this.label356, "label356");
-            this.label356.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label356.Name = "label356";
-            // 
-            // label357
-            // 
-            resources.ApplyResources(this.label357, "label357");
-            this.label357.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label357.Name = "label357";
-            // 
-            // label450
-            // 
-            resources.ApplyResources(this.label450, "label450");
-            this.label450.BackColor = System.Drawing.Color.Transparent;
-            this.label450.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label450.Name = "label450";
-            // 
-            // numericUpDown94
-            // 
-            resources.ApplyResources(this.numericUpDown94, "numericUpDown94");
-            this.numericUpDown94.Maximum = new decimal(new int[] {
-            3000,
-            0,
-            0,
-            0});
-            this.numericUpDown94.Name = "numericUpDown94";
-            this.numericUpDown94.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numericUpDown94.ValueChanged += new System.EventHandler(this.numericUpDown94_ValueChanged);
-            // 
-            // numericUpDown118
-            // 
-            resources.ApplyResources(this.numericUpDown118, "numericUpDown118");
-            this.numericUpDown118.Maximum = new decimal(new int[] {
-            63,
-            0,
-            0,
-            0});
-            this.numericUpDown118.Name = "numericUpDown118";
-            this.numericUpDown118.ValueChanged += new System.EventHandler(this.numericUpDown118_ValueChanged);
-            // 
-            // label359
-            // 
-            resources.ApplyResources(this.label359, "label359");
-            this.label359.BackColor = System.Drawing.Color.Transparent;
-            this.label359.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label359.Name = "label359";
-            // 
-            // label358
-            // 
-            resources.ApplyResources(this.label358, "label358");
-            this.label358.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label358.Name = "label358";
-            // 
-            // numericUpDown95
-            // 
-            resources.ApplyResources(this.numericUpDown95, "numericUpDown95");
-            this.numericUpDown95.Maximum = new decimal(new int[] {
-            60000,
-            0,
-            0,
-            0});
-            this.numericUpDown95.Minimum = new decimal(new int[] {
-            60000,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown95.Name = "numericUpDown95";
-            this.numericUpDown95.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numericUpDown95.ValueChanged += new System.EventHandler(this.numericUpDown95_ValueChanged);
-            // 
-            // label451
-            // 
-            resources.ApplyResources(this.label451, "label451");
-            this.label451.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label451.Name = "label451";
-            // 
-            // label360
-            // 
-            resources.ApplyResources(this.label360, "label360");
-            this.label360.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label360.Name = "label360";
-            // 
-            // label254
-            // 
-            resources.ApplyResources(this.label254, "label254");
-            this.label254.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label254.Name = "label254";
-            // 
-            // label452
-            // 
-            resources.ApplyResources(this.label452, "label452");
-            this.label452.BackColor = System.Drawing.Color.Transparent;
-            this.label452.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label452.Name = "label452";
-            // 
-            // numericUpDown119
-            // 
-            resources.ApplyResources(this.numericUpDown119, "numericUpDown119");
-            this.numericUpDown119.Maximum = new decimal(new int[] {
-            63,
-            0,
-            0,
-            0});
-            this.numericUpDown119.Name = "numericUpDown119";
-            this.numericUpDown119.ValueChanged += new System.EventHandler(this.numericUpDown119_ValueChanged);
-            // 
-            // label453
-            // 
-            resources.ApplyResources(this.label453, "label453");
-            this.label453.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label453.Name = "label453";
-            // 
-            // panel11
-            // 
-            this.panel11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel11.Controls.Add(this.panel7);
-            this.panel11.Controls.Add(this.label390);
-            this.panel11.Controls.Add(this.numericUpDown102);
-            this.panel11.Controls.Add(this.label391);
-            this.panel11.Controls.Add(this.label266);
-            this.panel11.Controls.Add(this.label267);
-            this.panel11.Controls.Add(this.label268);
-            this.panel11.Controls.Add(this.label269);
-            this.panel11.Controls.Add(this.numericUpDown74);
-            this.panel11.Controls.Add(this.numericUpDown75);
-            this.panel11.Controls.Add(this.numericUpDown31);
-            this.panel11.Controls.Add(this.label270);
-            this.panel11.Controls.Add(this.label117);
-            this.panel11.Controls.Add(this.label271);
-            this.panel11.Controls.Add(this.label118);
-            this.panel11.Controls.Add(this.numericUpDown76);
-            this.panel11.Controls.Add(this.numericUpDown77);
-            this.panel11.Controls.Add(this.label272);
-            this.panel11.Controls.Add(this.label273);
-            this.panel11.Controls.Add(this.label274);
-            this.panel11.Controls.Add(this.label275);
-            this.panel11.Controls.Add(this.numericUpDown78);
-            this.panel11.Controls.Add(this.label276);
-            this.panel11.Controls.Add(this.label277);
-            this.panel11.Controls.Add(this.numericUpDown79);
-            this.panel11.Controls.Add(this.label278);
-            this.panel11.Controls.Add(this.label279);
-            this.panel11.Controls.Add(this.numericUpDown80);
-            this.panel11.Controls.Add(this.label280);
-            this.panel11.Controls.Add(this.panel3);
-            resources.ApplyResources(this.panel11, "panel11");
-            this.panel11.Name = "panel11";
-            // 
-            // panel7
-            // 
-            this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel7.Controls.Add(this.label392);
-            this.panel7.Controls.Add(this.numericUpDown103);
-            this.panel7.Controls.Add(this.label63);
-            this.panel7.Controls.Add(this.label393);
-            this.panel7.Controls.Add(this.numericUpDown66);
-            this.panel7.Controls.Add(this.label64);
-            this.panel7.Controls.Add(this.numericUpDown67);
-            this.panel7.Controls.Add(this.label228);
-            this.panel7.Controls.Add(this.label229);
-            this.panel7.Controls.Add(this.numericUpDown24);
-            this.panel7.Controls.Add(this.label27);
-            this.panel7.Controls.Add(this.label32);
-            this.panel7.Controls.Add(this.numericUpDown65);
-            this.panel7.Controls.Add(this.label30);
-            this.panel7.Controls.Add(this.label28);
-            this.panel7.Controls.Add(this.label25);
-            this.panel7.Controls.Add(this.numericUpDown64);
-            this.panel7.Controls.Add(this.label26);
-            this.panel7.Controls.Add(this.label1);
-            this.panel7.Controls.Add(this.label2);
-            this.panel7.Controls.Add(this.label4);
-            this.panel7.Controls.Add(this.label7);
-            this.panel7.Controls.Add(this.numericUpDown57);
-            this.panel7.Controls.Add(this.numericUpDown58);
-            this.panel7.Controls.Add(this.label8);
-            this.panel7.Controls.Add(this.label9);
-            this.panel7.Controls.Add(this.numericUpDown59);
-            this.panel7.Controls.Add(this.numericUpDown60);
-            this.panel7.Controls.Add(this.label10);
-            this.panel7.Controls.Add(this.label13);
-            this.panel7.Controls.Add(this.label14);
-            this.panel7.Controls.Add(this.label15);
-            this.panel7.Controls.Add(this.numericUpDown61);
-            this.panel7.Controls.Add(this.label16);
-            this.panel7.Controls.Add(this.label19);
-            this.panel7.Controls.Add(this.numericUpDown62);
-            this.panel7.Controls.Add(this.label20);
-            this.panel7.Controls.Add(this.label21);
-            this.panel7.Controls.Add(this.numericUpDown63);
-            this.panel7.Controls.Add(this.label22);
-            resources.ApplyResources(this.panel7, "panel7");
-            this.panel7.Name = "panel7";
-            // 
-            // label392
-            // 
-            resources.ApplyResources(this.label392, "label392");
-            this.label392.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label392.Name = "label392";
-            // 
-            // numericUpDown103
-            // 
-            resources.ApplyResources(this.numericUpDown103, "numericUpDown103");
-            this.numericUpDown103.Maximum = new decimal(new int[] {
-            30000,
-            0,
-            0,
-            0});
-            this.numericUpDown103.Name = "numericUpDown103";
-            this.numericUpDown103.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numericUpDown103.ValueChanged += new System.EventHandler(this.numericUpDown103_ValueChanged);
-            // 
-            // label63
-            // 
-            resources.ApplyResources(this.label63, "label63");
-            this.label63.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label63.Name = "label63";
-            // 
-            // label393
-            // 
-            resources.ApplyResources(this.label393, "label393");
-            this.label393.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label393.Name = "label393";
-            // 
-            // numericUpDown66
-            // 
-            resources.ApplyResources(this.numericUpDown66, "numericUpDown66");
-            this.numericUpDown66.Maximum = new decimal(new int[] {
-            30000,
-            0,
-            0,
-            0});
-            this.numericUpDown66.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numericUpDown66.Name = "numericUpDown66";
-            this.numericUpDown66.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numericUpDown66.ValueChanged += new System.EventHandler(this.numericUpDown66_ValueChanged);
-            // 
-            // label64
-            // 
-            resources.ApplyResources(this.label64, "label64");
-            this.label64.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label64.Name = "label64";
-            // 
-            // numericUpDown67
-            // 
-            resources.ApplyResources(this.numericUpDown67, "numericUpDown67");
-            this.numericUpDown67.Maximum = new decimal(new int[] {
-            30000,
-            0,
-            0,
-            0});
-            this.numericUpDown67.Name = "numericUpDown67";
-            this.numericUpDown67.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numericUpDown67.ValueChanged += new System.EventHandler(this.numericUpDown67_ValueChanged);
-            // 
-            // label228
-            // 
-            resources.ApplyResources(this.label228, "label228");
-            this.label228.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label228.Name = "label228";
-            // 
-            // label229
-            // 
-            resources.ApplyResources(this.label229, "label229");
-            this.label229.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label229.Name = "label229";
-            // 
-            // numericUpDown24
-            // 
-            resources.ApplyResources(this.numericUpDown24, "numericUpDown24");
-            this.numericUpDown24.Maximum = new decimal(new int[] {
-            65536,
-            0,
-            0,
-            0});
-            this.numericUpDown24.Name = "numericUpDown24";
-            this.numericUpDown24.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numericUpDown24.ValueChanged += new System.EventHandler(this.numericUpDown24_ValueChanged);
-            // 
-            // label27
-            // 
-            resources.ApplyResources(this.label27, "label27");
-            this.label27.BackColor = System.Drawing.Color.Transparent;
-            this.label27.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label27.Name = "label27";
-            // 
-            // label32
-            // 
-            resources.ApplyResources(this.label32, "label32");
-            this.label32.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label32.Name = "label32";
-            // 
-            // numericUpDown65
-            // 
-            resources.ApplyResources(this.numericUpDown65, "numericUpDown65");
-            this.numericUpDown65.Maximum = new decimal(new int[] {
-            60000,
-            0,
-            0,
-            0});
-            this.numericUpDown65.Minimum = new decimal(new int[] {
-            60000,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown65.Name = "numericUpDown65";
-            this.numericUpDown65.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numericUpDown65.ValueChanged += new System.EventHandler(this.numericUpDown65_ValueChanged);
-            // 
-            // label30
-            // 
-            resources.ApplyResources(this.label30, "label30");
-            this.label30.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label30.Name = "label30";
-            // 
-            // label28
-            // 
-            resources.ApplyResources(this.label28, "label28");
-            this.label28.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label28.Name = "label28";
-            // 
-            // label25
-            // 
-            resources.ApplyResources(this.label25, "label25");
-            this.label25.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label25.Name = "label25";
-            // 
-            // numericUpDown64
-            // 
-            resources.ApplyResources(this.numericUpDown64, "numericUpDown64");
-            this.numericUpDown64.Maximum = new decimal(new int[] {
-            3000,
-            0,
-            0,
-            0});
-            this.numericUpDown64.Name = "numericUpDown64";
-            this.numericUpDown64.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numericUpDown64.ValueChanged += new System.EventHandler(this.numericUpDown64_ValueChanged);
-            // 
-            // label26
-            // 
-            resources.ApplyResources(this.label26, "label26");
-            this.label26.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label26.Name = "label26";
-            // 
-            // label1
-            // 
-            resources.ApplyResources(this.label1, "label1");
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label1.Name = "label1";
-            // 
-            // label2
-            // 
-            resources.ApplyResources(this.label2, "label2");
-            this.label2.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label2.Name = "label2";
-            // 
-            // label4
-            // 
-            resources.ApplyResources(this.label4, "label4");
-            this.label4.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label4.Name = "label4";
-            // 
-            // label7
-            // 
-            resources.ApplyResources(this.label7, "label7");
-            this.label7.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label7.Name = "label7";
-            // 
-            // numericUpDown57
-            // 
-            resources.ApplyResources(this.numericUpDown57, "numericUpDown57");
-            this.numericUpDown57.Maximum = new decimal(new int[] {
-            60000,
-            0,
-            0,
-            0});
-            this.numericUpDown57.Minimum = new decimal(new int[] {
-            60000,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown57.Name = "numericUpDown57";
-            this.numericUpDown57.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numericUpDown57.ValueChanged += new System.EventHandler(this.numericUpDown57_ValueChanged);
-            // 
-            // numericUpDown58
-            // 
-            this.numericUpDown58.Increment = new decimal(new int[] {
-            50,
-            0,
-            0,
-            0});
-            resources.ApplyResources(this.numericUpDown58, "numericUpDown58");
-            this.numericUpDown58.Maximum = new decimal(new int[] {
-            60000,
-            0,
-            0,
-            0});
-            this.numericUpDown58.Minimum = new decimal(new int[] {
-            60000,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown58.Name = "numericUpDown58";
-            this.numericUpDown58.Value = new decimal(new int[] {
-            50,
-            0,
-            0,
-            0});
-            this.numericUpDown58.ValueChanged += new System.EventHandler(this.numericUpDown58_ValueChanged);
-            // 
-            // label8
-            // 
-            resources.ApplyResources(this.label8, "label8");
-            this.label8.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label8.Name = "label8";
-            // 
-            // label9
-            // 
-            resources.ApplyResources(this.label9, "label9");
-            this.label9.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label9.Name = "label9";
-            // 
-            // numericUpDown59
-            // 
-            resources.ApplyResources(this.numericUpDown59, "numericUpDown59");
-            this.numericUpDown59.Maximum = new decimal(new int[] {
-            65536,
-            0,
-            0,
-            0});
-            this.numericUpDown59.Minimum = new decimal(new int[] {
-            65536,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown59.Name = "numericUpDown59";
-            this.numericUpDown59.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numericUpDown59.ValueChanged += new System.EventHandler(this.numericUpDown59_ValueChanged);
-            // 
-            // numericUpDown60
-            // 
-            resources.ApplyResources(this.numericUpDown60, "numericUpDown60");
-            this.numericUpDown60.Maximum = new decimal(new int[] {
-            60000,
-            0,
-            0,
-            0});
-            this.numericUpDown60.Minimum = new decimal(new int[] {
-            60000,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown60.Name = "numericUpDown60";
-            this.numericUpDown60.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numericUpDown60.ValueChanged += new System.EventHandler(this.numericUpDown60_ValueChanged);
-            // 
-            // label10
-            // 
-            resources.ApplyResources(this.label10, "label10");
-            this.label10.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label10.Name = "label10";
-            // 
-            // label13
-            // 
-            resources.ApplyResources(this.label13, "label13");
-            this.label13.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label13.Name = "label13";
-            // 
-            // label14
-            // 
-            resources.ApplyResources(this.label14, "label14");
-            this.label14.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label14.Name = "label14";
-            // 
-            // label15
-            // 
-            resources.ApplyResources(this.label15, "label15");
-            this.label15.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label15.Name = "label15";
-            // 
-            // numericUpDown61
-            // 
-            resources.ApplyResources(this.numericUpDown61, "numericUpDown61");
-            this.numericUpDown61.Maximum = new decimal(new int[] {
-            3000,
-            0,
-            0,
-            0});
-            this.numericUpDown61.Name = "numericUpDown61";
-            this.numericUpDown61.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numericUpDown61.ValueChanged += new System.EventHandler(this.numericUpDown61_ValueChanged);
-            // 
-            // label16
-            // 
-            resources.ApplyResources(this.label16, "label16");
-            this.label16.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label16.Name = "label16";
-            // 
-            // label19
-            // 
-            resources.ApplyResources(this.label19, "label19");
-            this.label19.BackColor = System.Drawing.Color.Transparent;
-            this.label19.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label19.Name = "label19";
-            // 
-            // numericUpDown62
-            // 
-            resources.ApplyResources(this.numericUpDown62, "numericUpDown62");
-            this.numericUpDown62.Maximum = new decimal(new int[] {
-            60000,
-            0,
-            0,
-            0});
-            this.numericUpDown62.Minimum = new decimal(new int[] {
-            60000,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown62.Name = "numericUpDown62";
-            this.numericUpDown62.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numericUpDown62.ValueChanged += new System.EventHandler(this.numericUpDown62_ValueChanged);
-            // 
-            // label20
-            // 
-            resources.ApplyResources(this.label20, "label20");
-            this.label20.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label20.Name = "label20";
-            // 
-            // label21
-            // 
-            resources.ApplyResources(this.label21, "label21");
-            this.label21.BackColor = System.Drawing.Color.Transparent;
-            this.label21.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label21.Name = "label21";
-            // 
-            // numericUpDown63
-            // 
-            resources.ApplyResources(this.numericUpDown63, "numericUpDown63");
-            this.numericUpDown63.Maximum = new decimal(new int[] {
-            60000,
-            0,
-            0,
-            0});
-            this.numericUpDown63.Minimum = new decimal(new int[] {
-            60000,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown63.Name = "numericUpDown63";
-            this.numericUpDown63.Value = new decimal(new int[] {
-            100,
-            0,
-            0,
-            0});
-            this.numericUpDown63.ValueChanged += new System.EventHandler(this.numericUpDown63_ValueChanged);
-            // 
-            // label22
-            // 
-            resources.ApplyResources(this.label22, "label22");
-            this.label22.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label22.Name = "label22";
-            // 
-            // label390
-            // 
-            resources.ApplyResources(this.label390, "label390");
-            this.label390.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label390.Name = "label390";
-            // 
-            // numericUpDown102
-            // 
-            resources.ApplyResources(this.numericUpDown102, "numericUpDown102");
-            this.numericUpDown102.Maximum = new decimal(new int[] {
-            30000,
-            0,
-            0,
-            0});
-            this.numericUpDown102.Name = "numericUpDown102";
-            this.numericUpDown102.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numericUpDown102.ValueChanged += new System.EventHandler(this.numericUpDown102_ValueChanged);
-            // 
-            // label391
-            // 
-            resources.ApplyResources(this.label391, "label391");
-            this.label391.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label391.Name = "label391";
-            // 
-            // label266
-            // 
-            resources.ApplyResources(this.label266, "label266");
-            this.label266.BackColor = System.Drawing.Color.Transparent;
-            this.label266.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label266.Name = "label266";
-            // 
-            // label267
-            // 
-            resources.ApplyResources(this.label267, "label267");
-            this.label267.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label267.Name = "label267";
-            // 
-            // label268
-            // 
-            resources.ApplyResources(this.label268, "label268");
-            this.label268.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label268.Name = "label268";
-            // 
-            // label269
-            // 
-            resources.ApplyResources(this.label269, "label269");
-            this.label269.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label269.Name = "label269";
-            // 
-            // numericUpDown74
-            // 
-            resources.ApplyResources(this.numericUpDown74, "numericUpDown74");
-            this.numericUpDown74.Maximum = new decimal(new int[] {
-            60000,
-            0,
-            0,
-            0});
-            this.numericUpDown74.Minimum = new decimal(new int[] {
-            60000,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown74.Name = "numericUpDown74";
-            this.numericUpDown74.ValueChanged += new System.EventHandler(this.numericUpDown74_ValueChanged);
-            // 
-            // numericUpDown75
-            // 
-            this.numericUpDown75.Increment = new decimal(new int[] {
-            50,
-            0,
-            0,
-            0});
-            resources.ApplyResources(this.numericUpDown75, "numericUpDown75");
-            this.numericUpDown75.Maximum = new decimal(new int[] {
-            65536,
-            0,
-            0,
-            0});
-            this.numericUpDown75.Minimum = new decimal(new int[] {
-            50000,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown75.Name = "numericUpDown75";
-            this.numericUpDown75.Value = new decimal(new int[] {
-            50,
-            0,
-            0,
-            0});
-            this.numericUpDown75.ValueChanged += new System.EventHandler(this.numericUpDown75_ValueChanged);
-            // 
-            // numericUpDown31
-            // 
-            resources.ApplyResources(this.numericUpDown31, "numericUpDown31");
-            this.numericUpDown31.Maximum = new decimal(new int[] {
-            65536,
-            0,
-            0,
-            0});
-            this.numericUpDown31.Name = "numericUpDown31";
-            this.numericUpDown31.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numericUpDown31.ValueChanged += new System.EventHandler(this.numericUpDown31_ValueChanged);
-            // 
-            // label270
-            // 
-            resources.ApplyResources(this.label270, "label270");
-            this.label270.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label270.Name = "label270";
-            // 
-            // label117
-            // 
-            resources.ApplyResources(this.label117, "label117");
-            this.label117.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label117.Name = "label117";
-            // 
-            // label271
-            // 
-            resources.ApplyResources(this.label271, "label271");
-            this.label271.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label271.Name = "label271";
-            // 
-            // label118
-            // 
-            resources.ApplyResources(this.label118, "label118");
-            this.label118.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label118.Name = "label118";
-            // 
-            // numericUpDown76
-            // 
-            resources.ApplyResources(this.numericUpDown76, "numericUpDown76");
-            this.numericUpDown76.Maximum = new decimal(new int[] {
-            65536,
-            0,
-            0,
-            0});
-            this.numericUpDown76.Minimum = new decimal(new int[] {
-            65536,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown76.Name = "numericUpDown76";
-            this.numericUpDown76.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numericUpDown76.ValueChanged += new System.EventHandler(this.numericUpDown76_ValueChanged);
-            // 
-            // numericUpDown77
-            // 
-            resources.ApplyResources(this.numericUpDown77, "numericUpDown77");
-            this.numericUpDown77.Maximum = new decimal(new int[] {
-            60000,
-            0,
-            0,
-            0});
-            this.numericUpDown77.Minimum = new decimal(new int[] {
-            60000,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown77.Name = "numericUpDown77";
-            this.numericUpDown77.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numericUpDown77.ValueChanged += new System.EventHandler(this.numericUpDown77_ValueChanged);
-            // 
-            // label272
-            // 
-            resources.ApplyResources(this.label272, "label272");
-            this.label272.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label272.Name = "label272";
-            // 
-            // label273
-            // 
-            resources.ApplyResources(this.label273, "label273");
-            this.label273.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label273.Name = "label273";
-            // 
-            // label274
-            // 
-            resources.ApplyResources(this.label274, "label274");
-            this.label274.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label274.Name = "label274";
-            // 
-            // label275
-            // 
-            resources.ApplyResources(this.label275, "label275");
-            this.label275.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label275.Name = "label275";
-            // 
-            // numericUpDown78
-            // 
-            resources.ApplyResources(this.numericUpDown78, "numericUpDown78");
-            this.numericUpDown78.Maximum = new decimal(new int[] {
-            3000,
-            0,
-            0,
-            0});
-            this.numericUpDown78.Name = "numericUpDown78";
-            this.numericUpDown78.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numericUpDown78.ValueChanged += new System.EventHandler(this.numericUpDown78_ValueChanged);
-            // 
-            // label276
-            // 
-            resources.ApplyResources(this.label276, "label276");
-            this.label276.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label276.Name = "label276";
-            // 
-            // label277
-            // 
-            resources.ApplyResources(this.label277, "label277");
-            this.label277.BackColor = System.Drawing.Color.Transparent;
-            this.label277.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label277.Name = "label277";
-            // 
-            // numericUpDown79
-            // 
-            resources.ApplyResources(this.numericUpDown79, "numericUpDown79");
-            this.numericUpDown79.Maximum = new decimal(new int[] {
-            60000,
-            0,
-            0,
-            0});
-            this.numericUpDown79.Minimum = new decimal(new int[] {
-            60000,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown79.Name = "numericUpDown79";
-            this.numericUpDown79.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numericUpDown79.ValueChanged += new System.EventHandler(this.numericUpDown79_ValueChanged);
-            // 
-            // label278
-            // 
-            resources.ApplyResources(this.label278, "label278");
-            this.label278.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label278.Name = "label278";
-            // 
-            // label279
-            // 
-            resources.ApplyResources(this.label279, "label279");
-            this.label279.BackColor = System.Drawing.Color.Transparent;
-            this.label279.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label279.Name = "label279";
-            // 
-            // numericUpDown80
-            // 
-            resources.ApplyResources(this.numericUpDown80, "numericUpDown80");
-            this.numericUpDown80.Maximum = new decimal(new int[] {
-            60000,
-            0,
-            0,
-            0});
-            this.numericUpDown80.Minimum = new decimal(new int[] {
-            60000,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown80.Name = "numericUpDown80";
-            this.numericUpDown80.Value = new decimal(new int[] {
-            100,
-            0,
-            0,
-            0});
-            this.numericUpDown80.ValueChanged += new System.EventHandler(this.numericUpDown80_ValueChanged);
-            // 
-            // label280
-            // 
-            resources.ApplyResources(this.label280, "label280");
-            this.label280.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label280.Name = "label280";
-            // 
-            // panel3
-            // 
-            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel3.Controls.Add(this.checkBox23);
-            this.panel3.Controls.Add(this.label106);
-            this.panel3.Controls.Add(this.label195);
-            this.panel3.Controls.Add(this.numericUpDown23);
-            this.panel3.Controls.Add(this.label188);
-            this.panel3.Controls.Add(this.label105);
-            this.panel3.Controls.Add(this.numericUpDown37);
-            this.panel3.Controls.Add(this.numericUpDown20);
-            this.panel3.Controls.Add(this.label190);
-            this.panel3.Controls.Add(this.label100);
-            this.panel3.Controls.Add(this.label99);
-            this.panel3.Controls.Add(this.label101);
-            this.panel3.Controls.Add(this.numericUpDown19);
-            this.panel3.Controls.Add(this.label98);
-            this.panel3.Controls.Add(this.label97);
-            this.panel3.Controls.Add(this.panel4);
-            this.panel3.Controls.Add(this.numericUpDown18);
-            this.panel3.Controls.Add(this.label96);
-            resources.ApplyResources(this.panel3, "panel3");
-            this.panel3.Name = "panel3";
-            // 
-            // checkBox23
-            // 
-            resources.ApplyResources(this.checkBox23, "checkBox23");
-            this.checkBox23.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.checkBox23.Name = "checkBox23";
-            this.checkBox23.UseVisualStyleBackColor = true;
-            this.checkBox23.CheckedChanged += new System.EventHandler(this.checkBox23_CheckedChanged);
-            // 
-            // label106
-            // 
-            resources.ApplyResources(this.label106, "label106");
-            this.label106.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label106.Name = "label106";
-            // 
-            // label195
-            // 
-            resources.ApplyResources(this.label195, "label195");
-            this.label195.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label195.Name = "label195";
-            // 
-            // numericUpDown23
-            // 
-            resources.ApplyResources(this.numericUpDown23, "numericUpDown23");
-            this.numericUpDown23.Maximum = new decimal(new int[] {
-            60000,
-            0,
-            0,
-            0});
-            this.numericUpDown23.Minimum = new decimal(new int[] {
-            50000,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown23.Name = "numericUpDown23";
-            this.numericUpDown23.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numericUpDown23.ValueChanged += new System.EventHandler(this.numericUpDown23_ValueChanged);
-            // 
-            // label188
-            // 
-            resources.ApplyResources(this.label188, "label188");
-            this.label188.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label188.Name = "label188";
-            // 
-            // label105
-            // 
-            resources.ApplyResources(this.label105, "label105");
-            this.label105.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label105.Name = "label105";
-            // 
-            // numericUpDown37
-            // 
-            resources.ApplyResources(this.numericUpDown37, "numericUpDown37");
-            this.numericUpDown37.Maximum = new decimal(new int[] {
-            65536,
-            0,
-            0,
-            0});
-            this.numericUpDown37.Minimum = new decimal(new int[] {
-            65536,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown37.Name = "numericUpDown37";
-            this.numericUpDown37.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numericUpDown37.ValueChanged += new System.EventHandler(this.numericUpDown37_ValueChanged);
-            // 
-            // numericUpDown20
-            // 
-            resources.ApplyResources(this.numericUpDown20, "numericUpDown20");
-            this.numericUpDown20.Maximum = new decimal(new int[] {
-            60000,
-            0,
-            0,
-            0});
-            this.numericUpDown20.Minimum = new decimal(new int[] {
-            50000,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown20.Name = "numericUpDown20";
-            this.numericUpDown20.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numericUpDown20.ValueChanged += new System.EventHandler(this.numericUpDown20_ValueChanged);
-            // 
-            // label190
-            // 
-            resources.ApplyResources(this.label190, "label190");
-            this.label190.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label190.Name = "label190";
-            // 
-            // label100
-            // 
-            resources.ApplyResources(this.label100, "label100");
-            this.label100.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label100.Name = "label100";
-            // 
-            // label101
-            // 
-            resources.ApplyResources(this.label101, "label101");
-            this.label101.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label101.Name = "label101";
-            this.label101.Click += new System.EventHandler(this.label101_Click);
-            // 
-            // panel4
-            // 
-            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel4.Controls.Add(this.label386);
-            this.panel4.Controls.Add(this.numericUpDown100);
-            this.panel4.Controls.Add(this.label192);
-            this.panel4.Controls.Add(this.label193);
-            this.panel4.Controls.Add(this.label387);
-            this.panel4.Controls.Add(this.numericUpDown40);
-            this.panel4.Controls.Add(this.label197);
-            this.panel4.Controls.Add(this.numericUpDown43);
-            this.panel4.Controls.Add(this.label199);
-            this.panel4.Controls.Add(this.label200);
-            this.panel4.Controls.Add(this.label201);
-            this.panel4.Controls.Add(this.numericUpDown44);
-            this.panel4.Controls.Add(this.label202);
-            this.panel4.Controls.Add(this.label203);
-            this.panel4.Controls.Add(this.numericUpDown45);
-            this.panel4.Controls.Add(this.label204);
-            resources.ApplyResources(this.panel4, "panel4");
-            this.panel4.Name = "panel4";
-            this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
-            // 
-            // label386
-            // 
-            resources.ApplyResources(this.label386, "label386");
-            this.label386.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label386.Name = "label386";
-            // 
-            // numericUpDown100
-            // 
-            resources.ApplyResources(this.numericUpDown100, "numericUpDown100");
-            this.numericUpDown100.Maximum = new decimal(new int[] {
-            30000,
-            0,
-            0,
-            0});
-            this.numericUpDown100.Name = "numericUpDown100";
-            this.numericUpDown100.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numericUpDown100.ValueChanged += new System.EventHandler(this.numericUpDown100_ValueChanged);
-            // 
-            // label192
-            // 
-            resources.ApplyResources(this.label192, "label192");
-            this.label192.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label192.Name = "label192";
-            // 
-            // label193
-            // 
-            resources.ApplyResources(this.label193, "label193");
-            this.label193.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label193.Name = "label193";
-            // 
-            // label387
-            // 
-            resources.ApplyResources(this.label387, "label387");
-            this.label387.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label387.Name = "label387";
-            // 
-            // numericUpDown40
-            // 
-            resources.ApplyResources(this.numericUpDown40, "numericUpDown40");
-            this.numericUpDown40.Maximum = new decimal(new int[] {
-            60000,
-            0,
-            0,
-            0});
-            this.numericUpDown40.Minimum = new decimal(new int[] {
-            50000,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown40.Name = "numericUpDown40";
-            this.numericUpDown40.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numericUpDown40.ValueChanged += new System.EventHandler(this.numericUpDown40_ValueChanged);
-            // 
-            // label197
-            // 
-            resources.ApplyResources(this.label197, "label197");
-            this.label197.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label197.Name = "label197";
-            // 
-            // numericUpDown43
-            // 
-            resources.ApplyResources(this.numericUpDown43, "numericUpDown43");
-            this.numericUpDown43.Maximum = new decimal(new int[] {
-            60000,
-            0,
-            0,
-            0});
-            this.numericUpDown43.Minimum = new decimal(new int[] {
-            50000,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown43.Name = "numericUpDown43";
-            this.numericUpDown43.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numericUpDown43.ValueChanged += new System.EventHandler(this.numericUpDown43_ValueChanged);
-            // 
-            // label199
-            // 
-            resources.ApplyResources(this.label199, "label199");
-            this.label199.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label199.Name = "label199";
-            // 
-            // label200
-            // 
-            resources.ApplyResources(this.label200, "label200");
-            this.label200.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label200.Name = "label200";
-            // 
-            // label201
-            // 
-            resources.ApplyResources(this.label201, "label201");
-            this.label201.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label201.Name = "label201";
-            // 
-            // numericUpDown44
-            // 
-            resources.ApplyResources(this.numericUpDown44, "numericUpDown44");
-            this.numericUpDown44.Maximum = new decimal(new int[] {
-            3000,
-            0,
-            0,
-            0});
-            this.numericUpDown44.Name = "numericUpDown44";
-            this.numericUpDown44.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numericUpDown44.ValueChanged += new System.EventHandler(this.numericUpDown44_ValueChanged);
-            // 
-            // label202
-            // 
-            resources.ApplyResources(this.label202, "label202");
-            this.label202.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label202.Name = "label202";
-            // 
-            // label203
-            // 
-            resources.ApplyResources(this.label203, "label203");
-            this.label203.BackColor = System.Drawing.Color.Transparent;
-            this.label203.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label203.Name = "label203";
-            // 
-            // numericUpDown45
-            // 
-            resources.ApplyResources(this.numericUpDown45, "numericUpDown45");
-            this.numericUpDown45.Maximum = new decimal(new int[] {
-            30000,
-            0,
-            0,
-            0});
-            this.numericUpDown45.Minimum = new decimal(new int[] {
-            50000,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown45.Name = "numericUpDown45";
-            this.numericUpDown45.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numericUpDown45.ValueChanged += new System.EventHandler(this.numericUpDown45_ValueChanged);
-            // 
-            // label204
-            // 
-            resources.ApplyResources(this.label204, "label204");
-            this.label204.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label204.Name = "label204";
-            // 
-            // panel2
-            // 
-            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.label185);
-            this.panel2.Controls.Add(this.numericUpDown39);
-            this.panel2.Controls.Add(this.label186);
-            this.panel2.Controls.Add(this.numericUpDown38);
-            this.panel2.Controls.Add(this.label187);
-            this.panel2.Controls.Add(this.label189);
-            this.panel2.Controls.Add(this.numericUpDown88);
-            resources.ApplyResources(this.panel2, "panel2");
-            this.panel2.Name = "panel2";
-            // 
-            // label185
-            // 
-            resources.ApplyResources(this.label185, "label185");
-            this.label185.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label185.Name = "label185";
-            // 
-            // numericUpDown39
-            // 
-            resources.ApplyResources(this.numericUpDown39, "numericUpDown39");
-            this.numericUpDown39.Maximum = new decimal(new int[] {
-            65536,
-            0,
-            0,
-            0});
-            this.numericUpDown39.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numericUpDown39.Name = "numericUpDown39";
-            this.numericUpDown39.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numericUpDown39.ValueChanged += new System.EventHandler(this.numericUpDown39_ValueChanged);
-            // 
-            // label186
-            // 
-            resources.ApplyResources(this.label186, "label186");
-            this.label186.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label186.Name = "label186";
-            // 
-            // numericUpDown38
-            // 
-            resources.ApplyResources(this.numericUpDown38, "numericUpDown38");
-            this.numericUpDown38.Maximum = new decimal(new int[] {
-            65536,
-            0,
-            0,
-            0});
-            this.numericUpDown38.Name = "numericUpDown38";
-            this.numericUpDown38.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numericUpDown38.ValueChanged += new System.EventHandler(this.numericUpDown38_ValueChanged);
-            // 
-            // label187
-            // 
-            resources.ApplyResources(this.label187, "label187");
-            this.label187.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label187.Name = "label187";
-            // 
-            // label189
-            // 
-            resources.ApplyResources(this.label189, "label189");
-            this.label189.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label189.Name = "label189";
-            // 
-            // numericUpDown88
-            // 
-            resources.ApplyResources(this.numericUpDown88, "numericUpDown88");
-            this.numericUpDown88.Maximum = new decimal(new int[] {
-            255,
-            0,
-            0,
-            0});
-            this.numericUpDown88.Name = "numericUpDown88";
-            this.numericUpDown88.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numericUpDown88.ValueChanged += new System.EventHandler(this.numericUpDown88_ValueChanged);
-            // 
-            // numericUpDown32
-            // 
-            resources.ApplyResources(this.numericUpDown32, "numericUpDown32");
-            this.numericUpDown32.Maximum = new decimal(new int[] {
-            65536,
-            0,
-            0,
-            0});
-            this.numericUpDown32.Name = "numericUpDown32";
-            this.numericUpDown32.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numericUpDown32.ValueChanged += new System.EventHandler(this.numericUpDown32_ValueChanged);
-            // 
-            // numericUpDown99
-            // 
-            resources.ApplyResources(this.numericUpDown99, "numericUpDown99");
-            this.numericUpDown99.Maximum = new decimal(new int[] {
-            65536,
-            0,
-            0,
-            0});
-            this.numericUpDown99.Name = "numericUpDown99";
-            this.numericUpDown99.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numericUpDown99.ValueChanged += new System.EventHandler(this.numericUpDown99_ValueChanged);
-            // 
-            // numericUpDown33
-            // 
-            resources.ApplyResources(this.numericUpDown33, "numericUpDown33");
-            this.numericUpDown33.Maximum = new decimal(new int[] {
-            65536,
-            0,
-            0,
-            0});
-            this.numericUpDown33.Name = "numericUpDown33";
-            this.numericUpDown33.Value = new decimal(new int[] {
-            100,
-            0,
-            0,
-            0});
-            this.numericUpDown33.ValueChanged += new System.EventHandler(this.numericUpDown33_ValueChanged);
-            // 
-            // button22
-            // 
-            this.button22.ImageKey = global::ControlBalance.MyStrings.About1333;
-            resources.ApplyResources(this.button22, "button22");
-            this.button22.Name = "button22";
-            this.button22.UseVisualStyleBackColor = true;
-            this.button22.Click += new System.EventHandler(this.button22_Click);
-            // 
             // label475
             // 
             resources.ApplyResources(this.label475, "label475");
@@ -15134,850 +11161,10 @@
             this.button15.UseVisualStyleBackColor = false;
             this.button15.Click += new System.EventHandler(this.button15_Click);
             // 
-            // button37
-            // 
-            this.button37.ImageKey = global::ControlBalance.MyStrings.About1333;
-            resources.ApplyResources(this.button37, "button37");
-            this.button37.Name = "button37";
-            this.button37.UseVisualStyleBackColor = true;
-            this.button37.Click += new System.EventHandler(this.button37_Click);
-            // 
-            // checkBox50
-            // 
-            resources.ApplyResources(this.checkBox50, "checkBox50");
-            this.checkBox50.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.checkBox50.Name = "checkBox50";
-            this.checkBox50.UseVisualStyleBackColor = true;
-            this.checkBox50.CheckedChanged += new System.EventHandler(this.checkBox50_CheckedChanged);
-            // 
-            // label374
-            // 
-            resources.ApplyResources(this.label374, "label374");
-            this.label374.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label374.Name = "label374";
-            // 
-            // label344
-            // 
-            resources.ApplyResources(this.label344, "label344");
-            this.label344.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label344.Name = "label344";
-            this.label344.Click += new System.EventHandler(this.label344_Click);
-            // 
-            // label345
-            // 
-            resources.ApplyResources(this.label345, "label345");
-            this.label345.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label345.Name = "label345";
-            this.label345.Click += new System.EventHandler(this.label345_Click);
-            // 
-            // label38
-            // 
-            resources.ApplyResources(this.label38, "label38");
-            this.label38.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label38.Name = "label38";
-            // 
-            // label37
-            // 
-            resources.ApplyResources(this.label37, "label37");
-            this.label37.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label37.Name = "label37";
-            // 
-            // label44
-            // 
-            resources.ApplyResources(this.label44, "label44");
-            this.label44.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label44.Name = "label44";
-            // 
-            // label43
-            // 
-            resources.ApplyResources(this.label43, "label43");
-            this.label43.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label43.Name = "label43";
-            // 
-            // label50
-            // 
-            resources.ApplyResources(this.label50, "label50");
-            this.label50.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label50.Name = "label50";
-            // 
-            // label49
-            // 
-            resources.ApplyResources(this.label49, "label49");
-            this.label49.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label49.Name = "label49";
-            // 
-            // label54
-            // 
-            resources.ApplyResources(this.label54, "label54");
-            this.label54.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label54.Name = "label54";
-            // 
-            // label53
-            // 
-            resources.ApplyResources(this.label53, "label53");
-            this.label53.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label53.Name = "label53";
-            // 
-            // numericUpDown5
-            // 
-            resources.ApplyResources(this.numericUpDown5, "numericUpDown5");
-            this.numericUpDown5.Maximum = new decimal(new int[] {
-            65536,
-            0,
-            0,
-            0});
-            this.numericUpDown5.Name = "numericUpDown5";
-            this.numericUpDown5.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numericUpDown5.ValueChanged += new System.EventHandler(this.numericUpDown5_ValueChanged);
-            // 
-            // numericUpDown6
-            // 
-            resources.ApplyResources(this.numericUpDown6, "numericUpDown6");
-            this.numericUpDown6.Maximum = new decimal(new int[] {
-            65536,
-            0,
-            0,
-            0});
-            this.numericUpDown6.Name = "numericUpDown6";
-            this.numericUpDown6.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numericUpDown6.ValueChanged += new System.EventHandler(this.numericUpDown6_ValueChanged);
-            // 
-            // numericUpDown7
-            // 
-            resources.ApplyResources(this.numericUpDown7, "numericUpDown7");
-            this.numericUpDown7.Maximum = new decimal(new int[] {
-            65536,
-            0,
-            0,
-            0});
-            this.numericUpDown7.Name = "numericUpDown7";
-            this.numericUpDown7.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numericUpDown7.ValueChanged += new System.EventHandler(this.numericUpDown7_ValueChanged);
-            // 
-            // numericUpDown9
-            // 
-            resources.ApplyResources(this.numericUpDown9, "numericUpDown9");
-            this.numericUpDown9.Maximum = new decimal(new int[] {
-            65536,
-            0,
-            0,
-            0});
-            this.numericUpDown9.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numericUpDown9.Name = "numericUpDown9";
-            this.numericUpDown9.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numericUpDown9.ValueChanged += new System.EventHandler(this.numericUpDown9_ValueChanged);
-            // 
-            // label209
-            // 
-            resources.ApplyResources(this.label209, "label209");
-            this.label209.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label209.Name = "label209";
-            // 
-            // label119
-            // 
-            resources.ApplyResources(this.label119, "label119");
-            this.label119.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label119.Name = "label119";
-            // 
-            // label120
-            // 
-            resources.ApplyResources(this.label120, "label120");
-            this.label120.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label120.Name = "label120";
-            // 
-            // checkBox53
-            // 
-            resources.ApplyResources(this.checkBox53, "checkBox53");
-            this.checkBox53.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.checkBox53.Name = "checkBox53";
-            this.checkBox53.UseVisualStyleBackColor = true;
-            this.checkBox53.CheckedChanged += new System.EventHandler(this.checkBox53_CheckedChanged);
-            // 
-            // button33
-            // 
-            this.button33.ImageKey = global::ControlBalance.MyStrings.About1333;
-            resources.ApplyResources(this.button33, "button33");
-            this.button33.Name = "button33";
-            this.button33.UseVisualStyleBackColor = true;
-            this.button33.Click += new System.EventHandler(this.button33_Click);
-            // 
-            // label384
-            // 
-            resources.ApplyResources(this.label384, "label384");
-            this.label384.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label384.Name = "label384";
-            // 
-            // label385
-            // 
-            resources.ApplyResources(this.label385, "label385");
-            this.label385.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label385.Name = "label385";
-            // 
-            // numericUpDown81
-            // 
-            this.numericUpDown81.Increment = new decimal(new int[] {
-            100,
-            0,
-            0,
-            0});
-            resources.ApplyResources(this.numericUpDown81, "numericUpDown81");
-            this.numericUpDown81.Maximum = new decimal(new int[] {
-            30000,
-            0,
-            0,
-            0});
-            this.numericUpDown81.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numericUpDown81.Name = "numericUpDown81";
-            this.numericUpDown81.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numericUpDown81.ValueChanged += new System.EventHandler(this.numericUpDown81_ValueChanged);
-            // 
-            // label327
-            // 
-            resources.ApplyResources(this.label327, "label327");
-            this.label327.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label327.Name = "label327";
-            // 
-            // label328
-            // 
-            resources.ApplyResources(this.label328, "label328");
-            this.label328.BackColor = System.Drawing.Color.Yellow;
-            this.label328.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label328.Name = "label328";
-            // 
-            // checkBox30
-            // 
-            resources.ApplyResources(this.checkBox30, "checkBox30");
-            this.checkBox30.ForeColor = System.Drawing.Color.Red;
-            this.checkBox30.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.checkBox30.Name = "checkBox30";
-            this.checkBox30.UseVisualStyleBackColor = true;
-            this.checkBox30.CheckedChanged += new System.EventHandler(this.checkBox30_CheckedChanged);
-            // 
-            // checkBox29
-            // 
-            resources.ApplyResources(this.checkBox29, "checkBox29");
-            this.checkBox29.ForeColor = System.Drawing.Color.Red;
-            this.checkBox29.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.checkBox29.Name = "checkBox29";
-            this.checkBox29.UseVisualStyleBackColor = true;
-            this.checkBox29.CheckedChanged += new System.EventHandler(this.checkBox29_CheckedChanged);
-            // 
-            // checkBox28
-            // 
-            resources.ApplyResources(this.checkBox28, "checkBox28");
-            this.checkBox28.ForeColor = System.Drawing.Color.Red;
-            this.checkBox28.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.checkBox28.Name = "checkBox28";
-            this.checkBox28.UseVisualStyleBackColor = true;
-            this.checkBox28.CheckedChanged += new System.EventHandler(this.checkBox28_CheckedChanged);
-            // 
-            // checkBox27
-            // 
-            resources.ApplyResources(this.checkBox27, "checkBox27");
-            this.checkBox27.ForeColor = System.Drawing.Color.Red;
-            this.checkBox27.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.checkBox27.Name = "checkBox27";
-            this.checkBox27.UseVisualStyleBackColor = true;
-            this.checkBox27.CheckedChanged += new System.EventHandler(this.checkBox27_CheckedChanged);
-            // 
-            // label382
-            // 
-            resources.ApplyResources(this.label382, "label382");
-            this.label382.BackColor = System.Drawing.Color.Yellow;
-            this.label382.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label382.Name = "label382";
-            // 
-            // label383
-            // 
-            resources.ApplyResources(this.label383, "label383");
-            this.label383.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label383.Name = "label383";
-            // 
-            // numericUpDown98
-            // 
-            resources.ApplyResources(this.numericUpDown98, "numericUpDown98");
-            this.numericUpDown98.Maximum = new decimal(new int[] {
-            9000,
-            0,
-            0,
-            0});
-            this.numericUpDown98.Minimum = new decimal(new int[] {
-            8000,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown98.Name = "numericUpDown98";
-            this.numericUpDown98.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numericUpDown98.ValueChanged += new System.EventHandler(this.numericUpDown98_ValueChanged);
-            // 
-            // label74
-            // 
-            resources.ApplyResources(this.label74, "label74");
-            this.label74.BackColor = System.Drawing.Color.Yellow;
-            this.label74.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label74.Name = "label74";
-            // 
-            // numericUpDown17
-            // 
-            resources.ApplyResources(this.numericUpDown17, "numericUpDown17");
-            this.numericUpDown17.Maximum = new decimal(new int[] {
-            30000,
-            0,
-            0,
-            0});
-            this.numericUpDown17.Minimum = new decimal(new int[] {
-            30000,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown17.Name = "numericUpDown17";
-            this.numericUpDown17.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numericUpDown17.ValueChanged += new System.EventHandler(this.numericUpDown17_ValueChanged);
-            // 
-            // label73
-            // 
-            resources.ApplyResources(this.label73, "label73");
-            this.label73.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label73.Name = "label73";
-            // 
-            // label80
-            // 
-            resources.ApplyResources(this.label80, "label80");
-            this.label80.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label80.Name = "label80";
-            // 
-            // numericUpDown14
-            // 
-            resources.ApplyResources(this.numericUpDown14, "numericUpDown14");
-            this.numericUpDown14.Maximum = new decimal(new int[] {
-            30000,
-            0,
-            0,
-            0});
-            this.numericUpDown14.Minimum = new decimal(new int[] {
-            30000,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown14.Name = "numericUpDown14";
-            this.numericUpDown14.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numericUpDown14.ValueChanged += new System.EventHandler(this.numericUpDown14_ValueChanged);
-            // 
-            // label81
-            // 
-            resources.ApplyResources(this.label81, "label81");
-            this.label81.BackColor = System.Drawing.Color.Yellow;
-            this.label81.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label81.Name = "label81";
-            // 
-            // numericUpDown16
-            // 
-            resources.ApplyResources(this.numericUpDown16, "numericUpDown16");
-            this.numericUpDown16.Maximum = new decimal(new int[] {
-            30000,
-            0,
-            0,
-            0});
-            this.numericUpDown16.Minimum = new decimal(new int[] {
-            30000,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown16.Name = "numericUpDown16";
-            this.numericUpDown16.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numericUpDown16.ValueChanged += new System.EventHandler(this.numericUpDown16_ValueChanged);
-            // 
-            // label78
-            // 
-            resources.ApplyResources(this.label78, "label78");
-            this.label78.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label78.Name = "label78";
-            // 
-            // label79
-            // 
-            resources.ApplyResources(this.label79, "label79");
-            this.label79.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label79.Name = "label79";
-            // 
-            // numericUpDown13
-            // 
-            resources.ApplyResources(this.numericUpDown13, "numericUpDown13");
-            this.numericUpDown13.Maximum = new decimal(new int[] {
-            45,
-            0,
-            0,
-            0});
-            this.numericUpDown13.Name = "numericUpDown13";
-            this.numericUpDown13.Value = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-            this.numericUpDown13.ValueChanged += new System.EventHandler(this.numericUpDown13_ValueChanged);
-            // 
-            // label152
-            // 
-            resources.ApplyResources(this.label152, "label152");
-            this.label152.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label152.Name = "label152";
-            // 
-            // label151
-            // 
-            resources.ApplyResources(this.label151, "label151");
-            this.label151.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label151.Name = "label151";
-            // 
-            // label379
-            // 
-            resources.ApplyResources(this.label379, "label379");
-            this.label379.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label379.Name = "label379";
-            // 
-            // label375
-            // 
-            resources.ApplyResources(this.label375, "label375");
-            this.label375.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label375.Name = "label375";
-            // 
-            // label376
-            // 
-            resources.ApplyResources(this.label376, "label376");
-            this.label376.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label376.Name = "label376";
-            // 
-            // label377
-            // 
-            resources.ApplyResources(this.label377, "label377");
-            this.label377.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label377.Name = "label377";
-            // 
-            // button21
-            // 
-            this.button21.ImageKey = global::ControlBalance.MyStrings.About1333;
-            resources.ApplyResources(this.button21, "button21");
-            this.button21.Name = "button21";
-            this.button21.UseVisualStyleBackColor = true;
-            this.button21.Click += new System.EventHandler(this.button21_Click);
-            // 
-            // label378
-            // 
-            resources.ApplyResources(this.label378, "label378");
-            this.label378.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label378.Name = "label378";
-            // 
-            // button14
-            // 
-            this.button14.ImageKey = global::ControlBalance.MyStrings.About1333;
-            resources.ApplyResources(this.button14, "button14");
-            this.button14.Name = "button14";
-            this.button14.UseVisualStyleBackColor = true;
-            this.button14.Click += new System.EventHandler(this.button14_Click);
-            // 
-            // button29
-            // 
-            this.button29.ImageKey = global::ControlBalance.MyStrings.About1333;
-            resources.ApplyResources(this.button29, "button29");
-            this.button29.Name = "button29";
-            this.button29.UseVisualStyleBackColor = true;
-            this.button29.Click += new System.EventHandler(this.button29_Click);
-            // 
-            // label139
-            // 
-            resources.ApplyResources(this.label139, "label139");
-            this.label139.BackColor = System.Drawing.Color.Transparent;
-            this.label139.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label139.Name = "label139";
-            // 
-            // numericUpDown35
-            // 
-            resources.ApplyResources(this.numericUpDown35, "numericUpDown35");
-            this.numericUpDown35.Maximum = new decimal(new int[] {
-            65536,
-            0,
-            0,
-            0});
-            this.numericUpDown35.Name = "numericUpDown35";
-            this.numericUpDown35.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numericUpDown35.ValueChanged += new System.EventHandler(this.numericUpDown35_ValueChanged);
-            // 
-            // numericUpDown34
-            // 
-            resources.ApplyResources(this.numericUpDown34, "numericUpDown34");
-            this.numericUpDown34.Maximum = new decimal(new int[] {
-            30000,
-            0,
-            0,
-            0});
-            this.numericUpDown34.Name = "numericUpDown34";
-            this.numericUpDown34.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numericUpDown34.ValueChanged += new System.EventHandler(this.numericUpDown34_ValueChanged);
-            // 
-            // label145
-            // 
-            resources.ApplyResources(this.label145, "label145");
-            this.label145.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label145.Name = "label145";
-            this.label145.Click += new System.EventHandler(this.label145_Click);
-            // 
-            // label144
-            // 
-            resources.ApplyResources(this.label144, "label144");
-            this.label144.BackColor = System.Drawing.Color.Transparent;
-            this.label144.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label144.Name = "label144";
-            // 
-            // label143
-            // 
-            resources.ApplyResources(this.label143, "label143");
-            this.label143.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label143.Name = "label143";
-            this.label143.Click += new System.EventHandler(this.label143_Click);
-            // 
-            // label142
-            // 
-            resources.ApplyResources(this.label142, "label142");
-            this.label142.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label142.Name = "label142";
-            // 
-            // label141
-            // 
-            resources.ApplyResources(this.label141, "label141");
-            this.label141.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label141.Name = "label141";
-            this.label141.Click += new System.EventHandler(this.label141_Click);
-            // 
-            // numericUpDown36
-            // 
-            resources.ApplyResources(this.numericUpDown36, "numericUpDown36");
-            this.numericUpDown36.Maximum = new decimal(new int[] {
-            65536,
-            0,
-            0,
-            0});
-            this.numericUpDown36.Name = "numericUpDown36";
-            this.numericUpDown36.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numericUpDown36.ValueChanged += new System.EventHandler(this.numericUpDown36_ValueChanged);
-            // 
-            // label146
-            // 
-            resources.ApplyResources(this.label146, "label146");
-            this.label146.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label146.Name = "label146";
-            // 
-            // label140
-            // 
-            resources.ApplyResources(this.label140, "label140");
-            this.label140.BackColor = System.Drawing.Color.Transparent;
-            this.label140.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label140.Name = "label140";
-            // 
-            // label247
-            // 
-            resources.ApplyResources(this.label247, "label247");
-            this.label247.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label247.Name = "label247";
-            // 
-            // label248
-            // 
-            resources.ApplyResources(this.label248, "label248");
-            this.label248.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label248.Name = "label248";
-            // 
-            // label249
-            // 
-            resources.ApplyResources(this.label249, "label249");
-            this.label249.BackColor = System.Drawing.Color.Transparent;
-            this.label249.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label249.Name = "label249";
-            // 
-            // label250
-            // 
-            resources.ApplyResources(this.label250, "label250");
-            this.label250.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label250.Name = "label250";
-            // 
-            // checkBox42
-            // 
-            resources.ApplyResources(this.checkBox42, "checkBox42");
-            this.checkBox42.ForeColor = System.Drawing.Color.Red;
-            this.checkBox42.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.checkBox42.Name = "checkBox42";
-            this.checkBox42.UseVisualStyleBackColor = true;
-            this.checkBox42.CheckedChanged += new System.EventHandler(this.checkBox42_CheckedChanged);
-            // 
-            // checkBox41
-            // 
-            resources.ApplyResources(this.checkBox41, "checkBox41");
-            this.checkBox41.ForeColor = System.Drawing.Color.Red;
-            this.checkBox41.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.checkBox41.Name = "checkBox41";
-            this.checkBox41.UseVisualStyleBackColor = true;
-            this.checkBox41.CheckedChanged += new System.EventHandler(this.checkBox41_CheckedChanged);
-            // 
-            // checkBox40
-            // 
-            resources.ApplyResources(this.checkBox40, "checkBox40");
-            this.checkBox40.ForeColor = System.Drawing.Color.Red;
-            this.checkBox40.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.checkBox40.Name = "checkBox40";
-            this.checkBox40.UseVisualStyleBackColor = true;
-            this.checkBox40.CheckedChanged += new System.EventHandler(this.checkBox40_CheckedChanged);
-            // 
-            // checkBox39
-            // 
-            resources.ApplyResources(this.checkBox39, "checkBox39");
-            this.checkBox39.ForeColor = System.Drawing.Color.Red;
-            this.checkBox39.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.checkBox39.Name = "checkBox39";
-            this.checkBox39.UseVisualStyleBackColor = true;
-            this.checkBox39.CheckedChanged += new System.EventHandler(this.checkBox39_CheckedChanged);
-            // 
-            // checkBox38
-            // 
-            resources.ApplyResources(this.checkBox38, "checkBox38");
-            this.checkBox38.ForeColor = System.Drawing.Color.Red;
-            this.checkBox38.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.checkBox38.Name = "checkBox38";
-            this.checkBox38.UseVisualStyleBackColor = true;
-            this.checkBox38.CheckedChanged += new System.EventHandler(this.checkBox38_CheckedChanged);
-            // 
-            // checkBox37
-            // 
-            resources.ApplyResources(this.checkBox37, "checkBox37");
-            this.checkBox37.ForeColor = System.Drawing.Color.Red;
-            this.checkBox37.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.checkBox37.Name = "checkBox37";
-            this.checkBox37.UseVisualStyleBackColor = true;
-            this.checkBox37.CheckedChanged += new System.EventHandler(this.checkBox37_CheckedChanged);
-            // 
-            // checkBox36
-            // 
-            resources.ApplyResources(this.checkBox36, "checkBox36");
-            this.checkBox36.ForeColor = System.Drawing.Color.Red;
-            this.checkBox36.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.checkBox36.Name = "checkBox36";
-            this.checkBox36.UseVisualStyleBackColor = true;
-            this.checkBox36.CheckedChanged += new System.EventHandler(this.checkBox36_CheckedChanged);
-            // 
-            // checkBox35
-            // 
-            resources.ApplyResources(this.checkBox35, "checkBox35");
-            this.checkBox35.ForeColor = System.Drawing.Color.Red;
-            this.checkBox35.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.checkBox35.Name = "checkBox35";
-            this.checkBox35.UseVisualStyleBackColor = true;
-            this.checkBox35.CheckedChanged += new System.EventHandler(this.checkBox35_CheckedChanged);
-            // 
-            // checkBox34
-            // 
-            resources.ApplyResources(this.checkBox34, "checkBox34");
-            this.checkBox34.ForeColor = System.Drawing.Color.Red;
-            this.checkBox34.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.checkBox34.Name = "checkBox34";
-            this.checkBox34.UseVisualStyleBackColor = true;
-            this.checkBox34.CheckedChanged += new System.EventHandler(this.checkBox34_CheckedChanged);
-            // 
-            // checkBox33
-            // 
-            resources.ApplyResources(this.checkBox33, "checkBox33");
-            this.checkBox33.ForeColor = System.Drawing.Color.Red;
-            this.checkBox33.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.checkBox33.Name = "checkBox33";
-            this.checkBox33.UseVisualStyleBackColor = true;
-            this.checkBox33.CheckedChanged += new System.EventHandler(this.checkBox33_CheckedChanged);
-            // 
-            // checkBox32
-            // 
-            resources.ApplyResources(this.checkBox32, "checkBox32");
-            this.checkBox32.ForeColor = System.Drawing.Color.Red;
-            this.checkBox32.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.checkBox32.Name = "checkBox32";
-            this.checkBox32.UseVisualStyleBackColor = true;
-            this.checkBox32.CheckedChanged += new System.EventHandler(this.checkBox32_CheckedChanged);
-            // 
-            // checkBox31
-            // 
-            resources.ApplyResources(this.checkBox31, "checkBox31");
-            this.checkBox31.ForeColor = System.Drawing.Color.Red;
-            this.checkBox31.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.checkBox31.Name = "checkBox31";
-            this.checkBox31.UseVisualStyleBackColor = true;
-            this.checkBox31.CheckedChanged += new System.EventHandler(this.checkBox31_CheckedChanged);
-            // 
-            // checkBox13
-            // 
-            resources.ApplyResources(this.checkBox13, "checkBox13");
-            this.checkBox13.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.checkBox13.Name = "checkBox13";
-            this.checkBox13.UseVisualStyleBackColor = true;
-            this.checkBox13.CheckedChanged += new System.EventHandler(this.checkBox13_CheckedChanged);
-            // 
-            // checkBox1
-            // 
-            resources.ApplyResources(this.checkBox1, "checkBox1");
-            this.checkBox1.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
-            // 
-            // checkBox2
-            // 
-            resources.ApplyResources(this.checkBox2, "checkBox2");
-            this.checkBox2.Checked = true;
-            this.checkBox2.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox2.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.UseVisualStyleBackColor = true;
-            this.checkBox2.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
-            // 
-            // checkBox3
-            // 
-            resources.ApplyResources(this.checkBox3, "checkBox3");
-            this.checkBox3.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.UseVisualStyleBackColor = true;
-            this.checkBox3.CheckedChanged += new System.EventHandler(this.checkBox3_CheckedChanged);
-            // 
-            // checkBox4
-            // 
-            resources.ApplyResources(this.checkBox4, "checkBox4");
-            this.checkBox4.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.checkBox4.Name = "checkBox4";
-            this.checkBox4.UseVisualStyleBackColor = true;
-            this.checkBox4.CheckedChanged += new System.EventHandler(this.checkBox4_CheckedChanged);
-            // 
-            // checkBox5
-            // 
-            resources.ApplyResources(this.checkBox5, "checkBox5");
-            this.checkBox5.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.checkBox5.Name = "checkBox5";
-            this.checkBox5.UseVisualStyleBackColor = true;
-            this.checkBox5.CheckedChanged += new System.EventHandler(this.checkBox5_CheckedChanged);
-            // 
-            // checkBox8
-            // 
-            resources.ApplyResources(this.checkBox8, "checkBox8");
-            this.checkBox8.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.checkBox8.Name = "checkBox8";
-            this.checkBox8.UseVisualStyleBackColor = true;
-            this.checkBox8.CheckedChanged += new System.EventHandler(this.checkBox8_CheckedChanged);
-            // 
-            // checkBox9
-            // 
-            resources.ApplyResources(this.checkBox9, "checkBox9");
-            this.checkBox9.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.checkBox9.Name = "checkBox9";
-            this.checkBox9.UseVisualStyleBackColor = true;
-            this.checkBox9.CheckedChanged += new System.EventHandler(this.checkBox9_CheckedChanged);
-            // 
-            // checkBox7
-            // 
-            resources.ApplyResources(this.checkBox7, "checkBox7");
-            this.checkBox7.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.checkBox7.Name = "checkBox7";
-            this.checkBox7.UseVisualStyleBackColor = true;
-            this.checkBox7.CheckedChanged += new System.EventHandler(this.checkBox7_CheckedChanged);
-            // 
-            // checkBox10
-            // 
-            resources.ApplyResources(this.checkBox10, "checkBox10");
-            this.checkBox10.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.checkBox10.Name = "checkBox10";
-            this.checkBox10.UseVisualStyleBackColor = true;
-            this.checkBox10.CheckedChanged += new System.EventHandler(this.checkBox10_CheckedChanged);
-            // 
-            // checkBox6
-            // 
-            resources.ApplyResources(this.checkBox6, "checkBox6");
-            this.checkBox6.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.checkBox6.Name = "checkBox6";
-            this.checkBox6.UseVisualStyleBackColor = true;
-            this.checkBox6.CheckedChanged += new System.EventHandler(this.checkBox6_CheckedChanged);
-            // 
             // timer1
             // 
             this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // label331
-            // 
-            resources.ApplyResources(this.label331, "label331");
-            this.label331.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label331.Name = "label331";
-            // 
-            // label332
-            // 
-            resources.ApplyResources(this.label332, "label332");
-            this.label332.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label332.Name = "label332";
-            // 
-            // label407
-            // 
-            resources.ApplyResources(this.label407, "label407");
-            this.label407.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label407.Name = "label407";
-            // 
-            // label447
-            // 
-            resources.ApplyResources(this.label447, "label447");
-            this.label447.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label447.Name = "label447";
             // 
             // statusStrip1
             // 
@@ -16096,6 +11283,23 @@
             this.button44.UseVisualStyleBackColor = false;
             this.button44.Click += new System.EventHandler(this.button44_Click);
             // 
+            // textBox2
+            // 
+            resources.ApplyResources(this.textBox2, "textBox2");
+            this.textBox2.Name = "textBox2";
+            // 
+            // label858
+            // 
+            resources.ApplyResources(this.label858, "label858");
+            this.label858.ImageKey = global::ControlBalance.MyStrings.About1333;
+            this.label858.Name = "label858";
+            // 
+            // label860
+            // 
+            resources.ApplyResources(this.label860, "label860");
+            this.label860.ImageKey = global::ControlBalance.MyStrings.About1333;
+            this.label860.Name = "label860";
+            // 
             // checkBox88
             // 
             resources.ApplyResources(this.checkBox88, "checkBox88");
@@ -16103,11 +11307,6 @@
             this.checkBox88.Name = "checkBox88";
             this.checkBox88.UseVisualStyleBackColor = true;
             this.checkBox88.CheckedChanged += new System.EventHandler(this.checkBox88_CheckedChanged);
-            // 
-            // textBox2
-            // 
-            resources.ApplyResources(this.textBox2, "textBox2");
-            this.textBox2.Name = "textBox2";
             // 
             // chart1
             // 
@@ -16207,40 +11406,26 @@
             this.chart1.Series.Add(series10);
             this.chart1.Series.Add(series11);
             // 
-            // label858
-            // 
-            resources.ApplyResources(this.label858, "label858");
-            this.label858.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label858.Name = "label858";
-            // 
-            // label860
-            // 
-            resources.ApplyResources(this.label860, "label860");
-            this.label860.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.label860.Name = "label860";
-            // 
             // Form1
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.label858);
             this.Controls.Add(this.label860);
+            this.Controls.Add(this.label858);
             this.Controls.Add(this.chart1);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.checkBox88);
-            this.Controls.Add(this.label209);
             this.Controls.Add(this.label479);
             this.Controls.Add(this.label471);
             this.Controls.Add(this.label474);
-            this.Controls.Add(this.panel25);
             this.Controls.Add(this.button44);
+            this.Controls.Add(this.label526);
             this.Controls.Add(this.button43);
             this.Controls.Add(this.button41);
             this.Controls.Add(this.button42);
-            this.Controls.Add(this.label526);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.label528);
             this.Controls.Add(this.numericUpDown135);
+            this.Controls.Add(this.label528);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.checkBox17);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.label475);
@@ -16249,144 +11434,7 @@
             this.Controls.Add(this.button15);
             this.Controls.Add(this.comboBox4);
             this.Controls.Add(this.comboBox3);
-            this.Controls.Add(this.checkBox53);
-            this.Controls.Add(this.label18);
-            this.Controls.Add(this.label17);
-            this.Controls.Add(this.numericUpDown3);
-            this.Controls.Add(this.checkBox50);
-            this.Controls.Add(this.button33);
-            this.Controls.Add(this.label384);
-            this.Controls.Add(this.button37);
-            this.Controls.Add(this.label385);
-            this.Controls.Add(this.label119);
-            this.Controls.Add(this.label374);
-            this.Controls.Add(this.label447);
-            this.Controls.Add(this.label120);
-            this.Controls.Add(this.label344);
-            this.Controls.Add(this.label379);
-            this.Controls.Add(this.label345);
-            this.Controls.Add(this.label382);
-            this.Controls.Add(this.label38);
-            this.Controls.Add(this.label375);
-            this.Controls.Add(this.label37);
-            this.Controls.Add(this.button21);
-            this.Controls.Add(this.label44);
-            this.Controls.Add(this.label407);
-            this.Controls.Add(this.label43);
-            this.Controls.Add(this.label383);
-            this.Controls.Add(this.label50);
-            this.Controls.Add(this.numericUpDown81);
-            this.Controls.Add(this.label49);
-            this.Controls.Add(this.label376);
-            this.Controls.Add(this.label54);
-            this.Controls.Add(this.label327);
-            this.Controls.Add(this.label53);
-            this.Controls.Add(this.button14);
-            this.Controls.Add(this.numericUpDown5);
-            this.Controls.Add(this.numericUpDown6);
-            this.Controls.Add(this.label328);
-            this.Controls.Add(this.numericUpDown7);
-            this.Controls.Add(this.label377);
-            this.Controls.Add(this.numericUpDown9);
-            this.Controls.Add(this.label378);
-            this.Controls.Add(this.numericUpDown98);
-            this.Controls.Add(this.label331);
-            this.Controls.Add(this.label332);
-            this.Controls.Add(this.label247);
-            this.Controls.Add(this.button29);
-            this.Controls.Add(this.label248);
             this.Controls.Add(this.tabControl1);
-            this.Controls.Add(this.label74);
-            this.Controls.Add(this.numericUpDown17);
-            this.Controls.Add(this.label249);
-            this.Controls.Add(this.label73);
-            this.Controls.Add(this.label80);
-            this.Controls.Add(this.label250);
-            this.Controls.Add(this.numericUpDown14);
-            this.Controls.Add(this.label81);
-            this.Controls.Add(this.checkBox42);
-            this.Controls.Add(this.checkBox30);
-            this.Controls.Add(this.numericUpDown16);
-            this.Controls.Add(this.label78);
-            this.Controls.Add(this.checkBox29);
-            this.Controls.Add(this.checkBox28);
-            this.Controls.Add(this.label79);
-            this.Controls.Add(this.checkBox41);
-            this.Controls.Add(this.numericUpDown13);
-            this.Controls.Add(this.checkBox27);
-            this.Controls.Add(this.label152);
-            this.Controls.Add(this.checkBox40);
-            this.Controls.Add(this.label151);
-            this.Controls.Add(this.checkBox39);
-            this.Controls.Add(this.checkBox38);
-            this.Controls.Add(this.label139);
-            this.Controls.Add(this.numericUpDown35);
-            this.Controls.Add(this.checkBox37);
-            this.Controls.Add(this.label87);
-            this.Controls.Add(this.checkBox36);
-            this.Controls.Add(this.numericUpDown34);
-            this.Controls.Add(this.label86);
-            this.Controls.Add(this.checkBox35);
-            this.Controls.Add(this.checkBox34);
-            this.Controls.Add(this.checkBox33);
-            this.Controls.Add(this.label145);
-            this.Controls.Add(this.checkBox32);
-            this.Controls.Add(this.label144);
-            this.Controls.Add(this.checkBox31);
-            this.Controls.Add(this.label103);
-            this.Controls.Add(this.numericUpDown21);
-            this.Controls.Add(this.label102);
-            this.Controls.Add(this.label143);
-            this.Controls.Add(this.label75);
-            this.Controls.Add(this.checkBox12);
-            this.Controls.Add(this.label142);
-            this.Controls.Add(this.label69);
-            this.Controls.Add(this.label70);
-            this.Controls.Add(this.label71);
-            this.Controls.Add(this.label141);
-            this.Controls.Add(this.label72);
-            this.Controls.Add(this.label67);
-            this.Controls.Add(this.label68);
-            this.Controls.Add(this.numericUpDown36);
-            this.Controls.Add(this.label146);
-            this.Controls.Add(this.label66);
-            this.Controls.Add(this.label140);
-            this.Controls.Add(this.label65);
-            this.Controls.Add(this.numericUpDown29);
-            this.Controls.Add(this.label113);
-            this.Controls.Add(this.label55);
-            this.Controls.Add(this.label104);
-            this.Controls.Add(this.numericUpDown22);
-            this.Controls.Add(this.label60);
-            this.Controls.Add(this.checkBox13);
-            this.Controls.Add(this.label59);
-            this.Controls.Add(this.label114);
-            this.Controls.Add(this.label51);
-            this.Controls.Add(this.numericUpDown11);
-            this.Controls.Add(this.numericUpDown28);
-            this.Controls.Add(this.checkBox1);
-            this.Controls.Add(this.checkBox2);
-            this.Controls.Add(this.label47);
-            this.Controls.Add(this.label111);
-            this.Controls.Add(this.checkBox3);
-            this.Controls.Add(this.label45);
-            this.Controls.Add(this.checkBox4);
-            this.Controls.Add(this.label112);
-            this.Controls.Add(this.checkBox5);
-            this.Controls.Add(this.label41);
-            this.Controls.Add(this.checkBox8);
-            this.Controls.Add(this.label39);
-            this.Controls.Add(this.checkBox9);
-            this.Controls.Add(this.numericUpDown12);
-            this.Controls.Add(this.checkBox7);
-            this.Controls.Add(this.label35);
-            this.Controls.Add(this.checkBox10);
-            this.Controls.Add(this.label61);
-            this.Controls.Add(this.checkBox6);
-            this.Controls.Add(this.label62);
-            this.Controls.Add(this.label33);
-            this.Controls.Add(this.label31);
-            this.Controls.Add(this.label29);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button5);
@@ -16398,25 +11446,17 @@
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyUp);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown11)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown15)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown12)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown18)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown19)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown21)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown22)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown25)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown26)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown27)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown28)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown29)).EndInit();
             this.tabControl1.ResumeLayout(false);
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             this.panel60.ResumeLayout(false);
@@ -16612,14 +11652,14 @@
             this.panel58.PerformLayout();
             this.tabPage10.ResumeLayout(false);
             this.tabPage10.PerformLayout();
+            this.panel76.ResumeLayout(false);
+            this.panel76.PerformLayout();
             this.panel77.ResumeLayout(false);
             this.panel77.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown214)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown217)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown222)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown223)).EndInit();
-            this.panel76.ResumeLayout(false);
-            this.panel76.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown216)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown220)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown221)).EndInit();
@@ -16684,119 +11724,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown146)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown147)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown71)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown112)).EndInit();
-            this.panel25.ResumeLayout(false);
-            this.panel25.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown111)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown109)).EndInit();
-            this.panel24.ResumeLayout(false);
-            this.panel24.PerformLayout();
-            this.panel20.ResumeLayout(false);
-            this.panel20.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown107)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown86)).EndInit();
-            this.panel22.ResumeLayout(false);
-            this.panel22.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown84)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown110)).EndInit();
-            this.panel21.ResumeLayout(false);
-            this.panel21.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown83)).EndInit();
-            this.panel23.ResumeLayout(false);
-            this.panel23.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown85)).EndInit();
-            this.panel6.ResumeLayout(false);
-            this.panel6.PerformLayout();
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown101)).EndInit();
-            this.panel12.ResumeLayout(false);
-            this.panel12.PerformLayout();
-            this.panel15.ResumeLayout(false);
-            this.panel15.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown96)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown92)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown87)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown47)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown48)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown49)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown30)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown50)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown51)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown52)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown53)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown97)).EndInit();
-            this.panel13.ResumeLayout(false);
-            this.panel13.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown90)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown120)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown89)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown91)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown121)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown93)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown94)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown118)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown95)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown119)).EndInit();
-            this.panel11.ResumeLayout(false);
-            this.panel11.PerformLayout();
-            this.panel7.ResumeLayout(false);
-            this.panel7.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown103)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown66)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown67)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown24)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown65)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown64)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown57)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown58)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown59)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown60)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown61)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown62)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown63)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown102)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown74)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown75)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown31)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown76)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown77)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown78)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown79)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown80)).EndInit();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown23)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown37)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown20)).EndInit();
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown100)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown40)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown43)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown44)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown45)).EndInit();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown39)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown38)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown88)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown32)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown99)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown33)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown81)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown98)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown17)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown14)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown16)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown13)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown35)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown34)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown36)).EndInit();
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown135)).EndInit();
@@ -16811,48 +11738,16 @@
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Label label29;
-        private System.Windows.Forms.Label label31;
-        private System.Windows.Forms.Label label33;
-        private System.Windows.Forms.Label label39;
-        private System.Windows.Forms.Label label41;
-        private System.Windows.Forms.Label label45;
-        private System.Windows.Forms.Label label47;
-        private System.Windows.Forms.Label label51;
         private System.Windows.Forms.NumericUpDown numericUpDown2;
-        private System.Windows.Forms.NumericUpDown numericUpDown3;
-        private System.Windows.Forms.Label label55;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.NumericUpDown numericUpDown10;
-        private System.Windows.Forms.NumericUpDown numericUpDown11;
         private System.Windows.Forms.Label label57;
         private System.Windows.Forms.Label label58;
-        private System.Windows.Forms.Label label59;
-        private System.Windows.Forms.Label label60;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Label label65;
-        private System.Windows.Forms.Label label66;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Label label67;
-        private System.Windows.Forms.Label label68;
-        private System.Windows.Forms.Label label69;
-        private System.Windows.Forms.Label label70;
-        private System.Windows.Forms.Label label71;
-        private System.Windows.Forms.Label label72;
-        private System.Windows.Forms.CheckBox checkBox12;
-        private System.Windows.Forms.Label label75;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label87;
-        private System.Windows.Forms.Label label86;
         private System.Windows.Forms.NumericUpDown numericUpDown15;
-        private System.Windows.Forms.NumericUpDown numericUpDown12;
-        private System.Windows.Forms.Label label61;
-        private System.Windows.Forms.Label label62;
-        private System.Windows.Forms.Label label77;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Label label82;
         private System.Windows.Forms.Label label83;
@@ -16867,18 +11762,6 @@
         private System.Windows.Forms.Label label94;
         private System.Windows.Forms.Label label95;
         private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.NumericUpDown numericUpDown18;
-        private System.Windows.Forms.Label label96;
-        private System.Windows.Forms.Label label97;
-        private System.Windows.Forms.NumericUpDown numericUpDown19;
-        private System.Windows.Forms.Label label98;
-        private System.Windows.Forms.Label label99;
-        private System.Windows.Forms.NumericUpDown numericUpDown21;
-        private System.Windows.Forms.Label label102;
-        private System.Windows.Forms.Label label103;
-        private System.Windows.Forms.NumericUpDown numericUpDown22;
-        private System.Windows.Forms.Label label104;
-        private System.Windows.Forms.Label label35;
         private System.Windows.Forms.NumericUpDown numericUpDown25;
         private System.Windows.Forms.NumericUpDown numericUpDown26;
         private System.Windows.Forms.Label label34;
@@ -16893,16 +11776,9 @@
         private System.Windows.Forms.Label label56;
         private System.Windows.Forms.Label label107;
         private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.Label label108;
         private System.Windows.Forms.Label label109;
         private System.Windows.Forms.Label label110;
         private System.Windows.Forms.CheckBox checkBox15;
-        private System.Windows.Forms.NumericUpDown numericUpDown28;
-        private System.Windows.Forms.Label label111;
-        private System.Windows.Forms.Label label112;
-        private System.Windows.Forms.NumericUpDown numericUpDown29;
-        private System.Windows.Forms.Label label113;
-        private System.Windows.Forms.Label label114;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
@@ -16925,36 +11801,12 @@
         private System.Windows.Forms.Label label138;
         private System.Windows.Forms.Label label135;
         private System.Windows.Forms.Label label136;
-        private System.Windows.Forms.Label label139;
-        private System.Windows.Forms.Label label141;
-        private System.Windows.Forms.Label label142;
-        private System.Windows.Forms.Label label143;
-        private System.Windows.Forms.Label label144;
-        private System.Windows.Forms.Label label145;
-        private System.Windows.Forms.NumericUpDown numericUpDown33;
-        private System.Windows.Forms.NumericUpDown numericUpDown34;
-        private System.Windows.Forms.NumericUpDown numericUpDown35;
-        private System.Windows.Forms.Label label140;
-        private System.Windows.Forms.Label label146;
-        private System.Windows.Forms.NumericUpDown numericUpDown36;
         private System.IO.Ports.SerialPort serialPort1;
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.Button button13;
         private System.Windows.Forms.Button button12;
-        private System.Windows.Forms.Button button14;
         private System.Windows.Forms.Timer timer1;
-        private System.Windows.Forms.CheckBox checkBox13;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.CheckBox checkBox3;
-        private System.Windows.Forms.CheckBox checkBox4;
-        private System.Windows.Forms.CheckBox checkBox5;
-        private System.Windows.Forms.CheckBox checkBox6;
-        private System.Windows.Forms.CheckBox checkBox7;
-        private System.Windows.Forms.CheckBox checkBox8;
-        private System.Windows.Forms.CheckBox checkBox9;
-        private System.Windows.Forms.CheckBox checkBox10;
         private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.CheckBox checkBox18;
         private System.Windows.Forms.CheckBox checkBox17;
@@ -16968,11 +11820,6 @@
         private System.Windows.Forms.Label label149;
         private System.Windows.Forms.Label label148;
         private System.Windows.Forms.Label label147;
-        private System.Windows.Forms.Label label151;
-        private System.Windows.Forms.NumericUpDown numericUpDown13;
-        private System.Windows.Forms.Label label152;
-        private System.Windows.Forms.CheckBox checkBox20;
-        private System.Windows.Forms.CheckBox checkBox21;
         private System.Windows.Forms.Label label153;
         private System.Windows.Forms.Label label154;
         private System.Windows.Forms.Label label155;
@@ -17007,149 +11854,24 @@
         private System.Windows.Forms.Label label182;
         private System.Windows.Forms.Label label183;
         private System.Windows.Forms.Label label184;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label185;
-        private System.Windows.Forms.NumericUpDown numericUpDown39;
-        private System.Windows.Forms.Label label186;
-        private System.Windows.Forms.NumericUpDown numericUpDown38;
-        private System.Windows.Forms.Label label187;
-        private System.Windows.Forms.Label label189;
-        private System.Windows.Forms.Label label188;
-        private System.Windows.Forms.Label label190;
-        private System.Windows.Forms.NumericUpDown numericUpDown37;
-        private System.Windows.Forms.Label label74;
-        private System.Windows.Forms.NumericUpDown numericUpDown17;
-        private System.Windows.Forms.Label label73;
-        private System.Windows.Forms.Label label80;
-        private System.Windows.Forms.NumericUpDown numericUpDown14;
-        private System.Windows.Forms.Label label81;
-        private System.Windows.Forms.NumericUpDown numericUpDown16;
-        private System.Windows.Forms.Label label78;
-        private System.Windows.Forms.Label label79;
-        private System.Windows.Forms.NumericUpDown numericUpDown32;
-        private System.Windows.Forms.Label label119;
-        private System.Windows.Forms.Label label120;
-        private System.Windows.Forms.NumericUpDown numericUpDown31;
-        private System.Windows.Forms.Label label117;
-        private System.Windows.Forms.Label label118;
-        private System.Windows.Forms.NumericUpDown numericUpDown30;
-        private System.Windows.Forms.Label label115;
-        private System.Windows.Forms.Label label116;
-        private System.Windows.Forms.Label label38;
-        private System.Windows.Forms.Label label37;
-        private System.Windows.Forms.Label label44;
-        private System.Windows.Forms.Label label43;
-        private System.Windows.Forms.Label label50;
-        private System.Windows.Forms.Label label49;
-        private System.Windows.Forms.NumericUpDown numericUpDown24;
-        private System.Windows.Forms.Label label54;
-        private System.Windows.Forms.Label label30;
-        private System.Windows.Forms.Label label53;
-        private System.Windows.Forms.Label label32;
-        private System.Windows.Forms.NumericUpDown numericUpDown5;
-        private System.Windows.Forms.NumericUpDown numericUpDown6;
-        private System.Windows.Forms.NumericUpDown numericUpDown7;
-        private System.Windows.Forms.NumericUpDown numericUpDown9;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label label195;
-        private System.Windows.Forms.Label label106;
-        private System.Windows.Forms.NumericUpDown numericUpDown23;
-        private System.Windows.Forms.Label label105;
-        private System.Windows.Forms.NumericUpDown numericUpDown20;
-        private System.Windows.Forms.Label label100;
-        private System.Windows.Forms.Label label101;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.NumericUpDown numericUpDown4;
-        private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label191;
-        private System.Windows.Forms.Label label192;
-        private System.Windows.Forms.Label label193;
         private System.Windows.Forms.Label label194;
-        private System.Windows.Forms.NumericUpDown numericUpDown40;
         private System.Windows.Forms.NumericUpDown numericUpDown41;
         private System.Windows.Forms.Label label196;
-        private System.Windows.Forms.Label label197;
         private System.Windows.Forms.NumericUpDown numericUpDown42;
-        private System.Windows.Forms.NumericUpDown numericUpDown43;
         private System.Windows.Forms.Label label198;
-        private System.Windows.Forms.Label label199;
-        private System.Windows.Forms.Label label201;
-        private System.Windows.Forms.Label label203;
-        private System.Windows.Forms.NumericUpDown numericUpDown45;
-        private System.Windows.Forms.Label label204;
         private System.Windows.Forms.Label label205;
         private System.Windows.Forms.NumericUpDown numericUpDown46;
         private System.Windows.Forms.Label label206;
-        private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Label label207;
-        private System.Windows.Forms.Label label208;
-        private System.Windows.Forms.Label label209;
-        private System.Windows.Forms.Label label210;
-        private System.Windows.Forms.NumericUpDown numericUpDown47;
-        private System.Windows.Forms.NumericUpDown numericUpDown48;
-        private System.Windows.Forms.Label label211;
-        private System.Windows.Forms.Label label212;
-        private System.Windows.Forms.NumericUpDown numericUpDown49;
-        private System.Windows.Forms.NumericUpDown numericUpDown50;
-        private System.Windows.Forms.Label label213;
-        private System.Windows.Forms.Label label214;
-        private System.Windows.Forms.Label label215;
-        private System.Windows.Forms.Label label216;
-        private System.Windows.Forms.NumericUpDown numericUpDown51;
-        private System.Windows.Forms.Label label217;
-        private System.Windows.Forms.Label label218;
-        private System.Windows.Forms.NumericUpDown numericUpDown52;
-        private System.Windows.Forms.Label label219;
-        private System.Windows.Forms.Label label220;
-        private System.Windows.Forms.NumericUpDown numericUpDown53;
-        private System.Windows.Forms.Label label221;
         private System.Windows.Forms.NumericUpDown numericUpDown55;
         private System.Windows.Forms.Label label224;
         private System.Windows.Forms.Label label225;
         private System.Windows.Forms.NumericUpDown numericUpDown54;
         private System.Windows.Forms.Label label222;
         private System.Windows.Forms.Label label223;
-        private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.CheckBox checkBox22;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.NumericUpDown numericUpDown57;
-        private System.Windows.Forms.NumericUpDown numericUpDown58;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.NumericUpDown numericUpDown59;
-        private System.Windows.Forms.NumericUpDown numericUpDown60;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.NumericUpDown numericUpDown61;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.NumericUpDown numericUpDown62;
-        private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.NumericUpDown numericUpDown63;
-        private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.NumericUpDown numericUpDown64;
-        private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.Label label27;
-        private System.Windows.Forms.NumericUpDown numericUpDown65;
-        private System.Windows.Forms.Label label28;
-        private System.Windows.Forms.Label label63;
-        private System.Windows.Forms.NumericUpDown numericUpDown66;
-        private System.Windows.Forms.Label label64;
-        private System.Windows.Forms.NumericUpDown numericUpDown67;
-        private System.Windows.Forms.Label label228;
-        private System.Windows.Forms.Label label229;
-        private System.Windows.Forms.CheckBox checkBox23;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.NumericUpDown numericUpDown1;
         private System.Windows.Forms.Label label5;
@@ -17168,24 +11890,17 @@
         private System.Windows.Forms.NumericUpDown numericUpDown70;
         private System.Windows.Forms.Label label237;
         private System.Windows.Forms.Button button19;
-        private System.Windows.Forms.Button button22;
-        private System.Windows.Forms.Button button21;
         private System.Windows.Forms.Button button20;
         private System.Windows.Forms.Label label238;
         private System.Windows.Forms.Label label239;
         private System.Windows.Forms.Button button23;
         private System.Windows.Forms.Label label241;
-        private System.Windows.Forms.Label label247;
-        private System.Windows.Forms.Label label248;
-        private System.Windows.Forms.Label label249;
-        private System.Windows.Forms.Label label250;
         private System.Windows.Forms.Label label243;
         private System.Windows.Forms.Label label244;
         private System.Windows.Forms.Label label245;
         private System.Windows.Forms.Label label246;
         private System.Windows.Forms.Button button24;
         private System.Windows.Forms.Label label251;
-        private System.Windows.Forms.Label label254;
         private System.Windows.Forms.Label label259;
         private System.Windows.Forms.Label label260;
         private System.Windows.Forms.NumericUpDown numericUpDown73;
@@ -17205,187 +11920,24 @@
         private System.Windows.Forms.Label label262;
         private System.Windows.Forms.Label label264;
         private System.Windows.Forms.NumericUpDown numericUpDown71;
-        private System.Windows.Forms.Panel panel11;
-        private System.Windows.Forms.Label label266;
-        private System.Windows.Forms.Label label267;
-        private System.Windows.Forms.Label label268;
-        private System.Windows.Forms.Label label269;
-        private System.Windows.Forms.NumericUpDown numericUpDown74;
-        private System.Windows.Forms.NumericUpDown numericUpDown75;
-        private System.Windows.Forms.Label label270;
-        private System.Windows.Forms.Label label271;
-        private System.Windows.Forms.NumericUpDown numericUpDown76;
-        private System.Windows.Forms.NumericUpDown numericUpDown77;
-        private System.Windows.Forms.Label label272;
-        private System.Windows.Forms.Label label273;
-        private System.Windows.Forms.Label label274;
-        private System.Windows.Forms.Label label275;
-        private System.Windows.Forms.NumericUpDown numericUpDown78;
-        private System.Windows.Forms.Label label276;
-        private System.Windows.Forms.Label label277;
-        private System.Windows.Forms.NumericUpDown numericUpDown79;
-        private System.Windows.Forms.Label label278;
-        private System.Windows.Forms.Label label279;
-        private System.Windows.Forms.NumericUpDown numericUpDown80;
-        private System.Windows.Forms.Label label280;
         private System.Windows.Forms.TabPage tabPage9;
-        private System.Windows.Forms.Label label311;
-        private System.Windows.Forms.Label label312;
-        private System.Windows.Forms.Label label309;
-        private System.Windows.Forms.Label label310;
-        private System.Windows.Forms.Label label307;
-        private System.Windows.Forms.Label label308;
-        private System.Windows.Forms.Label label305;
-        private System.Windows.Forms.Label label306;
-        private System.Windows.Forms.Label label303;
-        private System.Windows.Forms.Label label304;
-        private System.Windows.Forms.Label label301;
-        private System.Windows.Forms.Label label302;
-        private System.Windows.Forms.Label label299;
-        private System.Windows.Forms.Label label300;
-        private System.Windows.Forms.Label label297;
-        private System.Windows.Forms.Label label298;
-        private System.Windows.Forms.Label label295;
-        private System.Windows.Forms.Label label296;
-        private System.Windows.Forms.Label label293;
-        private System.Windows.Forms.Label label294;
-        private System.Windows.Forms.Label label291;
-        private System.Windows.Forms.Label label292;
-        private System.Windows.Forms.Label label289;
-        private System.Windows.Forms.Label label290;
-        private System.Windows.Forms.Label label287;
-        private System.Windows.Forms.Label label288;
-        private System.Windows.Forms.Label label285;
-        private System.Windows.Forms.Label label286;
-        private System.Windows.Forms.Label label283;
-        private System.Windows.Forms.Label label284;
-        private System.Windows.Forms.Label label281;
-        private System.Windows.Forms.Label label282;
-        private System.Windows.Forms.CheckBox checkBox42;
-        private System.Windows.Forms.CheckBox checkBox41;
-        private System.Windows.Forms.CheckBox checkBox40;
-        private System.Windows.Forms.CheckBox checkBox39;
-        private System.Windows.Forms.CheckBox checkBox38;
-        private System.Windows.Forms.CheckBox checkBox37;
-        private System.Windows.Forms.CheckBox checkBox36;
-        private System.Windows.Forms.CheckBox checkBox35;
-        private System.Windows.Forms.CheckBox checkBox34;
-        private System.Windows.Forms.CheckBox checkBox33;
-        private System.Windows.Forms.CheckBox checkBox32;
-        private System.Windows.Forms.CheckBox checkBox31;
-        private System.Windows.Forms.CheckBox checkBox30;
-        private System.Windows.Forms.CheckBox checkBox29;
-        private System.Windows.Forms.CheckBox checkBox28;
-        private System.Windows.Forms.CheckBox checkBox27;
-        private System.Windows.Forms.Label label318;
-        private System.Windows.Forms.Label label317;
-        private System.Windows.Forms.Label label316;
-        private System.Windows.Forms.Label label315;
-        private System.Windows.Forms.Label label314;
-        private System.Windows.Forms.Label label313;
-        private System.Windows.Forms.Label label320;
         private System.Windows.Forms.Label label322;
         private System.Windows.Forms.Label label321;
         private System.Windows.Forms.Label label325;
         private System.Windows.Forms.Label label326;
-        private System.Windows.Forms.NumericUpDown numericUpDown81;
-        private System.Windows.Forms.Label label327;
-        private System.Windows.Forms.Label label328;
         private System.Windows.Forms.Label label329;
         private System.Windows.Forms.Label label330;
-        private System.Windows.Forms.Label label331;
-        private System.Windows.Forms.Label label332;
         private System.Windows.Forms.NumericUpDown numericUpDown82;
         private System.Windows.Forms.Label label333;
         private System.Windows.Forms.Label label334;
-        private System.Windows.Forms.NumericUpDown numericUpDown83;
-        private System.Windows.Forms.Label label336;
-        private System.Windows.Forms.Button button25;
-        private System.Windows.Forms.Button button28;
-        private System.Windows.Forms.NumericUpDown numericUpDown86;
-        private System.Windows.Forms.Label label338;
-        private System.Windows.Forms.Button button27;
-        private System.Windows.Forms.NumericUpDown numericUpDown85;
-        private System.Windows.Forms.Label label337;
-        private System.Windows.Forms.Button button26;
-        private System.Windows.Forms.NumericUpDown numericUpDown84;
-        private System.Windows.Forms.Label label335;
-        private System.Windows.Forms.Panel panel12;
-        private System.Windows.Forms.Label label339;
-        private System.Windows.Forms.Label label340;
-        private System.Windows.Forms.NumericUpDown numericUpDown87;
-        private System.Windows.Forms.Label label341;
-        private System.Windows.Forms.Button button29;
-        private System.Windows.Forms.Label label344;
-        private System.Windows.Forms.Label label345;
-        private System.Windows.Forms.NumericUpDown numericUpDown88;
-        private System.Windows.Forms.Panel panel13;
-        private System.Windows.Forms.Label label347;
-        private System.Windows.Forms.Label label348;
-        private System.Windows.Forms.NumericUpDown numericUpDown89;
-        private System.Windows.Forms.NumericUpDown numericUpDown91;
-        private System.Windows.Forms.Label label351;
-        private System.Windows.Forms.Label label352;
-        private System.Windows.Forms.Label label353;
-        private System.Windows.Forms.NumericUpDown numericUpDown93;
-        private System.Windows.Forms.Label label355;
-        private System.Windows.Forms.Label label356;
-        private System.Windows.Forms.Label label357;
-        private System.Windows.Forms.NumericUpDown numericUpDown94;
-        private System.Windows.Forms.Label label358;
-        private System.Windows.Forms.Label label359;
-        private System.Windows.Forms.NumericUpDown numericUpDown95;
-        private System.Windows.Forms.Label label360;
-        private System.Windows.Forms.NumericUpDown numericUpDown90;
-        private System.Windows.Forms.Label label346;
-        private System.Windows.Forms.Label label349;
-        private System.Windows.Forms.NumericUpDown numericUpDown92;
-        private System.Windows.Forms.Label label350;
-        private System.Windows.Forms.Label label354;
-        private System.Windows.Forms.Label label362;
-        private System.Windows.Forms.NumericUpDown numericUpDown96;
-        private System.Windows.Forms.Label label363;
-        private System.Windows.Forms.Label label361;
-        private System.Windows.Forms.Label label364;
-        private System.Windows.Forms.NumericUpDown numericUpDown97;
-        private System.Windows.Forms.Label label365;
         private System.Windows.Forms.Button button30;
         private System.Windows.Forms.Label label366;
         private System.Windows.Forms.Label label367;
-        private System.Windows.Forms.CheckBox checkBox45;
         private System.Windows.Forms.Panel panel16;
         private System.Windows.Forms.CheckBox checkBox47;
-        private System.Windows.Forms.Label label374;
-        private System.Windows.Forms.Label label375;
-        private System.Windows.Forms.Label label376;
-        private System.Windows.Forms.Label label377;
-        private System.Windows.Forms.Label label378;
-        private System.Windows.Forms.Label label379;
         private System.Windows.Forms.Label label380;
         private System.Windows.Forms.Label label381;
-        private System.Windows.Forms.Label label382;
-        private System.Windows.Forms.Label label383;
-        private System.Windows.Forms.NumericUpDown numericUpDown98;
-        private System.Windows.Forms.CheckBox checkBox50;
         private System.Windows.Forms.CheckBox checkBox51;
-        private System.Windows.Forms.CheckBox checkBox52;
-        private System.Windows.Forms.Button button32;
-        private System.Windows.Forms.Label label384;
-        private System.Windows.Forms.Label label385;
-        private System.Windows.Forms.NumericUpDown numericUpDown99;
-        private System.Windows.Forms.Button button33;
-        private System.Windows.Forms.Button button34;
-        private System.Windows.Forms.CheckBox checkBox53;
-        private System.Windows.Forms.Label label390;
-        private System.Windows.Forms.NumericUpDown numericUpDown102;
-        private System.Windows.Forms.Label label391;
-        private System.Windows.Forms.Label label388;
-        private System.Windows.Forms.NumericUpDown numericUpDown101;
-        private System.Windows.Forms.Label label389;
-        private System.Windows.Forms.Label label392;
-        private System.Windows.Forms.NumericUpDown numericUpDown103;
-        private System.Windows.Forms.Label label393;
-        private System.Windows.Forms.ComboBox comboBox6;
         private System.Windows.Forms.NumericUpDown numericUpDown104;
         private System.Windows.Forms.Label label396;
         private System.Windows.Forms.Label label397;
@@ -17397,9 +11949,6 @@
         private System.Windows.Forms.Label label400;
         private System.Windows.Forms.Label label401;
         private System.Windows.Forms.ComboBox comboBox8;
-        private System.Windows.Forms.Label label406;
-        private System.Windows.Forms.Label label319;
-        private System.Windows.Forms.Label label407;
         private System.Windows.Forms.Label label408;
         private System.Windows.Forms.Panel panel17;
         private System.Windows.Forms.Label label416;
@@ -17410,42 +11959,8 @@
         private System.Windows.Forms.Label label423;
         private System.Windows.Forms.Label label421;
         private System.Windows.Forms.Label label426;
-        private System.Windows.Forms.Panel panel24;
-        private System.Windows.Forms.Label label433;
-        private System.Windows.Forms.Panel panel23;
-        private System.Windows.Forms.Label label432;
-        private System.Windows.Forms.Panel panel22;
-        private System.Windows.Forms.Label label431;
-        private System.Windows.Forms.Panel panel21;
-        private System.Windows.Forms.Label label429;
-        private System.Windows.Forms.NumericUpDown numericUpDown112;
-        private System.Windows.Forms.Label label440;
-        private System.Windows.Forms.Label label441;
-        private System.Windows.Forms.NumericUpDown numericUpDown111;
-        private System.Windows.Forms.Label label438;
-        private System.Windows.Forms.Label label439;
-        private System.Windows.Forms.NumericUpDown numericUpDown110;
-        private System.Windows.Forms.Label label436;
-        private System.Windows.Forms.Label label437;
-        private System.Windows.Forms.NumericUpDown numericUpDown109;
-        private System.Windows.Forms.Label label434;
-        private System.Windows.Forms.Label label435;
-        private System.Windows.Forms.Panel panel25;
-        private System.Windows.Forms.Label label442;
-        private System.Windows.Forms.Label label445;
-        private System.Windows.Forms.Label label446;
-        private System.Windows.Forms.Label label443;
-        private System.Windows.Forms.Label label444;
         private System.Windows.Forms.Button button36;
-        private System.Windows.Forms.Button button37;
-        private System.Windows.Forms.Label label447;
         private System.Windows.Forms.Panel panel26;
-        private System.Windows.Forms.Label label450;
-        private System.Windows.Forms.NumericUpDown numericUpDown118;
-        private System.Windows.Forms.Label label451;
-        private System.Windows.Forms.Label label452;
-        private System.Windows.Forms.NumericUpDown numericUpDown119;
-        private System.Windows.Forms.Label label453;
         private System.Windows.Forms.Label label454;
         private System.Windows.Forms.Label label455;
         private System.Windows.Forms.NumericUpDown numericUpDown116;
@@ -17455,17 +11970,10 @@
         private System.Windows.Forms.Label label458;
         private System.Windows.Forms.NumericUpDown numericUpDown115;
         private System.Windows.Forms.Label label459;
-        private System.Windows.Forms.Label label460;
-        private System.Windows.Forms.NumericUpDown numericUpDown120;
-        private System.Windows.Forms.Label label461;
-        private System.Windows.Forms.Label label462;
-        private System.Windows.Forms.NumericUpDown numericUpDown121;
-        private System.Windows.Forms.Label label463;
         private System.Windows.Forms.CheckBox checkBox57;
         private System.Windows.Forms.CheckBox checkBox58;
         private System.Windows.Forms.Panel panel27;
         private System.Windows.Forms.Label label473;
-        private System.Windows.Forms.CheckBox checkBox60;
         private System.Windows.Forms.Label label465;
         private System.Windows.Forms.NumericUpDown numericUpDown127;
         private System.Windows.Forms.Label label466;
@@ -17512,12 +12020,6 @@
         private System.Windows.Forms.RadioButton radioButton5;
         private System.Windows.Forms.RadioButton radioButton4;
         private System.Windows.Forms.Label label472;
-        private System.Windows.Forms.Label label386;
-        private System.Windows.Forms.NumericUpDown numericUpDown100;
-        private System.Windows.Forms.Label label387;
-        private System.Windows.Forms.Label label200;
-        private System.Windows.Forms.NumericUpDown numericUpDown44;
-        private System.Windows.Forms.Label label202;
         private System.Windows.Forms.Panel panel35;
         private System.Windows.Forms.CheckBox checkBox49;
         private System.Windows.Forms.Label label478;
@@ -17658,15 +12160,6 @@
         private System.Windows.Forms.Label label557;
         private System.Windows.Forms.Button button41;
         private System.Windows.Forms.Button button42;
-        private System.Windows.Forms.Panel panel15;
-        private System.Windows.Forms.Label label369;
-        private System.Windows.Forms.CheckBox checkBox46;
-        private System.Windows.Forms.Label label394;
-        private System.Windows.Forms.CheckBox checkBox48;
-        private System.Windows.Forms.CheckBox checkBox11;
-        private System.Windows.Forms.Label label395;
-        private System.Windows.Forms.CheckBox checkBox24;
-        private System.Windows.Forms.CheckBox checkBox43;
         private System.Windows.Forms.Label label559;
         private System.Windows.Forms.Label label560;
         private System.Windows.Forms.NumericUpDown numericUpDown143;
@@ -17887,7 +12380,6 @@
         private System.Windows.Forms.Label label676;
         private System.Windows.Forms.Label label677;
         private System.Windows.Forms.Label label678;
-        private System.Windows.Forms.CheckBox checkBox88;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Button button50;
         private System.Windows.Forms.CheckBox checkBox89;
@@ -17904,7 +12396,6 @@
         private System.Windows.Forms.Panel panel61;
         private System.Windows.Forms.NumericUpDown numericUpDown176;
         private System.Windows.Forms.Label label685;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
         private System.Windows.Forms.NumericUpDown numericUpDown181;
         private System.Windows.Forms.Label label694;
         private System.Windows.Forms.Label label695;
@@ -18140,16 +12631,6 @@
         private System.Windows.Forms.NumericUpDown numericUpDown210;
         private System.Windows.Forms.Label label833;
         private System.Windows.Forms.Label label834;
-        private System.Windows.Forms.Panel panel20;
-        private System.Windows.Forms.Label label430;
-        private System.Windows.Forms.Label label413;
-        private System.Windows.Forms.Label label412;
-        private System.Windows.Forms.Label label411;
-        private System.Windows.Forms.Button button35;
-        private System.Windows.Forms.Label label410;
-        private System.Windows.Forms.NumericUpDown numericUpDown107;
-        private System.Windows.Forms.Label label405;
-        private System.Windows.Forms.Label label404;
         private System.Windows.Forms.Label label839;
         private System.Windows.Forms.Label label840;
         private System.Windows.Forms.Label label837;
@@ -18290,6 +12771,12 @@
         private System.Windows.Forms.ComboBox comboBox25;
         private System.Windows.Forms.CheckBox checkBox61;
         private System.Windows.Forms.ComboBox comboBox26;
+        private System.Windows.Forms.Label label813;
+        private System.Windows.Forms.CheckBox checkBox88;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
     }
 }
 

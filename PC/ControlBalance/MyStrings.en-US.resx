@@ -402,4 +402,7 @@
   <data name="SpeedLimitSin5kHz" xml:space="preserve">
     <value>Speed with sin control is limited with 20 km/h. Switching to a trapezoid at a higher speed.</value>
   </data>
+  <data name="CloseOpen" xml:space="preserve">
+    <value>Close application and start it again.</value>
+  </data>
 </root>

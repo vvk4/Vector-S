@@ -402,4 +402,7 @@
   <data name="SpeedLimitSin5kHz" xml:space="preserve">
     <value>Скорость на синусе ограничена 20км/ч. Если выше, то переключение на трапецию.</value>
   </data>
+  <data name="CloseOpen" xml:space="preserve">
+    <value>Для вступления изменений в силу закройте и заново откройте приложение</value>
+  </data>
 </root>

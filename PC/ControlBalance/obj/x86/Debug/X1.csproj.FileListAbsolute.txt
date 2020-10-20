@@ -66,3 +66,13 @@ E:\prog\X1\VectorGIT\Vector-S\PC\ControlBalance\obj\x86\Debug\X1.exe.manifest
 E:\prog\X1\VectorGIT\Vector-S\PC\ControlBalance\obj\x86\Debug\X1.application
 E:\prog\X1\VectorGIT\Vector-S\PC\ControlBalance\obj\x86\Debug\X1.exe
 E:\prog\X1\VectorGIT\Vector-S\PC\ControlBalance\obj\x86\Debug\X1.pdb
+E:\prog\X1\VectorGIT\Vector-S\PC\ControlBalance\bin\Debug\ru-RU\X1.resources.dll
+E:\prog\X1\VectorGIT\Vector-S\PC\ControlBalance\bin\Debug\sq\X1.resources.dll
+E:\prog\X1\VectorGIT\Vector-S\PC\ControlBalance\obj\x86\Debug\X1.csprojAssemblyReference.cache
+E:\prog\X1\VectorGIT\Vector-S\PC\ControlBalance\obj\x86\Debug\ControlBalance.Form1.ru-RU.resources
+E:\prog\X1\VectorGIT\Vector-S\PC\ControlBalance\obj\x86\Debug\ControlBalance.Form1.sq.resources
+E:\prog\X1\VectorGIT\Vector-S\PC\ControlBalance\obj\x86\Debug\ru-RU\X1.resources.dll
+E:\prog\X1\VectorGIT\Vector-S\PC\ControlBalance\obj\x86\Debug\sq\X1.resources.dll
+E:\prog\X1\VectorGIT\Vector-S\PC\ControlBalance\bin\Debug\ru\X1.resources.dll
+E:\prog\X1\VectorGIT\Vector-S\PC\ControlBalance\obj\x86\Debug\ControlBalance.Form1.ru.resources
+E:\prog\X1\VectorGIT\Vector-S\PC\ControlBalance\obj\x86\Debug\ru\X1.resources.dll
