@@ -19,6 +19,8 @@ dsPIC33EP512MU810 project (MPLAB.X IDE v5.25, compiler XC16 v.1.41):
                                           
 PC application (Visual Studio 2019, C#):  PC folder
 
+PC application installer: Dist folder
+
 Instructions and pictures:               Doc folder
 
 Поддержать проект: https://sobe.ru/na/vektor_controller
