@@ -1,4 +1,7 @@
 # Vector-S
+
+Copyright 2015-2020 by Viacheslav Kulakov       vvk43210@gmail.com   
+
 The controller Vector-S is intended to drive motor for monowheel and ebike. Two controllers can synchronously drive two motors and can work with joystick control or as balancing scooter controller.
 
 Files:
