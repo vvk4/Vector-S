@@ -2621,11 +2621,7 @@ unsigned char SlowStrtSpd, AntiPolicePower;
 //__eds__ unsigned char TSTMass1[17000]; __attribute__ ((eds));
 
 int main(void) {
-
-
-
-    //  int i,j=sizeof(tab_sin);
-    //    i=sizeof(sinetable);
+        
 #if !defined VECTOR
 #if defined ISOLATED    
     KEY_BT = 0;
@@ -2859,7 +2855,7 @@ void SegMain(void) {
 
 
     //    TST_PIN=1;
-    Mgnovenniy = 0;
+    
 
     if (MODE_LED_Cnt)
         MODE_LED_Cnt--;
@@ -5709,10 +5705,11 @@ void InitSegAll(void) {
 
     CNT_U = 500;
 
+    /*
 #if defined HighDataSpdUART
     T6_7Init();
 #endif
-
+*/
 
     InitPort_U4();
     UARTInit_U4();
@@ -6113,15 +6110,23 @@ void InitSegAll(void) {
 
 
 
+# if !defined TRIS_TST_PIN    
     //    if (_2WDMode)
     {
         InitPort_U3();
         UARTInit_U3();
     }
+#else
+        TRIS_TST_PIN=0;
+#endif
+        
+        
     CalibrateJOYSTICK = 1;
     InitSensorsNear();
     TestU3ChangeSpd = 1;
 
+    HighDataSpdUART=0;
+    
     InitReady = 1;
 
 
@@ -8646,10 +8651,10 @@ void ReceiveUDP(void) {
         HvPacketU4_FL = 0;
         Cmmd = RecBytes[1];
     }
-#if defined HighDataSpdUART
+/*#if defined HighDataSpdUART
     Locked = 0;
 #endif
-
+*/
     if (Locked) {
         if (Cmmd != 113)
             Nop();
@@ -8777,6 +8782,20 @@ void ReceiveUDP(void) {
                     {
                         SoundNum = 12;
                         LightMode = RecBytes[3];
+                        OptionsToMass();
+                        MustTrmFlashMass = 1;
+                        break;
+                    }
+                    case 208:
+                    {
+                        HighDataSpdUART = 1;
+                        OptionsToMass();
+                        MustTrmFlashMass = 1;
+                        break;
+                    }
+                    case 209:
+                    {
+                        HighDataSpdUART = 0;
                         OptionsToMass();
                         MustTrmFlashMass = 1;
                         break;
@@ -11720,7 +11739,7 @@ void ReceiveUDP(void) {
 
                     case 55:
                         ShortCircuit = 1;
-                        Mgnovenniy = 0;
+//                        Mgnovenniy = 0;
                         VectorInit();
                         Comparator2_Init();
                         OptionsToMass();
@@ -11729,7 +11748,7 @@ void ReceiveUDP(void) {
 
                     case 56:
                         ShortCircuit = 0;
-                        Mgnovenniy = 1;
+  //                      Mgnovenniy = 1;
                         VectorInit();
                         Comparator2_Init();
                         OptionsToMass();
@@ -11738,7 +11757,7 @@ void ReceiveUDP(void) {
 
                     case 57:
                         ShortCircuit = 0;
-                        Mgnovenniy = 0;
+    //                    Mgnovenniy = 0;
                         VectorInit();
                         Comparator2_Init();
                         OptionsToMass();
@@ -13177,6 +13196,20 @@ void ReceiveUDP(void) {
                         MustTrmFlashMass = 1;
                         break;
                     }
+                    case 208:
+                    {
+                        HighDataSpdUART = 1;
+                        OptionsToMass();
+                        MustTrmFlashMass = 1;
+                        break;
+                    }
+                    case 209:
+                    {
+                        HighDataSpdUART = 0;
+                        OptionsToMass();
+                        MustTrmFlashMass = 1;
+                        break;
+                    }
 
 
                 }
@@ -13993,7 +14026,7 @@ unsigned char ReadOptions1(void) {
 }
 
 void OptionsToMass(void) {
-    Mgnovenniy = 0;
+    //Mgnovenniy = 0;
 
     int Tm = (int) KpMustBe;
     FlashMass[0] = 0;
@@ -16238,7 +16271,7 @@ void MassToOptions2(void) {
     SpdStartLevelFl = ((float) SpdStartLevel) / ImpToKmH1_t;
     CurrentMaxCurrentOnlyWork = ((float) CurrentMaxCurrentOnly * 1000/**Crr1Corr*/) / CurrPerDigit;
 
-    Mgnovenniy = 0;
+    //Mgnovenniy = 0;
 }
 
 void Comparator3_Init(void) {
@@ -18441,6 +18474,7 @@ void TrmDataPacketHC05(void) {
         return;
     }
 
+        TST_PIN=!TST_PIN;
 
     if (NoAutoTrm) {
         if (!MustSendDataPacket)
@@ -18469,23 +18503,39 @@ void TrmDataPacketHC05(void) {
 
     HC05TrmMass[3] = 5; //COMMAND
 
-#if defined HighDataSpdUART
+    if (HighDataSpdUART)
+    {
+        
+        
+        
+    HC05TrmMass[CntBt++] = (unsigned char)CntSamples;
+//    HC05TrmMass[CntBt++] = CntSamples >> 8;
+//    HC05TrmMass[CntBt++] = CntSamples >> 16;
+//    HC05TrmMass[CntBt++] = CntSamples >> 24;
+    Tmp = (int) (AlfaXRes * 100);
+    HC05TrmMass[CntBt++] = Tmp;
+    HC05TrmMass[CntBt++] = Tmp >> 8;
+
+    Tmp = (int) (AlfaYRes * 100);
+    HC05TrmMass[CntBt++] = Tmp;
+    HC05TrmMass[CntBt++] = Tmp >> 8;
+
+    Tmp = (int) EpLog;
+    HC05TrmMass[CntBt++] = Tmp;
+    HC05TrmMass[CntBt++] = Tmp >> 8;
+
+    Tmp = (int) EiLog;
+    HC05TrmMass[CntBt++] = Tmp;
+    HC05TrmMass[CntBt++] = Tmp >> 8;
+
+    Tmp = (int) EdLog;
+    HC05TrmMass[CntBt++] = Tmp;
+    HC05TrmMass[CntBt++] = Tmp >> 8;
 
     if (PWM1Plus)
         Tmp = PWM1Show; //PWM1;        8
     else
         Tmp = -PWM1Show;
-    HC05TrmMass[CntBt++] = Tmp;
-    HC05TrmMass[CntBt++] = Tmp >> 8;
-
-    //    HC05TrmMass[CntBt++] = Theta1CntPWMSND;
-    HC05TrmMass[CntBt++] = Phase1Period1Show;
-    HC05TrmMass[CntBt++] = Phase1Period1Show >> 8;
-    HC05TrmMass[CntBt++] = Phase1Period1Show >> 16;
-    HC05TrmMass[CntBt++] = Phase1Period1Show >> 24;
-
-
-    Tmp = Phase1Period1Up;
     HC05TrmMass[CntBt++] = Tmp;
     HC05TrmMass[CntBt++] = Tmp >> 8;
 
@@ -18496,7 +18546,8 @@ void TrmDataPacketHC05(void) {
     MustTrmHC05 = 1;
 
     return;
-#endif    
+    }
+
 
 
 
@@ -20662,7 +20713,7 @@ void __attribute__((interrupt, auto_psv)) _T5Interrupt(void) {
 
 void T6_7Init(void) {
 
-#if defined HighDataSpdUART
+/*#if defined HighDataSpdUART
     TMR6 = 0;
     T6CON = 0x8000;
     PR6 = 0xffff; //33333; //500 Hz Int
@@ -20670,6 +20721,7 @@ void T6_7Init(void) {
     IPC11bits.T6IP = 7;
     IEC2bits.T6IE = 1;
 #else
+    */
     T7CONbits.TON = 0; // Stop any 16-bit Timer3 operation
     T6CONbits.TON = 0; // Stop any 16/32-bit Timer3 operation
     T6CONbits.T32 = 1; // Enable 32-bit Timer mode
@@ -20685,7 +20737,7 @@ void T6_7Init(void) {
     IEC3bits.T7IE = 1; // Enable Timer3 interrupt
     T6CONbits.TON = 1; // Start 32-bit Timer
 
-#endif
+//#endif
 
 }
 
@@ -20697,11 +20749,11 @@ void __attribute__((interrupt, auto_psv)) _T6Interrupt(void) {
 
 void __attribute__((interrupt, auto_psv)) _T7Interrupt(void) {
     IFS3bits.T7IF = 0;
-
+/*
 #if defined HighDataSpdUART
     return;
 #endif
-
+*/
 
 
     if (Sensorless) {
@@ -20871,7 +20923,7 @@ void __attribute__((interrupt, auto_psv)) _T8Interrupt(void) {
 }
 
 void InitPWM_Vector(void) {
-    Mgnovenniy = 0;
+    //Mgnovenniy = 0;
 
     /* Set PWM Period on Primary Time Base */
     PTPER = 6000;
@@ -20941,7 +20993,7 @@ void InitPWM_Vector(void) {
                 IOCON2bits.FLTDAT = 0b00;
                 IOCON3bits.FLTDAT = 0b00;
             } else {
-                if (Mgnovenniy) {
+                if (0) {
                     FCLCON1bits.FLTSRC = 0b01001;
                     FCLCON2bits.FLTSRC = 0b01001;
                     FCLCON3bits.FLTSRC = 0b01001;

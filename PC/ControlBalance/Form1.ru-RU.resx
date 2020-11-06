@@ -148,9 +148,6 @@
   <data name="numericUpDown15.Location" type="System.Drawing.Point, System.Drawing">
     <value>43, 40</value>
   </data>
-  <data name="button8.Location" type="System.Drawing.Point, System.Drawing">
-    <value>153, 234</value>
-  </data>
   <data name="label91.Location" type="System.Drawing.Point, System.Drawing">
     <value>10, 157</value>
   </data>
@@ -159,9 +156,6 @@
   </data>
   <data name="label95.Location" type="System.Drawing.Point, System.Drawing">
     <value>11, 197</value>
-  </data>
-  <data name="button9.Location" type="System.Drawing.Point, System.Drawing">
-    <value>17, 234</value>
   </data>
   <data name="label52.Location" type="System.Drawing.Point, System.Drawing">
     <value>58, 3</value>
@@ -182,7 +176,7 @@
     <value>Мин. напряжение V:</value>
   </data>
   <data name="label109.Location" type="System.Drawing.Point, System.Drawing">
-    <value>44, 265</value>
+    <value>247, 265</value>
   </data>
   <data name="label109.Size" type="System.Drawing.Size, System.Drawing">
     <value>107, 25</value>
@@ -191,7 +185,7 @@
     <value>Одометр:</value>
   </data>
   <data name="label110.Location" type="System.Drawing.Point, System.Drawing">
-    <value>159, 265</value>
+    <value>362, 265</value>
   </data>
   <data name="tabPage3.Text" xml:space="preserve">
     <value>Связь</value>
@@ -5704,20 +5698,32 @@
   <data name="label558.Location" type="System.Drawing.Point, System.Drawing">
     <value>109, 44</value>
   </data>
+  <data name="button24.Location" type="System.Drawing.Point, System.Drawing">
+    <value>273, 489</value>
+  </data>
   <data name="button24.Text" xml:space="preserve">
     <value>Очистить</value>
+  </data>
+  <data name="button46.Location" type="System.Drawing.Point, System.Drawing">
+    <value>266, 584</value>
   </data>
   <data name="button46.Text" xml:space="preserve">
     <value>Версия</value>
   </data>
+  <data name="label509.Location" type="System.Drawing.Point, System.Drawing">
+    <value>353, 620</value>
+  </data>
   <data name="label246.Location" type="System.Drawing.Point, System.Drawing">
-    <value>378, 290</value>
+    <value>233, 451</value>
   </data>
   <data name="label246.Size" type="System.Drawing.Size, System.Drawing">
     <value>121, 24</value>
   </data>
   <data name="label246.Text" xml:space="preserve">
     <value>Реген  (A*ч):</value>
+  </data>
+  <data name="label508.Location" type="System.Drawing.Point, System.Drawing">
+    <value>237, 619</value>
   </data>
   <data name="label508.Size" type="System.Drawing.Size, System.Drawing">
     <value>93, 29</value>
@@ -5738,6 +5744,9 @@
   <data name="label239.Text" xml:space="preserve">
     <value>Калибровочное значение:</value>
   </data>
+  <data name="label245.Location" type="System.Drawing.Point, System.Drawing">
+    <value>171, 426</value>
+  </data>
   <data name="label245.Size" type="System.Drawing.Size, System.Drawing">
     <value>183, 24</value>
   </data>
@@ -5749,6 +5758,12 @@
   </data>
   <data name="button23.Text" xml:space="preserve">
     <value>Калибровка нуля тока</value>
+  </data>
+  <data name="label244.Location" type="System.Drawing.Point, System.Drawing">
+    <value>358, 448</value>
+  </data>
+  <data name="label243.Location" type="System.Drawing.Point, System.Drawing">
+    <value>358, 423</value>
   </data>
   <data name="label421.Location" type="System.Drawing.Point, System.Drawing">
     <value>10, 13</value>
@@ -5769,7 +5784,7 @@
     <value>Ток батареи:</value>
   </data>
   <data name="label367.Location" type="System.Drawing.Point, System.Drawing">
-    <value>25, 290</value>
+    <value>228, 290</value>
   </data>
   <data name="label367.Size" type="System.Drawing.Size, System.Drawing">
     <value>126, 25</value>
@@ -5778,10 +5793,10 @@
     <value>Дистанция:</value>
   </data>
   <data name="label366.Location" type="System.Drawing.Point, System.Drawing">
-    <value>159, 290</value>
+    <value>362, 290</value>
   </data>
   <data name="button30.Location" type="System.Drawing.Point, System.Drawing">
-    <value>44, 321</value>
+    <value>248, 321</value>
   </data>
   <data name="button30.Text" xml:space="preserve">
     <value>Сброс дистанции:</value>
@@ -7052,14 +7067,8 @@
   <data name="checkBox75.Location" type="System.Drawing.Point, System.Drawing">
     <value>56, 77</value>
   </data>
-  <data name="checkBox76.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 9.75pt</value>
-  </data>
   <data name="checkBox76.Location" type="System.Drawing.Point, System.Drawing">
     <value>75, 23</value>
-  </data>
-  <data name="checkBox76.Size" type="System.Drawing.Size, System.Drawing">
-    <value>120, 20</value>
   </data>
   <data name="label573.Location" type="System.Drawing.Point, System.Drawing">
     <value>42, 41</value>
@@ -7069,12 +7078,6 @@
   </data>
   <data name="numericUpDown152.Location" type="System.Drawing.Point, System.Drawing">
     <value>164, 58</value>
-  </data>
-  <data name="label812.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt</value>
-  </data>
-  <data name="label812.Size" type="System.Drawing.Size, System.Drawing">
-    <value>103, 20</value>
   </data>
   <data name="tabPage12.Text" xml:space="preserve">
     <value>Моно ПИД</value>

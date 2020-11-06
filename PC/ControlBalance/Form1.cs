@@ -25,8 +25,9 @@ namespace ControlBalance
 
         Form F2;
         uint  StartCNT=30;
-
+        String LogFileString;
         byte LightMode, Crr1Corr, PWMSignal, HallsLines, StopIfPWM100Time, CntKdSwitchCONST, PWMkHz;
+        short EpLog, EiLog, EdLog;
         ushort LightSensorThresholdLo, LightSensorThresholdHi, CurrentMaxCurrentOnly, K_PWM_Nastr, SpdStartLevel, RegenOffMem, KpKpDeadZoneMem, KiKpDeadZoneMem, TimeHumanSensorOff;
         ushort FaultStatus1Res, VGSStatus2Res, KiMax, DeadZoneHandleBarSegway, PWMChangedThreshold;
         short JoystickCalibrX, JoystickCalibrY, JoistickDeadZone, KpSlowSpeed, KiKpMustBe, KRotMustBe, KpRotMustBe, KiRotMustBe, Eid, KdNoManR, KpDeadZone,PWMSignalTimer;
@@ -58,10 +59,12 @@ namespace ControlBalance
         int DiffAlfaConstL, DiffAlfaConstH, TiltZadState5, Temperature;
         int BeepPauseConstAlm, BzOnCntSeriaConstAlm, CntSingleBeepAlm;
         int  KpSPD, ZeroCurr1, EpCurr1;
+        bool HeaderOk = false;
 
 
         byte HallDelay1MaxSPD_F, HallDelay1MaxSPD_B, HallDelayMaxSPD, OCP_DEG, VDS_LVL, TemperatureTYPE_FETs;
 
+        StreamWriter sw;
 
 
         public byte SensOrder1;
@@ -630,6 +633,8 @@ namespace ControlBalance
         const byte SEND_StopIfPWM100Time = 205;
         const byte SEND_CntKdSwitchCONST = 206;
         const byte SEND_PWMSignalTimer = 207;
+        const byte SEND_LogOn = 208;
+        const byte SEND_LogOff = 209;
 
         const bool REV1 = false;
         const String Version = "4.05";//01.11.2020
@@ -2423,8 +2428,10 @@ namespace ControlBalance
                         checkBox77.Checked = false;
 
 
-                        
-                        
+
+
+
+
                     if ((StatFlags2 & 0x1000) == 0x1000)
                     {
                         checkBox80.Checked = true;
@@ -2531,6 +2538,10 @@ namespace ControlBalance
                     }
 
 
+                    if ((StatFlgs3 & 0x0004) == 0x0004)
+                        checkBox1.Checked = true;
+                    else
+                        checkBox1.Checked = false;
 
 
                     if ((StatFlgs3 & 0x1000) == 0x1000)
@@ -4083,16 +4094,6 @@ namespace ControlBalance
 
                     if (ShowSer == 1)
                     {
-
-
-                        //chart1.Series[7].Enabled = true;
-                        //chart1.Series[5].Enabled = true;
-                        //chart1.Series[6].Enabled = true;
-
-                        //chart1.Series[7].Points.AddXY(CntSamples, Phase1Period1);
-                        //chart1.Series[5].Points.AddXY(CntSamples, Phase1Period2);
-                        //chart1.Series[6].Points.AddXY(CntSamples, Phase1Period3);
-
                         int comboBox3Num;
 
 
@@ -4168,783 +4169,8 @@ namespace ControlBalance
 
 
 
+                        GraphSeries();
 
-
-                        if (checkBox16.Checked)
-                        {
-
-
-                            switch (comboBox3.SelectedIndex)
-                            {
-                                case 0:
-                                    comboBox3Num = 26;
-                                    break;
-                                case 1:
-                                    comboBox3Num = 27;
-                                    break;
-                                case 2:
-                                    comboBox3Num = 51;
-                                    break;
-                                case 3:
-                                    comboBox3Num = 43;
-                                    break;
-                                case 4:
-                                    comboBox3Num = 7;
-                                    break;
-                                case 5:
-                                    comboBox3Num = 9;
-                                    break;
-                                case 6:
-                                    comboBox3Num = 15;
-                                    break;
-                                case 7:
-                                    comboBox3Num = 11;
-                                    break;
-                                case 8:
-                                    comboBox3Num = 41;
-                                    break;
-                                case 9:
-                                    comboBox3Num = 30;
-                                    break;
-                                case 10:
-                                    comboBox3Num = 31;
-                                    break;
-                                case 11:
-                                    comboBox3Num = 32;
-                                    break;
-                                case 12:
-                                    comboBox3Num = 35;
-                                    break;
-                                case 13:
-                                    comboBox3Num = 36;
-                                    break;
-                                case 14:
-                                    comboBox3Num = 37;
-                                    break;
-                                case 15:
-                                    comboBox3Num = 1;
-                                    break;
-                                case 16:
-                                    comboBox3Num = 0;
-                                    break;
-                                case 17:
-                                    comboBox3Num = 14;
-                                    break;
-                                case 18:
-                                    comboBox3Num = 22;
-                                    break;
-                                case 19:
-                                    comboBox3Num = 40;
-                                    break;
-                                case 20:
-                                    comboBox3Num = 61;
-                                    break;
-
-                                default:
-                                    comboBox3Num = 1;
-                                    break;
-                            }
-
-
-                            //Газ с ручки газа
-                            //Газ после коррекции
-                            //ШИМ
-                            //Ток
-                            //Напряжение батареи
-                            //Скорость относительная
-                            //Скорость в км/ч
-
-
-                            switch (comboBox3Num)
-                            {
-                                case 0:
-                                    chart1.Series[0].Points.AddXY(CntSamples, AlfaXRes);
-                                    break;
-                                case 1:
-                                    chart1.Series[0].Points.AddXY(CntSamples, AlfaYRes);
-                                    break;
-                                case 2:
-                                    chart1.Series[0].Points.AddXY(CntSamples, GyroX);
-                                    break;
-                                case 3:
-                                    chart1.Series[0].Points.AddXY(CntSamples, TiltXRes);
-                                    break;
-                                case 4:
-                                    chart1.Series[0].Points.AddXY(CntSamples, TiltYRes);
-                                    break;
-                                case 5:
-                                    chart1.Series[0].Points.AddXY(CntSamples, Ep);
-                                    break;
-                                case 6:
-                                    chart1.Series[0].Points.AddXY(CntSamples, Ei);
-                                    break;
-                                case 7:
-                                    chart1.Series[0].Points.AddXY(CntSamples, PWM1);
-                                    break;
-                                case 8:
-                                    //chart1.Series[0].Points.AddXY(CntSamples, PWM2);
-                                    break;
-                                case 9:
-                                    chart1.Series[0].Points.AddXY(CntSamples, Cr1 / 1000);
-                                    break;
-                                case 10:
-                                    //chart1.Series[0].Points.AddXY(CntSamples, Cr2);
-                                    break;
-                                case 11:
-                                    chart1.Series[0].Points.AddXY(CntSamples, Spd1Res);
-                                    break;
-                                case 12:
-                                    //chart1.Series[0].Points.AddXY(CntSamples, Spd2Res);
-                                    break;
-                                case 13:
-                                    //chart1.Series[0].Points.AddXY(CntSamples, SpdAv);
-                                    break;
-                                case 14:
-                                    chart1.Series[0].Points.AddXY(CntSamples, Kp);
-                                    break;
-                                case 15:
-                                    chart1.Series[0].Points.AddXY(CntSamples, UBT);
-                                    break;
-                                case 16:
-                                    chart1.Series[0].Points.AddXY(CntSamples, GyroVert_Steer);
-                                    break;
-                                case 17:
-                                    chart1.Series[0].Points.AddXY(CntSamples, GyroZFilter);
-                                    break;
-                                case 18:
-                                    chart1.Series[0].Points.AddXY(CntSamples, AlfaYResPrevAv);
-                                    break;
-                                case 19:
-                                    chart1.Series[0].Points.AddXY(CntSamples, DiffBetweenTilts);
-                                    break;
-                                case 20:
-                                    chart1.Series[0].Points.AddXY(CntSamples, TiltZad);
-                                    break;
-                                case 21:
-                                    chart1.Series[0].Points.AddXY(CntSamples, StartRot);
-                                    break;
-                                case 22:
-                                    chart1.Series[0].Points.AddXY(CntSamples, Ki);
-                                    break;
-                                case 23:
-                                    chart1.Series[0].Points.AddXY(CntSamples, KRot);
-                                    break;
-                                case 24:
-                                    chart1.Series[0].Points.AddXY(CntSamples, KpRot);
-                                    break;
-                                case 25:
-                                    chart1.Series[0].Points.AddXY(CntSamples, KiRot);
-                                    break;
-                                case 26:
-                                    chart1.Series[0].Points.AddXY(CntSamples, Preas1ADC);
-                                    break;
-                                case 27:
-                                    chart1.Series[0].Points.AddXY(CntSamples, Preas2ADC);
-                                    break;
-                                case 28:
-                                    chart1.Series[0].Points.AddXY(CntSamples, KpSPD);
-                                    break;
-                                case 29:
-                                    chart1.Series[0].Points.AddXY(CntSamples, AngleLimitReal);
-                                    break;
-                                case 30:
-                                    chart1.Series[0].Points.AddXY(CntSamples, AccX);
-                                    break;
-                                case 31:
-                                    chart1.Series[0].Points.AddXY(CntSamples, AccY);
-                                    break;
-                                case 32:
-                                    chart1.Series[0].Points.AddXY(CntSamples, AccZ);
-                                    break;
-                                case 33:
-                                    chart1.Series[0].Points.AddXY(CntSamples, TiltZad);
-                                    break;
-                                case 34:
-                                    chart1.Series[0].Points.AddXY(CntSamples, _48V);
-                                    break;
-                                case 35:
-                                    chart1.Series[0].Points.AddXY(CntSamples, GyroXFl);
-                                    break;
-                                case 36:
-                                    chart1.Series[0].Points.AddXY(CntSamples, GyroYFl);
-                                    break;
-                                case 37:
-                                    chart1.Series[0].Points.AddXY(CntSamples, GyroZFl);
-                                    break;
-                                case 38:
-                                    chart1.Series[0].Points.AddXY(CntSamples, Ed);
-                                    break;
-                                case 39:
-                                    chart1.Series[0].Points.AddXY(CntSamples, GyroYAv);
-                                    break;
-                                case 40:
-                                    chart1.Series[0].Points.AddXY(CntSamples, KdI);
-                                    break;
-                                case 41:
-                                    chart1.Series[0].Points.AddXY(CntSamples, Spd1Fl);
-                                    break;
-                                case 42:
-                                    //chart1.Series[0].Points.AddXY(CntSamples, Spd2Fl);
-                                    break;
-                                case 43:
-                                    int u = (int)CurrPerDigit;
-                                    u = (int)(EPID_Res * u);
-                                    chart1.Series[0].Points.AddXY(CntSamples, (float)(((float)u) / 1000));
-                                    break;
-                                case 44:
-                                    chart1.Series[0].Points.AddXY(CntSamples, Phase1Period1);
-                                    break;
-                                case 45:
-                                    chart1.Series[0].Points.AddXY(CntSamples, Phase1Period2);
-                                    break;
-                                case 46:
-                                    //chart1.Series[0].Points.AddXY(CntSamples, Phase1Period3);
-                                    break;
-                                case 47:
-                                    chart1.Series[0].Points.AddXY(CntSamples, Phase1Period4);
-                                    break;
-                                case 48:
-                                    chart1.Series[0].Points.AddXY(CntSamples, Phase1Period5);
-                                    break;
-                                case 49:
-                                    chart1.Series[0].Points.AddXY(CntSamples, Phase1Period6);
-                                    break;
-                                case 50:
-                                    //chart1.Series[0].Points.AddXY(CntSamples, Phase1PeriodTTL);
-                                    break;
-                                case 51:
-                                    chart1.Series[0].Points.AddXY(CntSamples, Spd1USTKMH);
-                                    break;
-                                case 52:
-                                    chart1.Series[0].Points.AddXY(CntSamples, PhaseCr);
-                                    break;
-                                case 53:
-                                    chart1.Series[0].Points.AddXY(CntSamples, EpCurr1);
-                                    break;
-                                case 54:
-                                    chart1.Series[0].Points.AddXY(CntSamples, ECurr1Summ);
-                                    break;
-                                case 55:
-                                    chart1.Series[0].Points.AddXY(CntSamples, PhasePer1);
-                                    break;
-                                case 56:
-                                    chart1.Series[0].Points.AddXY(CntSamples, Halls);
-                                    break;
-                                case 57:
-                                    chart1.Series[0].Points.AddXY(CntSamples, CurrA_P);
-                                    break;
-                                case 58:
-                                    chart1.Series[0].Points.AddXY(CntSamples, CurrA_N);
-                                    break;
-                                case 59:
-                                    chart1.Series[0].Points.AddXY(CntSamples, CurrC_P);
-                                    break;
-                                case 60:
-                                    chart1.Series[0].Points.AddXY(CntSamples, CurrC_N);
-                                    break;
-                                case 61:
-                                    chart1.Series[0].Points.AddXY(CntSamples, ADCThrottleBreak);
-                                    break;
-                                case 62:
-                                    chart1.Series[0].Points.AddXY(CntSamples, Eid);
-                                    break;
-                                case 63:
-                                    //chart1.Series[0].Points.AddXY(CntSamples, Theta1CntPWMSND);
-                                    break;
-
-                                    
-
-
-                            }
-
-                        }
-
-
-
-                        if (checkBox17.Checked)
-                        {
-                            switch (comboBox4.SelectedIndex)
-                            {
-                                case 0:
-                                    comboBox3Num = 26;
-                                    break;
-                                case 1:
-                                    comboBox3Num = 27;
-                                    break;
-                                case 2:
-                                    comboBox3Num = 51;
-                                    break;
-                                case 3:
-                                    comboBox3Num = 43;
-                                    break;
-                                case 4:
-                                    comboBox3Num = 7;
-                                    break;
-                                case 5:
-                                    comboBox3Num = 9;
-                                    break;
-                                case 6:
-                                    comboBox3Num = 15;
-                                    break;
-                                case 7:
-                                    comboBox3Num = 11;
-                                    break;
-                                case 8:
-                                    comboBox3Num = 41;
-                                    break;
-                                case 9:
-                                    comboBox3Num = 30;
-                                    break;
-                                case 10:
-                                    comboBox3Num = 31;
-                                    break;
-                                case 11:
-                                    comboBox3Num = 32;
-                                    break;
-                                case 12:
-                                    comboBox3Num = 35;
-                                    break;
-                                case 13:
-                                    comboBox3Num = 36;
-                                    break;
-                                case 14:
-                                    comboBox3Num = 37;
-                                    break;
-                                case 15:
-                                    comboBox3Num = 1;
-                                    break;
-                                case 16:
-                                    comboBox3Num = 0;
-                                    break;
-                                case 17:
-                                    comboBox3Num = 14;
-                                    break;
-                                case 18:
-                                    comboBox3Num = 22;
-                                    break;
-                                case 19:
-                                    comboBox3Num = 40;
-                                    break;
-                                case 20:
-                                    comboBox3Num = 61;
-                                    break;
-
-                                default:
-                                    comboBox3Num = 1;
-                                    break;
-                            }
-
-                            switch (comboBox3Num)
-                            {
-                                case 0:
-                                    chart1.Series[1].Points.AddXY(CntSamples, AlfaXRes);
-                                    break;
-                                case 1:
-                                    chart1.Series[1].Points.AddXY(CntSamples, AlfaYRes);
-                                    break;
-                                case 2:
-                                    chart1.Series[1].Points.AddXY(CntSamples, GyroX);
-                                    break;
-                                case 3:
-                                    chart1.Series[1].Points.AddXY(CntSamples, TiltXRes);
-                                    break;
-                                case 4:
-                                    chart1.Series[1].Points.AddXY(CntSamples, TiltYRes);
-                                    break;
-                                case 5:
-                                    chart1.Series[1].Points.AddXY(CntSamples, Ep);
-                                    break;
-                                case 6:
-                                    chart1.Series[1].Points.AddXY(CntSamples, Ei);
-                                    break;
-                                case 7:
-                                    chart1.Series[1].Points.AddXY(CntSamples, PWM1);
-                                    break;
-                                case 8:
-                                    //chart1.Series[1].Points.AddXY(CntSamples, PWM2);
-                                    break;
-                                case 9:
-                                    chart1.Series[1].Points.AddXY(CntSamples, Cr1 / 1000);
-                                    break;
-                                case 10:
-                                    //chart1.Series[1].Points.AddXY(CntSamples, Cr2);
-                                    break;
-                                case 11:
-                                    chart1.Series[1].Points.AddXY(CntSamples, Spd1Res);
-                                    break;
-                                case 12:
-                                    //chart1.Series[1].Points.AddXY(CntSamples, Spd2Res);
-                                    break;
-                                case 13:
-                                    //chart1.Series[1].Points.AddXY(CntSamples, SpdAv);
-                                    break;
-                                case 14:
-                                    chart1.Series[1].Points.AddXY(CntSamples, Kp);
-                                    break;
-                                case 15:
-                                    chart1.Series[1].Points.AddXY(CntSamples, UBT);
-                                    break;
-                                case 16:
-                                    chart1.Series[1].Points.AddXY(CntSamples, GyroVert_Steer);
-                                    break;
-                                case 17:
-                                    chart1.Series[1].Points.AddXY(CntSamples, GyroZFilter);
-                                    break;
-                                case 18:
-                                    chart1.Series[1].Points.AddXY(CntSamples, AlfaYResPrevAv);
-                                    break;
-                                case 19:
-                                    chart1.Series[1].Points.AddXY(CntSamples, DiffBetweenTilts);
-                                    break;
-                                case 20:
-                                    chart1.Series[1].Points.AddXY(CntSamples, TiltZad);
-                                    break;
-                                case 21:
-                                    chart1.Series[1].Points.AddXY(CntSamples, StartRot);
-                                    break;
-                                case 22:
-                                    chart1.Series[1].Points.AddXY(CntSamples, Ki);
-                                    break;
-                                case 23:
-                                    chart1.Series[1].Points.AddXY(CntSamples, KRot);
-                                    break;
-                                case 24:
-                                    chart1.Series[1].Points.AddXY(CntSamples, KpRot);
-                                    break;
-                                case 25:
-                                    chart1.Series[1].Points.AddXY(CntSamples, KiRot);
-                                    break;
-                                case 26:
-                                    chart1.Series[1].Points.AddXY(CntSamples, Preas1ADC);
-                                    break;
-                                case 27:
-                                    chart1.Series[1].Points.AddXY(CntSamples, Preas2ADC);
-                                    break;
-                                case 28:
-                                    chart1.Series[1].Points.AddXY(CntSamples, KpSPD);
-                                    break;
-                                case 29:
-                                    chart1.Series[1].Points.AddXY(CntSamples, AngleLimitReal);
-                                    break;
-                                case 30:
-                                    chart1.Series[1].Points.AddXY(CntSamples, AccX);
-                                    break;
-                                case 31:
-                                    chart1.Series[1].Points.AddXY(CntSamples, AccY);
-                                    break;
-                                case 32:
-                                    chart1.Series[1].Points.AddXY(CntSamples, AccZ);
-                                    break;
-                                case 33:
-                                    chart1.Series[1].Points.AddXY(CntSamples, TiltZad);
-                                    break;
-                                case 34:
-                                    chart1.Series[1].Points.AddXY(CntSamples, _48V);
-                                    break;
-                                case 35:
-                                    chart1.Series[1].Points.AddXY(CntSamples, GyroXFl);
-                                    break;
-                                case 36:
-                                    chart1.Series[1].Points.AddXY(CntSamples, GyroYFl);
-                                    break;
-                                case 37:
-                                    chart1.Series[1].Points.AddXY(CntSamples, GyroZFl);
-                                    break;
-                                case 38:
-                                    chart1.Series[1].Points.AddXY(CntSamples, Ed);
-                                    break;
-                                case 39:
-                                    chart1.Series[1].Points.AddXY(CntSamples, GyroYAv);
-                                    break;
-                                case 40:
-                                    chart1.Series[1].Points.AddXY(CntSamples, KdI);
-                                    break;
-                                case 41:
-                                    chart1.Series[1].Points.AddXY(CntSamples, Spd1Fl);
-                                    break;
-                                case 42:
-                                    //chart1.Series[1].Points.AddXY(CntSamples, Spd2Fl);
-                                    break;
-                                case 43:
-                                    int u = (int)CurrPerDigit;
-                                    u = (int)(EPID_Res * u);
-                                    chart1.Series[1].Points.AddXY(CntSamples, (float)(((float)u) / 1000));
-                                    break;
-                                case 44:
-                                    chart1.Series[1].Points.AddXY(CntSamples, Phase1Period1);
-                                    break;
-                                case 45:
-                                    chart1.Series[1].Points.AddXY(CntSamples, Phase1Period2);
-                                    break;
-                                case 46:
-                                    //chart1.Series[1].Points.AddXY(CntSamples, Phase1Period3);
-                                    break;
-                                case 47:
-                                    chart1.Series[1].Points.AddXY(CntSamples, Phase1Period4);
-                                    break;
-                                case 48:
-                                    chart1.Series[1].Points.AddXY(CntSamples, Phase1Period5);
-                                    break;
-                                case 49:
-                                    chart1.Series[1].Points.AddXY(CntSamples, Phase1Period6);
-                                    break;
-                                case 50:
-                                    //chart1.Series[1].Points.AddXY(CntSamples, Phase1PeriodTTL);
-                                    break;
-                                case 51:
-                                    chart1.Series[1].Points.AddXY(CntSamples, Spd1USTKMH);
-                                    break;
-                                case 52:
-                                    chart1.Series[1].Points.AddXY(CntSamples, PhaseCr);
-                                    break;
-                                case 53:
-                                    chart1.Series[1].Points.AddXY(CntSamples, EpCurr1);
-                                    break;
-                                case 54:
-                                    chart1.Series[1].Points.AddXY(CntSamples, ECurr1Summ);
-                                    break;
-                                case 55:
-                                    chart1.Series[1].Points.AddXY(CntSamples, PhasePer1);
-                                    break;
-                                case 56:
-                                    chart1.Series[1].Points.AddXY(CntSamples, Halls);
-                                    break;
-                                case 57:
-                                    chart1.Series[1].Points.AddXY(CntSamples, CurrA_P);
-                                    break;
-                                case 58:
-                                    chart1.Series[1].Points.AddXY(CntSamples, CurrA_N);
-                                    break;
-                                case 59:
-                                    chart1.Series[1].Points.AddXY(CntSamples, CurrC_P);
-                                    break;
-                                case 60:
-                                    chart1.Series[1].Points.AddXY(CntSamples, CurrC_N);
-                                    break;
-                                case 61:
-                                    chart1.Series[1].Points.AddXY(CntSamples, ADCThrottleBreak);
-                                    break;
-                                case 62:
-                                    chart1.Series[1].Points.AddXY(CntSamples, Eid);
-                                    break;
-                                case 63:
-                                    //chart1.Series[1].Points.AddXY(CntSamples, Phase1Period1Up);
-                                    break;
-
-
-                            }
-
-                        }
-
-
-                        if (checkBox18.Checked)
-                            switch (comboBox5.SelectedIndex)
-                            {
-                                case 0:
-                                    chart1.Series[2].Points.AddXY(CntSamples, AlfaXRes);
-                                    break;
-                                case 1:
-                                    chart1.Series[2].Points.AddXY(CntSamples, AlfaYRes);
-                                    break;
-                                case 2:
-                                    chart1.Series[2].Points.AddXY(CntSamples, GyroX);
-                                    break;
-                                case 3:
-                                    chart1.Series[2].Points.AddXY(CntSamples, TiltXRes);
-                                    break;
-                                case 4:
-                                    chart1.Series[2].Points.AddXY(CntSamples, TiltYRes);
-                                    break;
-                                case 5:
-                                    chart1.Series[2].Points.AddXY(CntSamples, Ep);
-                                    break;
-                                case 6:
-                                    chart1.Series[2].Points.AddXY(CntSamples, Ei);
-                                    break;
-                                case 7:
-                                    chart1.Series[2].Points.AddXY(CntSamples, PWM1);
-                                    break;
-                                case 8:
-                                    //chart1.Series[2].Points.AddXY(CntSamples, PWM2);
-                                    break;
-                                case 9:
-                                    chart1.Series[2].Points.AddXY(CntSamples, Cr1 / 1000);
-                                    break;
-                                case 10:
-                                    //chart1.Series[2].Points.AddXY(CntSamples, Cr2);
-                                    break;
-                                case 11:
-                                    chart1.Series[2].Points.AddXY(CntSamples, Spd1Res);
-                                    break;
-                                case 12:
-                                    //chart1.Series[2].Points.AddXY(CntSamples, Spd2Res);
-                                    break;
-                                case 13:
-                                    //chart1.Series[2].Points.AddXY(CntSamples, SpdAv);
-                                    break;
-                                case 14:
-                                    chart1.Series[2].Points.AddXY(CntSamples, Kp);
-                                    break;
-                                case 15:
-                                    chart1.Series[2].Points.AddXY(CntSamples, UBT);
-                                    break;
-                                case 16:
-                                    chart1.Series[2].Points.AddXY(CntSamples, GyroVert_Steer);
-                                    break;
-                                case 17:
-                                    chart1.Series[2].Points.AddXY(CntSamples, GyroZFilter);
-                                    break;
-                                case 18:
-                                    chart1.Series[2].Points.AddXY(CntSamples, AlfaYResPrevAv);
-                                    break;
-                                case 19:
-                                    chart1.Series[2].Points.AddXY(CntSamples, DiffBetweenTilts);
-                                    break;
-                                case 20:
-                                    chart1.Series[2].Points.AddXY(CntSamples, TiltZad);
-                                    break;
-                                case 21:
-                                    chart1.Series[2].Points.AddXY(CntSamples, StartRot);
-                                    break;
-                                case 22:
-                                    chart1.Series[2].Points.AddXY(CntSamples, Ki);
-                                    break;
-                                case 23:
-                                    chart1.Series[2].Points.AddXY(CntSamples, KRot);
-                                    break;
-                                case 24:
-                                    chart1.Series[2].Points.AddXY(CntSamples, KpRot);
-                                    break;
-                                case 25:
-                                    chart1.Series[2].Points.AddXY(CntSamples, KiRot);
-                                    break;
-                                case 26:
-                                    chart1.Series[2].Points.AddXY(CntSamples, Preas1ADC);
-                                    break;
-                                case 27:
-                                    chart1.Series[2].Points.AddXY(CntSamples, Preas2ADC);
-                                    break;
-                                case 28:
-                                    chart1.Series[2].Points.AddXY(CntSamples, KpSPD);
-                                    break;
-                                case 29:
-                                    chart1.Series[2].Points.AddXY(CntSamples, AngleLimitReal);
-                                    break;
-                                case 30:
-                                    chart1.Series[2].Points.AddXY(CntSamples, AccX);
-                                    break;
-                                case 31:
-                                    chart1.Series[2].Points.AddXY(CntSamples, AccY);
-                                    break;
-                                case 32:
-                                    chart1.Series[2].Points.AddXY(CntSamples, AccZ);
-                                    break;
-                                case 33:
-                                    chart1.Series[2].Points.AddXY(CntSamples, TiltZad);
-                                    break;
-                                case 34:
-                                    chart1.Series[2].Points.AddXY(CntSamples, _48V);
-                                    break;
-                                case 35:
-                                    chart1.Series[2].Points.AddXY(CntSamples, GyroXFl);
-                                    break;
-                                case 36:
-                                    chart1.Series[2].Points.AddXY(CntSamples, GyroYFl);
-                                    break;
-                                case 37:
-                                    chart1.Series[2].Points.AddXY(CntSamples, GyroZFl);
-                                    break;
-                                case 38:
-                                    chart1.Series[2].Points.AddXY(CntSamples, Ed);
-                                    break;
-                                case 39:
-                                    chart1.Series[2].Points.AddXY(CntSamples, GyroYAv);
-                                    break;
-                                case 40:
-                                    chart1.Series[2].Points.AddXY(CntSamples, KdI);
-                                    break;
-                                case 41:
-                                    chart1.Series[2].Points.AddXY(CntSamples, Spd1Fl);
-                                    break;
-                                case 42:
-                                    //chart1.Series[2].Points.AddXY(CntSamples, Spd2Fl);
-                                    break;
-                                case 43:
-                                    int u = (int)CurrPerDigit;
-                                    u = (int)(EPID_Res * u);
-                                    chart1.Series[2].Points.AddXY(CntSamples, (float)(((float)u) / 1000));
-                                    break;
-                                case 44:
-                                    chart1.Series[2].Points.AddXY(CntSamples, Phase1Period1);
-                                    break;
-                                case 45:
-                                    chart1.Series[2].Points.AddXY(CntSamples, Phase1Period2);
-                                    break;
-                                case 46:
-                                    //chart1.Series[2].Points.AddXY(CntSamples, Phase1Period3);
-                                    break;
-                                case 47:
-                                    chart1.Series[2].Points.AddXY(CntSamples, Phase1Period4);
-                                    break;
-                                case 48:
-                                    chart1.Series[2].Points.AddXY(CntSamples, Phase1Period5);
-                                    break;
-                                case 49:
-                                    chart1.Series[2].Points.AddXY(CntSamples, Phase1Period6);
-                                    break;
-                                case 50:
-                                    //chart1.Series[2].Points.AddXY(CntSamples, Phase1PeriodTTL);
-                                    break;
-                                case 51:
-                                    chart1.Series[2].Points.AddXY(CntSamples, Spd1USTKMH);
-                                    break;
-                                case 52:
-                                    chart1.Series[2].Points.AddXY(CntSamples, PhaseCr);
-                                    break;
-                                case 53:
-                                    chart1.Series[2].Points.AddXY(CntSamples, EpCurr1);
-                                    break;
-                                case 54:
-                                    chart1.Series[2].Points.AddXY(CntSamples, ECurr1Summ);
-                                    break;
-                                case 55:
-                                    chart1.Series[2].Points.AddXY(CntSamples, PhasePer1);
-                                    break;
-                                case 56:
-                                    chart1.Series[2].Points.AddXY(CntSamples, Halls);
-                                    break;
-                                case 57:
-                                    chart1.Series[2].Points.AddXY(CntSamples, CurrA_P);
-                                    break;
-                                case 58:
-                                    chart1.Series[2].Points.AddXY(CntSamples, CurrA_N);
-                                    break;
-                                case 59:
-                                    chart1.Series[2].Points.AddXY(CntSamples, CurrC_P);
-                                    break;
-                                case 60:
-                                    chart1.Series[2].Points.AddXY(CntSamples, CurrC_N);
-                                    break;
-                                case 61:
-                                    chart1.Series[2].Points.AddXY(CntSamples, ADCThrottleBreak);
-                                    break;
-                                case 62:
-                                    chart1.Series[2].Points.AddXY(CntSamples, Eid);
-                                    break;
-
-                                case 63:
-                                    //chart1.Series[0].Points.AddXY(CntSamples, Theta1CntPWMSND);
-                                    break;
-
-
-  /*                              case 63:
-                                    chart1.Series[2].Points.AddXY(CntSamples, GyroZFl);
-                                    break;
-
-*/
-
-
-                            }
 
                     }
                     float ut = (float)Cr1;
@@ -5102,6 +4328,10 @@ namespace ControlBalance
                         chart1.Series[9].Points.Add((short)PacketRec[j]);       //Neutral
                     }
                     j++;
+                    break;
+
+                case 25:
+                    GraphSeries();
                     break;
 
 
@@ -7365,9 +6595,39 @@ namespace ControlBalance
 
         }
 
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
 
+            if (checkBox1.Checked)
+            {
+                saveFileDialog2.FileName = "";
+                saveFileDialog2.ShowDialog();
+                if (saveFileDialog2.FileName != "")
+                {
+                    LogFileString = saveFileDialog2.FileName;
+                    sw = new StreamWriter(LogFileString, true, Encoding.ASCII);
+                    sw.WriteLine(DateTime.Now);
+                    sw.Write("N TiltAlong TiltAcross EpLog EiLog EdLog PWM Time");
+                    sw.WriteLine("");
+                    sw.Close();
+                    HeaderOk = true;
+                }
 
+            TrmMass[0] = 0xff;
+            TrmMass[1] = 0xff;
+            TrmMass[2] = 2;//N
+            TrmMass[3] = SEND_SecondCMD;
+            if (checkBox1.Checked)
+                TrmMass[4] = SEND_LogOn;
+            else
+                TrmMass[4] = SEND_LogOff;
+            TrmMass[5] = CalcCheckSummTrm();
+            Trm();
 
+                checkBox1.Enabled = false;
+            }
+
+        }
 
         private void COMPorts()
         {
@@ -7385,15 +6645,6 @@ namespace ControlBalance
             if (!serialPort1.IsOpen)
             {
                 serialPort1.PortName = comboBox2.Text;
-
-                //catch (ArgumentOutOfRangeException outOfRange)
-                //{
-                //}
-                //catch (IOException e)
-                //{
-                //}
-
-
 
                 serialPort1.BaudRate =  38400;//9600;//
                 serialPort1.ReadBufferSize = 1000000;
@@ -7937,24 +7188,60 @@ namespace ControlBalance
 
                     break;
                 case 5:
+                    if (checkBox1.Checked)
+                    {
+                        //CntSamples = PacketRec[Cnt++] + (((uint)PacketRec[Cnt++]) << 8) + (((uint)PacketRec[Cnt++]) << 16) + (((uint)PacketRec[Cnt++]) << 24);  //1
+                        CntSamples++;
+                        ushort N = (ushort)PacketRec[Cnt++];
+                        Tmp = PacketRec[Cnt++] + (((int)PacketRec[Cnt++]) << 8);        
+                        AlfaXRes = (short)Tmp;
 
-                    /*CntSamples++;
+                        Tmp = PacketRec[Cnt++] + (((int)PacketRec[Cnt++]) << 8);        
+                        AlfaYRes = (short)Tmp;
 
-                    Tmp = PacketRec[Cnt++] + (((int)PacketRec[Cnt++]) << 8);        //
-                    PWM1 = (short)Tmp;
+                        
+                        Tmp = PacketRec[Cnt++] + (((int)PacketRec[Cnt++]) << 8);
+                        EpLog = (short)Tmp;
+                        Tmp = PacketRec[Cnt++] + (((int)PacketRec[Cnt++]) << 8);
+                        EiLog = (short)Tmp;
+                        Tmp = PacketRec[Cnt++] + (((int)PacketRec[Cnt++]) << 8);
+                        EdLog = (short)Tmp;
 
-                     //= PacketRec[Cnt++];
-                    Theta1CntPWMSND = PacketRec[Cnt++] + (((uint)PacketRec[Cnt++]) << 8) + (((uint)PacketRec[Cnt++]) << 16) + (((uint)PacketRec[Cnt++]) << 24);  //1
-                    Phase1Period1Up = (ushort)(PacketRec[Cnt++] + (((uint)PacketRec[Cnt++]) << 8));        //2
-                    
 
-                    backgroundWorker1.ReportProgress(5);
-                    break;
-                    */
 
-                    CntSamples = PacketRec[Cnt++] + (((uint)PacketRec[Cnt++]) << 8) + (((uint)PacketRec[Cnt++]) << 16) + (((uint)PacketRec[Cnt++]) << 24);  //1
+                        Tmp = PacketRec[Cnt++] + (((int)PacketRec[Cnt++]) << 8);        
+                        PWM1 = (short)Tmp;
 
-                    Tmp = PacketRec[Cnt++] + (((int)PacketRec[Cnt++]) << 8);        //2
+                        //= PacketRec[Cnt++];
+                        //Theta1CntPWMSND = PacketRec[Cnt++] + (((uint)PacketRec[Cnt++]) << 8) + (((uint)PacketRec[Cnt++]) << 16) + (((uint)PacketRec[Cnt++]) << 24);  //1
+                        //Phase1Period1Up = (ushort)(PacketRec[Cnt++] + (((uint)PacketRec[Cnt++]) << 8));        //2
+                        if ((LogFileString != null)&&(HeaderOk))
+                        {
+                            sw = new StreamWriter(LogFileString, true, Encoding.ASCII);
+                            if (PWM1==0)
+                            sw.Write("Stopped : "+N + " ");
+                            else
+                            sw.Write("Running : "+N + " ");
+
+                            sw.Write(AlfaYRes + " ");
+                            sw.Write(AlfaXRes + " ");
+                            sw.Write(EpLog + " ");
+                            sw.Write(EiLog + " ");
+                            sw.Write(EdLog + " ");
+                            sw.Write(PWM1 + " ");
+                            sw.Write(DateTime.Now.Hour + ":"+DateTime.Now.Minute +":"+ DateTime.Now.Millisecond);
+                            sw.WriteLine("");
+                            sw.Close();
+                        }
+
+
+                        backgroundWorker1.ReportProgress(25);
+                        break;
+                    }
+
+                    CntSamples = PacketRec[Cnt++] + (((uint)PacketRec[Cnt++]) << 8) + (((uint)PacketRec[Cnt++]) << 16) + (((uint)PacketRec[Cnt++]) << 24);  
+
+                    Tmp = PacketRec[Cnt++] + (((int)PacketRec[Cnt++]) << 8);        //1
                     AlfaXRes = (short)Tmp;
 
                     Tmp = PacketRec[Cnt++] + (((int)PacketRec[Cnt++]) << 8);        //2
@@ -15739,6 +15026,831 @@ namespace ControlBalance
         {
             if (StartCNT==0)
             MessageBox.Show(MyStrings.CloseOpen, MyStrings.Inform, MessageBoxButtons.OK);
+        }
+        void GraphSeries()
+        {
+            if (checkBox16.Checked)
+            {
+                int comboBox3Num;
+
+                switch (comboBox3.SelectedIndex)
+                {
+                    case 0:
+                        comboBox3Num = 26;
+                        break;
+                    case 1:
+                        comboBox3Num = 27;
+                        break;
+                    case 2:
+                        comboBox3Num = 51;
+                        break;
+                    case 3:
+                        comboBox3Num = 43;
+                        break;
+                    case 4:
+                        comboBox3Num = 7;
+                        break;
+                    case 5:
+                        comboBox3Num = 9;
+                        break;
+                    case 6:
+                        comboBox3Num = 15;
+                        break;
+                    case 7:
+                        comboBox3Num = 11;
+                        break;
+                    case 8:
+                        comboBox3Num = 41;
+                        break;
+                    case 9:
+                        comboBox3Num = 30;
+                        break;
+                    case 10:
+                        comboBox3Num = 31;
+                        break;
+                    case 11:
+                        comboBox3Num = 32;
+                        break;
+                    case 12:
+                        comboBox3Num = 35;
+                        break;
+                    case 13:
+                        comboBox3Num = 36;
+                        break;
+                    case 14:
+                        comboBox3Num = 37;
+                        break;
+                    case 15:
+                        comboBox3Num = 1;
+                        break;
+                    case 16:
+                        comboBox3Num = 0;
+                        break;
+                    case 17:
+                        comboBox3Num = 64;
+                        break;
+                    case 18:
+                        comboBox3Num = 65;
+                        break;
+                    case 19:
+                        comboBox3Num = 66;
+                        break;
+                    case 20:
+                        comboBox3Num = 61;
+                        break;
+                    case 21:
+                        comboBox3Num = 64;
+                        break;
+                    case 22:
+                        comboBox3Num = 65;
+                        break;
+                    case 23:
+                        comboBox3Num = 66;
+                        break;
+
+                    default:
+                        comboBox3Num = 1;
+                        break;
+                }
+
+
+                //Газ с ручки газа
+                //Газ после коррекции
+                //ШИМ
+                //Ток
+                //Напряжение батареи
+                //Скорость относительная
+                //Скорость в км/ч
+
+
+                switch (comboBox3Num)
+                {
+                    case 0:
+                        chart1.Series[0].Points.AddXY(CntSamples, AlfaXRes);
+                        break;
+                    case 1:
+                        chart1.Series[0].Points.AddXY(CntSamples, AlfaYRes);
+                        break;
+                    case 2:
+                        chart1.Series[0].Points.AddXY(CntSamples, GyroX);
+                        break;
+                    case 3:
+                        chart1.Series[0].Points.AddXY(CntSamples, TiltXRes);
+                        break;
+                    case 4:
+                        chart1.Series[0].Points.AddXY(CntSamples, TiltYRes);
+                        break;
+                    case 5:
+                        chart1.Series[0].Points.AddXY(CntSamples, Ep);
+                        break;
+                    case 6:
+                        chart1.Series[0].Points.AddXY(CntSamples, Ei);
+                        break;
+                    case 7:
+                        chart1.Series[0].Points.AddXY(CntSamples, PWM1);
+                        break;
+                    case 8:
+                        //chart1.Series[0].Points.AddXY(CntSamples, PWM2);
+                        break;
+                    case 9:
+                        chart1.Series[0].Points.AddXY(CntSamples, Cr1 / 1000);
+                        break;
+                    case 10:
+                        //chart1.Series[0].Points.AddXY(CntSamples, Cr2);
+                        break;
+                    case 11:
+                        chart1.Series[0].Points.AddXY(CntSamples, Spd1Res);
+                        break;
+                    case 12:
+                        //chart1.Series[0].Points.AddXY(CntSamples, Spd2Res);
+                        break;
+                    case 13:
+                        //chart1.Series[0].Points.AddXY(CntSamples, SpdAv);
+                        break;
+                    case 14:
+                        chart1.Series[0].Points.AddXY(CntSamples, Kp);
+                        break;
+                    case 15:
+                        chart1.Series[0].Points.AddXY(CntSamples, UBT);
+                        break;
+                    case 16:
+                        chart1.Series[0].Points.AddXY(CntSamples, GyroVert_Steer);
+                        break;
+                    case 17:
+                        chart1.Series[0].Points.AddXY(CntSamples, GyroZFilter);
+                        break;
+                    case 18:
+                        chart1.Series[0].Points.AddXY(CntSamples, AlfaYResPrevAv);
+                        break;
+                    case 19:
+                        chart1.Series[0].Points.AddXY(CntSamples, DiffBetweenTilts);
+                        break;
+                    case 20:
+                        chart1.Series[0].Points.AddXY(CntSamples, TiltZad);
+                        break;
+                    case 21:
+                        chart1.Series[0].Points.AddXY(CntSamples, StartRot);
+                        break;
+                    case 22:
+                        chart1.Series[0].Points.AddXY(CntSamples, Ki);
+                        break;
+                    case 23:
+                        chart1.Series[0].Points.AddXY(CntSamples, KRot);
+                        break;
+                    case 24:
+                        chart1.Series[0].Points.AddXY(CntSamples, KpRot);
+                        break;
+                    case 25:
+                        chart1.Series[0].Points.AddXY(CntSamples, KiRot);
+                        break;
+                    case 26:
+                        chart1.Series[0].Points.AddXY(CntSamples, Preas1ADC);
+                        break;
+                    case 27:
+                        chart1.Series[0].Points.AddXY(CntSamples, Preas2ADC);
+                        break;
+                    case 28:
+                        chart1.Series[0].Points.AddXY(CntSamples, KpSPD);
+                        break;
+                    case 29:
+                        chart1.Series[0].Points.AddXY(CntSamples, AngleLimitReal);
+                        break;
+                    case 30:
+                        chart1.Series[0].Points.AddXY(CntSamples, AccX);
+                        break;
+                    case 31:
+                        chart1.Series[0].Points.AddXY(CntSamples, AccY);
+                        break;
+                    case 32:
+                        chart1.Series[0].Points.AddXY(CntSamples, AccZ);
+                        break;
+                    case 33:
+                        chart1.Series[0].Points.AddXY(CntSamples, TiltZad);
+                        break;
+                    case 34:
+                        chart1.Series[0].Points.AddXY(CntSamples, _48V);
+                        break;
+                    case 35:
+                        chart1.Series[0].Points.AddXY(CntSamples, GyroXFl);
+                        break;
+                    case 36:
+                        chart1.Series[0].Points.AddXY(CntSamples, GyroYFl);
+                        break;
+                    case 37:
+                        chart1.Series[0].Points.AddXY(CntSamples, GyroZFl);
+                        break;
+                    case 38:
+                        chart1.Series[0].Points.AddXY(CntSamples, Ed);
+                        break;
+                    case 39:
+                        chart1.Series[0].Points.AddXY(CntSamples, GyroYAv);
+                        break;
+                    case 40:
+                        chart1.Series[0].Points.AddXY(CntSamples, KdI);
+                        break;
+                    case 41:
+                        chart1.Series[0].Points.AddXY(CntSamples, Spd1Fl);
+                        break;
+                    case 42:
+                        //chart1.Series[0].Points.AddXY(CntSamples, Spd2Fl);
+                        break;
+                    case 43:
+                        int u = (int)CurrPerDigit;
+                        u = (int)(EPID_Res * u);
+                        chart1.Series[0].Points.AddXY(CntSamples, (float)(((float)u) / 1000));
+                        break;
+                    case 44:
+                        chart1.Series[0].Points.AddXY(CntSamples, Phase1Period1);
+                        break;
+                    case 45:
+                        chart1.Series[0].Points.AddXY(CntSamples, Phase1Period2);
+                        break;
+                    case 46:
+                        //chart1.Series[0].Points.AddXY(CntSamples, Phase1Period3);
+                        break;
+                    case 47:
+                        chart1.Series[0].Points.AddXY(CntSamples, Phase1Period4);
+                        break;
+                    case 48:
+                        chart1.Series[0].Points.AddXY(CntSamples, Phase1Period5);
+                        break;
+                    case 49:
+                        chart1.Series[0].Points.AddXY(CntSamples, Phase1Period6);
+                        break;
+                    case 50:
+                        //chart1.Series[0].Points.AddXY(CntSamples, Phase1PeriodTTL);
+                        break;
+                    case 51:
+                        chart1.Series[0].Points.AddXY(CntSamples, Spd1USTKMH);
+                        break;
+                    case 52:
+                        chart1.Series[0].Points.AddXY(CntSamples, PhaseCr);
+                        break;
+                    case 53:
+                        chart1.Series[0].Points.AddXY(CntSamples, EpCurr1);
+                        break;
+                    case 54:
+                        chart1.Series[0].Points.AddXY(CntSamples, ECurr1Summ);
+                        break;
+                    case 55:
+                        chart1.Series[0].Points.AddXY(CntSamples, PhasePer1);
+                        break;
+                    case 56:
+                        chart1.Series[0].Points.AddXY(CntSamples, Halls);
+                        break;
+                    case 57:
+                        chart1.Series[0].Points.AddXY(CntSamples, CurrA_P);
+                        break;
+                    case 58:
+                        chart1.Series[0].Points.AddXY(CntSamples, CurrA_N);
+                        break;
+                    case 59:
+                        chart1.Series[0].Points.AddXY(CntSamples, CurrC_P);
+                        break;
+                    case 60:
+                        chart1.Series[0].Points.AddXY(CntSamples, CurrC_N);
+                        break;
+                    case 61:
+                        chart1.Series[0].Points.AddXY(CntSamples, ADCThrottleBreak);
+                        break;
+                    case 62:
+                        chart1.Series[0].Points.AddXY(CntSamples, Eid);
+                        break;
+                    case 63:
+                        //chart1.Series[0].Points.AddXY(CntSamples, Theta1CntPWMSND);
+                        break;
+                    case 64:
+                        chart1.Series[0].Points.AddXY(CntSamples, EpLog);
+                        break;
+                    case 65:
+                        chart1.Series[0].Points.AddXY(CntSamples, EiLog);
+                        break;
+                    case 66:
+                        chart1.Series[0].Points.AddXY(CntSamples, EdLog);
+                        break;
+
+
+
+
+                }
+
+            }
+
+
+
+            if (checkBox17.Checked)
+            {
+                int comboBox3Num;
+                switch (comboBox4.SelectedIndex)
+                {
+                    case 0:
+                        comboBox3Num = 26;
+                        break;
+                    case 1:
+                        comboBox3Num = 27;
+                        break;
+                    case 2:
+                        comboBox3Num = 51;
+                        break;
+                    case 3:
+                        comboBox3Num = 43;
+                        break;
+                    case 4:
+                        comboBox3Num = 7;
+                        break;
+                    case 5:
+                        comboBox3Num = 9;
+                        break;
+                    case 6:
+                        comboBox3Num = 15;
+                        break;
+                    case 7:
+                        comboBox3Num = 11;
+                        break;
+                    case 8:
+                        comboBox3Num = 41;
+                        break;
+                    case 9:
+                        comboBox3Num = 30;
+                        break;
+                    case 10:
+                        comboBox3Num = 31;
+                        break;
+                    case 11:
+                        comboBox3Num = 32;
+                        break;
+                    case 12:
+                        comboBox3Num = 35;
+                        break;
+                    case 13:
+                        comboBox3Num = 36;
+                        break;
+                    case 14:
+                        comboBox3Num = 37;
+                        break;
+                    case 15:
+                        comboBox3Num = 1;
+                        break;
+                    case 16:
+                        comboBox3Num = 0;
+                        break;
+                    case 17:
+                        comboBox3Num = 64;
+                        break;
+                    case 18:
+                        comboBox3Num = 65;
+                        break;
+                    case 19:
+                        comboBox3Num = 66;
+                        break;
+                    case 20:
+                        comboBox3Num = 61;
+                        break;
+                    case 21:
+                        comboBox3Num = 64;
+                        break;
+                    case 22:
+                        comboBox3Num = 65;
+                        break;
+                    case 23:
+                        comboBox3Num = 66;
+                        break;
+
+                    default:
+                        comboBox3Num = 1;
+                        break;
+                }
+
+                switch (comboBox3Num)
+                {
+                    case 0:
+                        chart1.Series[1].Points.AddXY(CntSamples, AlfaXRes);
+                        break;
+                    case 1:
+                        chart1.Series[1].Points.AddXY(CntSamples, AlfaYRes);
+                        break;
+                    case 2:
+                        chart1.Series[1].Points.AddXY(CntSamples, GyroX);
+                        break;
+                    case 3:
+                        chart1.Series[1].Points.AddXY(CntSamples, TiltXRes);
+                        break;
+                    case 4:
+                        chart1.Series[1].Points.AddXY(CntSamples, TiltYRes);
+                        break;
+                    case 5:
+                        chart1.Series[1].Points.AddXY(CntSamples, Ep);
+                        break;
+                    case 6:
+                        chart1.Series[1].Points.AddXY(CntSamples, Ei);
+                        break;
+                    case 7:
+                        chart1.Series[1].Points.AddXY(CntSamples, PWM1);
+                        break;
+                    case 8:
+                        //chart1.Series[1].Points.AddXY(CntSamples, PWM2);
+                        break;
+                    case 9:
+                        chart1.Series[1].Points.AddXY(CntSamples, Cr1 / 1000);
+                        break;
+                    case 10:
+                        //chart1.Series[1].Points.AddXY(CntSamples, Cr2);
+                        break;
+                    case 11:
+                        chart1.Series[1].Points.AddXY(CntSamples, Spd1Res);
+                        break;
+                    case 12:
+                        //chart1.Series[1].Points.AddXY(CntSamples, Spd2Res);
+                        break;
+                    case 13:
+                        //chart1.Series[1].Points.AddXY(CntSamples, SpdAv);
+                        break;
+                    case 14:
+                        chart1.Series[1].Points.AddXY(CntSamples, Kp);
+                        break;
+                    case 15:
+                        chart1.Series[1].Points.AddXY(CntSamples, UBT);
+                        break;
+                    case 16:
+                        chart1.Series[1].Points.AddXY(CntSamples, GyroVert_Steer);
+                        break;
+                    case 17:
+                        chart1.Series[1].Points.AddXY(CntSamples, GyroZFilter);
+                        break;
+                    case 18:
+                        chart1.Series[1].Points.AddXY(CntSamples, AlfaYResPrevAv);
+                        break;
+                    case 19:
+                        chart1.Series[1].Points.AddXY(CntSamples, DiffBetweenTilts);
+                        break;
+                    case 20:
+                        chart1.Series[1].Points.AddXY(CntSamples, TiltZad);
+                        break;
+                    case 21:
+                        chart1.Series[1].Points.AddXY(CntSamples, StartRot);
+                        break;
+                    case 22:
+                        chart1.Series[1].Points.AddXY(CntSamples, Ki);
+                        break;
+                    case 23:
+                        chart1.Series[1].Points.AddXY(CntSamples, KRot);
+                        break;
+                    case 24:
+                        chart1.Series[1].Points.AddXY(CntSamples, KpRot);
+                        break;
+                    case 25:
+                        chart1.Series[1].Points.AddXY(CntSamples, KiRot);
+                        break;
+                    case 26:
+                        chart1.Series[1].Points.AddXY(CntSamples, Preas1ADC);
+                        break;
+                    case 27:
+                        chart1.Series[1].Points.AddXY(CntSamples, Preas2ADC);
+                        break;
+                    case 28:
+                        chart1.Series[1].Points.AddXY(CntSamples, KpSPD);
+                        break;
+                    case 29:
+                        chart1.Series[1].Points.AddXY(CntSamples, AngleLimitReal);
+                        break;
+                    case 30:
+                        chart1.Series[1].Points.AddXY(CntSamples, AccX);
+                        break;
+                    case 31:
+                        chart1.Series[1].Points.AddXY(CntSamples, AccY);
+                        break;
+                    case 32:
+                        chart1.Series[1].Points.AddXY(CntSamples, AccZ);
+                        break;
+                    case 33:
+                        chart1.Series[1].Points.AddXY(CntSamples, TiltZad);
+                        break;
+                    case 34:
+                        chart1.Series[1].Points.AddXY(CntSamples, _48V);
+                        break;
+                    case 35:
+                        chart1.Series[1].Points.AddXY(CntSamples, GyroXFl);
+                        break;
+                    case 36:
+                        chart1.Series[1].Points.AddXY(CntSamples, GyroYFl);
+                        break;
+                    case 37:
+                        chart1.Series[1].Points.AddXY(CntSamples, GyroZFl);
+                        break;
+                    case 38:
+                        chart1.Series[1].Points.AddXY(CntSamples, Ed);
+                        break;
+                    case 39:
+                        chart1.Series[1].Points.AddXY(CntSamples, GyroYAv);
+                        break;
+                    case 40:
+                        chart1.Series[1].Points.AddXY(CntSamples, KdI);
+                        break;
+                    case 41:
+                        chart1.Series[1].Points.AddXY(CntSamples, Spd1Fl);
+                        break;
+                    case 42:
+                        //chart1.Series[1].Points.AddXY(CntSamples, Spd2Fl);
+                        break;
+                    case 43:
+                        int u = (int)CurrPerDigit;
+                        u = (int)(EPID_Res * u);
+                        chart1.Series[1].Points.AddXY(CntSamples, (float)(((float)u) / 1000));
+                        break;
+                    case 44:
+                        chart1.Series[1].Points.AddXY(CntSamples, Phase1Period1);
+                        break;
+                    case 45:
+                        chart1.Series[1].Points.AddXY(CntSamples, Phase1Period2);
+                        break;
+                    case 46:
+                        //chart1.Series[1].Points.AddXY(CntSamples, Phase1Period3);
+                        break;
+                    case 47:
+                        chart1.Series[1].Points.AddXY(CntSamples, Phase1Period4);
+                        break;
+                    case 48:
+                        chart1.Series[1].Points.AddXY(CntSamples, Phase1Period5);
+                        break;
+                    case 49:
+                        chart1.Series[1].Points.AddXY(CntSamples, Phase1Period6);
+                        break;
+                    case 50:
+                        //chart1.Series[1].Points.AddXY(CntSamples, Phase1PeriodTTL);
+                        break;
+                    case 51:
+                        chart1.Series[1].Points.AddXY(CntSamples, Spd1USTKMH);
+                        break;
+                    case 52:
+                        chart1.Series[1].Points.AddXY(CntSamples, PhaseCr);
+                        break;
+                    case 53:
+                        chart1.Series[1].Points.AddXY(CntSamples, EpCurr1);
+                        break;
+                    case 54:
+                        chart1.Series[1].Points.AddXY(CntSamples, ECurr1Summ);
+                        break;
+                    case 55:
+                        chart1.Series[1].Points.AddXY(CntSamples, PhasePer1);
+                        break;
+                    case 56:
+                        chart1.Series[1].Points.AddXY(CntSamples, Halls);
+                        break;
+                    case 57:
+                        chart1.Series[1].Points.AddXY(CntSamples, CurrA_P);
+                        break;
+                    case 58:
+                        chart1.Series[1].Points.AddXY(CntSamples, CurrA_N);
+                        break;
+                    case 59:
+                        chart1.Series[1].Points.AddXY(CntSamples, CurrC_P);
+                        break;
+                    case 60:
+                        chart1.Series[1].Points.AddXY(CntSamples, CurrC_N);
+                        break;
+                    case 61:
+                        chart1.Series[1].Points.AddXY(CntSamples, ADCThrottleBreak);
+                        break;
+                    case 62:
+                        chart1.Series[1].Points.AddXY(CntSamples, Eid);
+                        break;
+                    case 63:
+                        //chart1.Series[1].Points.AddXY(CntSamples, Phase1Period1Up);
+                        break;
+                    case 64:
+                        chart1.Series[1].Points.AddXY(CntSamples, EpLog);
+                        break;
+                    case 65:
+                        chart1.Series[1].Points.AddXY(CntSamples, EiLog);
+                        break;
+                    case 66:
+                        chart1.Series[1].Points.AddXY(CntSamples, EdLog);
+                        break;
+
+
+                }
+
+            }
+
+
+            if (checkBox18.Checked)
+                switch (comboBox5.SelectedIndex)
+                {
+                    case 0:
+                        chart1.Series[2].Points.AddXY(CntSamples, AlfaXRes);
+                        break;
+                    case 1:
+                        chart1.Series[2].Points.AddXY(CntSamples, AlfaYRes);
+                        break;
+                    case 2:
+                        chart1.Series[2].Points.AddXY(CntSamples, GyroX);
+                        break;
+                    case 3:
+                        chart1.Series[2].Points.AddXY(CntSamples, TiltXRes);
+                        break;
+                    case 4:
+                        chart1.Series[2].Points.AddXY(CntSamples, TiltYRes);
+                        break;
+                    case 5:
+                        chart1.Series[2].Points.AddXY(CntSamples, Ep);
+                        break;
+                    case 6:
+                        chart1.Series[2].Points.AddXY(CntSamples, Ei);
+                        break;
+                    case 7:
+                        chart1.Series[2].Points.AddXY(CntSamples, PWM1);
+                        break;
+                    case 8:
+                        //chart1.Series[2].Points.AddXY(CntSamples, PWM2);
+                        break;
+                    case 9:
+                        chart1.Series[2].Points.AddXY(CntSamples, Cr1 / 1000);
+                        break;
+                    case 10:
+                        //chart1.Series[2].Points.AddXY(CntSamples, Cr2);
+                        break;
+                    case 11:
+                        chart1.Series[2].Points.AddXY(CntSamples, Spd1Res);
+                        break;
+                    case 12:
+                        //chart1.Series[2].Points.AddXY(CntSamples, Spd2Res);
+                        break;
+                    case 13:
+                        //chart1.Series[2].Points.AddXY(CntSamples, SpdAv);
+                        break;
+                    case 14:
+                        chart1.Series[2].Points.AddXY(CntSamples, Kp);
+                        break;
+                    case 15:
+                        chart1.Series[2].Points.AddXY(CntSamples, UBT);
+                        break;
+                    case 16:
+                        chart1.Series[2].Points.AddXY(CntSamples, GyroVert_Steer);
+                        break;
+                    case 17:
+                        chart1.Series[2].Points.AddXY(CntSamples, GyroZFilter);
+                        break;
+                    case 18:
+                        chart1.Series[2].Points.AddXY(CntSamples, AlfaYResPrevAv);
+                        break;
+                    case 19:
+                        chart1.Series[2].Points.AddXY(CntSamples, DiffBetweenTilts);
+                        break;
+                    case 20:
+                        chart1.Series[2].Points.AddXY(CntSamples, TiltZad);
+                        break;
+                    case 21:
+                        chart1.Series[2].Points.AddXY(CntSamples, StartRot);
+                        break;
+                    case 22:
+                        chart1.Series[2].Points.AddXY(CntSamples, Ki);
+                        break;
+                    case 23:
+                        chart1.Series[2].Points.AddXY(CntSamples, KRot);
+                        break;
+                    case 24:
+                        chart1.Series[2].Points.AddXY(CntSamples, KpRot);
+                        break;
+                    case 25:
+                        chart1.Series[2].Points.AddXY(CntSamples, KiRot);
+                        break;
+                    case 26:
+                        chart1.Series[2].Points.AddXY(CntSamples, Preas1ADC);
+                        break;
+                    case 27:
+                        chart1.Series[2].Points.AddXY(CntSamples, Preas2ADC);
+                        break;
+                    case 28:
+                        chart1.Series[2].Points.AddXY(CntSamples, KpSPD);
+                        break;
+                    case 29:
+                        chart1.Series[2].Points.AddXY(CntSamples, AngleLimitReal);
+                        break;
+                    case 30:
+                        chart1.Series[2].Points.AddXY(CntSamples, AccX);
+                        break;
+                    case 31:
+                        chart1.Series[2].Points.AddXY(CntSamples, AccY);
+                        break;
+                    case 32:
+                        chart1.Series[2].Points.AddXY(CntSamples, AccZ);
+                        break;
+                    case 33:
+                        chart1.Series[2].Points.AddXY(CntSamples, TiltZad);
+                        break;
+                    case 34:
+                        chart1.Series[2].Points.AddXY(CntSamples, _48V);
+                        break;
+                    case 35:
+                        chart1.Series[2].Points.AddXY(CntSamples, GyroXFl);
+                        break;
+                    case 36:
+                        chart1.Series[2].Points.AddXY(CntSamples, GyroYFl);
+                        break;
+                    case 37:
+                        chart1.Series[2].Points.AddXY(CntSamples, GyroZFl);
+                        break;
+                    case 38:
+                        chart1.Series[2].Points.AddXY(CntSamples, Ed);
+                        break;
+                    case 39:
+                        chart1.Series[2].Points.AddXY(CntSamples, GyroYAv);
+                        break;
+                    case 40:
+                        chart1.Series[2].Points.AddXY(CntSamples, KdI);
+                        break;
+                    case 41:
+                        chart1.Series[2].Points.AddXY(CntSamples, Spd1Fl);
+                        break;
+                    case 42:
+                        //chart1.Series[2].Points.AddXY(CntSamples, Spd2Fl);
+                        break;
+                    case 43:
+                        int u = (int)CurrPerDigit;
+                        u = (int)(EPID_Res * u);
+                        chart1.Series[2].Points.AddXY(CntSamples, (float)(((float)u) / 1000));
+                        break;
+                    case 44:
+                        chart1.Series[2].Points.AddXY(CntSamples, Phase1Period1);
+                        break;
+                    case 45:
+                        chart1.Series[2].Points.AddXY(CntSamples, Phase1Period2);
+                        break;
+                    case 46:
+                        //chart1.Series[2].Points.AddXY(CntSamples, Phase1Period3);
+                        break;
+                    case 47:
+                        chart1.Series[2].Points.AddXY(CntSamples, Phase1Period4);
+                        break;
+                    case 48:
+                        chart1.Series[2].Points.AddXY(CntSamples, Phase1Period5);
+                        break;
+                    case 49:
+                        chart1.Series[2].Points.AddXY(CntSamples, Phase1Period6);
+                        break;
+                    case 50:
+                        //chart1.Series[2].Points.AddXY(CntSamples, Phase1PeriodTTL);
+                        break;
+                    case 51:
+                        chart1.Series[2].Points.AddXY(CntSamples, Spd1USTKMH);
+                        break;
+                    case 52:
+                        chart1.Series[2].Points.AddXY(CntSamples, PhaseCr);
+                        break;
+                    case 53:
+                        chart1.Series[2].Points.AddXY(CntSamples, EpCurr1);
+                        break;
+                    case 54:
+                        chart1.Series[2].Points.AddXY(CntSamples, ECurr1Summ);
+                        break;
+                    case 55:
+                        chart1.Series[2].Points.AddXY(CntSamples, PhasePer1);
+                        break;
+                    case 56:
+                        chart1.Series[2].Points.AddXY(CntSamples, Halls);
+                        break;
+                    case 57:
+                        chart1.Series[2].Points.AddXY(CntSamples, CurrA_P);
+                        break;
+                    case 58:
+                        chart1.Series[2].Points.AddXY(CntSamples, CurrA_N);
+                        break;
+                    case 59:
+                        chart1.Series[2].Points.AddXY(CntSamples, CurrC_P);
+                        break;
+                    case 60:
+                        chart1.Series[2].Points.AddXY(CntSamples, CurrC_N);
+                        break;
+                    case 61:
+                        chart1.Series[2].Points.AddXY(CntSamples, ADCThrottleBreak);
+                        break;
+                    case 62:
+                        chart1.Series[2].Points.AddXY(CntSamples, Eid);
+                        break;
+
+                    case 63:
+                        //chart1.Series[2].Points.AddXY(CntSamples, Theta1CntPWMSND);
+                        break;
+
+
+                    /*                              case 64:
+                                                      chart1.Series[2].Points.AddXY(CntSamples, GyroZFl);
+                                                      break;
+
+                  */
+                    case 65:
+                        chart1.Series[2].Points.AddXY(CntSamples, EpLog);
+                        break;
+                    case 66:
+                        chart1.Series[2].Points.AddXY(CntSamples, EiLog);
+                        break;
+                    case 67:
+                        chart1.Series[2].Points.AddXY(CntSamples, EdLog);
+                        break;
+
+
+                }
+
         }
 
     }

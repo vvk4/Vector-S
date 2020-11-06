@@ -29,3 +29,4 @@ E:\prog\X1\VectorGIT\Vector-S\PC\ControlBalance\obj\x86\Debug\X1.exe.manifest
 E:\prog\X1\VectorGIT\Vector-S\PC\ControlBalance\obj\x86\Debug\X1.application
 E:\prog\X1\VectorGIT\Vector-S\PC\ControlBalance\obj\x86\Debug\X1.exe
 E:\prog\X1\VectorGIT\Vector-S\PC\ControlBalance\obj\x86\Debug\X1.pdb
+E:\prog\X1\VectorGIT\Vector-S\PC\ControlBalance\obj\x86\Debug\Vector.csprojAssemblyReference.cache

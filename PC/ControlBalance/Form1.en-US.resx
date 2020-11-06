@@ -145,6 +145,12 @@
   <data name="label42.Location" type="System.Drawing.Point, System.Drawing">
     <value>26, 77</value>
   </data>
+  <data name="label109.Location" type="System.Drawing.Point, System.Drawing">
+    <value>237, 265</value>
+  </data>
+  <data name="label110.Location" type="System.Drawing.Point, System.Drawing">
+    <value>359, 265</value>
+  </data>
   <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         /9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAIBAQIBAQICAgICAgICAwUDAwMDAwYEBAMFBwYHBwcGBwcI
@@ -5574,6 +5580,51 @@
         ABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFF
         ABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAf//Z
 </value>
+  </data>
+  <data name="label684.Location" type="System.Drawing.Point, System.Drawing">
+    <value>110, 136</value>
+  </data>
+  <data name="label681.Location" type="System.Drawing.Point, System.Drawing">
+    <value>110, 103</value>
+  </data>
+  <data name="label680.Location" type="System.Drawing.Point, System.Drawing">
+    <value>110, 70</value>
+  </data>
+  <data name="label426.Location" type="System.Drawing.Point, System.Drawing">
+    <value>110, 37</value>
+  </data>
+  <data name="button24.Location" type="System.Drawing.Point, System.Drawing">
+    <value>273, 448</value>
+  </data>
+  <data name="button46.Location" type="System.Drawing.Point, System.Drawing">
+    <value>266, 526</value>
+  </data>
+  <data name="label509.Location" type="System.Drawing.Point, System.Drawing">
+    <value>359, 562</value>
+  </data>
+  <data name="label246.Location" type="System.Drawing.Point, System.Drawing">
+    <value>277, 418</value>
+  </data>
+  <data name="label508.Location" type="System.Drawing.Point, System.Drawing">
+    <value>263, 561</value>
+  </data>
+  <data name="label245.Location" type="System.Drawing.Point, System.Drawing">
+    <value>174, 390</value>
+  </data>
+  <data name="label244.Location" type="System.Drawing.Point, System.Drawing">
+    <value>359, 415</value>
+  </data>
+  <data name="label243.Location" type="System.Drawing.Point, System.Drawing">
+    <value>359, 387</value>
+  </data>
+  <data name="label367.Location" type="System.Drawing.Point, System.Drawing">
+    <value>247, 290</value>
+  </data>
+  <data name="label366.Location" type="System.Drawing.Point, System.Drawing">
+    <value>359, 290</value>
+  </data>
+  <data name="button30.Location" type="System.Drawing.Point, System.Drawing">
+    <value>248, 321</value>
   </data>
   <data name="checkBox112.Location" type="System.Drawing.Point, System.Drawing">
     <value>98, 5</value>

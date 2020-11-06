@@ -4,6 +4,7 @@
 
 
 unsigned char MaxAngleStopBreak;
+float EpLog, EiLog, EdLog;
 
 void GyroAcel(void) {
     float RotX = GyroYFl*TICK_PERIOD;
@@ -660,6 +661,11 @@ void MonoWheel(void) {
                     }
                 }
 
+                EpLog=Ep;
+                EiLog=Ei;
+                EdLog=Ed;
+                
+                
                 PWM1Temp = (int) Ep + (int) Ei + (int) Ed;
 
             }

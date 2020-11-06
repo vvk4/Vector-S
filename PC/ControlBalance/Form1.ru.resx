@@ -170,6 +170,30 @@
   <data name="label42.Text" xml:space="preserve">
     <value>Макс. угол вдоль.:</value>
   </data>
+  <data name="button24.Location" type="System.Drawing.Point, System.Drawing">
+    <value>359, 328</value>
+  </data>
+  <data name="label246.Location" type="System.Drawing.Point, System.Drawing">
+    <value>385, 295</value>
+  </data>
+  <data name="label245.Location" type="System.Drawing.Point, System.Drawing">
+    <value>282, 265</value>
+  </data>
+  <data name="label244.Location" type="System.Drawing.Point, System.Drawing">
+    <value>475, 292</value>
+  </data>
+  <data name="label243.Location" type="System.Drawing.Point, System.Drawing">
+    <value>475, 262</value>
+  </data>
+  <data name="label367.Location" type="System.Drawing.Point, System.Drawing">
+    <value>33, 295</value>
+  </data>
+  <data name="label366.Location" type="System.Drawing.Point, System.Drawing">
+    <value>145, 295</value>
+  </data>
+  <data name="button30.Location" type="System.Drawing.Point, System.Drawing">
+    <value>23, 326</value>
+  </data>
   <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         /9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAIBAQIBAQICAgICAgICAwUDAwMDAwYEBAMFBwYHBwcGBwcI
@@ -5600,24 +5624,20 @@
         ABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAf//Z
 </value>
   </data>
+  <data name="label684.Location" type="System.Drawing.Point, System.Drawing">
+    <value>107, 136</value>
+  </data>
+  <data name="label681.Location" type="System.Drawing.Point, System.Drawing">
+    <value>107, 103</value>
+  </data>
+  <data name="label680.Location" type="System.Drawing.Point, System.Drawing">
+    <value>107, 70</value>
+  </data>
+  <data name="label426.Location" type="System.Drawing.Point, System.Drawing">
+    <value>107, 37</value>
+  </data>
   <data name="label915.Location" type="System.Drawing.Point, System.Drawing">
     <value>477, 448</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="label814.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label814.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 10pt</value>
-  </data>
-  <data name="label814.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="label814.Size" type="System.Drawing.Size, System.Drawing">
-    <value>145, 17</value>
-  </data>
-  <data name="label814.Text" xml:space="preserve">
-    <value>Горизонт (0.1 град.):</value>
   </data>
   <data name="checkBox99.Location" type="System.Drawing.Point, System.Drawing">
     <value>64, 58</value>
@@ -5770,7 +5790,7 @@
     <value>39, 23</value>
   </data>
   <data name="checkBox76.Size" type="System.Drawing.Size, System.Drawing">
-    <value>132, 20</value>
+    <value>120, 20</value>
   </data>
   <data name="checkBox76.Text" xml:space="preserve">
     <value>Вперед-назад</value>
@@ -5791,7 +5811,7 @@
     <value>123, 0</value>
   </data>
   <data name="label812.Size" type="System.Drawing.Size, System.Drawing">
-    <value>113, 20</value>
+    <value>103, 20</value>
   </data>
   <data name="label812.Text" xml:space="preserve">
     <value>Торможение</value>

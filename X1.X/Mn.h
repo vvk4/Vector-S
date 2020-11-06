@@ -2,7 +2,7 @@
 
 #define Version     0x406////30.10.2020
 
-//#define HighDataSpdUART
+
 
 
 #define VECTOR
@@ -43,8 +43,8 @@
 
 
 
-//#define TST_PIN            
-//#define TRIS_TST_PIN       
+#define TST_PIN        LATFbits.LATF13
+#define TRIS_TST_PIN   TRISFbits.TRISF13     
 
 
 
@@ -920,7 +920,7 @@ typedef union {
 
 #define CW_CCW_AnyProfile      StatFlgs3.Fl0
 #define ShortCircuit           StatFlgs3.Fl1
-#define Mgnovenniy             StatFlgs3.Fl2
+#define HighDataSpdUART        StatFlgs3.Fl2
 #define BothBreaks             StatFlgs3.Fl3
 #define TrapezoidaWhenBigCurrent StatFlgs3.Fl4
 #define Joystick               StatFlgs3.Fl5
@@ -952,6 +952,10 @@ typedef union {
 #define I_PWMmaxSignal         StatFlgs4.Fl14
 #define DifferentKd            StatFlgs4.Fl15
 //BLDC 2
+
+
+
+
 
 
 //#define Break       ((!Break1)||(!Break2))
@@ -2252,6 +2256,7 @@ extern int OnDelayConst, OnDelayCnt, CurrUstWork;
 extern int TiltXThis, TiltYThis;
 extern unsigned int BuzzerOffTime;
 extern long int GyroZFilter, PWM1Temp, RotAddSumm,KFilterPrev,KFilter;
+extern float EpLog, EiLog, EdLog;
 
 
 

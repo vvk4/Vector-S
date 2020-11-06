@@ -136,10 +136,10 @@ section                    address   length (PC units)   length (bytes) (dec)
 -------                    -------   -----------------   --------------------
 .text                       0x2200              0x22a2          0x33f3  (13299)
 .const                      0x44a2               0x988           0xe4c  (3660)
-.text                       0x4e2a             0x1ca3c         0x2af5a  (175962)
-.dinit                     0x21866               0x18a           0x24f  (591)
+.text                       0x4e2a             0x1cbb4         0x2b18e  (176526)
+.dinit                     0x219de               0x18a           0x24f  (591)
 
-                 Total "program" memory used (bytes):        0x2f3e8  (193512) 37%
+                 Total "program" memory used (bytes):        0x2f61c  (194076) 37%
 
 
 Auxflash Memory  [Origin = 0x7fc000, Length = 0x3ffa]
@@ -157,9 +157,9 @@ section                    address      alignment gaps    total length  (dec)
 .nbss                       0x1000                   0             0x2  (2)
 .bss                        0x1002                   0          0x334c  (13132)
 .data                       0x434e                   0           0x226  (550)
-.bss                        0x4574                   0             0x2  (2)
+.bss                        0x4574                   0             0xe  (14)
 
-                 Total "data" memory used (bytes):         0x3576  (13686) 25%
+                 Total "data" memory used (bytes):         0x3582  (13698) 25%
 
 
 Dynamic Memory Usage
@@ -167,9 +167,9 @@ Dynamic Memory Usage
 region                     address                      maximum length  (dec)
 ------                     -------                      ---------------------
 heap                             0                                   0  (0)
-stack                       0x4576                              0x3a8a  (14986)
+stack                       0x4582                              0x3a7e  (14974)
 
-                 Maximum dynamic memory (bytes):         0x3a8a  (14986)
+                 Maximum dynamic memory (bytes):         0x3a7e  (14974)
 
 
 External Symbols in Data Memory (by address):
@@ -1204,6 +1204,9 @@ External Symbols in Data Memory (by address):
                     0x4571                  _SensorTST
                     0x4572                  _AutoPID_On_CntConst
                     0x4574                  _MaxAngleStopBreak
+                    0x4576                  _EpLog
+                    0x457a                  _EiLog
+                    0x457e                  _EdLog
 
 External Symbols in Data Memory (by name):
 
@@ -1548,9 +1551,11 @@ External Symbols in Data Memory (by name):
                     0x324a                  _EUChager
                     0x1414                  _E_PWM_Mode
                     0x1450                  _Ed
+                    0x457e                  _EdLog
                     0x325a                  _EdPWMmax
                     0x1454                  _Ei
                     0x2c78                  _EiCurrChager
+                    0x457a                  _EiLog
                     0x3256                  _EiPWMmax
                     0x324e                  _EiUChager
                     0x14a8                  _Eid
@@ -1558,6 +1563,7 @@ External Symbols in Data Memory (by name):
                     0x4112                  _EpCurr1
                     0x4116                  _EpCurr1PID
                     0x2c74                  _EpCurrChager
+                    0x4576                  _EpLog
                     0x3252                  _EpPWMmax
                     0x42ce                  _EpTemperIN
                     0x4326                  _EpTemperOUT
@@ -2323,189 +2329,189 @@ External Symbols in Program Memory (by address):
                   0x004dd6                  _TempTenzo6
                   0x004e2a                  _main
                   0x004f36                  _SegMain
-                  0x008754                  _InitSegAll
-                  0x008b22                  _OSC_Init
-                  0x008b46                  _InitPorts
-                  0x008bca                  _ADC1Init
-                  0x008c2a                  _ADC2Init
-                  0x008c78                  _SensorlessInit
-                  0x008d00                  _T9Init
-                  0x008d18                  _T3Init
-                  0x008d34                  _InitBLDCPorts
-                  0x008d8a                  _Phases1
-                  0x008f34                  _ReadSensor1_B
-                  0x008fb2                  _ReadSensor1_F
-                  0x009030                  _ChangePWM1
-                  0x009124                  _UARTInit_U3
-                  0x009184                  _TrmSteer
-                  0x0091ca                  _InitPort_U3
-                  0x0091e8                  _CalcCheckSumm
-                  0x009220                  _ReceiveUDP
-                  0x00d0d8                  _InitOC4
-                  0x00d130                  _InitAccSPI
-                  0x00d160                  _TxRxSPI_ACC
-                  0x00d18a                  _WF_SpiAccEnableChipSelect
-                  0x00d192                  _WF_SpiAccDisableChipSelect
-                  0x00d1aa                  _InitGyroSPI
-                  0x00d1fc                  _TxRxSPI_GYRO
-                  0x00d226                  _WF_SpiGyroEnableChipSelect
-                  0x00d22e                  _WF_SpiGyroDisableChipSelect
-                  0x00d236                  _InitFlash
-                  0x00d252                  _TrmRecByteFLASH
-                  0x00d2bc                  _RecStatusFLASH
-                  0x00d2e4                  _RecStatusFLASH_TST
-                  0x00d30c                  _ReadFlash
-                  0x00d37a                  _WREN_FLASH
-                  0x00d39a                  _WRDI_FLASH
-                  0x00d3ba                  _WriteByte_FLASH
-                  0x00d428                  _WriteStat_FLASH
-                  0x00d452                  _EraseSector_FLASH
-                  0x00d4ba                  _ReadOptions
-                  0x00d580                  _ReadOptions1
-                  0x00d5f4                  _OptionsToMass
-                  0x00e2a0                  _OptionsToMass2
-                  0x00e9ac                  _WriteOptions
-                  0x00ea4c                  _MassToOptions
-                  0x00f8ce                  _MassToOptions2
-                  0x0101f4                  _Comparator3_Init
-                  0x010230                  _ChangeCVR
-                  0x010320                  _Comparator2_Init
-                  0x01036a                  _WriteOdometr
-                  0x0103cc                  _ReadOdometr
-                  0x010534                  _WriteOdometrNew
-                  0x01068c                  _WrOdmtr
-                  0x0106c4                  _Buttons
-                  0x010ab8                  _Bt1Process
-                  0x010fa0                  _Bt2Process
-                  0x011462                  _Bt3Process
-                  0x011902                  _Bt4Process
-                  0x011dc4                  _writeFlash
-                  0x011e0a                  _WriteErrors
-                  0x012186                  _ReadErrors
-                  0x012382                  _UARTInit_U4
-                  0x0123e0                  _InitPort_U4
-                  0x012402                  _TrmHC05_AT
-                  0x012496                  _TrmHC05
-                  0x0124d2                  _CloseU4
-                  0x0124ea                  _TrmDataPacketHC05
-                  0x013c66                  _TrmFlashMass
-                  0x013d04                  _TrmFlashMass2
-                  0x013d9e                  _TrmErrorsHC05
-                  0x0140ce                  _SetKpMustBe_UP
-                  0x014102                  _SetKi_UP
-                  0x014136                  _SetKpSPD_UP
-                  0x014152                  _SetAngleLimit_UP
-                  0x01416e                  _DefaultOptions
-                  0x0145a6                  _AccToMemALM
-                  0x0145b8                  _AlmOn
-                  0x0145e6                  _AlmOff
-                  0x014606                  _Alm
-                  0x014796                  _Rbw
-                  0x01496a                  _GetRbw
-                  0x014a18                  _CalibrateCurr
-                  0x014aa0                  _InitSensorsNear
-                  0x014b06                  _SetTmrConst
-                  0x014b60                  _DataFrmBMS
-                  0x014b66                  _ErrorSound
-                  0x014bca                  _Dbg
-                  0x014be6                  _ChangeSensorOrder
-                  0x014cf8                  _CountSpd
-                  0x014eaa                  _SoundNoBMS
-                  0x014ebe                  _VectorInit
-                  0x014ef8                  _T4_5Init
-                  0x014f2c                  _T6_7Init
-                  0x014f5c                  _TrapeziumInit
-                  0x014f7e                  _T8Init
-                  0x014f9c                  _InitPWM_Vector
-                  0x015142                  _SVPWM1
-                  0x0166be                  _SVPWM1_SetPWM
-                  0x017760                  _SetPWM1_SV
-                  0x01780e                  _ReadSensor1_B_V
-                  0x017862                  _InvHalls
-                  0x017890                  _ReadSensor1_F_V
-                  0x0178e4                  _SetHallDelay1_F_UP
-                  0x017904                  _SetHallDelay1_B_UP
-                  0x017924                  _RdSensors
-                  0x0179a6                  _CalculateCalibrationHalls
-                  0x017dcc                  _Sound
-                  0x018166                  _InitPWM
-                  0x018220                  _SndPhDeb200
-                  0x0182c4                  _SndPhDeb400
-                  0x018362                  _SndNeutralDeb200
-                  0x018406                  _SndNeutralDeb400
-                  0x0184a2                  _TestBreak
-                  0x018636                  _StateMachinePID
-                  0x0186b0                  _GetTemperaturePTC_KTY81_210
-                  0x018784                  _GetTemperature_NTCALUG03A103H
-                  0x018858                  _GetTemperature_MF58_B_5K
-                  0x01892c                  _GetTemperature_MF58_G_10K
-                  0x018a00                  _GetTemperature_NCP18XH103F03RB
-                  0x018ad4                  _GetTemperaturePTC_KTY83_110
-                  0x018ba8                  _GetTemperaturePTC_KTY83_122
-                  0x018c7c                  _GetTemperaturePTC_KTY81_210_FETs
-                  0x018d50                  _GetTemperaturePTC_KTY84_130
-                  0x018e24                  _SensorlessMotorStartInit
-                  0x018e86                  _SensorlessMotorStart
-                  0x01904e                  _SensorlessMotorStopStarting
-                  0x019064                  _OptionsToMassProfile
-                  0x01a478                  _MassToOptionsProfile
-                  0x01bf54                  _DefaultProfileOptions
-                  0x01c1dc                  _ChangeProfile
-                  0x01c320                  _SetStartingProfile3PsnBtn
-                  0x01c3fe                  _AutoPIDStateMachine
-                  0x01c660                  _CopyProfiles
-                  0x01c69c                  _SendFlashMassToPC
-                  0x01c752                  _SendFlashMass2ToPC
-                  0x01c80a                  _SendProfileMassToPC
-                  0x01c8c0                  _CmdOK
-                  0x01c94e                  _CmdOK2
-                  0x01c9dc                  _CmdOK3
-                  0x01ca6c                  _SensorlessManualStartInit
-                  0x01cacc                  _CmdSendUnlockMSG
-                  0x01cb5c                  _ReadProgramMemory
-                  0x01cb8c                  _Lights
-                  0x01cc84                  _BzFuncOn
-                  0x01ccf8                  _ChangeCurr
-                  0x01ce64                  _Spd0TimerStateMachine
-                  0x01cf3e                  _AutoNastroyka_Func
-                  0x01db32                  _SendStateOfSinTest
-                  0x01ddd0                  _AutoNastrConfirmWait
-                  0x01de16                  _AutoNastroykaCMFStart
-                  0x01de38                  _UBT_To_V
-                  0x01de9e                  _SetPIN_HC05
-                  0x01df96                  _FillPINResetMass
-                  0x01dfe4                  _PID_OnOff_Func
-                  0x01e076                  _MPU60000Init
-                  0x01e2cc                  _writeByte
-                  0x01e2fe                  _readByte
-                  0x01e330                  _SetPWM_ChagerViaMotor
-                  0x01e3d8                  _PI_Chager
-                  0x01e6f4                  _TrmControls_U3
-                  0x01e85c                  _U4_9600_On
-                  0x01e8ee                  _ButtonsSlave
-                  0x01ecc4                  _BreakFunc
-                  0x01ecea                  _ClbrJOYSTICK
-                  0x01ed76                  _RecSlave2WDControls
-                  0x01eec8                  _LSM6DS33_Init
-                  0x01eeec                  _readByteLSM6DS33
-                  0x01ef1e                  _readBytesLSM6DS33
-                  0x01ef50                  _writeByteLSM6DS33
-                  0x01ef82                  _LighrSensorFunc
-                  0x01f08a                  _CriticalErrorLed
-                  0x01f132                  _WheelingFunc
-                  0x01f2aa                  _InitOC1
-                  0x01f2de                  _InitOC2
-                  0x01f31e                  _InitOC3
-                  0x01f35e                  _StartCharging
-                  0x01f46c                  _StopCharging
-                  0x01f58c                  _FindGyroVerticalFunc
-                  0x01f65a                  _SegAll
-                  0x01fa94                  _HighSpeedQuantum
-                  0x01fade                  _Round
-                  0x01fbd4                  _CurrentProtectionPID
-                  0x01fdca                  _PWM100StateMachine
-                  0x01fe86                  _GyroAcel
-                  0x02050c                  _MonoWheel
+                  0x00874e                  _InitSegAll
+                  0x008b20                  _OSC_Init
+                  0x008b44                  _InitPorts
+                  0x008bc8                  _ADC1Init
+                  0x008c28                  _ADC2Init
+                  0x008c76                  _SensorlessInit
+                  0x008cfe                  _T9Init
+                  0x008d16                  _T3Init
+                  0x008d32                  _InitBLDCPorts
+                  0x008d88                  _Phases1
+                  0x008f32                  _ReadSensor1_B
+                  0x008fb0                  _ReadSensor1_F
+                  0x00902e                  _ChangePWM1
+                  0x009122                  _UARTInit_U3
+                  0x009182                  _TrmSteer
+                  0x0091c8                  _InitPort_U3
+                  0x0091e6                  _CalcCheckSumm
+                  0x00921e                  _ReceiveUDP
+                  0x00d114                  _InitOC4
+                  0x00d16c                  _InitAccSPI
+                  0x00d19c                  _TxRxSPI_ACC
+                  0x00d1c6                  _WF_SpiAccEnableChipSelect
+                  0x00d1ce                  _WF_SpiAccDisableChipSelect
+                  0x00d1e6                  _InitGyroSPI
+                  0x00d238                  _TxRxSPI_GYRO
+                  0x00d262                  _WF_SpiGyroEnableChipSelect
+                  0x00d26a                  _WF_SpiGyroDisableChipSelect
+                  0x00d272                  _InitFlash
+                  0x00d28e                  _TrmRecByteFLASH
+                  0x00d2f8                  _RecStatusFLASH
+                  0x00d320                  _RecStatusFLASH_TST
+                  0x00d348                  _ReadFlash
+                  0x00d3b6                  _WREN_FLASH
+                  0x00d3d6                  _WRDI_FLASH
+                  0x00d3f6                  _WriteByte_FLASH
+                  0x00d464                  _WriteStat_FLASH
+                  0x00d48e                  _EraseSector_FLASH
+                  0x00d4f6                  _ReadOptions
+                  0x00d5bc                  _ReadOptions1
+                  0x00d630                  _OptionsToMass
+                  0x00e2d6                  _OptionsToMass2
+                  0x00e9e2                  _WriteOptions
+                  0x00ea82                  _MassToOptions
+                  0x00f904                  _MassToOptions2
+                  0x010224                  _Comparator3_Init
+                  0x010260                  _ChangeCVR
+                  0x010350                  _Comparator2_Init
+                  0x01039a                  _WriteOdometr
+                  0x0103fc                  _ReadOdometr
+                  0x010564                  _WriteOdometrNew
+                  0x0106bc                  _WrOdmtr
+                  0x0106f4                  _Buttons
+                  0x010ae8                  _Bt1Process
+                  0x010fd0                  _Bt2Process
+                  0x011492                  _Bt3Process
+                  0x011932                  _Bt4Process
+                  0x011df4                  _writeFlash
+                  0x011e3a                  _WriteErrors
+                  0x0121b6                  _ReadErrors
+                  0x0123b2                  _UARTInit_U4
+                  0x012410                  _InitPort_U4
+                  0x012432                  _TrmHC05_AT
+                  0x0124c6                  _TrmHC05
+                  0x012502                  _CloseU4
+                  0x01251a                  _TrmDataPacketHC05
+                  0x013e36                  _TrmFlashMass
+                  0x013ed4                  _TrmFlashMass2
+                  0x013f6e                  _TrmErrorsHC05
+                  0x01429e                  _SetKpMustBe_UP
+                  0x0142d2                  _SetKi_UP
+                  0x014306                  _SetKpSPD_UP
+                  0x014322                  _SetAngleLimit_UP
+                  0x01433e                  _DefaultOptions
+                  0x014776                  _AccToMemALM
+                  0x014788                  _AlmOn
+                  0x0147b6                  _AlmOff
+                  0x0147d6                  _Alm
+                  0x014966                  _Rbw
+                  0x014b3a                  _GetRbw
+                  0x014be8                  _CalibrateCurr
+                  0x014c70                  _InitSensorsNear
+                  0x014cd6                  _SetTmrConst
+                  0x014d30                  _DataFrmBMS
+                  0x014d36                  _ErrorSound
+                  0x014d9a                  _Dbg
+                  0x014db6                  _ChangeSensorOrder
+                  0x014ec8                  _CountSpd
+                  0x01507a                  _SoundNoBMS
+                  0x01508e                  _VectorInit
+                  0x0150c8                  _T4_5Init
+                  0x0150fc                  _T6_7Init
+                  0x01512c                  _TrapeziumInit
+                  0x01514e                  _T8Init
+                  0x01516c                  _InitPWM_Vector
+                  0x0152a2                  _SVPWM1
+                  0x01681e                  _SVPWM1_SetPWM
+                  0x0178c0                  _SetPWM1_SV
+                  0x01796e                  _ReadSensor1_B_V
+                  0x0179c2                  _InvHalls
+                  0x0179f0                  _ReadSensor1_F_V
+                  0x017a44                  _SetHallDelay1_F_UP
+                  0x017a64                  _SetHallDelay1_B_UP
+                  0x017a84                  _RdSensors
+                  0x017b06                  _CalculateCalibrationHalls
+                  0x017f2c                  _Sound
+                  0x0182c6                  _InitPWM
+                  0x018380                  _SndPhDeb200
+                  0x018424                  _SndPhDeb400
+                  0x0184c2                  _SndNeutralDeb200
+                  0x018566                  _SndNeutralDeb400
+                  0x018602                  _TestBreak
+                  0x018796                  _StateMachinePID
+                  0x018810                  _GetTemperaturePTC_KTY81_210
+                  0x0188e4                  _GetTemperature_NTCALUG03A103H
+                  0x0189b8                  _GetTemperature_MF58_B_5K
+                  0x018a8c                  _GetTemperature_MF58_G_10K
+                  0x018b60                  _GetTemperature_NCP18XH103F03RB
+                  0x018c34                  _GetTemperaturePTC_KTY83_110
+                  0x018d08                  _GetTemperaturePTC_KTY83_122
+                  0x018ddc                  _GetTemperaturePTC_KTY81_210_FETs
+                  0x018eb0                  _GetTemperaturePTC_KTY84_130
+                  0x018f84                  _SensorlessMotorStartInit
+                  0x018fe6                  _SensorlessMotorStart
+                  0x0191ae                  _SensorlessMotorStopStarting
+                  0x0191c4                  _OptionsToMassProfile
+                  0x01a5d8                  _MassToOptionsProfile
+                  0x01c0b4                  _DefaultProfileOptions
+                  0x01c33c                  _ChangeProfile
+                  0x01c480                  _SetStartingProfile3PsnBtn
+                  0x01c55e                  _AutoPIDStateMachine
+                  0x01c7c0                  _CopyProfiles
+                  0x01c7fc                  _SendFlashMassToPC
+                  0x01c8b2                  _SendFlashMass2ToPC
+                  0x01c96a                  _SendProfileMassToPC
+                  0x01ca20                  _CmdOK
+                  0x01caae                  _CmdOK2
+                  0x01cb3c                  _CmdOK3
+                  0x01cbcc                  _SensorlessManualStartInit
+                  0x01cc2c                  _CmdSendUnlockMSG
+                  0x01ccbc                  _ReadProgramMemory
+                  0x01ccec                  _Lights
+                  0x01cde4                  _BzFuncOn
+                  0x01ce58                  _ChangeCurr
+                  0x01cfc4                  _Spd0TimerStateMachine
+                  0x01d09e                  _AutoNastroyka_Func
+                  0x01dc92                  _SendStateOfSinTest
+                  0x01df30                  _AutoNastrConfirmWait
+                  0x01df76                  _AutoNastroykaCMFStart
+                  0x01df98                  _UBT_To_V
+                  0x01dffe                  _SetPIN_HC05
+                  0x01e0f6                  _FillPINResetMass
+                  0x01e144                  _PID_OnOff_Func
+                  0x01e1d6                  _MPU60000Init
+                  0x01e42c                  _writeByte
+                  0x01e45e                  _readByte
+                  0x01e490                  _SetPWM_ChagerViaMotor
+                  0x01e538                  _PI_Chager
+                  0x01e854                  _TrmControls_U3
+                  0x01e9bc                  _U4_9600_On
+                  0x01ea4e                  _ButtonsSlave
+                  0x01ee24                  _BreakFunc
+                  0x01ee4a                  _ClbrJOYSTICK
+                  0x01eed6                  _RecSlave2WDControls
+                  0x01f028                  _LSM6DS33_Init
+                  0x01f04c                  _readByteLSM6DS33
+                  0x01f07e                  _readBytesLSM6DS33
+                  0x01f0b0                  _writeByteLSM6DS33
+                  0x01f0e2                  _LighrSensorFunc
+                  0x01f1ea                  _CriticalErrorLed
+                  0x01f292                  _WheelingFunc
+                  0x01f40a                  _InitOC1
+                  0x01f43e                  _InitOC2
+                  0x01f47e                  _InitOC3
+                  0x01f4be                  _StartCharging
+                  0x01f5cc                  _StopCharging
+                  0x01f6ec                  _FindGyroVerticalFunc
+                  0x01f7ba                  _SegAll
+                  0x01fbf4                  _HighSpeedQuantum
+                  0x01fc3e                  _Round
+                  0x01fd34                  _CurrentProtectionPID
+                  0x01ff2a                  _PWM100StateMachine
+                  0x01ffe6                  _GyroAcel
+                  0x02066c                  _MonoWheel
                   0xf80004                  __FGS.sec
                   0xf80006                  _FOSCSEL
                   0xf80008                  _FOSC
@@ -2516,54 +2522,54 @@ External Symbols in Program Memory (by address):
 
 External Symbols in Program Memory (by name):
 
-                  0x008bca                  _ADC1Init
-                  0x008c2a                  _ADC2Init
+                  0x008bc8                  _ADC1Init
+                  0x008c28                  _ADC2Init
                   0x0047c8                  _ADC_BEMF_FILTER_CLKW
                   0x0044a2                  _ADC_MASK_CLKW
                   0x0044ae                  _ADC_XOR_CLKW
-                  0x0145a6                  _AccToMemALM
-                  0x014606                  _Alm
-                  0x0145e6                  _AlmOff
-                  0x0145b8                  _AlmOn
-                  0x01ddd0                  _AutoNastrConfirmWait
-                  0x01de16                  _AutoNastroykaCMFStart
-                  0x01cf3e                  _AutoNastroyka_Func
-                  0x01c3fe                  _AutoPIDStateMachine
-                  0x01ecc4                  _BreakFunc
-                  0x010ab8                  _Bt1Process
-                  0x010fa0                  _Bt2Process
-                  0x011462                  _Bt3Process
-                  0x011902                  _Bt4Process
-                  0x0106c4                  _Buttons
-                  0x01e8ee                  _ButtonsSlave
-                  0x01cc84                  _BzFuncOn
-                  0x0091e8                  _CalcCheckSumm
-                  0x0179a6                  _CalculateCalibrationHalls
-                  0x014a18                  _CalibrateCurr
-                  0x010230                  _ChangeCVR
-                  0x01ccf8                  _ChangeCurr
-                  0x009030                  _ChangePWM1
-                  0x01c1dc                  _ChangeProfile
-                  0x014be6                  _ChangeSensorOrder
-                  0x01ecea                  _ClbrJOYSTICK
-                  0x0124d2                  _CloseU4
-                  0x01c8c0                  _CmdOK
-                  0x01c94e                  _CmdOK2
-                  0x01c9dc                  _CmdOK3
-                  0x01cacc                  _CmdSendUnlockMSG
-                  0x010320                  _Comparator2_Init
-                  0x0101f4                  _Comparator3_Init
-                  0x01c660                  _CopyProfiles
-                  0x014cf8                  _CountSpd
-                  0x01f08a                  _CriticalErrorLed
+                  0x014776                  _AccToMemALM
+                  0x0147d6                  _Alm
+                  0x0147b6                  _AlmOff
+                  0x014788                  _AlmOn
+                  0x01df30                  _AutoNastrConfirmWait
+                  0x01df76                  _AutoNastroykaCMFStart
+                  0x01d09e                  _AutoNastroyka_Func
+                  0x01c55e                  _AutoPIDStateMachine
+                  0x01ee24                  _BreakFunc
+                  0x010ae8                  _Bt1Process
+                  0x010fd0                  _Bt2Process
+                  0x011492                  _Bt3Process
+                  0x011932                  _Bt4Process
+                  0x0106f4                  _Buttons
+                  0x01ea4e                  _ButtonsSlave
+                  0x01cde4                  _BzFuncOn
+                  0x0091e6                  _CalcCheckSumm
+                  0x017b06                  _CalculateCalibrationHalls
+                  0x014be8                  _CalibrateCurr
+                  0x010260                  _ChangeCVR
+                  0x01ce58                  _ChangeCurr
+                  0x00902e                  _ChangePWM1
+                  0x01c33c                  _ChangeProfile
+                  0x014db6                  _ChangeSensorOrder
+                  0x01ee4a                  _ClbrJOYSTICK
+                  0x012502                  _CloseU4
+                  0x01ca20                  _CmdOK
+                  0x01caae                  _CmdOK2
+                  0x01cb3c                  _CmdOK3
+                  0x01cc2c                  _CmdSendUnlockMSG
+                  0x010350                  _Comparator2_Init
+                  0x010224                  _Comparator3_Init
+                  0x01c7c0                  _CopyProfiles
+                  0x014ec8                  _CountSpd
+                  0x01f1ea                  _CriticalErrorLed
                   0x004808                  _CurrPerDigitDEF
-                  0x01fbd4                  _CurrentProtectionPID
-                  0x014b60                  _DataFrmBMS
-                  0x014bca                  _Dbg
-                  0x01416e                  _DefaultOptions
-                  0x01bf54                  _DefaultProfileOptions
-                  0x00d452                  _EraseSector_FLASH
-                  0x014b66                  _ErrorSound
+                  0x01fd34                  _CurrentProtectionPID
+                  0x014d30                  _DataFrmBMS
+                  0x014d9a                  _Dbg
+                  0x01433e                  _DefaultOptions
+                  0x01c0b4                  _DefaultProfileOptions
+                  0x00d48e                  _EraseSector_FLASH
+                  0x014d36                  _ErrorSound
                   0xf80010                  _FAS
                   0x000000                  _FGS
                   0xf8000e                  _FICD
@@ -2571,110 +2577,110 @@ External Symbols in Program Memory (by name):
                   0xf80006                  _FOSCSEL
                   0xf8000c                  _FPOR
                   0xf8000a                  _FWDT
-                  0x01df96                  _FillPINResetMass
-                  0x01f58c                  _FindGyroVerticalFunc
-                  0x01496a                  _GetRbw
-                  0x0186b0                  _GetTemperaturePTC_KTY81_210
-                  0x018c7c                  _GetTemperaturePTC_KTY81_210_FETs
-                  0x018ad4                  _GetTemperaturePTC_KTY83_110
-                  0x018ba8                  _GetTemperaturePTC_KTY83_122
-                  0x018d50                  _GetTemperaturePTC_KTY84_130
-                  0x018858                  _GetTemperature_MF58_B_5K
-                  0x01892c                  _GetTemperature_MF58_G_10K
-                  0x018a00                  _GetTemperature_NCP18XH103F03RB
-                  0x018784                  _GetTemperature_NTCALUG03A103H
-                  0x01fe86                  _GyroAcel
+                  0x01e0f6                  _FillPINResetMass
+                  0x01f6ec                  _FindGyroVerticalFunc
+                  0x014b3a                  _GetRbw
+                  0x018810                  _GetTemperaturePTC_KTY81_210
+                  0x018ddc                  _GetTemperaturePTC_KTY81_210_FETs
+                  0x018c34                  _GetTemperaturePTC_KTY83_110
+                  0x018d08                  _GetTemperaturePTC_KTY83_122
+                  0x018eb0                  _GetTemperaturePTC_KTY84_130
+                  0x0189b8                  _GetTemperature_MF58_B_5K
+                  0x018a8c                  _GetTemperature_MF58_G_10K
+                  0x018b60                  _GetTemperature_NCP18XH103F03RB
+                  0x0188e4                  _GetTemperature_NTCALUG03A103H
+                  0x01ffe6                  _GyroAcel
                   0x0044c1                  _HiDrive
-                  0x01fa94                  _HighSpeedQuantum
-                  0x00d130                  _InitAccSPI
-                  0x008d34                  _InitBLDCPorts
-                  0x00d236                  _InitFlash
-                  0x00d1aa                  _InitGyroSPI
-                  0x01f2aa                  _InitOC1
-                  0x01f2de                  _InitOC2
-                  0x01f31e                  _InitOC3
-                  0x00d0d8                  _InitOC4
-                  0x018166                  _InitPWM
-                  0x014f9c                  _InitPWM_Vector
-                  0x0091ca                  _InitPort_U3
-                  0x0123e0                  _InitPort_U4
-                  0x008b46                  _InitPorts
-                  0x008754                  _InitSegAll
-                  0x014aa0                  _InitSensorsNear
-                  0x017862                  _InvHalls
-                  0x01eec8                  _LSM6DS33_Init
-                  0x01ef82                  _LighrSensorFunc
-                  0x01cb8c                  _Lights
+                  0x01fbf4                  _HighSpeedQuantum
+                  0x00d16c                  _InitAccSPI
+                  0x008d32                  _InitBLDCPorts
+                  0x00d272                  _InitFlash
+                  0x00d1e6                  _InitGyroSPI
+                  0x01f40a                  _InitOC1
+                  0x01f43e                  _InitOC2
+                  0x01f47e                  _InitOC3
+                  0x00d114                  _InitOC4
+                  0x0182c6                  _InitPWM
+                  0x01516c                  _InitPWM_Vector
+                  0x0091c8                  _InitPort_U3
+                  0x012410                  _InitPort_U4
+                  0x008b44                  _InitPorts
+                  0x00874e                  _InitSegAll
+                  0x014c70                  _InitSensorsNear
+                  0x0179c2                  _InvHalls
+                  0x01f028                  _LSM6DS33_Init
+                  0x01f0e2                  _LighrSensorFunc
+                  0x01ccec                  _Lights
                   0x0044ba                  _LowDrive
-                  0x01e076                  _MPU60000Init
-                  0x00ea4c                  _MassToOptions
-                  0x00f8ce                  _MassToOptions2
-                  0x01a478                  _MassToOptionsProfile
-                  0x02050c                  _MonoWheel
-                  0x008b22                  _OSC_Init
-                  0x00d5f4                  _OptionsToMass
-                  0x00e2a0                  _OptionsToMass2
-                  0x019064                  _OptionsToMassProfile
-                  0x01dfe4                  _PID_OnOff_Func
-                  0x01e3d8                  _PI_Chager
-                  0x01fdca                  _PWM100StateMachine
-                  0x008d8a                  _Phases1
-                  0x014796                  _Rbw
-                  0x017924                  _RdSensors
-                  0x012186                  _ReadErrors
-                  0x00d30c                  _ReadFlash
-                  0x0103cc                  _ReadOdometr
-                  0x00d4ba                  _ReadOptions
-                  0x00d580                  _ReadOptions1
-                  0x01cb5c                  _ReadProgramMemory
-                  0x008f34                  _ReadSensor1_B
-                  0x01780e                  _ReadSensor1_B_V
-                  0x008fb2                  _ReadSensor1_F
-                  0x017890                  _ReadSensor1_F_V
-                  0x01ed76                  _RecSlave2WDControls
-                  0x00d2bc                  _RecStatusFLASH
-                  0x00d2e4                  _RecStatusFLASH_TST
-                  0x009220                  _ReceiveUDP
-                  0x01fade                  _Round
-                  0x015142                  _SVPWM1
-                  0x0166be                  _SVPWM1_SetPWM
-                  0x01f65a                  _SegAll
+                  0x01e1d6                  _MPU60000Init
+                  0x00ea82                  _MassToOptions
+                  0x00f904                  _MassToOptions2
+                  0x01a5d8                  _MassToOptionsProfile
+                  0x02066c                  _MonoWheel
+                  0x008b20                  _OSC_Init
+                  0x00d630                  _OptionsToMass
+                  0x00e2d6                  _OptionsToMass2
+                  0x0191c4                  _OptionsToMassProfile
+                  0x01e144                  _PID_OnOff_Func
+                  0x01e538                  _PI_Chager
+                  0x01ff2a                  _PWM100StateMachine
+                  0x008d88                  _Phases1
+                  0x014966                  _Rbw
+                  0x017a84                  _RdSensors
+                  0x0121b6                  _ReadErrors
+                  0x00d348                  _ReadFlash
+                  0x0103fc                  _ReadOdometr
+                  0x00d4f6                  _ReadOptions
+                  0x00d5bc                  _ReadOptions1
+                  0x01ccbc                  _ReadProgramMemory
+                  0x008f32                  _ReadSensor1_B
+                  0x01796e                  _ReadSensor1_B_V
+                  0x008fb0                  _ReadSensor1_F
+                  0x0179f0                  _ReadSensor1_F_V
+                  0x01eed6                  _RecSlave2WDControls
+                  0x00d2f8                  _RecStatusFLASH
+                  0x00d320                  _RecStatusFLASH_TST
+                  0x00921e                  _ReceiveUDP
+                  0x01fc3e                  _Round
+                  0x0152a2                  _SVPWM1
+                  0x01681e                  _SVPWM1_SetPWM
+                  0x01f7ba                  _SegAll
                   0x004f36                  _SegMain
-                  0x01c752                  _SendFlashMass2ToPC
-                  0x01c69c                  _SendFlashMassToPC
-                  0x01c80a                  _SendProfileMassToPC
-                  0x01db32                  _SendStateOfSinTest
-                  0x008c78                  _SensorlessInit
-                  0x01ca6c                  _SensorlessManualStartInit
-                  0x018e86                  _SensorlessMotorStart
-                  0x018e24                  _SensorlessMotorStartInit
-                  0x01904e                  _SensorlessMotorStopStarting
-                  0x014152                  _SetAngleLimit_UP
-                  0x017904                  _SetHallDelay1_B_UP
-                  0x0178e4                  _SetHallDelay1_F_UP
-                  0x014102                  _SetKi_UP
-                  0x0140ce                  _SetKpMustBe_UP
-                  0x014136                  _SetKpSPD_UP
-                  0x01de9e                  _SetPIN_HC05
-                  0x017760                  _SetPWM1_SV
-                  0x01e330                  _SetPWM_ChagerViaMotor
-                  0x01c320                  _SetStartingProfile3PsnBtn
-                  0x014b06                  _SetTmrConst
-                  0x018362                  _SndNeutralDeb200
-                  0x018406                  _SndNeutralDeb400
-                  0x018220                  _SndPhDeb200
-                  0x0182c4                  _SndPhDeb400
-                  0x017dcc                  _Sound
-                  0x014eaa                  _SoundNoBMS
-                  0x01ce64                  _Spd0TimerStateMachine
-                  0x01f35e                  _StartCharging
-                  0x018636                  _StateMachinePID
-                  0x01f46c                  _StopCharging
-                  0x008d18                  _T3Init
-                  0x014ef8                  _T4_5Init
-                  0x014f2c                  _T6_7Init
-                  0x014f7e                  _T8Init
-                  0x008d00                  _T9Init
+                  0x01c8b2                  _SendFlashMass2ToPC
+                  0x01c7fc                  _SendFlashMassToPC
+                  0x01c96a                  _SendProfileMassToPC
+                  0x01dc92                  _SendStateOfSinTest
+                  0x008c76                  _SensorlessInit
+                  0x01cbcc                  _SensorlessManualStartInit
+                  0x018fe6                  _SensorlessMotorStart
+                  0x018f84                  _SensorlessMotorStartInit
+                  0x0191ae                  _SensorlessMotorStopStarting
+                  0x014322                  _SetAngleLimit_UP
+                  0x017a64                  _SetHallDelay1_B_UP
+                  0x017a44                  _SetHallDelay1_F_UP
+                  0x0142d2                  _SetKi_UP
+                  0x01429e                  _SetKpMustBe_UP
+                  0x014306                  _SetKpSPD_UP
+                  0x01dffe                  _SetPIN_HC05
+                  0x0178c0                  _SetPWM1_SV
+                  0x01e490                  _SetPWM_ChagerViaMotor
+                  0x01c480                  _SetStartingProfile3PsnBtn
+                  0x014cd6                  _SetTmrConst
+                  0x0184c2                  _SndNeutralDeb200
+                  0x018566                  _SndNeutralDeb400
+                  0x018380                  _SndPhDeb200
+                  0x018424                  _SndPhDeb400
+                  0x017f2c                  _Sound
+                  0x01507a                  _SoundNoBMS
+                  0x01cfc4                  _Spd0TimerStateMachine
+                  0x01f4be                  _StartCharging
+                  0x018796                  _StateMachinePID
+                  0x01f5cc                  _StopCharging
+                  0x008d16                  _T3Init
+                  0x0150c8                  _T4_5Init
+                  0x0150fc                  _T6_7Init
+                  0x01514e                  _T8Init
+                  0x008cfe                  _T9Init
                   0x00483c                  _TempTenzo1
                   0x0048b0                  _TempTenzo2
                   0x004ce0                  _TempTenzo3
@@ -2692,38 +2698,38 @@ External Symbols in Program Memory (by name):
                   0x0048f4                  _Tenzo7
                   0x004968                  _Tenzo8
                   0x0049a2                  _Tenzo9
-                  0x0184a2                  _TestBreak
-                  0x014f5c                  _TrapeziumInit
-                  0x01e6f4                  _TrmControls_U3
-                  0x0124ea                  _TrmDataPacketHC05
-                  0x013d9e                  _TrmErrorsHC05
-                  0x013c66                  _TrmFlashMass
-                  0x013d04                  _TrmFlashMass2
-                  0x012496                  _TrmHC05
-                  0x012402                  _TrmHC05_AT
-                  0x00d252                  _TrmRecByteFLASH
-                  0x009184                  _TrmSteer
-                  0x00d160                  _TxRxSPI_ACC
-                  0x00d1fc                  _TxRxSPI_GYRO
-                  0x01e85c                  _U4_9600_On
-                  0x009124                  _UARTInit_U3
-                  0x012382                  _UARTInit_U4
-                  0x01de38                  _UBT_To_V
-                  0x014ebe                  _VectorInit
-                  0x00d192                  _WF_SpiAccDisableChipSelect
-                  0x00d18a                  _WF_SpiAccEnableChipSelect
-                  0x00d22e                  _WF_SpiGyroDisableChipSelect
-                  0x00d226                  _WF_SpiGyroEnableChipSelect
-                  0x00d39a                  _WRDI_FLASH
-                  0x00d37a                  _WREN_FLASH
-                  0x01f132                  _WheelingFunc
-                  0x01068c                  _WrOdmtr
-                  0x00d3ba                  _WriteByte_FLASH
-                  0x011e0a                  _WriteErrors
-                  0x01036a                  _WriteOdometr
-                  0x010534                  _WriteOdometrNew
-                  0x00e9ac                  _WriteOptions
-                  0x00d428                  _WriteStat_FLASH
+                  0x018602                  _TestBreak
+                  0x01512c                  _TrapeziumInit
+                  0x01e854                  _TrmControls_U3
+                  0x01251a                  _TrmDataPacketHC05
+                  0x013f6e                  _TrmErrorsHC05
+                  0x013e36                  _TrmFlashMass
+                  0x013ed4                  _TrmFlashMass2
+                  0x0124c6                  _TrmHC05
+                  0x012432                  _TrmHC05_AT
+                  0x00d28e                  _TrmRecByteFLASH
+                  0x009182                  _TrmSteer
+                  0x00d19c                  _TxRxSPI_ACC
+                  0x00d238                  _TxRxSPI_GYRO
+                  0x01e9bc                  _U4_9600_On
+                  0x009122                  _UARTInit_U3
+                  0x0123b2                  _UARTInit_U4
+                  0x01df98                  _UBT_To_V
+                  0x01508e                  _VectorInit
+                  0x00d1ce                  _WF_SpiAccDisableChipSelect
+                  0x00d1c6                  _WF_SpiAccEnableChipSelect
+                  0x00d26a                  _WF_SpiGyroDisableChipSelect
+                  0x00d262                  _WF_SpiGyroEnableChipSelect
+                  0x00d3d6                  _WRDI_FLASH
+                  0x00d3b6                  _WREN_FLASH
+                  0x01f292                  _WheelingFunc
+                  0x0106bc                  _WrOdmtr
+                  0x00d3f6                  _WriteByte_FLASH
+                  0x011e3a                  _WriteErrors
+                  0x01039a                  _WriteOdometr
+                  0x010564                  _WriteOdometrNew
+                  0x00e9e2                  _WriteOptions
+                  0x00d464                  _WriteStat_FLASH
                   0x0022fa                  __AD1Interrupt
                   0x00243c                  __AD2Interrupt
                   0x00308c                  __CNInterrupt
@@ -2779,16 +2785,16 @@ External Symbols in Program Memory (by name):
                   0x003faa                  _cosf
                   0x004400                  _fmodf
                   0x004e2a                  _main
-                  0x01e2fe                  _readByte
-                  0x01eeec                  _readByteLSM6DS33
-                  0x01ef1e                  _readBytesLSM6DS33
+                  0x01e45e                  _readByte
+                  0x01f04c                  _readByteLSM6DS33
+                  0x01f07e                  _readBytesLSM6DS33
                   0x0042be                  _sinf
                   0x0042c2                  _sqrtf
                   0x0044c8                  _tab_sin
                   0x004648                  _tab_sin_M
-                  0x01e2cc                  _writeByte
-                  0x01ef50                  _writeByteLSM6DS33
-                  0x011dc4                  _writeFlash
+                  0x01e42c                  _writeByte
+                  0x01f0b0                  _writeByteLSM6DS33
+                  0x011df4                  _writeFlash
 
 Memory Configuration
 
@@ -2956,7 +2962,7 @@ usercode
 
 __FGS             0xf80004          0x2
  *(__FGS.sec*)
- __FGS.sec        0xf80004          0x2 /CW/_FGSò|–|__FGS.sec
+ __FGS.sec        0xf80004          0x2 /CW/_FGSêZl»Zl__FGS.sec
                   0xf80004                  __FGS.sec
 
 __FOSCSEL
@@ -2983,21 +2989,21 @@ __FUID0
 .comment
  *(.comment)
 
-.debug_info       0x000000      0x18740
+.debug_info       0x000000      0x1880c
  *(.debug_info)
- .debug_info      0x000000      0x172ae build/default/production/X1Main.o
- .debug_info      0x0172ae       0x1492 build/default/production/Monocycle.o
+ .debug_info      0x000000      0x1730e build/default/production/X1Main.o
+ .debug_info      0x01730e       0x14fe build/default/production/Monocycle.o
  *(.gnu.linkonce.wi.*)
 
-.debug_abbrev     0x000000        0x353
+.debug_abbrev     0x000000        0x364
  *(.debug_abbrev)
  .debug_abbrev    0x000000        0x273 build/default/production/X1Main.o
- .debug_abbrev    0x000273         0xe0 build/default/production/Monocycle.o
+ .debug_abbrev    0x000273         0xf1 build/default/production/Monocycle.o
 
-.debug_line       0x000000       0x4438
+.debug_line       0x000000       0x4463
  *(.debug_line)
- .debug_line      0x000000       0x41c1 build/default/production/X1Main.o
- .debug_line      0x0041c1        0x277 build/default/production/Monocycle.o
+ .debug_line      0x000000       0x41e9 build/default/production/X1Main.o
+ .debug_line      0x0041e9        0x27a build/default/production/Monocycle.o
 
 .debug_frame      0x000000       0x194a
  *(.debug_frame)
@@ -3016,12 +3022,12 @@ __FUID0
  *(.debug_macinfo)
 
 .debug_pubnames
-                  0x000000       0x5075
+                  0x000000       0x5093
  *(.debug_pubnames)
  .debug_pubnames
                   0x000000       0x5032 build/default/production/X1Main.o
  .debug_pubnames
-                  0x005032         0x43 build/default/production/Monocycle.o
+                  0x005032         0x61 build/default/production/Monocycle.o
 
 .debug_ranges
  *(.debug_ranges)
@@ -6367,7 +6373,7 @@ LOAD e:/program files (x86)/microchip/xc16/v1.41/bin/bin/../../lib\libm-elf.a
 LOAD e:/program files (x86)/microchip/xc16/v1.41/bin/bin/../../lib\libc-elf.a
 END GROUP
 OUTPUT(dist/default/production/X1.X.production.elf elf32-pic30)
-LOAD /CW/_FGSò|–|__FGS.sec
+LOAD /CW/_FGSêZl»Zl__FGS.sec
 LOAD default_isr
 LOAD data_init
 
@@ -7482,43 +7488,46 @@ __c30_signature
                     0x4571                  _SensorTST
                     0x4572                  _AutoPID_On_CntConst
 
-.bss                0x4574          0x2
- .bss               0x4574          0x2 build/default/production/Monocycle.o
+.bss                0x4574          0xe
+ .bss               0x4574          0xe build/default/production/Monocycle.o
                     0x4574                  _MaxAngleStopBreak
+                    0x4576                  _EpLog
+                    0x457a                  _EiLog
+                    0x457e                  _EdLog
 
-_04D97B40_at_address_00F80006
+_04EC7C60_at_address_00F80006
                   0xf80006          0x2
- _04D97B40_at_address_00F80006
+ _04EC7C60_at_address_00F80006
                   0xf80006          0x2 build/default/production/X1Main.o
                   0xf80006                  _FOSCSEL
 
-_04D97BA0_at_address_00F80008
+_04EC7CC0_at_address_00F80008
                   0xf80008          0x2
- _04D97BA0_at_address_00F80008
+ _04EC7CC0_at_address_00F80008
                   0xf80008          0x2 build/default/production/X1Main.o
                   0xf80008                  _FOSC
 
-_04D97C00_at_address_00F8000A
+_04EC7D20_at_address_00F8000A
                   0xf8000a          0x2
- _04D97C00_at_address_00F8000A
+ _04EC7D20_at_address_00F8000A
                   0xf8000a          0x2 build/default/production/X1Main.o
                   0xf8000a                  _FWDT
 
-_04D97C60_at_address_00F8000C
+_04EC7D80_at_address_00F8000C
                   0xf8000c          0x2
- _04D97C60_at_address_00F8000C
+ _04EC7D80_at_address_00F8000C
                   0xf8000c          0x2 build/default/production/X1Main.o
                   0xf8000c                  _FPOR
 
-_04D97CC0_at_address_00F8000E
+_04EC7DE0_at_address_00F8000E
                   0xf8000e          0x2
- _04D97CC0_at_address_00F8000E
+ _04EC7DE0_at_address_00F8000E
                   0xf8000e          0x2 build/default/production/X1Main.o
                   0xf8000e                  _FICD
 
-_04D97D20_at_address_00F80010
+_04EC7E40_at_address_00F80010
                   0xf80010          0x2
- _04D97D20_at_address_00F80010
+ _04EC7E40_at_address_00F80010
                   0xf80010          0x2 build/default/production/X1Main.o
                   0xf80010                  _FAS
 
@@ -7635,194 +7644,194 @@ _04D97D20_at_address_00F80010
                     0xcda6                  _Tenzo6
                     0xcdd6                  _TempTenzo6
 
-.text             0x004e2a      0x1ca3c
- .text            0x004e2a      0x1b05c build/default/production/X1Main.o
+.text             0x004e2a      0x1cbb4
+ .text            0x004e2a      0x1b1bc build/default/production/X1Main.o
                   0x004e2a                  _main
                   0x004f36                  _SegMain
-                  0x008754                  _InitSegAll
-                  0x008b22                  _OSC_Init
-                  0x008b46                  _InitPorts
-                  0x008bca                  _ADC1Init
-                  0x008c2a                  _ADC2Init
-                  0x008c78                  _SensorlessInit
-                  0x008d00                  _T9Init
-                  0x008d18                  _T3Init
-                  0x008d34                  _InitBLDCPorts
-                  0x008d8a                  _Phases1
-                  0x008f34                  _ReadSensor1_B
-                  0x008fb2                  _ReadSensor1_F
-                  0x009030                  _ChangePWM1
-                  0x009124                  _UARTInit_U3
-                  0x009184                  _TrmSteer
-                  0x0091ca                  _InitPort_U3
-                  0x0091e8                  _CalcCheckSumm
-                  0x009220                  _ReceiveUDP
-                  0x00d0d8                  _InitOC4
-                  0x00d130                  _InitAccSPI
-                  0x00d160                  _TxRxSPI_ACC
-                  0x00d18a                  _WF_SpiAccEnableChipSelect
-                  0x00d192                  _WF_SpiAccDisableChipSelect
-                  0x00d1aa                  _InitGyroSPI
-                  0x00d1fc                  _TxRxSPI_GYRO
-                  0x00d226                  _WF_SpiGyroEnableChipSelect
-                  0x00d22e                  _WF_SpiGyroDisableChipSelect
-                  0x00d236                  _InitFlash
-                  0x00d252                  _TrmRecByteFLASH
-                  0x00d2bc                  _RecStatusFLASH
-                  0x00d2e4                  _RecStatusFLASH_TST
-                  0x00d30c                  _ReadFlash
-                  0x00d37a                  _WREN_FLASH
-                  0x00d39a                  _WRDI_FLASH
-                  0x00d3ba                  _WriteByte_FLASH
-                  0x00d428                  _WriteStat_FLASH
-                  0x00d452                  _EraseSector_FLASH
-                  0x00d4ba                  _ReadOptions
-                  0x00d580                  _ReadOptions1
-                  0x00d5f4                  _OptionsToMass
-                  0x00e2a0                  _OptionsToMass2
-                  0x00e9ac                  _WriteOptions
-                  0x00ea4c                  _MassToOptions
-                  0x00f8ce                  _MassToOptions2
-                  0x0101f4                  _Comparator3_Init
-                  0x010230                  _ChangeCVR
-                  0x010320                  _Comparator2_Init
-                  0x01036a                  _WriteOdometr
-                  0x0103cc                  _ReadOdometr
-                  0x010534                  _WriteOdometrNew
-                  0x01068c                  _WrOdmtr
-                  0x0106c4                  _Buttons
-                  0x010ab8                  _Bt1Process
-                  0x010fa0                  _Bt2Process
-                  0x011462                  _Bt3Process
-                  0x011902                  _Bt4Process
-                  0x011dc4                  _writeFlash
-                  0x011e0a                  _WriteErrors
-                  0x012186                  _ReadErrors
-                  0x012382                  _UARTInit_U4
-                  0x0123e0                  _InitPort_U4
-                  0x012402                  _TrmHC05_AT
-                  0x012496                  _TrmHC05
-                  0x0124d2                  _CloseU4
-                  0x0124ea                  _TrmDataPacketHC05
-                  0x013c66                  _TrmFlashMass
-                  0x013d04                  _TrmFlashMass2
-                  0x013d9e                  _TrmErrorsHC05
-                  0x0140ce                  _SetKpMustBe_UP
-                  0x014102                  _SetKi_UP
-                  0x014136                  _SetKpSPD_UP
-                  0x014152                  _SetAngleLimit_UP
-                  0x01416e                  _DefaultOptions
-                  0x0145a6                  _AccToMemALM
-                  0x0145b8                  _AlmOn
-                  0x0145e6                  _AlmOff
-                  0x014606                  _Alm
-                  0x014796                  _Rbw
-                  0x01496a                  _GetRbw
-                  0x014a18                  _CalibrateCurr
-                  0x014aa0                  _InitSensorsNear
-                  0x014b06                  _SetTmrConst
-                  0x014b60                  _DataFrmBMS
-                  0x014b66                  _ErrorSound
-                  0x014bca                  _Dbg
-                  0x014be6                  _ChangeSensorOrder
-                  0x014cf8                  _CountSpd
-                  0x014eaa                  _SoundNoBMS
-                  0x014ebe                  _VectorInit
-                  0x014ef8                  _T4_5Init
-                  0x014f2c                  _T6_7Init
-                  0x014f5c                  _TrapeziumInit
-                  0x014f7e                  _T8Init
-                  0x014f9c                  _InitPWM_Vector
-                  0x015142                  _SVPWM1
-                  0x0166be                  _SVPWM1_SetPWM
-                  0x017760                  _SetPWM1_SV
-                  0x01780e                  _ReadSensor1_B_V
-                  0x017862                  _InvHalls
-                  0x017890                  _ReadSensor1_F_V
-                  0x0178e4                  _SetHallDelay1_F_UP
-                  0x017904                  _SetHallDelay1_B_UP
-                  0x017924                  _RdSensors
-                  0x0179a6                  _CalculateCalibrationHalls
-                  0x017dcc                  _Sound
-                  0x018166                  _InitPWM
-                  0x018220                  _SndPhDeb200
-                  0x0182c4                  _SndPhDeb400
-                  0x018362                  _SndNeutralDeb200
-                  0x018406                  _SndNeutralDeb400
-                  0x0184a2                  _TestBreak
-                  0x018636                  _StateMachinePID
-                  0x0186b0                  _GetTemperaturePTC_KTY81_210
-                  0x018784                  _GetTemperature_NTCALUG03A103H
-                  0x018858                  _GetTemperature_MF58_B_5K
-                  0x01892c                  _GetTemperature_MF58_G_10K
-                  0x018a00                  _GetTemperature_NCP18XH103F03RB
-                  0x018ad4                  _GetTemperaturePTC_KTY83_110
-                  0x018ba8                  _GetTemperaturePTC_KTY83_122
-                  0x018c7c                  _GetTemperaturePTC_KTY81_210_FETs
-                  0x018d50                  _GetTemperaturePTC_KTY84_130
-                  0x018e24                  _SensorlessMotorStartInit
-                  0x018e86                  _SensorlessMotorStart
-                  0x01904e                  _SensorlessMotorStopStarting
-                  0x019064                  _OptionsToMassProfile
-                  0x01a478                  _MassToOptionsProfile
-                  0x01bf54                  _DefaultProfileOptions
-                  0x01c1dc                  _ChangeProfile
-                  0x01c320                  _SetStartingProfile3PsnBtn
-                  0x01c3fe                  _AutoPIDStateMachine
-                  0x01c660                  _CopyProfiles
-                  0x01c69c                  _SendFlashMassToPC
-                  0x01c752                  _SendFlashMass2ToPC
-                  0x01c80a                  _SendProfileMassToPC
-                  0x01c8c0                  _CmdOK
-                  0x01c94e                  _CmdOK2
-                  0x01c9dc                  _CmdOK3
-                  0x01ca6c                  _SensorlessManualStartInit
-                  0x01cacc                  _CmdSendUnlockMSG
-                  0x01cb5c                  _ReadProgramMemory
-                  0x01cb8c                  _Lights
-                  0x01cc84                  _BzFuncOn
-                  0x01ccf8                  _ChangeCurr
-                  0x01ce64                  _Spd0TimerStateMachine
-                  0x01cf3e                  _AutoNastroyka_Func
-                  0x01db32                  _SendStateOfSinTest
-                  0x01ddd0                  _AutoNastrConfirmWait
-                  0x01de16                  _AutoNastroykaCMFStart
-                  0x01de38                  _UBT_To_V
-                  0x01de9e                  _SetPIN_HC05
-                  0x01df96                  _FillPINResetMass
-                  0x01dfe4                  _PID_OnOff_Func
-                  0x01e076                  _MPU60000Init
-                  0x01e2cc                  _writeByte
-                  0x01e2fe                  _readByte
-                  0x01e330                  _SetPWM_ChagerViaMotor
-                  0x01e3d8                  _PI_Chager
-                  0x01e6f4                  _TrmControls_U3
-                  0x01e85c                  _U4_9600_On
-                  0x01e8ee                  _ButtonsSlave
-                  0x01ecc4                  _BreakFunc
-                  0x01ecea                  _ClbrJOYSTICK
-                  0x01ed76                  _RecSlave2WDControls
-                  0x01eec8                  _LSM6DS33_Init
-                  0x01eeec                  _readByteLSM6DS33
-                  0x01ef1e                  _readBytesLSM6DS33
-                  0x01ef50                  _writeByteLSM6DS33
-                  0x01ef82                  _LighrSensorFunc
-                  0x01f08a                  _CriticalErrorLed
-                  0x01f132                  _WheelingFunc
-                  0x01f2aa                  _InitOC1
-                  0x01f2de                  _InitOC2
-                  0x01f31e                  _InitOC3
-                  0x01f35e                  _StartCharging
-                  0x01f46c                  _StopCharging
-                  0x01f58c                  _FindGyroVerticalFunc
-                  0x01f65a                  _SegAll
-                  0x01fa94                  _HighSpeedQuantum
-                  0x01fade                  _Round
-                  0x01fbd4                  _CurrentProtectionPID
-                  0x01fdca                  _PWM100StateMachine
- .text            0x01fe86       0x19e0 build/default/production/Monocycle.o
-                  0x01fe86                  _GyroAcel
-                  0x02050c                  _MonoWheel
+                  0x00874e                  _InitSegAll
+                  0x008b20                  _OSC_Init
+                  0x008b44                  _InitPorts
+                  0x008bc8                  _ADC1Init
+                  0x008c28                  _ADC2Init
+                  0x008c76                  _SensorlessInit
+                  0x008cfe                  _T9Init
+                  0x008d16                  _T3Init
+                  0x008d32                  _InitBLDCPorts
+                  0x008d88                  _Phases1
+                  0x008f32                  _ReadSensor1_B
+                  0x008fb0                  _ReadSensor1_F
+                  0x00902e                  _ChangePWM1
+                  0x009122                  _UARTInit_U3
+                  0x009182                  _TrmSteer
+                  0x0091c8                  _InitPort_U3
+                  0x0091e6                  _CalcCheckSumm
+                  0x00921e                  _ReceiveUDP
+                  0x00d114                  _InitOC4
+                  0x00d16c                  _InitAccSPI
+                  0x00d19c                  _TxRxSPI_ACC
+                  0x00d1c6                  _WF_SpiAccEnableChipSelect
+                  0x00d1ce                  _WF_SpiAccDisableChipSelect
+                  0x00d1e6                  _InitGyroSPI
+                  0x00d238                  _TxRxSPI_GYRO
+                  0x00d262                  _WF_SpiGyroEnableChipSelect
+                  0x00d26a                  _WF_SpiGyroDisableChipSelect
+                  0x00d272                  _InitFlash
+                  0x00d28e                  _TrmRecByteFLASH
+                  0x00d2f8                  _RecStatusFLASH
+                  0x00d320                  _RecStatusFLASH_TST
+                  0x00d348                  _ReadFlash
+                  0x00d3b6                  _WREN_FLASH
+                  0x00d3d6                  _WRDI_FLASH
+                  0x00d3f6                  _WriteByte_FLASH
+                  0x00d464                  _WriteStat_FLASH
+                  0x00d48e                  _EraseSector_FLASH
+                  0x00d4f6                  _ReadOptions
+                  0x00d5bc                  _ReadOptions1
+                  0x00d630                  _OptionsToMass
+                  0x00e2d6                  _OptionsToMass2
+                  0x00e9e2                  _WriteOptions
+                  0x00ea82                  _MassToOptions
+                  0x00f904                  _MassToOptions2
+                  0x010224                  _Comparator3_Init
+                  0x010260                  _ChangeCVR
+                  0x010350                  _Comparator2_Init
+                  0x01039a                  _WriteOdometr
+                  0x0103fc                  _ReadOdometr
+                  0x010564                  _WriteOdometrNew
+                  0x0106bc                  _WrOdmtr
+                  0x0106f4                  _Buttons
+                  0x010ae8                  _Bt1Process
+                  0x010fd0                  _Bt2Process
+                  0x011492                  _Bt3Process
+                  0x011932                  _Bt4Process
+                  0x011df4                  _writeFlash
+                  0x011e3a                  _WriteErrors
+                  0x0121b6                  _ReadErrors
+                  0x0123b2                  _UARTInit_U4
+                  0x012410                  _InitPort_U4
+                  0x012432                  _TrmHC05_AT
+                  0x0124c6                  _TrmHC05
+                  0x012502                  _CloseU4
+                  0x01251a                  _TrmDataPacketHC05
+                  0x013e36                  _TrmFlashMass
+                  0x013ed4                  _TrmFlashMass2
+                  0x013f6e                  _TrmErrorsHC05
+                  0x01429e                  _SetKpMustBe_UP
+                  0x0142d2                  _SetKi_UP
+                  0x014306                  _SetKpSPD_UP
+                  0x014322                  _SetAngleLimit_UP
+                  0x01433e                  _DefaultOptions
+                  0x014776                  _AccToMemALM
+                  0x014788                  _AlmOn
+                  0x0147b6                  _AlmOff
+                  0x0147d6                  _Alm
+                  0x014966                  _Rbw
+                  0x014b3a                  _GetRbw
+                  0x014be8                  _CalibrateCurr
+                  0x014c70                  _InitSensorsNear
+                  0x014cd6                  _SetTmrConst
+                  0x014d30                  _DataFrmBMS
+                  0x014d36                  _ErrorSound
+                  0x014d9a                  _Dbg
+                  0x014db6                  _ChangeSensorOrder
+                  0x014ec8                  _CountSpd
+                  0x01507a                  _SoundNoBMS
+                  0x01508e                  _VectorInit
+                  0x0150c8                  _T4_5Init
+                  0x0150fc                  _T6_7Init
+                  0x01512c                  _TrapeziumInit
+                  0x01514e                  _T8Init
+                  0x01516c                  _InitPWM_Vector
+                  0x0152a2                  _SVPWM1
+                  0x01681e                  _SVPWM1_SetPWM
+                  0x0178c0                  _SetPWM1_SV
+                  0x01796e                  _ReadSensor1_B_V
+                  0x0179c2                  _InvHalls
+                  0x0179f0                  _ReadSensor1_F_V
+                  0x017a44                  _SetHallDelay1_F_UP
+                  0x017a64                  _SetHallDelay1_B_UP
+                  0x017a84                  _RdSensors
+                  0x017b06                  _CalculateCalibrationHalls
+                  0x017f2c                  _Sound
+                  0x0182c6                  _InitPWM
+                  0x018380                  _SndPhDeb200
+                  0x018424                  _SndPhDeb400
+                  0x0184c2                  _SndNeutralDeb200
+                  0x018566                  _SndNeutralDeb400
+                  0x018602                  _TestBreak
+                  0x018796                  _StateMachinePID
+                  0x018810                  _GetTemperaturePTC_KTY81_210
+                  0x0188e4                  _GetTemperature_NTCALUG03A103H
+                  0x0189b8                  _GetTemperature_MF58_B_5K
+                  0x018a8c                  _GetTemperature_MF58_G_10K
+                  0x018b60                  _GetTemperature_NCP18XH103F03RB
+                  0x018c34                  _GetTemperaturePTC_KTY83_110
+                  0x018d08                  _GetTemperaturePTC_KTY83_122
+                  0x018ddc                  _GetTemperaturePTC_KTY81_210_FETs
+                  0x018eb0                  _GetTemperaturePTC_KTY84_130
+                  0x018f84                  _SensorlessMotorStartInit
+                  0x018fe6                  _SensorlessMotorStart
+                  0x0191ae                  _SensorlessMotorStopStarting
+                  0x0191c4                  _OptionsToMassProfile
+                  0x01a5d8                  _MassToOptionsProfile
+                  0x01c0b4                  _DefaultProfileOptions
+                  0x01c33c                  _ChangeProfile
+                  0x01c480                  _SetStartingProfile3PsnBtn
+                  0x01c55e                  _AutoPIDStateMachine
+                  0x01c7c0                  _CopyProfiles
+                  0x01c7fc                  _SendFlashMassToPC
+                  0x01c8b2                  _SendFlashMass2ToPC
+                  0x01c96a                  _SendProfileMassToPC
+                  0x01ca20                  _CmdOK
+                  0x01caae                  _CmdOK2
+                  0x01cb3c                  _CmdOK3
+                  0x01cbcc                  _SensorlessManualStartInit
+                  0x01cc2c                  _CmdSendUnlockMSG
+                  0x01ccbc                  _ReadProgramMemory
+                  0x01ccec                  _Lights
+                  0x01cde4                  _BzFuncOn
+                  0x01ce58                  _ChangeCurr
+                  0x01cfc4                  _Spd0TimerStateMachine
+                  0x01d09e                  _AutoNastroyka_Func
+                  0x01dc92                  _SendStateOfSinTest
+                  0x01df30                  _AutoNastrConfirmWait
+                  0x01df76                  _AutoNastroykaCMFStart
+                  0x01df98                  _UBT_To_V
+                  0x01dffe                  _SetPIN_HC05
+                  0x01e0f6                  _FillPINResetMass
+                  0x01e144                  _PID_OnOff_Func
+                  0x01e1d6                  _MPU60000Init
+                  0x01e42c                  _writeByte
+                  0x01e45e                  _readByte
+                  0x01e490                  _SetPWM_ChagerViaMotor
+                  0x01e538                  _PI_Chager
+                  0x01e854                  _TrmControls_U3
+                  0x01e9bc                  _U4_9600_On
+                  0x01ea4e                  _ButtonsSlave
+                  0x01ee24                  _BreakFunc
+                  0x01ee4a                  _ClbrJOYSTICK
+                  0x01eed6                  _RecSlave2WDControls
+                  0x01f028                  _LSM6DS33_Init
+                  0x01f04c                  _readByteLSM6DS33
+                  0x01f07e                  _readBytesLSM6DS33
+                  0x01f0b0                  _writeByteLSM6DS33
+                  0x01f0e2                  _LighrSensorFunc
+                  0x01f1ea                  _CriticalErrorLed
+                  0x01f292                  _WheelingFunc
+                  0x01f40a                  _InitOC1
+                  0x01f43e                  _InitOC2
+                  0x01f47e                  _InitOC3
+                  0x01f4be                  _StartCharging
+                  0x01f5cc                  _StopCharging
+                  0x01f6ec                  _FindGyroVerticalFunc
+                  0x01f7ba                  _SegAll
+                  0x01fbf4                  _HighSpeedQuantum
+                  0x01fc3e                  _Round
+                  0x01fd34                  _CurrentProtectionPID
+                  0x01ff2a                  _PWM100StateMachine
+ .text            0x01ffe6       0x19f8 build/default/production/Monocycle.o
+                  0x01ffe6                  _GyroAcel
+                  0x02066c                  _MonoWheel
 
-.dinit            0x021866        0x18a
- .dinit           0x021866        0x18a data_init
+.dinit            0x0219de        0x18a
+ .dinit           0x0219de        0x18a data_init
