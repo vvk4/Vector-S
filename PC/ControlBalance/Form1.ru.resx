@@ -170,30 +170,6 @@
   <data name="label42.Text" xml:space="preserve">
     <value>Макс. угол вдоль.:</value>
   </data>
-  <data name="button24.Location" type="System.Drawing.Point, System.Drawing">
-    <value>359, 328</value>
-  </data>
-  <data name="label246.Location" type="System.Drawing.Point, System.Drawing">
-    <value>385, 295</value>
-  </data>
-  <data name="label245.Location" type="System.Drawing.Point, System.Drawing">
-    <value>282, 265</value>
-  </data>
-  <data name="label244.Location" type="System.Drawing.Point, System.Drawing">
-    <value>475, 292</value>
-  </data>
-  <data name="label243.Location" type="System.Drawing.Point, System.Drawing">
-    <value>475, 262</value>
-  </data>
-  <data name="label367.Location" type="System.Drawing.Point, System.Drawing">
-    <value>33, 295</value>
-  </data>
-  <data name="label366.Location" type="System.Drawing.Point, System.Drawing">
-    <value>145, 295</value>
-  </data>
-  <data name="button30.Location" type="System.Drawing.Point, System.Drawing">
-    <value>23, 326</value>
-  </data>
   <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         /9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAIBAQIBAQICAgICAgICAwUDAwMDAwYEBAMFBwYHBwcGBwcI
@@ -5635,6 +5611,30 @@
   </data>
   <data name="label426.Location" type="System.Drawing.Point, System.Drawing">
     <value>107, 37</value>
+  </data>
+  <data name="button24.Location" type="System.Drawing.Point, System.Drawing">
+    <value>359, 328</value>
+  </data>
+  <data name="label246.Location" type="System.Drawing.Point, System.Drawing">
+    <value>385, 295</value>
+  </data>
+  <data name="label245.Location" type="System.Drawing.Point, System.Drawing">
+    <value>282, 265</value>
+  </data>
+  <data name="label244.Location" type="System.Drawing.Point, System.Drawing">
+    <value>475, 292</value>
+  </data>
+  <data name="label243.Location" type="System.Drawing.Point, System.Drawing">
+    <value>475, 262</value>
+  </data>
+  <data name="label367.Location" type="System.Drawing.Point, System.Drawing">
+    <value>33, 295</value>
+  </data>
+  <data name="label366.Location" type="System.Drawing.Point, System.Drawing">
+    <value>145, 295</value>
+  </data>
+  <data name="button30.Location" type="System.Drawing.Point, System.Drawing">
+    <value>23, 326</value>
   </data>
   <data name="label915.Location" type="System.Drawing.Point, System.Drawing">
     <value>477, 448</value>

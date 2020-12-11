@@ -1097,8 +1097,6 @@ unsigned char ReadSensor1_F_V(void);
 
 void SetHallDelay1_F_UP(void);
 void SetHallDelay1_B_UP(void);
-void SndPhDeb200(void);
-void SndPhDeb400(void);
 void SetPWM_ChagerViaMotor();
 void CriticalErrorLed(void);
 void WheelingFunc(void);
@@ -1110,8 +1108,6 @@ unsigned char readByte(unsigned char ADDR);
 
 void AutoNastroykaCMFStart(unsigned int AutoNastroykaStateFin);
 
-void SndNeutralDeb200(void);
-void SndNeutralDeb400(void);
 void CmdSendUnlockMSG(void);
 
 int MaxSpdCoeff, TemperatureMPU6000;
@@ -1244,9 +1240,8 @@ unsigned int CurrLimit, CurrLimitWork, SensorLessCurrLimit, CntTestingSinDelay;
 unsigned char PhasePERMASS, PhasePERMASS_SHFT, adcBackEMFFilter, MPU6050ReadStateMachine;
 
 
-#define MassTMPSIZE 1000
 unsigned char Sensor1_Prev_Const = 1, CntZero, CntZeroConst = 5, ChangeCurrStateMachine;
-unsigned int MassTMPPhase[MassTMPSIZE], MassTMPNeutral[MassTMPSIZE], CntPhase = 0, CntGyroAccSameOff, Phase1Period1Up;
+unsigned int MassTMPPhaseA[MassTMPSIZE],MassTMPPhaseB[MassTMPSIZE],MassTMPPhaseC[MassTMPSIZE], MassTMPNeutral[MassTMPSIZE], CntPhase = 0, CntGyroAccSameOff, Phase1Period1Up;
 float _3VFl, _5VFl, _12VFl, SlowSpeedForKpFl;
 
 unsigned char TrmMass_U3[255], SlowSpeedForKp;
@@ -1461,7 +1456,7 @@ void WriteOdometrNew(void);
 void writeByteLSM6DS33(unsigned char ADDR, unsigned char Data);
 void readBytesLSM6DS33(unsigned char ADDR, unsigned char N);
 unsigned char readByteLSM6DS33(unsigned char ADDR);
-
+void SndDebugArrays(void);
 
 
 
@@ -2809,6 +2804,13 @@ void SegMain(void) {
 
     ButtonBreakOnly = 0;
 
+    
+    
+#if !defined SENSORLESS_TEST
+        Sensorless2=0;
+#endif
+
+    
 
     if (ErrorCode != CriticalError) {
         if (CriticalError) {
@@ -4615,7 +4617,7 @@ void SegMain(void) {
 
                     PWM1Temp = ThrottleTmp*KThrottle;
 
-                    if ((SpeedControl || AntiPolice)&&(!SpeedControlPID)&&(!Sensorless)) {
+                    if ((SpeedControl)&&(!SpeedControlPID)&&(!Sensorless)) {
                         if (!CurrentControlOnly)
                             Spd1UST = ((float) (PWM1Temp * (long int) MaxSpd)) / (((float) MAX_PWM) * ImpToKmH1_t);
                         else
@@ -4625,11 +4627,7 @@ void SegMain(void) {
                             //        Spd1UST_Tmp=(float)((float)PWM1Temp/(float)MaxSpdCoeff);
                             Spd1UST_Tmp = ((float) (PWM1Temp * (long int) MaxSpd)) / (((float) MAX_PWM) * ImpToKmH1_t);
                         if (!Sensorless) {
-                            if (!AntiPolice)
                                 PWM1Temp = (((float) PWM1Temp) / 100) * MAX_PWM_MEM_WORK;
-                            else {
-                                PWM1Temp = (((float) PWM1Temp) / 100)*(float) AntiPolicePower;
-                            }
                         }
                     }
                     if (DisconnectMotor)
@@ -5595,12 +5593,9 @@ void SegMain(void) {
 
     CntSamples++;
 
-    SndPhDeb200();
-    SndPhDeb400();
-
-
-    SndNeutralDeb200();
-    SndNeutralDeb400();
+    
+    SndDebugArrays();
+    
 
 
     TrmFlashMass();
@@ -6051,6 +6046,9 @@ void InitSegAll(void) {
             VectorInit();
         else
             TrapeziumInit();
+#if defined SENSORLESS_TEST
+        SensorlessInit();
+#endif
     }
 #endif
     RdSensors();
@@ -6069,15 +6067,7 @@ void InitSegAll(void) {
     if (Monocycle)
         SoundNum = 1;
 
-    AntiPolice = 0;
-    if (AntiPolice) {
-        if (SpeedControl)
-            SpeedControlTmp = 1;
-        else
-            SpeedControlTmp = 0;
-        //SpeedControl=1;
-        //    MaxSpdCoeff=(int)((((float)MAX_PWM)*ImpToKmH1_t)/((float)SlowStrtSpd/ImpToKmH1_t));
-    }
+    
 
     SpeedControlPrev = SpeedControl;
 
@@ -6573,434 +6563,8 @@ void __attribute__((interrupt, auto_psv)) _AD1Interrupt(void) {
 
 }
 
-void ADC2Init(void) {
 
-    /* Set port configuration */
-    //ANSELA = ANSELC = ANSELD = ANSELE = ANSELG = 0x0000;
-    //ANSELB = 0x012C; // Ensure AN2, AN3, AN5 and AN8 are analog
-    /* Initialize ADC module */
-    AD2CON1 = 0x04E4; // Enable 12-bit mode, auto-sample and auto-conversion
-    AD2CON2 = 0x0408; // Sample 4 channels alternately using channel scanning
-#if defined REV2
-    //AD2CON2bits.CHPS=0x10;
-    //AD2CON1bits.SIMSAM=1;
-#endif
-    AD2CON3 = 5; //0x0F0F; // Sample for 15*TAD before converting
-    AD2CON4 = 0x0000;
-    //AD2CSSH=0b000000000100000;
-    // AD2CSSL=0b00000000001110;
-    AD2CSSL = 0b00000000000111;
-    //   AD1CSSL=0b110000000000000;
-    //AD1CSSH = 0x0000;
-    //AD1CSSL = 0x012C; // Select AN2, AN3, AN5 and AN8 for scanning
-    /* Assign MUXA inputs */
-    AD2CHS0bits.CH0SA = 0; // CH0SA bits ignored for CH0 +ve input selection
-    AD2CHS0bits.CH0NA = 0; // Select VREF- for CH0 -ve input
-
-
-    AD2CON1bits.SSRC = 3;
-    AD2CON1bits.SSRCG = 0;
-
-    /* Enable ADC module and provide ADC stabilization delay */
-    AD2CON1bits.ADON = 1;
-    IFS1bits.AD2IF = 0;
-    IPC5bits.AD2IP = 7;
-    IEC1bits.AD2IE = 1;
-
-    int k;
-    for (k = 0; k < 20000; k++);
-
-
-}
-
-void __attribute__((interrupt, auto_psv)) _AD2Interrupt(void) {
-    unsigned long int TmL;
-    unsigned char SnT;
-    //Light=1;
-
-    IFS1bits.AD2IF = 0;
-
-    //  if (Sensor1_Prev==1)
-
-    MotorPhaseC = ADC2BUF0;
-    MotorPhaseB = ADC2BUF1;
-    MotorPhaseA = ADC2BUF2;
-
-
-    MotorNeutralVoltage = (MotorPhaseA + MotorPhaseB + MotorPhaseC) / 3;
-
-    SnT = ReadSensor1_B();
-    /*
-    if (SnT==6)
-        Horn=1;
-    else
-        Horn=0;
-     */
-    /*if (Sensor1_Prev==6)
-          Light=1;
-      else
-          Light=0;
-     */
-
-    if (Sensor1_PrevSensorless != Sensor1_Prev) {
-        Sensor1_PrevSensorless = Sensor1_Prev;
-        CntTicks = 0;
-        CntAcqSensor++;
-    } else
-        CntTicks++;
-
-
-
-    if ((Sensor1_Prev == SensorTST)&&(!SendingMass)&&(!SendingNeutral))
-        //                        if ((!SendingMass)&&(!SendingNeutral))
-    {
-        if (CntPhase < MassTMPSIZE) {
-            MassTMPPhase[CntPhase] = MotorPhaseC;
-            MassTMPNeutral[CntPhase++] = MotorNeutralVoltage;
-        }
-    }
-    /*else
-    {
-        if (CntPhase)
-        {
-        CntPhase=0;
-        }
-    }*/
-
-    if (ManualStart) {
-        if (!CanZeroCrossing) {
-            CntCanZeroCrossing++;
-            if (CntCanZeroCrossing > 20000)
-                CanZeroCrossing = 1;
-        } else
-            CntCanZeroCrossing = 0;
-    }
-
-    if (CanZeroCrossing) {
-
-        if (DirPWM1) {
-            switch (Sensor1_Prev) {
-                case 1:
-                    if (MotorPhaseC > MotorNeutralVoltage) {
-                        if (CntTicks > 5) {
-                            if (CntZero) {
-                                CntZero--;
-                                if (!CntZero) {
-                                    //                    if (SensorlessNotBEMF)
-                                    HvZeroCrossing = 1;
-                                    //          MassTMPNeutral[CntPhase-1]=200;
-                                }
-                            }
-                        }
-                    } else {
-                        CntZero = CntZeroConst;
-                    }
-                    break;
-                case 2:
-                    if (MotorPhaseA > MotorNeutralVoltage) {
-                        if (CntTicks > 5) {
-                            if (CntZero) {
-                                CntZero--;
-                                if (!CntZero) {
-                                    //                    if (SensorlessNotBEMF)
-                                    HvZeroCrossing = 1;
-
-                                    //          MassTMPNeutral[CntPhase-1]=200;
-                                }
-                            }
-                        }
-                    } else {
-                        CntZero = CntZeroConst;
-                    }
-                    break;
-                case 3:
-                    if (MotorPhaseB < MotorNeutralVoltage) {
-                        if (CntTicks > 5) {
-                            if (CntZero) {
-                                CntZero--;
-                                if (!CntZero) {
-                                    //                    if (SensorlessNotBEMF)
-                                    HvZeroCrossing = 1;
-
-                                    //         MassTMPNeutral[CntPhase-1]=200;
-                                }
-                            }
-                        }
-                    } else {
-                        CntZero = CntZeroConst;
-                    }
-                    break;
-
-                case 4:
-                    if (MotorPhaseB > MotorNeutralVoltage) {
-                        if (CntTicks > 5) {
-                            if (CntZero) {
-                                CntZero--;
-                                if (!CntZero) {
-                                    //                    if (SensorlessNotBEMF)
-                                    HvZeroCrossing = 1;
-                                    //       MassTMPNeutral[CntPhase-1]=200;
-                                }
-                            }
-                        }
-                    } else {
-                        CntZero = CntZeroConst;
-                    }
-                    break;
-                case 5:
-                    if (MotorPhaseA < MotorNeutralVoltage) {
-                        if (CntTicks > 5) {
-                            if (CntZero) {
-                                CntZero--;
-                                if (!CntZero) {
-                                    //                    if (SensorlessNotBEMF)
-                                    HvZeroCrossing = 1;
-                                    //        MassTMPNeutral[CntPhase-1]=200;
-                                }
-                            }
-                        }
-                    } else {
-                        CntZero = CntZeroConst;
-                    }
-                    break;
-                case 6:
-                    if (MotorPhaseC < MotorNeutralVoltage) {
-                        if (CntTicks > 5) {
-                            if (CntZero) {
-                                CntZero--;
-                                if (!CntZero) {
-                                    //                    if (SensorlessNotBEMF)
-                                    HvZeroCrossing = 1;
-
-                                    //    MassTMPNeutral[CntPhase-1]=200;
-                                }
-                            }
-                        }
-                    } else {
-                        CntZero = CntZeroConst;
-                    }
-                    break;
-
-            }
-        } else {
-            switch (Sensor1_Prev) {
-                case 1:
-                    if (MotorPhaseC < MotorNeutralVoltage) {
-                        if (CntTicks > 5) {
-                            if (CntZero) {
-                                CntZero--;
-                                if (!CntZero) {
-                                    //                    if (SensorlessNotBEMF)
-                                    HvZeroCrossing = 1;
-                                    //        MassTMPNeutral[CntPhase-1]=200;
-                                }
-                            }
-                        }
-                    } else {
-                        CntZero = CntZeroConst;
-                    }
-                    break;
-                case 2:
-                    if (MotorPhaseA < MotorNeutralVoltage) {
-                        if (CntTicks > 5) {
-                            if (CntZero) {
-                                CntZero--;
-                                if (!CntZero) {
-                                    //                    if (SensorlessNotBEMF)
-                                    HvZeroCrossing = 1;
-
-
-                                    //        MassTMPNeutral[CntPhase-1]=200;
-                                }
-                            }
-                        }
-                    } else {
-                        CntZero = CntZeroConst;
-                    }
-                    break;
-                case 3:
-                    if (MotorPhaseB > MotorNeutralVoltage) {
-                        if (CntTicks > 5) {
-                            if (CntZero) {
-                                CntZero--;
-                                if (!CntZero) {
-                                    //                    if (SensorlessNotBEMF)
-                                    HvZeroCrossing = 1;
-                                    //         MassTMPNeutral[CntPhase-1]=200;
-                                }
-                            }
-                        }
-                    } else {
-                        CntZero = CntZeroConst;
-                    }
-                    break;
-
-                case 4:
-                    if (MotorPhaseB < MotorNeutralVoltage) {
-                        if (CntTicks > 5) {
-                            if (CntZero) {
-                                CntZero--;
-                                if (!CntZero) {
-                                    //                    if (SensorlessNotBEMF)
-                                    HvZeroCrossing = 1;
-                                    //         MassTMPNeutral[CntPhase-1]=200;
-                                }
-                            }
-                        }
-                    } else {
-                        CntZero = CntZeroConst;
-                    }
-                    break;
-                case 5:
-                    if (MotorPhaseA > MotorNeutralVoltage) {
-                        if (CntTicks > 5) {
-                            if (CntZero) {
-                                CntZero--;
-                                if (!CntZero) {
-                                    //                    if (SensorlessNotBEMF)
-                                    HvZeroCrossing = 1;
-
-                                    //     MassTMPNeutral[CntPhase-1]=200;
-                                }
-                            }
-                        }
-                    } else {
-                        CntZero = CntZeroConst;
-                    }
-                    break;
-                case 6:
-                    if (MotorPhaseC > MotorNeutralVoltage) {
-                        if (CntTicks > 5) {
-                            if (CntZero) {
-                                CntZero--;
-                                if (!CntZero) {
-                                    //                    if (SensorlessNotBEMF)
-                                    HvZeroCrossing = 1;
-
-                                    //        MassTMPNeutral[CntPhase-1]=200;
-                                }
-                            }
-                        }
-                    } else {
-                        CntZero = CntZeroConst;
-                    }
-                    break;
-
-            }
-        }
-
-
-
-
-
-        if (HvZeroCrossing) {
-
-            MassTMPNeutral[CntPhase - 1] = 200;
-
-
-            //        if (CntHvZ_Cr<10)
-            //          CntHvZ_Cr++;
-            //    else
-            HvZ_Cr = 1;
-
-
-            Odometr++;
-            Distance++;
-
-            if (!MeasuringSpd1) {
-                _1sCnt1 = 0;
-                MeasuringSpd1 = 1;
-            } else {
-                if (Forward1)
-                    Spd1Cnt++;
-                else
-                    Spd1Cnt--;
-            }
-
-
-
-
-            SensorBEMF = Sensor1_Prev;
-            CanZeroCrossing = 0;
-            HvZeroCrossing = 0;
-            CntZero = CntZeroConst;
-            //Light=!Light;
-            CntBEMF++;
-
-
-            TmL = TMR4;
-            Phase1PeriodTek = TMR5HLD;
-            Phase1PeriodTek = (Phase1PeriodTek << 16) + TmL;
-
-            Phase1Period1 = (Phase1PeriodPrev + Phase1PeriodTek) >> 1;
-            Phase1PeriodPrev = Phase1PeriodTek;
-
-
-            if (Phase1PeriodTek < Phase1Period1) {
-                TMR7Sensorless = Phase1Period1 >> 1;
-
-                TMR7HLD = TMR7Sensorless >> 16;
-                TMR6 = TMR7Sensorless;
-
-
-                PR7 = Phase1Period1 >> 16;
-                PR6 = Phase1Period1;
-
-            }
-
-            Phase1Period2 = TMR7Sensorless;
-
-            TMR5HLD = 0;
-            TMR4 = 0;
-            TMR5 = 0;
-
-
-
-        } else {
-            //        CntHvZ_Cr=0;
-            HvZ_Cr = 0;
-        }
-    }
-
-    if (CntAcqSensor > 20) {
-        CntBEMFMax = CntBEMF;
-        if ((CntBEMF >= 19)) {
-            if (SensorlessStartNoHalls && (SensorLessTimerConst < 40)) {
-                if (SensorlessNotBEMF)
-                    SoundNum = 12;
-                SensorlessNotBEMF = 0;
-                SensorlessStartNoHalls = 0;
-            }
-            if (!SensorlessStartNoHalls) {
-                if (SensorlessNotBEMF)
-                    SoundNum = 12;
-                SensorlessNotBEMF = 0;
-                SensorlessStartNoHalls = 0;
-            }
-
-        } else {
-            if (!ManualStart) {
-                if (CntBEMF < 10)
-                    SensorlessNotBEMF = 1;
-            }
-        }
-
-        CntAcqSensor = CntBEMF = 0;
-    }
-
-
-    Nop();
-    Nop();
-    Nop();
-
-    //Light=0;
-
-
-
-
-}
-
-void SensorlessInit(void) {
+void SensorlessInitOld(void) {
 #if defined ISOLATED
     return;
 #endif
@@ -7759,6 +7323,11 @@ void InitBLDCPorts(void) {
 void Phases1(void) {
     unsigned char LowDrv, HiDrv;
 
+    
+    
+    if (Sensorless2)
+        return;
+    
     if ((Vector)&&(!BreakPressed))
         return;
     if (ChagerViaMotor)
@@ -7996,8 +7565,11 @@ void __attribute__((interrupt, auto_psv)) _CNInterrupt() {
     IFS1bits.CNIF = 0;
     //TST_PIN2=!TST_PIN2;
 
+    if (Sensorless2)
+        return;
 
-
+    
+    
     if ((!Sensorless) || ((SensorlessNotBEMF)&&(!SensorlessStartNoHalls))) {
 
 
@@ -11076,9 +10648,12 @@ void ReceiveUDP(void) {
 
             case 226:
             {
+                Sensorless2 = 1;
 
-                //SensorlessNotBEMF=1;
+                /*
+                SensorlessNotBEMF=1;
                 SensorlessInit();
+                */
                 OptionsToMass();
                 MustTrmFlashMass = 1;
                 break;
@@ -11086,7 +10661,8 @@ void ReceiveUDP(void) {
 
             case 227:
             {
-                Sensorless = 0;
+                Sensorless2 = 0;
+                /*Sensorless = 0;
                 SensorlessNotBEMF = 0;
                 SensorlessStartNoHalls = 0;
                 CurrUst = CurrUstWork;
@@ -11097,6 +10673,7 @@ void ReceiveUDP(void) {
                     TrapeziumInit();
                 ChangeCVR();
                 RdSensors();
+                */
                 OptionsToMass();
                 MustTrmFlashMass = 1;
 
@@ -11254,9 +10831,9 @@ void ReceiveUDP(void) {
 
             case 247:
             {
-                //                                while (Sensor1_Prev==3);
                 SendingMass = 1;
-                SendingNeutral = 1;
+                SndDebugArraysStateMachine=1;
+                Idx=0;
                 break;
             }
 
@@ -11386,18 +10963,10 @@ void ReceiveUDP(void) {
                         MustTrmFlashMass = 1;
                         break;
                     case 12:
-                        AntiPolice = 1;
-                        OptionsToMass();
-                        MustTrmFlashMass = 1;
+
+
                         break;
                     case 13:
-                        if (AntiPolice) {
-                            SoundNum = 12;
-                            AntiPolice = 0;
-                            OptionsToMassProfile();
-                            OptionsToMass();
-                            MustTrmFlashMass = 1;
-                        }
                         break;
                     case 14:
                     {
@@ -16886,10 +16455,6 @@ void Bt1Process(void) {
             break;
         case 3:
             if (HvBt1) {
-                if (AntiPolice) {
-                    HvBt1 = 0;
-                    return;
-                }
                 if (!PID_On) {
                     if (!Wheeling) {
                         if (!SpeedControl) {
@@ -16922,10 +16487,6 @@ void Bt1Process(void) {
                 HvBt1 = 0;
             }
             if (Bt1Up) {
-                if (AntiPolice) {
-                    Bt1Up = 0;
-                    return;
-                }
 
                 if (StrongModePID)
                     StrongMode = PrevStrongMode;
@@ -17176,10 +16737,6 @@ void Bt2Process(void) {
             break;
         case 3:
             if (HvBt2) {
-                if (AntiPolice) {
-                    HvBt2 = 0;
-                    return;
-                }
 
                 if (!PID_On) {
                     if (!Wheeling) {
@@ -17212,10 +16769,6 @@ void Bt2Process(void) {
                 HvBt2 = 0;
             }
             if (Bt2Up) {
-                if (AntiPolice) {
-                    Bt2Up = 0;
-                    return;
-                }
 
                 if (StrongModePID)
                     StrongMode = PrevStrongMode;
@@ -17468,10 +17021,6 @@ void Bt3Process(void) {
             break;
         case 3:
             if (HvBt3) {
-                if (AntiPolice) {
-                    HvBt3 = 0;
-                    return;
-                }
 
                 if (!PID_On) {
                     if (!Wheeling) {
@@ -17502,10 +17051,6 @@ void Bt3Process(void) {
                 HvBt3 = 0;
             }
             if (Bt3Up) {
-                if (AntiPolice) {
-                    Bt3Up = 0;
-                    return;
-                }
 
                 if (StrongModePID)
                     StrongMode = PrevStrongMode;
@@ -17754,10 +17299,6 @@ void Bt4Process(void) {
             break;
         case 3:
             if (HvBt4) {
-                if (AntiPolice) {
-                    HvBt4 = 0;
-                    return;
-                }
 
                 if (!PID_On) {
                     if (!Wheeling) {
@@ -17788,10 +17329,6 @@ void Bt4Process(void) {
                 HvBt4 = 0;
             }
             if (Bt4Up) {
-                if (AntiPolice) {
-                    Bt4Up = 0;
-                    return;
-                }
 
                 if (StrongModePID)
                     StrongMode = PrevStrongMode;
@@ -18474,7 +18011,7 @@ void TrmDataPacketHC05(void) {
         return;
     }
 
-        TST_PIN=!TST_PIN;
+//        TST_PIN=!TST_PIN;
 
     if (NoAutoTrm) {
         if (!MustSendDataPacket)
@@ -18789,15 +18326,15 @@ void TrmDataPacketHC05(void) {
     HC05TrmMass[CntBt++] = Tmp;
     HC05TrmMass[CntBt++] = Tmp >> 8;
 
-    Tmp = (unsigned int) V8; //V8        50
+    Tmp = (unsigned int) MotorPhaseA;//V8; //V8        50
     HC05TrmMass[CntBt++] = Tmp;
     HC05TrmMass[CntBt++] = Tmp >> 8;
 
-    Tmp = (unsigned int) V9; //V9        51
+    Tmp = (unsigned int) BEMFHallCntMax;//MotorPhaseB;//V9; //V9        51
     HC05TrmMass[CntBt++] = Tmp;
     HC05TrmMass[CntBt++] = Tmp >> 8;
 
-    Tmp = (unsigned int) V10; //V10        52
+    Tmp = (unsigned int) BemfFilterHi;//MotorPhaseC;//V10; //V10        52
     HC05TrmMass[CntBt++] = Tmp;
     HC05TrmMass[CntBt++] = Tmp >> 8;
 
@@ -20669,7 +20206,9 @@ void VectorInit(void) {
     //    IPC20bits.U3RXIP = 7;
     //    IPC2bits.T3IP = 7;
     //    IPC5bits.AD2IP=0;
+#if !defined SENSORLESS_TEST    
     IEC1bits.AD2IE = 0;
+#endif
 
 
     T4_5Init();
@@ -20682,7 +20221,7 @@ void VectorInit(void) {
     SensorlessInitialized = 0;
     InitPWM_Vector();
 
-    AD2CON1 = 0;
+    //AD2CON1 = 0;
 
 }
 
@@ -20783,7 +20322,9 @@ void TrapeziumInit(void) {
     // IPC20bits.U3RXIP = 7;
     //IPC2bits.T3IP = 7;
     //IPC5bits.AD2IP=0;
+#if !defined SENSORLESS_TEST    
     IEC1bits.AD2IE = 0;
+#endif
 
 
     T8CON = 0;
@@ -20798,7 +20339,7 @@ void TrapeziumInit(void) {
     //InitPWM();
     InitPWM_Vector();
 
-    AD2CON1 = 0;
+//    AD2CON1 = 0;
 
 }
 
@@ -21238,7 +20779,8 @@ void SVPWM1(void) {
 
         PWM1Show = Amplitude1Tmp;
 
-
+        
+                
         //Theta1CntPWM=63-Theta1CntPWM;
 
         if (TrapezoidaRAM1) {
@@ -23115,133 +22657,8 @@ void InitPWM(void) {
 
 }
 
-void SndPhDeb200(void) {
-    int i;
-
-    if (HC05_BUSY)
-        return;
-
-    if (!Hv_HC05)
-        return;
-    if (!SendingMass)
-        return;
-    if (OnTransmittHC05)
-        return;
-    HC05_BUSY = 1;
-
-    HC05TrmMass[0] = 0xff;
-    HC05TrmMass[1] = 0xff;
-    HC05TrmMass[2] = 201;
-    HC05TrmMass[3] = 8; //COMMAND
 
 
-    for (i = 4; i < 204; i++)
-        HC05TrmMass[i] = MassTMPPhase[i - 4];
-
-    HC05TrmMass[i] = CalcCheckSumm(HC05TrmMass[2] + 1, &HC05TrmMass[2]);
-
-    MustTrmHC05 = 1;
-    //TrmHC05(HC05TrmMass);
-    SendingMass = 0;
-    SendingMass400 = 1;
-}
-
-void SndPhDeb400(void) {
-    int i;
-
-    if (HC05_BUSY)
-        return;
-
-    if (!Hv_HC05)
-        return;
-    if (!SendingMass400)
-        return;
-    if (OnTransmittHC05)
-        return;
-    HC05_BUSY = 1;
-
-    HC05TrmMass[0] = 0xff;
-    HC05TrmMass[1] = 0xff;
-    HC05TrmMass[2] = 201;
-    HC05TrmMass[3] = 8; //COMMAND
-
-
-    for (i = 4; i < 204; i++)
-        HC05TrmMass[i] = MassTMPPhase[i - 4 + 200];
-
-    HC05TrmMass[i] = CalcCheckSumm(HC05TrmMass[2] + 1, &HC05TrmMass[2]);
-
-    MustTrmHC05 = 1;
-    //TrmHC05(HC05TrmMass);
-    SendingMass400 = 0;
-
-
-
-}
-
-void SndNeutralDeb200(void) {
-    int i;
-
-    if (HC05_BUSY)
-        return;
-
-    if (!Hv_HC05)
-        return;
-    if (!SendingNeutral)
-        return;
-    if (OnTransmittHC05)
-        return;
-    HC05_BUSY = 1;
-
-    HC05TrmMass[0] = 0xff;
-    HC05TrmMass[1] = 0xff;
-    HC05TrmMass[2] = 201;
-    HC05TrmMass[3] = 9; //COMMAND
-
-
-    for (i = 4; i < 204; i++)
-        HC05TrmMass[i] = MassTMPNeutral[i - 4];
-
-    HC05TrmMass[i] = CalcCheckSumm(HC05TrmMass[2] + 1, &HC05TrmMass[2]);
-
-    MustTrmHC05 = 1;
-    //TrmHC05(HC05TrmMass);
-    SendingNeutral = 0;
-    SendingNeutral400 = 1;
-}
-
-void SndNeutralDeb400(void) {
-    int i;
-
-    if (HC05_BUSY)
-        return;
-
-    if (!Hv_HC05)
-        return;
-    if (!SendingNeutral400)
-        return;
-    if (OnTransmittHC05)
-        return;
-    HC05_BUSY = 1;
-
-    HC05TrmMass[0] = 0xff;
-    HC05TrmMass[1] = 0xff;
-    HC05TrmMass[2] = 201;
-    HC05TrmMass[3] = 9; //COMMAND
-
-
-    for (i = 4; i < 204; i++)
-        HC05TrmMass[i] = MassTMPNeutral[i - 4 + 200];
-
-    HC05TrmMass[i] = CalcCheckSumm(HC05TrmMass[2] + 1, &HC05TrmMass[2]);
-
-    MustTrmHC05 = 1;
-    //TrmHC05(HC05TrmMass);
-    SendingNeutral400 = 0;
-
-
-
-}
 
 void TestBreak(void) {
     if (StrongModeBreakOff && StrongModeMem && StrongMode&&!SIN_MIDDLE&&!Monocycle) {
@@ -25264,14 +24681,6 @@ void ChangeProfile(void) {
 
     }
 
-    if (AntiPolice) {
-        if (SpeedControl)
-            SpeedControlTmp = 1;
-        else
-            SpeedControlTmp = 0;
-        //        SpeedControl=1;
-        //    MaxSpdCoeff=(int)((((float)MAX_PWM)*ImpToKmH1_t)/((float)SlowStrtSpd/ImpToKmH1_t));
-    }
 
 }
 

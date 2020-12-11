@@ -18,13 +18,14 @@
 #define BLE
 ////////////////////////////////////////#define CHAGER_VIA_MOTOR_VECTOR_M2
 
+#define SENSORLESS_TEST
 
 //#define NO_UBT
 //#define  SIN_MIDDLE 
 //#define MPU6050
 #define MPU6500////////////////////////////////////////
 ////////////////////////////////////////#define LSM6DS33
-#if !defined VECTOR
+#if !definedPhasePERMASS_DEF VECTOR
 #define ISOLATED
 #endif
 //#define INT_FRC
@@ -61,6 +62,8 @@
 
 
 #define FLASHMASS_SIZE 243 //(MAX 240)
+#define MassTMPSIZE 1000
+
 
 
 #define FCY  60000000	 // xtal = 8Mhz; with PLL -> 60 MIPS
@@ -514,13 +517,13 @@ typedef union {
 
 
 #define Transmitting_U3         Flgs.Fl0
-#define GettingPacketU3_FL	Flgs.Fl1
+#define GettingPacketU3_FL      Flgs.Fl1
 #define CHK_Err_U3              Flgs.Fl2
-#define HvDataPacketU3_FL           Flgs.Fl3
+#define HvDataPacketU3_FL       Flgs.Fl3
 #define FindGyroVertical        Flgs.Fl4
 #define MustTrm                 Flgs.Fl5
 #define Forward1                Flgs.Fl6
-#define SendingMass                Flgs.Fl7
+#define SendingMass             Flgs.Fl7
 #define StartingTiltX           Flgs.Fl8
 #define PrevForward1            Flgs.Fl9
 #define PrevForward2            Flgs.Fl10
@@ -534,20 +537,20 @@ typedef union {
 #define MustTrmFlashMass        Flgs.Fl18
 #define TiltXPlus               Flgs.Fl19
 #define SendPhase               Flgs.Fl20
-//#define EPlus                   Flgs.Fl21
+//#define SendingMassB            Flgs.Fl21
 #define TakingPacketUbat        Flgs.Fl22
 #define HvPacketUBat            Flgs.Fl23
-#define SendingMass400          Flgs.Fl24
+//#define SendingMass400          Flgs.Fl24
 #define CanSensor1              Flgs.Fl25
 #define CanSensor2              Flgs.Fl26
 #define HvSpd1                  Flgs.Fl27
 #define SpeedControlPID         Flgs.Fl28
 #define MeasuringSpd1           Flgs.Fl29
 #define StrongMode              Flgs.Fl30
-#define SendingNeutral          Flgs.Fl31
+//#define SendingMassC            Flgs.Fl31
 
 
-#define SendingNeutral400       Flgs1.Fl0
+//#define SendingNeutral          Flgs1.Fl0
 #define ChagerViaMotor          Flgs1.Fl1
 #define OffingBreak             Flgs1.Fl2
 #define OdometrErased           Flgs1.Fl3
@@ -654,12 +657,12 @@ typedef union {
 #define MustTrm_U3               Flgs4.Fl3
 #define OnTransmitt_U3           Flgs4.Fl4
 #define HvPachetSteer            Flgs4.Fl5
-//#define Kd_UP                    Flgs4.Fl6
+#define BEMFA_OK                 Flgs4.Fl6
 #define Stopping                 Flgs4.Fl7
 #define HvOptions                Flgs4.Fl8
 #define BreakPressedPrev         Flgs4.Fl9
 #define _1stBreak                Flgs4.Fl10
-#define Wheeling              Flgs4.Fl11
+#define Wheeling                 Flgs4.Fl11
 #define StrtWheeling             Flgs4.Fl12
 #define InitReady                Flgs4.Fl13
 #define NoSecret                 Flgs4.Fl14
@@ -793,6 +796,12 @@ typedef union {
 #define Buzzer                   Flgs8.Fl4
 #endif
 #define TmpFl                    Flgs8.Fl5
+#define BEMFB_OK                 Flgs8.Fl6
+#define BEMFC_OK                 Flgs8.Fl7
+#define BEMF_OK                  Flgs8.Fl8
+#define A2_OK                    Flgs8.Fl9
+#define B2_OK                    Flgs8.Fl10
+#define C2_OK                    Flgs8.Fl11
 
 
 
@@ -862,7 +871,7 @@ typedef union {
 
 #define DirectControlMotor     StatFlgs.Fl0
 #define EEPROM_CHK_ERR         StatFlgs.Fl1
-//#define EEPROM_Limit_ERR       StatFlgs.Fl2
+//#define BEMFA_OK       StatFlgs.Fl2
 #define PWM10kHz              StatFlgs.Fl2
 
 #define Beep_10m               StatFlgs.Fl3
@@ -908,7 +917,7 @@ typedef union {
 #define LightsTudaSuda         StatFlgs2.Fl6
 #define LightsStopMonoDir      StatFlgs2.Fl7
 #define SlowStart              StatFlgs2.Fl8
-#define AntiPolice             StatFlgs2.Fl9
+#define Sensorless2            StatFlgs2.Fl9
 #define MixedModeSlowSpeedOff  StatFlgs2.Fl10
 #define MixedMode2             StatFlgs2.Fl11
 #define PWM_Mode               StatFlgs2.Fl12
@@ -2217,7 +2226,11 @@ extern void VectorInit(void);
 extern void TrapeziumInit(void);
 extern void ChangeCVR(void);
 extern void GyroAcel(void);
-
+extern void ADC2Init(void);
+extern void SensorlessInit(void);
+extern void SndDebugArrays(void);
+extern unsigned char CalcCheckSumm(unsigned int N, unsigned char *Mass);
+void Phases1(void);
 
 
 
@@ -2248,7 +2261,10 @@ extern float AccXFlPrev, AccYFlPrev, AccZFlPrev;
 extern float AlfaXRes, AlfaYRes, AlfaZRes, AlfaXResPrev, AlfaYResPrev, AlfaZResPrev;
 extern float KGYRO, KACC;
 extern float AccXFl, AccYFl, AccZFl;
-extern unsigned char MaxAngleStopBreak, Sounds, SoundNum, CriticalError, KdStateMachine, CntKdSwitch, CntKdSwitchCONST;
+extern unsigned char MaxAngleStopBreak, Sounds, SoundNum, CriticalError, KdStateMachine;
+extern unsigned char CntKdSwitch, CntKdSwitchCONST,Sensor1_Prev,Sensor1;
+extern unsigned char HC05TrmMass[FLASHMASS_SIZE + 10],SndDebugArraysStateMachine;
+extern const unsigned char LowDrive[7],HiDrive[7];
 extern int Spd1Res, Spd1KpLevel, Spd1KdLevel, Spd1ResPrev, SpdPID, Spd1ResPlus, Spd1Cnt, SpdTmp, Spd1ResPlusTST;
 extern int XLimit, YLimit, GyroZFlTurn, CurrUst;
 extern int BreakMonocycleSpd, TimeDecreaseKi, MAX_PWM_CONST;
@@ -2257,6 +2273,6 @@ extern int TiltXThis, TiltYThis;
 extern unsigned int BuzzerOffTime;
 extern long int GyroZFilter, PWM1Temp, RotAddSumm,KFilterPrev,KFilter;
 extern float EpLog, EiLog, EdLog;
-
-
-
+extern unsigned int MotorPhaseA, MotorPhaseB, MotorPhaseC, MotorNeutralVoltage;
+extern unsigned int MassTMPPhaseA[MassTMPSIZE],MassTMPPhaseB[MassTMPSIZE],MassTMPPhaseC[MassTMPSIZE], MassTMPNeutral[MassTMPSIZE], CntPhase;
+extern unsigned int Idx,BemfFilterHiCnt,BemfFilterHi,BEMFHallCntMax;

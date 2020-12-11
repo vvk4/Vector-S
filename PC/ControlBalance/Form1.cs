@@ -967,7 +967,7 @@ namespace ControlBalance
                     chart1.Series[0].Points.Clear();
                     chart1.Series[1].Points.Clear();
                     comboBox3.SelectedIndex = 0;
-                    comboBox4.SelectedIndex = 21;
+         //           comboBox4.SelectedIndex = 21;
                     break;
 
 
@@ -2973,7 +2973,7 @@ namespace ControlBalance
                         checkBox84.Checked = false;
 
 
-                    if ((StatFlags1 & 0x20) == 0x20)
+                    if ((StatFlags2 & 0x200) == 0x200)
                         checkBox56.Checked = true;
                     else
                         checkBox56.Checked = false;
@@ -4290,8 +4290,11 @@ namespace ControlBalance
 
                     label625.Text = HallErrCnt.ToString();
 
+                    label4.Text = V8.ToString();
+                    label8.Text = V9.ToString();
+                    label10.Text = V10.ToString();
 
-                    
+
 
                     DataShown = true;
 
@@ -4301,33 +4304,43 @@ namespace ControlBalance
 
                 case 8:
                     int i = 0;
-                    int f;
-                    for (i = 2; i < 202; i++)
+                    ushort Tmp;
+                    for (i = 1; i < 124; i++)
                     {
-                        if (radioButton14.Checked)
-                        {
-                            f = (int)((short)PacketRec[i]);
-                            if (f > 128)
-                                f = f - 256;
-                        }
-                        else
-                            f = (int)((short)PacketRec[i]);
-
-
-                        chart1.Series[10].Points.Add(f);
+                        Tmp = (ushort)PacketRec[i * 2];
+                        Tmp = (ushort)(Tmp + (PacketRec[i*2+1]*256));
+                        if (checkBox2.Checked)
+                            chart1.Series[10].Points.Add(Tmp);
                     }
-                    i++;
                     break;
 
 
                 case 9:
-                    int j;
-                    chart1.Series[9].Enabled = true;
-                    for (j = 2; j < 202; j++)
+                    for (i = 1; i < 124; i++)
                     {
-                        chart1.Series[9].Points.Add((short)PacketRec[j]);       //Neutral
+                        Tmp = (ushort)PacketRec[i * 2];
+                        Tmp = (ushort)(Tmp + (PacketRec[i * 2 + 1] * 256));
+                        if (checkBox3.Checked)
+                            chart1.Series[9].Points.Add(Tmp);
                     }
-                    j++;
+                    break;
+                case 19:
+                    for (i = 1; i < 124; i++)
+                    {
+                        Tmp = (ushort)PacketRec[i * 2];
+                        Tmp = (ushort)(Tmp + (PacketRec[i * 2 + 1] * 256));
+                        if (checkBox4.Checked)
+                            chart1.Series[8].Points.Add(Tmp);
+                    }
+                    break;
+                case 20:
+                    for (i = 1; i < 124; i++)
+                    {
+                        Tmp = (ushort)PacketRec[i * 2];
+                        Tmp = (ushort)(Tmp + (PacketRec[i * 2 + 1] * 256));
+                        if (checkBox5.Checked)
+                            chart1.Series[7].Points.Add(Tmp);
+                    }
                     break;
 
                 case 25:
@@ -6595,6 +6608,42 @@ namespace ControlBalance
 
         }
 
+        private void checkBox2_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox2.Checked)
+                chart1.Series[10].Enabled = true;
+            else
+                chart1.Series[10].Enabled = false;
+
+        }
+
+        private void checkBox3_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox3.Checked)
+                chart1.Series[9].Enabled = true;
+            else
+                chart1.Series[9].Enabled = false;
+
+        }
+
+        private void checkBox4_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox4.Checked)
+                chart1.Series[8].Enabled = true;
+            else
+                chart1.Series[8].Enabled = false;
+
+        }
+
+        private void checkBox5_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox5.Checked)
+                chart1.Series[7].Enabled = true;
+            else
+                chart1.Series[7].Enabled = false;
+
+        }
+
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
 
@@ -6805,7 +6854,7 @@ namespace ControlBalance
                     }
                     else
                     {
-                        if (CntRec > 250)
+                        if (CntRec > 253)
                             GettingPacket_FL = false;
                         else
                         {
@@ -8810,6 +8859,12 @@ namespace ControlBalance
                 case 18:
                     backgroundWorker1.ReportProgress(18);
                     break;
+                case 19:
+                    backgroundWorker1.ReportProgress(19);
+                    break;
+                case 20:
+                    backgroundWorker1.ReportProgress(20);
+                    break;
 
 
 
@@ -10807,27 +10862,19 @@ namespace ControlBalance
 
         private void button40_Click(object sender, EventArgs e)
         {
-            byte[] sendbuf = Encoding.ASCII.GetBytes("Is anybody there?");
-            sendbuf[0] = SEND_GetPhase;
-            if (checkBox19.Checked)
-            {
-                s.SendTo(sendbuf, ep);
-            }
-            else
-            {
                 TrmMass[0] = 0xff;
                 TrmMass[1] = 0xff;
                 TrmMass[2] = 1;//N
                 TrmMass[3] = SEND_GetPhase;
                 TrmMass[4] = CalcCheckSummTrm();
                 Trm();
-            }
+
             if (!GettinPhase)
                 GettinPhase = true;
             else
                 GettinPhase = false;
-            
 
+            
         }
 
 
