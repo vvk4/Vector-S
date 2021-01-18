@@ -1,12 +1,17 @@
+//To enable this feature uncomment SENSORLESS_TEST in Mn.h
+
 #include "Mn.h"
 
-#define BEMF_FILTER    3
-#define BEMF_FILTER_HI 10
-#define SUMM_CNT       2
+#define BEMF_FILTER         3
+#define BEMF_FILTER_HI      10
+#define BEMF_FILTER_HI_Hi   100
+#define SUMM_CNT            2
+
 void FillSndArray(unsigned char * Array, unsigned int Index, unsigned char Cmd);
 
 int CntDebugArray;
-unsigned int Idx, BemfFilterHi = BEMF_FILTER_HI, BemfFilterHiCnt, PeriodCnt, PeriodSumm, SummCnt, BEMFHallCnt, BEMFHallCntMax;
+unsigned int Idx, BEMFCnt, BemfFilterHi = BEMF_FILTER_HI, BemfFilterHiPrev, BemfFilterHiCnt, PeriodCnt;
+unsigned int PWM_Sensorless,PeriodSumm, SummCnt,BEMFHallCnt, BEMFHallCntMax;
 unsigned char SndDebugArraysStateMachine, BEMFAStateMachine, BEMFBStateMachine, BEMFCStateMachine;
 unsigned char BEMFACnt, PhaseACnt, BEMFBCnt, PhaseBCnt, BEMFCCnt, PhaseCCnt;
 unsigned char PEN1_A_H_Prev, PEN1_B_H_Prev, PEN1_C_H_Prev, Snsr;
@@ -106,7 +111,6 @@ void __attribute__((interrupt, auto_psv)) _AD2Interrupt(void) {
     IFS1bits.AD2IF = 0;
 
 
-    TST_PIN = !TST_PIN;
 
     //  if (Sensor1_Prev==1)
 
@@ -117,11 +121,13 @@ void __attribute__((interrupt, auto_psv)) _AD2Interrupt(void) {
 
 
     MotorNeutralVoltage = (MotorPhaseA + MotorPhaseB + MotorPhaseC) / 3;
-
+/*
     if ((PEN1_A_H != PEN1_A_H_Prev) || (PEN1_B_H != PEN1_B_H_Prev) || (PEN1_C_H != PEN1_C_H_Prev)) {
         BemfFilterHi = BemfFilterHiCnt >> 2;
-        if (BemfFilterHi<BEMF_FILTER_HI)
-            BemfFilterHi=BEMF_FILTER_HI;
+        if (BemfFilterHi < BEMF_FILTER_HI)
+            BemfFilterHi = BEMF_FILTER_HI;
+        if (BemfFilterHi > BEMF_FILTER_HI_Hi)
+            BemfFilterHi = BEMF_FILTER_HI_Hi;
         BemfFilterHiCnt = 0;
         PEN1_A_H_Prev = PEN1_A_H;
         PEN1_B_H_Prev = PEN1_B_H;
@@ -129,10 +135,15 @@ void __attribute__((interrupt, auto_psv)) _AD2Interrupt(void) {
     }
 
     BemfFilterHiCnt++;
+*/
 
+  //  BemfFilterHi=BEMF_FILTER_HI;
 
+        BemfFilterHiCnt++;
 
-
+        
+  //                  if ((PWM_Sensorless<(MAX_PWM>>2))&&(BemfFilterHi == BEMF_FILTER_HI))
+//                Nop();
 
     switch (BEMFAStateMachine) {
         case 0:
@@ -241,11 +252,12 @@ void __attribute__((interrupt, auto_psv)) _AD2Interrupt(void) {
 
     PeriodCnt++;
 
-    if (BEMF_OK)//||BEMFB_OK||BEMFC_OK) 
-    {
+    if (BEMF_OK) {
+        BEMFCnt++;
+
         PeriodSumm = PeriodSumm + PeriodCnt;
         BEMF_OK = 0;
-        MotorNeutralVoltage = 1000;
+        MotorNeutralVoltage = 1000; //Debug: show BEMF
         SummCnt++;
         if (SummCnt >= SUMM_CNT) {
             SummCnt = 0;
@@ -264,103 +276,131 @@ void __attribute__((interrupt, auto_psv)) _AD2Interrupt(void) {
     if (BEMFHallCnt >= BEMFHallCntMax) {
         BEMFHallCnt = 0;
 
-        if (Sensorless2) {
-            if (BEMFA_OK) {
-                if (!A2_OK) {
-                    A2_OK = 1;
-                    Snsr = 1;
-                    MotorNeutralVoltage = 2000;
-                } else {
-                    BEMFA_OK = 0;
-                    Snsr = 3;
-                    MotorNeutralVoltage = 2000;
-                }
-            } else
-                if (BEMFB_OK) {
-                if (!B2_OK) {
-                    Snsr = 2;
-                    MotorNeutralVoltage = 2000;
-                    B2_OK = 1;
-                } else {
-                    Snsr = 6;
-                    MotorNeutralVoltage = 2000;
-                    BEMFB_OK = 0;
-                }
-            } else
-                if (BEMFC_OK) {
-                if (!C2_OK) {
-                    Snsr = 4;
-                    MotorNeutralVoltage = 2000;
-                    C2_OK = 1;
-                } else {
-                    Snsr = 5;
-                    MotorNeutralVoltage = 2000;
-                    BEMFC_OK = 0;
-                }
-            }
-                else
-                    Snsr = 0;
 
+        
+        
+            if (Sensorless2)
+            {
+        if (!MeasuringSpd1) {
+            _1sCnt1 = 0;
+            MeasuringSpd1 = 1;
+        } else {
+             //   TST_PIN = !TST_PIN;
+            if (Forward1)
+                Spd1Cnt++;
+            else
+                Spd1Cnt--;
+        }
+    }
+
+
+        
+            
+
+        
+        
+        
+        if (BEMFA_OK) {
+            if (!A2_OK) {
+                A2_OK = 1;
+                Snsr = 1;
+                MotorNeutralVoltage = 2000; //Debug: show phase change
+            } else {
+                BEMFA_OK = 0;
+                Snsr = 3;
+                MotorNeutralVoltage = 2000;
+            }
+        } else
+            if (BEMFB_OK) {
+            if (!B2_OK) {
+                Snsr = 2;
+                MotorNeutralVoltage = 2000;
+                B2_OK = 1;
+            } else {
+                Snsr = 6;
+                MotorNeutralVoltage = 2000;
+                BEMFB_OK = 0;
+            }
+        } else
+            if (BEMFC_OK) {
+            if (!C2_OK) {
+                Snsr = 4;
+                MotorNeutralVoltage = 2000;
+                C2_OK = 1;
+            } else {
+                Snsr = 5;
+                MotorNeutralVoltage = 2000;
+                BEMFC_OK = 0;
+            }
+        } else
+            Snsr = 0;
+
+
+  
+
+        
+        if (Sensorless2) {
             PWM1_A_H = 0;
             PWM1_A_L = 0;
             PWM1_B_H = 0;
             PWM1_B_L = 0;
             PWM1_C_H = 0;
             PWM1_C_L = 0;
-            if (Snsr)
-            {
-            LowDrv = LowDrive[Snsr];
-            HiDrv = HiDrive[Snsr];
+            if (Snsr) {
+                LowDrv = LowDrive[Snsr];
+                HiDrv = HiDrive[Snsr];
+
+        BemfFilterHi = BemfFilterHiCnt >> 2;
+        if (BemfFilterHi < BEMF_FILTER_HI)
+            BemfFilterHi = BEMF_FILTER_HI;
+        if (BemfFilterHi > BEMF_FILTER_HI_Hi)
+            BemfFilterHi = BEMF_FILTER_HI_Hi;
+        BemfFilterHiCnt = 0;
 
 
-
-            if (HiDrv & 1) {//A
-                PEN1_A_H = 1;
-                if (StrongMode)
-                    PEN1_A_L = 1;
-                else
-                    PEN1_A_L = 0;
-                PEN1_B_H = 0;
-                PEN1_B_L = 0;
-                PEN1_C_H = 0;
-                PEN1_C_L = 0;
-            }
-            else
-            if (HiDrv & 2) {
-                PEN1_A_H = 0;
-                PEN1_A_L = 0;
-
-                PEN1_B_H = 1;
-                if (StrongMode)
-                    PEN1_B_L = 1;
-                else
+                if (HiDrv & 1) {//A
+                    PEN1_A_H = 1;
+                    if (StrongMode)
+                        PEN1_A_L = 1;
+                    else
+                        PEN1_A_L = 0;
+                    PEN1_B_H = 0;
                     PEN1_B_L = 0;
-                PEN1_C_H = 0;
-                PEN1_C_L = 0;
-            }
-            else
-            if (HiDrv & 4) {//C
-                PEN1_A_H = 0;
-                PEN1_A_L = 0;
-                PEN1_B_H = 0;
-                PEN1_B_L = 0;
-                PEN1_C_H = 1;
-                if (StrongMode)
-                    PEN1_C_L = 1;
-                else
+                    PEN1_C_H = 0;
                     PEN1_C_L = 0;
-            }
-            if (LowDrv & 1)
-                PWM1_A_L = 1;
-            else
-            if (LowDrv & 2)
-                PWM1_B_L = 1;
-            else
-            if (LowDrv & 4)
-                PWM1_C_L = 1;
-        }
-            else
-            {
+                } else
+                    if (HiDrv & 2) {
+                    PEN1_A_H = 0;
+                    PEN1_A_L = 0;
+
+                    PEN1_B_H = 1;
+                    if (StrongMode)
+                        PEN1_B_L = 1;
+                    else
+                        PEN1_B_L = 0;
+                    PEN1_C_H = 0;
+                    PEN1_C_L = 0;
+                } else
+                    if (HiDrv & 4) {//C
+                    PEN1_A_H = 0;
+                    PEN1_A_L = 0;
+                    PEN1_B_H = 0;
+                    PEN1_B_L = 0;
+                    PEN1_C_H = 1;
+                    if (StrongMode)
+                        PEN1_C_L = 1;
+                    else
+                        PEN1_C_L = 0;
+                }
+                if (LowDrv & 1)
+                    PWM1_A_L = 1;
+                else
+                    if (LowDrv & 2)
+                    PWM1_B_L = 1;
+                else
+                    if (LowDrv & 4)
+                    PWM1_C_L = 1;
+            } else {
                 PEN1_A_H = 0;
                 PEN1_A_L = 0;
                 PEN1_B_H = 0;
@@ -374,14 +414,14 @@ void __attribute__((interrupt, auto_psv)) _AD2Interrupt(void) {
 
     }
 
-/*
-    MotorPhaseA = Sensor1_Prev;
-    MotorPhaseB = Snsr;
+    /*
+        MotorPhaseA = Sensor1_Prev;
+        MotorPhaseB = Snsr;
 
-    MotorPhaseA = MotorPhaseA * 100;
-    MotorPhaseB = MotorPhaseB * 110;
-    */
-    
+        MotorPhaseA = MotorPhaseA * 100;
+        MotorPhaseB = MotorPhaseB * 110;
+     */
+
 
     if (CntPhase < MassTMPSIZE) {//Fill debug array
         MassTMPPhaseA[CntPhase] = MotorPhaseA;
@@ -391,6 +431,14 @@ void __attribute__((interrupt, auto_psv)) _AD2Interrupt(void) {
     }
 
 }
+
+
+
+
+
+
+
+
 
 void SndDebugArrays(void) {
 

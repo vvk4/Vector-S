@@ -57,18 +57,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=X1Main.c Monocycle.c Sensorless.c
+SOURCEFILES_QUOTED_IF_SPACED=X1Main.c Monocycle.c Sensorless.c MotorControl.c Thermistors.c UART4.c _2WD.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/X1Main.o ${OBJECTDIR}/Monocycle.o ${OBJECTDIR}/Sensorless.o
-POSSIBLE_DEPFILES=${OBJECTDIR}/X1Main.o.d ${OBJECTDIR}/Monocycle.o.d ${OBJECTDIR}/Sensorless.o.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/X1Main.o ${OBJECTDIR}/Monocycle.o ${OBJECTDIR}/Sensorless.o ${OBJECTDIR}/MotorControl.o ${OBJECTDIR}/Thermistors.o ${OBJECTDIR}/UART4.o ${OBJECTDIR}/_2WD.o
+POSSIBLE_DEPFILES=${OBJECTDIR}/X1Main.o.d ${OBJECTDIR}/Monocycle.o.d ${OBJECTDIR}/Sensorless.o.d ${OBJECTDIR}/MotorControl.o.d ${OBJECTDIR}/Thermistors.o.d ${OBJECTDIR}/UART4.o.d ${OBJECTDIR}/_2WD.o.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/X1Main.o ${OBJECTDIR}/Monocycle.o ${OBJECTDIR}/Sensorless.o
+OBJECTFILES=${OBJECTDIR}/X1Main.o ${OBJECTDIR}/Monocycle.o ${OBJECTDIR}/Sensorless.o ${OBJECTDIR}/MotorControl.o ${OBJECTDIR}/Thermistors.o ${OBJECTDIR}/UART4.o ${OBJECTDIR}/_2WD.o
 
 # Source Files
-SOURCEFILES=X1Main.c Monocycle.c Sensorless.c
-
+SOURCEFILES=X1Main.c Monocycle.c Sensorless.c MotorControl.c Thermistors.c UART4.c _2WD.c
 
 
 CFLAGS=
@@ -116,6 +115,34 @@ ${OBJECTDIR}/Sensorless.o: Sensorless.c  nbproject/Makefile-${CND_CONF}.mk
 	${MP_CC} $(MP_EXTRA_CC_PRE)  Sensorless.c  -o ${OBJECTDIR}/Sensorless.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/Sensorless.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -mno-eds-warn  -omf=elf -DXPRJ_default=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -mlarge-code -mlarge-data -mlarge-scalar -mconst-in-code -O0 -msmart-io=1 -Wall -msfr-warn=off  
 	@${FIXDEPS} "${OBJECTDIR}/Sensorless.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
 	
+${OBJECTDIR}/MotorControl.o: MotorControl.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/MotorControl.o.d 
+	@${RM} ${OBJECTDIR}/MotorControl.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  MotorControl.c  -o ${OBJECTDIR}/MotorControl.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/MotorControl.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -mno-eds-warn  -omf=elf -DXPRJ_default=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -mlarge-code -mlarge-data -mlarge-scalar -mconst-in-code -O0 -msmart-io=1 -Wall -msfr-warn=off  
+	@${FIXDEPS} "${OBJECTDIR}/MotorControl.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
+	
+${OBJECTDIR}/Thermistors.o: Thermistors.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/Thermistors.o.d 
+	@${RM} ${OBJECTDIR}/Thermistors.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  Thermistors.c  -o ${OBJECTDIR}/Thermistors.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/Thermistors.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -mno-eds-warn  -omf=elf -DXPRJ_default=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -mlarge-code -mlarge-data -mlarge-scalar -mconst-in-code -O0 -msmart-io=1 -Wall -msfr-warn=off  
+	@${FIXDEPS} "${OBJECTDIR}/Thermistors.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
+	
+${OBJECTDIR}/UART4.o: UART4.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/UART4.o.d 
+	@${RM} ${OBJECTDIR}/UART4.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  UART4.c  -o ${OBJECTDIR}/UART4.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/UART4.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -mno-eds-warn  -omf=elf -DXPRJ_default=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -mlarge-code -mlarge-data -mlarge-scalar -mconst-in-code -O0 -msmart-io=1 -Wall -msfr-warn=off  
+	@${FIXDEPS} "${OBJECTDIR}/UART4.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
+	
+${OBJECTDIR}/_2WD.o: _2WD.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/_2WD.o.d 
+	@${RM} ${OBJECTDIR}/_2WD.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  _2WD.c  -o ${OBJECTDIR}/_2WD.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_2WD.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -mno-eds-warn  -omf=elf -DXPRJ_default=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -mlarge-code -mlarge-data -mlarge-scalar -mconst-in-code -O0 -msmart-io=1 -Wall -msfr-warn=off  
+	@${FIXDEPS} "${OBJECTDIR}/_2WD.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
+	
 else
 ${OBJECTDIR}/X1Main.o: X1Main.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}" 
@@ -137,6 +164,34 @@ ${OBJECTDIR}/Sensorless.o: Sensorless.c  nbproject/Makefile-${CND_CONF}.mk
 	@${RM} ${OBJECTDIR}/Sensorless.o 
 	${MP_CC} $(MP_EXTRA_CC_PRE)  Sensorless.c  -o ${OBJECTDIR}/Sensorless.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/Sensorless.o.d"      -mno-eds-warn  -g -omf=elf -DXPRJ_default=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -mlarge-code -mlarge-data -mlarge-scalar -mconst-in-code -O0 -msmart-io=1 -Wall -msfr-warn=off  
 	@${FIXDEPS} "${OBJECTDIR}/Sensorless.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
+	
+${OBJECTDIR}/MotorControl.o: MotorControl.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/MotorControl.o.d 
+	@${RM} ${OBJECTDIR}/MotorControl.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  MotorControl.c  -o ${OBJECTDIR}/MotorControl.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/MotorControl.o.d"      -mno-eds-warn  -g -omf=elf -DXPRJ_default=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -mlarge-code -mlarge-data -mlarge-scalar -mconst-in-code -O0 -msmart-io=1 -Wall -msfr-warn=off  
+	@${FIXDEPS} "${OBJECTDIR}/MotorControl.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
+	
+${OBJECTDIR}/Thermistors.o: Thermistors.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/Thermistors.o.d 
+	@${RM} ${OBJECTDIR}/Thermistors.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  Thermistors.c  -o ${OBJECTDIR}/Thermistors.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/Thermistors.o.d"      -mno-eds-warn  -g -omf=elf -DXPRJ_default=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -mlarge-code -mlarge-data -mlarge-scalar -mconst-in-code -O0 -msmart-io=1 -Wall -msfr-warn=off  
+	@${FIXDEPS} "${OBJECTDIR}/Thermistors.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
+	
+${OBJECTDIR}/UART4.o: UART4.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/UART4.o.d 
+	@${RM} ${OBJECTDIR}/UART4.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  UART4.c  -o ${OBJECTDIR}/UART4.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/UART4.o.d"      -mno-eds-warn  -g -omf=elf -DXPRJ_default=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -mlarge-code -mlarge-data -mlarge-scalar -mconst-in-code -O0 -msmart-io=1 -Wall -msfr-warn=off  
+	@${FIXDEPS} "${OBJECTDIR}/UART4.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
+	
+${OBJECTDIR}/_2WD.o: _2WD.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/_2WD.o.d 
+	@${RM} ${OBJECTDIR}/_2WD.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  _2WD.c  -o ${OBJECTDIR}/_2WD.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_2WD.o.d"      -mno-eds-warn  -g -omf=elf -DXPRJ_default=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -mlarge-code -mlarge-data -mlarge-scalar -mconst-in-code -O0 -msmart-io=1 -Wall -msfr-warn=off  
+	@${FIXDEPS} "${OBJECTDIR}/_2WD.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
 	
 endif
 

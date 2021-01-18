@@ -24,41 +24,41 @@ namespace ControlBalance
     {
 
         Form F2;
-        uint  StartCNT=30;
+        uint StartCNT = 30;
         String LogFileString;
         byte LightMode, Crr1Corr, PWMSignal, HallsLines, StopIfPWM100Time, CntKdSwitchCONST, PWMkHz;
         short EpLog, EiLog, EdLog;
         ushort LightSensorThresholdLo, LightSensorThresholdHi, CurrentMaxCurrentOnly, K_PWM_Nastr, SpdStartLevel, RegenOffMem, KpKpDeadZoneMem, KiKpDeadZoneMem, TimeHumanSensorOff;
         ushort FaultStatus1Res, VGSStatus2Res, KiMax, DeadZoneHandleBarSegway, PWMChangedThreshold;
-        short JoystickCalibrX, JoystickCalibrY, JoistickDeadZone, KpSlowSpeed, KiKpMustBe, KRotMustBe, KpRotMustBe, KiRotMustBe, Eid, KdNoManR, KpDeadZone,PWMSignalTimer;
+        short JoystickCalibrX, JoystickCalibrY, JoistickDeadZone, KpSlowSpeed, KiKpMustBe, KRotMustBe, KpRotMustBe, KiRotMustBe, Eid, KdNoManR, KpDeadZone, PWMSignalTimer;
         public ushort AutoNastroykaState;
         public int StatFlags2;
         public Socket s;
         FileStream w;
         int CntMixedModeMax, MixedModeLevelOn, MixedModeLevelOff, CurrMixed, numericUpDown173PrevValue;
         float Temperature1, Temperature2, Temperature3, TemperatureMaxOUT, TemperatureMaxIN, TemperatureMaxOUT_H, TemperatureMaxIN_H, Temperature4, Temperature5, Temperature6, Spd1USTKMH, _3VFl, _5VFl, _12VFl;
-        bool radioButton7CannotSndCMD, radioButton10CannotSndCMD, radioButton11CannotSndCMD, radioButton12CannotSndCMD, CanShowMsgChargingComplete, DataShown;
+        bool radioButton7CannotSndCMD, radioButton10CannotSndCMD, radioButton11CannotSndCMD, radioButton12CannotSndCMD, CanShowMsgChargingComplete, DataShown, ShowPassword;
         bool radioButton25CannotSndCMD, radioButton26CannotSndCMD, radioButton27CannotSndCMD, radioButton28CannotSndCMD;
         bool GettinPhase = false, RunningThread = false;
         uint PhasesCnt2, Phase1Period1, Phase1Period2, Phase1Period4, Phase1Period5, TimeOutLoadOptions1, TimeOutLoadOptions2, DataShownCnt;
         int BMSTimeOt, SummOk, SummNOk, KiCurr, KpCurr, CurrUst, CurrUstSpd0, CurrUstTek, SensorlessCurrUst, ConnectionCnt, MsgOpenPortCnt, KpTemperIN, KpTemperOUT, KiTemperIN, KiTemperOUT, BigCurrent;
         int MAX_PWM_MEM, MaxSpdRevers, MAX_PWM_Revers, AutoPID_On_CntConst, SaveTimeOut, Phase1Period6, CurrPhaseLimit, CurrPhaseLimitSpd0, CurrPhaseLimitTek, CntNoChange;
-        short CurrA_P, CurrA_N, CurrC_P, CurrC_N,  ThrottleLevelUpOff;
-        short  KdOneTwoLeg,  Spd1Fl, EPID_Res,  V_MIN_OFF, V_MIN_Pre_OFF, V_MIN_Sound, V_min_OverV, SensorlessCntAlignConst, KpKpSpd, Spd1UST_Tmp;
-        short TiltYCorr, HighSpeed, GoalSpeed, StartRotHighSpeed, KRotHighSpeed,  GyroYFl, GyroXFl, GyroZFl, Ki_PWM_Mode, KpKpZoneEnd;
-        ushort SpdRstSpeedLim,  SpeedLimitSt4, KFirstBreak, SensorLessTimerConst, SensorLessTimerConst2, SensorlessSpdChngCntConst, ADCThrottleBreak;
+        short CurrA_P, CurrA_N, CurrC_P, CurrC_N, ThrottleLevelUpOff;
+        short KdOneTwoLeg, Spd1Fl, EPID_Res, V_MIN_OFF, V_MIN_Pre_OFF, V_MIN_Sound, V_min_OverV, SensorlessCntAlignConst, KpKpSpd, Spd1UST_Tmp;
+        short TiltYCorr, HighSpeed, GoalSpeed, StartRotHighSpeed, KRotHighSpeed, GyroYFl, GyroXFl, GyroZFl, Ki_PWM_Mode, KpKpZoneEnd;
+        ushort SpdRstSpeedLim, SpeedLimitSt4, KFirstBreak, SensorLessTimerConst, SensorLessTimerConst2, SensorlessSpdChngCntConst, ADCThrottleBreak;
         double Cr1, GyroYAv;
         uint V8, V9, V10, V11, V12, V13, V14, V15, V16, V17, V18, BatteryKeys, UBatHi;
         ushort BatErr, SensorThreshold, SensorThresholdUp, BreakThreshold, RCON_Mem;
-        byte ChagerKeys, KAccGyroSteer, KdAverage,  PhasePERMASS, PhasePERMASS_SHFT, HallDelay1_F, HallDelay1_B,   CriticalError, ThrottleTmpChngMem, HallDelay1_Tek_F, HallDelay1_Tek_B;
-        byte Theta1Zero, Theta2Zero,  But1Func, But2Func, But3Func, But4Func, But5Func, SensorllessSpdThreshold, CurrLimitTek, TemperatureTYPE, Profile, MaxAngleStopBreak, MixedModeSlowSpeed;
+        byte ChagerKeys, KAccGyroSteer, KdAverage, PhasePERMASS, PhasePERMASS_SHFT, HallDelay1_F, HallDelay1_B, CriticalError, ThrottleTmpChngMem, HallDelay1_Tek_F, HallDelay1_Tek_B;
+        byte Theta1Zero, Theta2Zero, But1Func, But2Func, But3Func, But4Func, But5Func, SensorllessSpdThreshold, CurrLimitTek, TemperatureTYPE, Profile, MaxAngleStopBreak, MixedModeSlowSpeed;
         byte _3psnSwitchBt3, _3psnSwitchBtNotPressed, _3psnSwitchBt4, _2WDMode;
         ushort UseTmr, TmrCntDelay = 5, DEADTIME_Si8233, Ki_PWM_ModeOff, KeyLightBrightness, ButtonBreakOnlyTime, SpdKiMin, KiMin, ELimitedMem;
         uint CurrTuda1, CurrRegen1, Timer1Mem, Timer2Mem, TimerCnt, SerNumber, ProtectValue;
 
         int DiffAlfaConstL, DiffAlfaConstH, TiltZadState5, Temperature;
         int BeepPauseConstAlm, BzOnCntSeriaConstAlm, CntSingleBeepAlm;
-        int  KpSPD, ZeroCurr1, EpCurr1;
+        int KpSPD, ZeroCurr1, EpCurr1;
         bool HeaderOk = false;
 
 
@@ -76,21 +76,23 @@ namespace ControlBalance
         byte AutoPID_On_Speed, SlowStrtSpd, AntiPolicePower, MPU6050Err, CurrSensor, Halls;
 
         float AutoPID_On_PWM;
+        string SSID = null;
+        string passwordWiFi = null;
 
-        
-        
 
-        short TiltZadAddNoManOneLeg,   BreakThresholdDn, BreakThresholdUp, GyroZFlTurn, ECurr1Summ, KpNoManOneLeg;
-        int   Preas1ADC, Preas2ADC;
-        
 
-        int    KiRotOneTwoLeg;
-        
 
-        
-        
+        short TiltZadAddNoManOneLeg, BreakThresholdDn, BreakThresholdUp, GyroZFlTurn, ECurr1Summ, KpNoManOneLeg;
+        int Preas1ADC, Preas2ADC;
 
-        int LastMainTiltAngleMnErr, LastSteerTiltAngleMnErr, TiltAngleAvMnErr, StatFlgs, StatFlgs3,StatFlgs4;
+
+        int KiRotOneTwoLeg;
+
+
+
+
+
+        int LastMainTiltAngleMnErr, LastSteerTiltAngleMnErr, TiltAngleAvMnErr, StatFlgs, StatFlgs3, StatFlgs4;
         int LastMainTiltAngleSteerErr, LastSteerTiltAngleSteerErr, TiltAngleAvSteerErr, TmrLocked;
         short AccX, AccY, AccZ;
         byte MainTiltNumErr, SteerTiltNumErr;
@@ -103,7 +105,7 @@ namespace ControlBalance
         byte[] SaveOptionsMass = new byte[1024];
         byte[] bytes = new byte[255];
 
-        
+
         byte TstPhase, GyroVertical;
         bool CanChangePWM10kHz = true;
         short CanChangePWM10kHzCnt = 0, KpKpMustBe;
@@ -132,7 +134,7 @@ namespace ControlBalance
 
         int _continue;
         int AngleLimitInt, AngleLimitReal, KpSPDReal, KdSPD, KiSPD, SpeedLimit1, SpeedLimit2, SpeedLimit3, NumSpeedLimit, XLimit, YLimit, UBatLow, KpBack, TiltBackLimit, SpdKpMax, SpdKdMax;
-        int KpMax,  KpMin;
+        int KpMax, KpMin;
         int KpMustBe, SpeedAdd, KpNoMan, KiNoMan, KGYRO, Kpx, Prorez = 0, TiltXSteerCorr, KpRot, KFilterPrev;
         short CalibrationAccX, CalibrationAccY, CalibrationAccZ, LightSensor, KdKpSpd;
         short CalibrationGyroX, CalibrationGyroY, CalibrationGyroZ;
@@ -146,9 +148,9 @@ namespace ControlBalance
         short KpKp2, KpKp2DeadZone, KpKp2ZoneEnd;
 
         float EPos, EPosPrev, EdPos, EPosSumm, EiPos, Angle, EpPos, T, Tj;
-        short KpPos, KdPos, KiPos, AngleLimit,  MaxSpdKMH, KTemperatureSPDControl;
+        short KpPos, KdPos, KiPos, AngleLimit, MaxSpdKMH, KTemperatureSPDControl;
 
-        byte FirstTime, ShowSer, MovingON, Sensor1Snd,   SlowSpeedForKp;
+        byte FirstTime, ShowSer, MovingON, Sensor1Snd, SlowSpeedForKp;
         uint Odometr, OdometrMem;
 
         ushort FirmwareVersion, ButtonBreakOnlyPWM, BuzzerOnEvent;
@@ -159,17 +161,21 @@ namespace ControlBalance
         float[] EdMass, EiMass;
         int[] CntPacketsMass, _12, _13, _14, _16;
 
+        Thread UDPThread;
 
-        IPAddress broadcast;
+        IPAddress IPaddr, thisIP;
+        int TrmPort = 51731;
+        int listenPort = 51722;
         IPEndPoint ep;
+
 
         //const byte SEND_V_MIN_Pre_OFF = 1;
         const byte SEND_Kp = 2;
         const byte SEND_Kd = 3;
         const byte SEND_Ki = 4;
-//        const byte SEND_KpPos = 5;
-//        const byte SEND_KdPos = 6;
-//        const byte SEND_KiPos = 7;
+        //        const byte SEND_KpPos = 5;
+        //        const byte SEND_KdPos = 6;
+        //        const byte SEND_KiPos = 7;
         const byte SEND_StrtPOS = 8;
         const byte SEND_SensorlessCurrUst = 9;
         const byte SEND_CntUDPTrmConst = 10;
@@ -206,7 +212,7 @@ namespace ControlBalance
         const byte SEND_SbrosOdometra = 41;
         const byte SEND_Beep_10m = 42;
         const byte SEND_No_Beep_10m = 43;
-//        const byte SEND_Theta2Zero = 44;
+        //        const byte SEND_Theta2Zero = 44;
         const byte SEND_VectorOn = 45;
         const byte SEND_VectorOff = 46;
         //const byte SEND_SpeedLimit3 = 47;
@@ -214,7 +220,7 @@ namespace ControlBalance
         const byte SEND_GetErrors = 49;
         const byte SEND_AnalogBreakOn = 50;
         const byte SEND_KpMax = 51;
-//        const byte SEND_V_MIN_OFF = 52;
+        //        const byte SEND_V_MIN_OFF = 52;
         const byte SEND_SpdKpMax = 53;
         const byte SEND_GetDataPacket = 54;
         const byte SEND_AnalogBreakOff = 55;
@@ -314,34 +320,34 @@ namespace ControlBalance
         const byte SEND_TemperatureTYPE = 144;
         const byte SEND_KpTemperIN = 145;
         const byte SEND_Profile = 146;
-//        const byte SEND_Key10_On = 147;
-  //      const byte SEND_Key10_Off = 148;
+        //        const byte SEND_Key10_On = 147;
+        //      const byte SEND_Key10_Off = 148;
         //const byte SEND_Key11_On = 149;
-//        const byte SEND_Key11_Off = 150;
-//        const byte SEND_Key12_On = 151;
-//        const byte SEND_Key12_Off = 152;
-//        const byte SEND_Key13_On = 153;
-//        const byte SEND_Key13_Off = 154;
-//        const byte SEND_Key14_On = 155;
-//        const byte SEND_Key14_Off = 156;
-//        const byte SEND_Key15_On = 157;
-//        const byte SEND_Key15_Off = 158;
-//        const byte SEND_Key16_On = 159;
-//        const byte SEND_Key16_Off = 160;
+        //        const byte SEND_Key11_Off = 150;
+        //        const byte SEND_Key12_On = 151;
+        //        const byte SEND_Key12_Off = 152;
+        //        const byte SEND_Key13_On = 153;
+        //        const byte SEND_Key13_Off = 154;
+        //        const byte SEND_Key14_On = 155;
+        //        const byte SEND_Key14_Off = 156;
+        //        const byte SEND_Key15_On = 157;
+        //        const byte SEND_Key15_Off = 158;
+        //        const byte SEND_Key16_On = 159;
+        //        const byte SEND_Key16_Off = 160;
         const byte SEND_Options2 = 161;
         const byte SEND_BreakThresholdDn = 162;
         //const byte SEND_MAH = 163;
         const byte SEND_SensorThreshold = 164;
         const byte SEND_ManualStartOn = 165;
         const byte SEND_ManualStartOff = 166;
-//        const byte SEND_Balance2 = 167;
+        //        const byte SEND_Balance2 = 167;
         const byte SEND_StopBalance2 = 168;
         //const byte SEND_Balance3 = 169;
         const byte SEND_StopBalance3 = 170;
         //const byte SEND_Balance4 = 171;
         const byte SEND_StopBalance4 = 172;
         //const byte SEND_TiltZadState5 = 173;
-//        const byte SEND_SpdRstSpeedLim = 174;
+        //        const byte SEND_SpdRstSpeedLim = 174;
         const byte SEND_PWMControlOn = 175;
         const byte SEND_SpeedControlOn = 176;
         const byte SEND_XLimit = 177;
@@ -350,7 +356,7 @@ namespace ControlBalance
         const byte SEND_MonocycleOn = 180;
         const byte SEND_MonocycleOff = 181;
         const byte SEND_BreakButtonMonocycleOn = 182;
-//        const byte SEND_SpeedLimitSt4 = 183;
+        //        const byte SEND_SpeedLimitSt4 = 183;
         const byte SEND_ResetDistance = 184;
         //const byte SEND_TestVibroLROn = 185;
         const byte SEND_TestVibroLROff = 186;
@@ -377,8 +383,8 @@ namespace ControlBalance
         const byte SEND_AlignmentOff = 207;
         const byte SEND_ThreePositionSwitchOn = 208;
         const byte SEND_ThreePositionSwitchOff = 209;
-//        const byte SEND_KdOneTwoLeg = 210;
-//        const byte SEND_KdOneTwoLeg_1 = 211;
+        //        const byte SEND_KdOneTwoLeg = 210;
+        //        const byte SEND_KdOneTwoLeg_1 = 211;
         //const byte SEND_KdFreshman = 212;
         //const byte SEND_Num_KdAverage = 213;
         const byte SEND_SensorThresholdUp = 214;
@@ -402,8 +408,8 @@ namespace ControlBalance
         const byte SEND_KpCurr = 231;
         const byte SEND_VectorTrapezoidaOn = 232;
         const byte SEND_VectorTrapezoidaOff = 233;
-//        const byte SEND_CurrLimII_On = 234;
-  //      const byte SEND_CurrLimII_Off = 235;
+        //        const byte SEND_CurrLimII_On = 234;
+        //      const byte SEND_CurrLimII_Off = 235;
         const byte SEND_KiCurr = 236;
         const byte SEND_CurrUst = 237;
         const byte SEND_ClbrHalls = 238;
@@ -562,7 +568,7 @@ namespace ControlBalance
         const byte SEND_ButtonBreakOnlyTime = 134;
         const byte SEND_BreakMonocycleSpd = 135;
         const byte SEND_PWMkHz = 136;
-//        const byte SEND_PWM10kHzOff = 137;
+        //        const byte SEND_PWM10kHzOff = 137;
         const byte SEND_LightsFromButtonOn = 138;
         const byte SEND_LightsFromButtonOff = 139;
         const byte SEND_KpKpDeadZoneMem = 140;
@@ -637,7 +643,7 @@ namespace ControlBalance
         const byte SEND_LogOff = 209;
 
         const bool REV1 = false;
-        const String Version = "4.05";//01.11.2020
+        const String Version = "4.06";//01.11.2020
         double CurrPerDigit = 111;//48.34;//64.45;//80.5664;//29.296;//14.648;
 
         int[] sine_array = new int[]/*{
@@ -699,22 +705,34 @@ namespace ControlBalance
 
             if (!String.IsNullOrEmpty(Properties.Settings.Default.Language))
             {
-////                System.Threading.Thread.CurrentThread.CurrentUICulture = System.Globalization.CultureInfo.GetCultureInfo("en-US");
-////                System.Threading.Thread.CurrentThread.CurrentCulture = System.Globalization.CultureInfo.GetCultureInfo("en-US");
+                ////                System.Threading.Thread.CurrentThread.CurrentUICulture = System.Globalization.CultureInfo.GetCultureInfo("en-US");
+                ////                System.Threading.Thread.CurrentThread.CurrentCulture = System.Globalization.CultureInfo.GetCultureInfo("en-US");
                 System.Threading.Thread.CurrentThread.CurrentUICulture = System.Globalization.CultureInfo.GetCultureInfo(Properties.Settings.Default.Language);
-               System.Threading.Thread.CurrentThread.CurrentCulture = System.Globalization.CultureInfo.GetCultureInfo(Properties.Settings.Default.Language);
+                System.Threading.Thread.CurrentThread.CurrentCulture = System.Globalization.CultureInfo.GetCultureInfo(Properties.Settings.Default.Language);
             }
- 
+
 
             InitializeComponent();
             backgroundWorker1.RunWorkerAsync();//numberToCompute );
             FirstTime = 0;
             s = new Socket(AddressFamily.InterNetwork, SocketType.Dgram, ProtocolType.Udp);
-            broadcast = IPAddress.Parse("192.169.0.255");
-            ep = new IPEndPoint(broadcast, 51731);
             ShowSer = 1;
             MovingON = 0;
 
+            string Host = System.Net.Dns.GetHostName();
+            //thisIP = 
+            IPAddress[] IPs = System.Net.Dns.GetHostByName(Host).AddressList;
+
+            for (int i = 0; i < System.Net.Dns.GetHostByName(Host).AddressList.Length; i++)
+            {
+                //comboBox6.Items.Add(IPs[i]);
+                //comboBox6.SelectedIndex = 0;
+            }
+
+
+
+
+            //            label16.Text = thisIP.ToString();
 
             SaveTimeOut = 0;
             TmrLocked = 0;
@@ -743,7 +761,7 @@ namespace ControlBalance
 
             radioButton7CannotSndCMD = false;
             radioButton10CannotSndCMD = radioButton11CannotSndCMD = radioButton12CannotSndCMD = false;
-            radioButton25CannotSndCMD = radioButton26CannotSndCMD = radioButton27CannotSndCMD=false;
+            radioButton25CannotSndCMD = radioButton26CannotSndCMD = radioButton27CannotSndCMD = false;
 
 
 
@@ -967,7 +985,7 @@ namespace ControlBalance
                     chart1.Series[0].Points.Clear();
                     chart1.Series[1].Points.Clear();
                     comboBox3.SelectedIndex = 0;
-         //           comboBox4.SelectedIndex = 21;
+                    //           comboBox4.SelectedIndex = 21;
                     break;
 
 
@@ -1965,7 +1983,7 @@ namespace ControlBalance
                     break;
 
                 case 200:
-                    
+
                     if (PacketRec[15] != 0)
                         PacketRec[15] = 0;
                     uint tm = ((uint)PacketRec[15]) << 16;
@@ -1990,7 +2008,7 @@ namespace ControlBalance
                         FirstTime = 1;
 
                         numericUpDown2.Value = Kp;
-                        
+
                         numericUpDown4.Value = Ki;
                         numericUpDown10.Value = (int)(Tj * 100);
                     }
@@ -2023,7 +2041,7 @@ namespace ControlBalance
                     label11.Text = KpNoMan.ToString();
                     label23.Text = KiNoMan.ToString();
                     label57.Text = KGYRO.ToString();
-  
+
 
                     label82.Text = CalibrationGyroX.ToString();
                     label84.Text = CalibrationGyroY.ToString();
@@ -2063,8 +2081,8 @@ namespace ControlBalance
 
 
                     label811.Text = BreakMonocycleSpd.ToString();
-                    
-                    
+
+
 
 
                     label610.Text = K_PWM_Nastr.ToString();
@@ -2081,7 +2099,7 @@ namespace ControlBalance
                     label896.Text = KiUBTCoeff.ToString();
 
 
-                    
+
 
                     label632.Text = CurrPhaseLimit.ToString();
                     if (CurrSensor < comboBox18.Items.Count)
@@ -2110,7 +2128,7 @@ namespace ControlBalance
                     label396.Text = SensorThresholdUp.ToString();
 
                     label400.Text = KFirstBreak.ToString();
-                    
+
                     label398.Text = BreakThreshold.ToString();
 
                     if (SensOrder1 <= comboBox8.Items.Count)//MaxLength)
@@ -2177,18 +2195,18 @@ namespace ControlBalance
 
                     label884.Text = SpdKdMax.ToString();
                     label883.Text = KdKpSpd.ToString();
-                    
-                    
+
+
                     label886.Text = KdMax.ToString();
                     label888.Text = KdMin.ToString();
 
                     label890.Text = KiKd.ToString();
-                    
+
                     label900.Text = SpdKiMin.ToString();
                     label902.Text = KiMin.ToString();
 
                     label904.Text = ELimitedMem.ToString();
-        
+
 
 
                     switch (GyroVertical)
@@ -2208,7 +2226,7 @@ namespace ControlBalance
                     }
 
 
-                        
+
 
 
                     //if ((StatFlgs4 & 0x0008) == 0x0008)
@@ -2216,7 +2234,7 @@ namespace ControlBalance
                     //else
                     //    checkBox100.Checked = false;
 
-        
+
 
 
 
@@ -2239,7 +2257,7 @@ namespace ControlBalance
                     label911.Text = StopIfPWM100Time.ToString();
 
 
-                    
+
 
                     label815.Text = KpKpDeadZoneMem.ToString();
                     label822.Text = KpSlowSpeed.ToString();
@@ -2254,21 +2272,21 @@ namespace ControlBalance
                     switch (PWMkHz)
                     {
                         case 1:
-                            comboBox25.SelectedIndex=0;
+                            comboBox25.SelectedIndex = 0;
                             break;
                         case 2:
-                            comboBox25.SelectedIndex=1;
+                            comboBox25.SelectedIndex = 1;
                             break;
                         case 3:
-                            comboBox25.SelectedIndex=2;
+                            comboBox25.SelectedIndex = 2;
                             break;
                         default:
                             comboBox25.SelectedIndex = -1;
 
                             break;
                     }
-                      
-                    
+
+
 
                     label825.Text = KiKpMustBe.ToString();
                     label824.Text = KiKpDeadZoneMem.ToString();
@@ -2284,11 +2302,11 @@ namespace ControlBalance
                     label914.Text = CntKdSwitchCONST.ToString();
                     label915.Text = PWMSignalTimer.ToString();
 
-                    
+
 
                     label909.Text = KpDeadZone.ToString();
 
-                    
+
 
                     label570.Text = CntMixedModeMax.ToString();
                     label568.Text = MixedModeLevelOn.ToString();
@@ -2339,7 +2357,7 @@ namespace ControlBalance
                     label604.Text = MaxAngleStopBreak.ToString();
                     label583.Text = GyroZFlTurn.ToString();
                     label818.Text = PWMSignal.ToString();
-                    
+
 
                     label593.Text = ThrottleTmpChngMem.ToString();
 
@@ -2368,7 +2386,7 @@ namespace ControlBalance
 
                     label694.Text = String.Format("{0:0}", ((float)ChagerCurr) * CurrPerDigit);
 
-//                    label694.Text = (((float)ChagerCurr) * CurrPerDigit).ToString();
+                    //                    label694.Text = (((float)ChagerCurr) * CurrPerDigit).ToString();
                     label687.Text = P_Curr.ToString();
                     label689.Text = I_Curr.ToString();
                     label691.Text = P_U.ToString();
@@ -2377,7 +2395,7 @@ namespace ControlBalance
 
                     label898.Text = VectorOnOffSpdLo.ToString();
                     label892.Text = VectorOnOffSpdHi.ToString();
-                    
+
 
 
                     if (PhasePERMASS_SHFT <= comboBox9.Items.Count)//MaxLength)
@@ -3175,7 +3193,7 @@ namespace ControlBalance
 
                 case 5:
 
-                    
+
 
 
 
@@ -3217,7 +3235,7 @@ namespace ControlBalance
                     label256.Text = (TimerCnt / 500).ToString();
 
                     if ((Flgs1 & 0x20000000) == 0x20000000)
-                   {
+                    {
                         label457.ForeColor = Color.Black;
                         label459.ForeColor = Color.Black;
                         label455.ForeColor = Color.Blue;
@@ -3229,7 +3247,7 @@ namespace ControlBalance
                         label648.ForeColor = Color.Blue;
                         label651.ForeColor = Color.Blue;
 
-                    
+
                     }
                     else
                     {
@@ -3244,10 +3262,10 @@ namespace ControlBalance
                         label648.ForeColor = Color.Black;
                         label651.ForeColor = Color.Black;
 
-                    
+
                     }
-                    
- 
+
+
 
 
 
@@ -3271,7 +3289,7 @@ namespace ControlBalance
                     label322.Text = Sensor1_Prev.ToString();
                     label380.Text = Temperature.ToString();
 
-                    label423.Text = Spd1Fl.ToString() + " "+ MyStrings.KMH;
+                    label423.Text = Spd1Fl.ToString() + " " + MyStrings.KMH;
                     label426.Text = String.Format("{0:0.0}", UBT) + " V";
                     label699.Text = String.Format("{0:0.0}", UBT) + " V";
 
@@ -3479,20 +3497,20 @@ namespace ControlBalance
                     }
 
 
-                    
+
 
 
                     if (checkBox70.Checked)
                     {
                         if ((Flgs & 0x800) == 0x800)
                         {
-                        label860.Text = "Stopped";
-                        label860.ForeColor = Color.Blue;
+                            label860.Text = "Stopped";
+                            label860.ForeColor = Color.Blue;
                         }
                         else
                         {
-                        label860.Text = "Running";
-                        label860.ForeColor = Color.Red;
+                            label860.Text = "Running";
+                            label860.ForeColor = Color.Red;
                         }
 
                     }
@@ -3595,7 +3613,7 @@ namespace ControlBalance
                     else
                         label876.Text = "0";
 
-                
+
                     switch (CriticalError)
                     {
                         case 0:
@@ -3648,7 +3666,7 @@ namespace ControlBalance
                             break;
 
 
-                            
+
 
 
 
@@ -3670,7 +3688,7 @@ namespace ControlBalance
                     label661.Text = GyroXFl.ToString();
                     label663.Text = GyroYFl.ToString();
                     label665.Text = GyroZFl.ToString();
-                    
+
 
                     if ((FaultStatus1Res & 0x8000) == 0x8000)
                     {
@@ -4044,7 +4062,8 @@ namespace ControlBalance
 
                     try
                     {
-                        toolStripProgressBar1.ForeColor = Color.Blue;
+                        if (toolStripProgressBar1 != null)
+                            toolStripProgressBar1.ForeColor = Color.Blue;
                     }
                     catch (System.NullReferenceException)
                     {
@@ -4181,7 +4200,7 @@ namespace ControlBalance
                     //ut = (float)Cr2;
                     //ut = ut / 1000;
 
-                    
+
                     label241.Text = ZeroCurr1.ToString();
 
 
@@ -4202,15 +4221,15 @@ namespace ControlBalance
                     C2 = ttf;
 
 
-//                    tt = CurrTuda2;
-  //                  tt = (tt / 36000) * CurrPerDigit;
-    //                ttf = ((float)tt) / 1000;
+                    //                    tt = CurrTuda2;
+                    //                  tt = (tt / 36000) * CurrPerDigit;
+                    //                ttf = ((float)tt) / 1000;
 
                     C3 = ttf;
 
-//                    tt = CurrRegen2;
-  //                  tt = (tt / 36000) * CurrPerDigit;
-    //                ttf = ((float)tt) / 1000;
+                    //                    tt = CurrRegen2;
+                    //                  tt = (tt / 36000) * CurrPerDigit;
+                    //                ttf = ((float)tt) / 1000;
 
                     C1 = C1 - C2 + C3 - ttf;
 
@@ -4281,8 +4300,8 @@ namespace ControlBalance
                         label577.Text = ADCThrottleBreak.ToString();
                         if (checkBox71.Checked)
                             label534.Text = Preas2ADC.ToString();
-  //                      else
-//                            label534.Text = BreakTMP.ToString();
+                        //                      else
+                        //                            label534.Text = BreakTMP.ToString();
                     }
 
 
@@ -4308,7 +4327,7 @@ namespace ControlBalance
                     for (i = 1; i < 124; i++)
                     {
                         Tmp = (ushort)PacketRec[i * 2];
-                        Tmp = (ushort)(Tmp + (PacketRec[i*2+1]*256));
+                        Tmp = (ushort)(Tmp + (PacketRec[i * 2 + 1] * 256));
                         if (checkBox2.Checked)
                             chart1.Series[10].Points.Add(Tmp);
                     }
@@ -4347,6 +4366,10 @@ namespace ControlBalance
                     GraphSeries();
                     break;
 
+                case 21:
+                    label17.Text = SSID;
+                    label19.Text = passwordWiFi;
+                    break;
 
             }
 
@@ -4594,41 +4617,66 @@ namespace ControlBalance
 
         public void Trm()
         {
-            if (serialPort1.IsOpen == false)
-                return;
-        //    for (int j = 0; j < TrmMass[2] + 4; j++)
+            if (!checkBox6.Checked)
             {
-                try
+                if (serialPort1.IsOpen == false)
+                    return;
+                //    for (int j = 0; j < TrmMass[2] + 4; j++)
                 {
-                    serialPort1.Write(TrmMass, 0, (TrmMass[2] + 4));
-                }
-                catch (System.TimeoutException)//IOException e)
-                {
-                    _continue = 0;
                     try
                     {
-                        serialPort1.Close();
+                        serialPort1.Write(TrmMass, 0, (TrmMass[2] + 4));
+                    }
+                    catch (System.TimeoutException)//IOException e)
+                    {
+                        _continue = 0;
+                        try
+                        {
+                            serialPort1.Close();
+                        }
+                        catch (System.IO.IOException)
+                        {
+                        }
+                        //                    MessageBox.Show("Ошибка передачи. Проверьте BlueTooth и откройте порт заново", "Ошибка", MessageBoxButtons.OK);
+                        return;
                     }
                     catch (System.IO.IOException)
                     {
+                        _continue = 0;
+                        try
+                        {
+                            serialPort1.Close();
+                        }
+                        catch (System.IO.IOException)
+                        {
+                        }
+                        MessageBox.Show(MyStrings.ConnectionErr2, MyStrings.ErrorMsg, MessageBoxButtons.OK);
+                        return;
                     }
-                    //                    MessageBox.Show("Ошибка передачи. Проверьте BlueTooth и откройте порт заново", "Ошибка", MessageBoxButtons.OK);
-                    return;
-                }
-                catch (System.IO.IOException)
-                {
-                    _continue = 0;
-                    try
-                    {
-                        serialPort1.Close();
-                    }
-                    catch (System.IO.IOException)
-                    {
-                    }
-                    MessageBox.Show(MyStrings.ConnectionErr2, MyStrings.ErrorMsg, MessageBoxButtons.OK);
-                    return;
-                }
 
+                }
+            }
+            else
+            {
+
+
+
+
+
+                //IPaddr = IPAddress.Parse("192.168.1.114");
+                if (IPaddr != null)
+                {
+                    ep = new IPEndPoint(IPaddr, TrmPort);
+                    //       s.SendBufferSize = 4;
+
+
+                    byte[] sendbuf = new byte[TrmMass[2] + 4];
+                    int i;
+                    for (i = 0; i < TrmMass[2] + 4; i++)
+                        sendbuf[i] = TrmMass[i];
+
+                    s.SendTo(sendbuf, ep);
+                }
             }
         }
 
@@ -4807,7 +4855,7 @@ namespace ControlBalance
             }
         }
 
-       
+
 
         private unsafe void numericUpDown19_ValueChanged(object sender, EventArgs e)
         {
@@ -5274,7 +5322,7 @@ namespace ControlBalance
 
         }
 
-       
+
 
         private void numericUpDown165_ValueChanged(object sender, EventArgs e)
         {
@@ -5392,8 +5440,8 @@ namespace ControlBalance
                 comboBox4.SelectedIndex = 6;
                 chart1.Series[0].Points.Clear();
                 chart1.Series[1].Points.Clear();
-                
-                
+
+
 
 
                 //F2 = new Form2(new MyDelegate(func));
@@ -5403,7 +5451,7 @@ namespace ControlBalance
                 //Form F2 = new Form2(new MyDelegate(func));
                 //F2.Owner = this;
                 F2.ShowDialog();
-               //  F2.Show();
+                //  F2.Show();
 
 
             }
@@ -5806,7 +5854,7 @@ namespace ControlBalance
 
         }
 
-     
+
 
         private void comboBox20_SelectionChangeCommitted(object sender, EventArgs e)
         {
@@ -6644,6 +6692,101 @@ namespace ControlBalance
 
         }
 
+        private void checkBox19_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (ShowPassword)
+                ShowPassword = false;
+            else
+                ShowPassword = true;
+        }
+
+        private void button7_Click_1(object sender, EventArgs e)
+        {
+            int i, cntBytes = 8;
+            String SSIDSet=textBox3.Text, passwordSet= textBox4.Text;
+
+  /*          string str = comboBox6.Text;
+            int n = str.LastIndexOf('.');
+            str = str.Substring(0, n + 1);
+            str = str + "255";
+
+            IPAddress IP = IPAddress.Parse(str);
+*/
+
+            if (SSIDSet.Length==0)
+            {
+                MessageBox.Show("SSID is not set","error", MessageBoxButtons.OK);
+                return;
+            }
+
+
+
+            TrmMass[0] = 0xff;
+            TrmMass[1] = 0xff;
+            //TrmMass[2] = 1;
+            TrmMass[3] = 2;
+            TrmMass[4] = 0;// (byte)IP.Address;
+            TrmMass[5] = 0;//(byte)(IP.Address >> 8);
+            TrmMass[6] = 0;//(byte)(IP.Address >> 16);
+            TrmMass[7] = 0;//(byte)(IP.Address >> 24);
+
+
+
+
+            TrmMass[cntBytes++] = (byte)SSIDSet.Length;
+            for (i = 0; i < SSIDSet.Length; i++)
+            {
+                TrmMass[cntBytes++] = (byte)SSIDSet[i];
+            }
+
+            TrmMass[cntBytes++] = (byte)passwordSet.Length;
+            for (i = 0; i < passwordSet.Length; i++)
+            {
+                TrmMass[cntBytes++] = (byte)passwordSet[i];
+            }
+
+            TrmMass[2] = (byte)(cntBytes-3);
+
+            TrmMass[cntBytes] = CalcCheckSummTrm();
+            Trm();
+
+
+
+
+
+
+
+
+
+        }
+
+        private void checkBox6_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox6.Checked)
+            {
+                if (UDPThread == null)
+                    UDPThread = new Thread(UDPRead);
+                UDPThread.Start();
+
+
+            }
+            else
+            {
+                if (UDPThread != null)
+                    if (UDPThread.IsAlive)
+                    {
+                        UDPThread.Abort();
+                        UDPThread = null;
+                    }
+
+            }
+        }
+
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
 
@@ -6662,16 +6805,16 @@ namespace ControlBalance
                     HeaderOk = true;
                 }
 
-            TrmMass[0] = 0xff;
-            TrmMass[1] = 0xff;
-            TrmMass[2] = 2;//N
-            TrmMass[3] = SEND_SecondCMD;
-            if (checkBox1.Checked)
-                TrmMass[4] = SEND_LogOn;
-            else
-                TrmMass[4] = SEND_LogOff;
-            TrmMass[5] = CalcCheckSummTrm();
-            Trm();
+                TrmMass[0] = 0xff;
+                TrmMass[1] = 0xff;
+                TrmMass[2] = 2;//N
+                TrmMass[3] = SEND_SecondCMD;
+                if (checkBox1.Checked)
+                    TrmMass[4] = SEND_LogOn;
+                else
+                    TrmMass[4] = SEND_LogOff;
+                TrmMass[5] = CalcCheckSummTrm();
+                Trm();
 
                 checkBox1.Enabled = false;
             }
@@ -6695,7 +6838,7 @@ namespace ControlBalance
             {
                 serialPort1.PortName = comboBox2.Text;
 
-                serialPort1.BaudRate =  38400;//9600;//
+                serialPort1.BaudRate = 38400;//9600;//
                 serialPort1.ReadBufferSize = 1000000;
 
                 serialPort1.Parity = Parity.None;
@@ -6812,7 +6955,7 @@ namespace ControlBalance
                             catch (System.IO.IOException)
                             {
                             }
-                            String str=MyStrings.TMout;
+                            String str = MyStrings.TMout;
                             MessageBox.Show(str, "Error"/*MyStrings.ErrorMsg*/, MessageBoxButtons.OK);
                             //MessageBox.Show(MyStrings.TMout, MyStrings.ErrorMsg, MessageBoxButtons.OK);
                             RunningThread = false;
@@ -6872,11 +7015,11 @@ namespace ControlBalance
 
                                 if (CalcCheckSummRec() != PacketRec[PacketRec[0] + 1])
                                 {
-//                                    CHK_Err = true;
+                                    //                                    CHK_Err = true;
                                 }
                                 else
                                 {
-//                                    CHK_Err = false;
+                                    //                                    CHK_Err = false;
                                     RaspakHC05();
 
 
@@ -6889,9 +7032,9 @@ namespace ControlBalance
                 }
                 catch (TimeoutException e)
                 {
-              //          MessageBox.Show("Исключение. Связь с устройством потеряна. Проверьте BlueTooth и откройте порт заново", "Ошибка", MessageBoxButtons.OK);
-                //        _continue = 0;
-                  //    serialPort1.Close();
+                    //          MessageBox.Show("Исключение. Связь с устройством потеряна. Проверьте BlueTooth и откройте порт заново", "Ошибка", MessageBoxButtons.OK);
+                    //        _continue = 0;
+                    //    serialPort1.Close();
 
                     String St = e.ToString();
                     int s = 3;
@@ -6967,6 +7110,14 @@ namespace ControlBalance
             {
             }
 
+            if (UDPThread != null)
+                if (UDPThread.IsAlive)
+                {
+                    UDPThread.Abort();
+                    UDPThread = null;
+                }
+
+
 
             Properties.Settings.Default.Language = comboBox26.SelectedValue.ToString();
             Properties.Settings.Default.Save();
@@ -6976,8 +7127,19 @@ namespace ControlBalance
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            if (StartCNT!=0)
+            if (StartCNT != 0)
                 StartCNT--;
+
+            if (ShowPassword)
+            {
+                textBox4.PasswordChar = '\0';
+                button2.Text = "Hide password";
+            }
+            else
+            {
+                button2.Text = "Show password";
+                textBox4.PasswordChar = '*';
+            }
 
 
             if (checkBox114.Checked)
@@ -7013,7 +7175,7 @@ namespace ControlBalance
             if (CanChangePWM10kHzCnt > 0)
             {
                 CanChangePWM10kHzCnt--;
-                if (CanChangePWM10kHzCnt==0)
+                if (CanChangePWM10kHzCnt == 0)
                     CanChangePWM10kHz = true;
 
             }
@@ -7138,7 +7300,7 @@ namespace ControlBalance
                 TimeOutLoadOptions1--;
                 if (TimeOutLoadOptions1 == 0)
                 {
-                    MessageBox.Show(MyStrings.OptionsNotSaved+" (4)", MyStrings.ErrorMsg, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(MyStrings.OptionsNotSaved + " (4)", MyStrings.ErrorMsg, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
 
@@ -7242,6 +7404,25 @@ namespace ControlBalance
                         //CntSamples = PacketRec[Cnt++] + (((uint)PacketRec[Cnt++]) << 8) + (((uint)PacketRec[Cnt++]) << 16) + (((uint)PacketRec[Cnt++]) << 24);  //1
                         CntSamples++;
                         ushort N = (ushort)PacketRec[Cnt++];
+
+                        short AccXFl, AccYFl, AccZFl, GyroXFl, GyroYFl, GyroZFl;
+
+                        Tmp = PacketRec[Cnt++] + (((int)PacketRec[Cnt++]) << 8);
+                        AccXFl = (short)Tmp;
+                        Tmp = PacketRec[Cnt++] + (((int)PacketRec[Cnt++]) << 8);
+                        AccYFl = (short)Tmp;
+                        Tmp = PacketRec[Cnt++] + (((int)PacketRec[Cnt++]) << 8);
+                        AccZFl = (short)Tmp;
+                        Tmp = PacketRec[Cnt++] + (((int)PacketRec[Cnt++]) << 8);
+                        GyroXFl = (short)Tmp;
+                        Tmp = PacketRec[Cnt++] + (((int)PacketRec[Cnt++]) << 8);
+                        GyroYFl = (short)Tmp;
+                        Tmp = PacketRec[Cnt++] + (((int)PacketRec[Cnt++]) << 8);
+                        GyroZFl = (short)Tmp;
+
+
+
+                        /*
                         Tmp = PacketRec[Cnt++] + (((int)PacketRec[Cnt++]) << 8);        
                         AlfaXRes = (short)Tmp;
 
@@ -7256,29 +7437,30 @@ namespace ControlBalance
                         Tmp = PacketRec[Cnt++] + (((int)PacketRec[Cnt++]) << 8);
                         EdLog = (short)Tmp;
 
+                        */
 
-
-                        Tmp = PacketRec[Cnt++] + (((int)PacketRec[Cnt++]) << 8);        
+                        Tmp = PacketRec[Cnt++] + (((int)PacketRec[Cnt++]) << 8);
                         PWM1 = (short)Tmp;
 
                         //= PacketRec[Cnt++];
                         //Theta1CntPWMSND = PacketRec[Cnt++] + (((uint)PacketRec[Cnt++]) << 8) + (((uint)PacketRec[Cnt++]) << 16) + (((uint)PacketRec[Cnt++]) << 24);  //1
                         //Phase1Period1Up = (ushort)(PacketRec[Cnt++] + (((uint)PacketRec[Cnt++]) << 8));        //2
-                        if ((LogFileString != null)&&(HeaderOk))
+                        if ((LogFileString != null) && (HeaderOk))
                         {
                             sw = new StreamWriter(LogFileString, true, Encoding.ASCII);
-                            if (PWM1==0)
-                            sw.Write("Stopped : "+N + " ");
+                            if (PWM1 == 0)
+                                sw.Write("Stopped : " + N + " ");
                             else
-                            sw.Write("Running : "+N + " ");
+                                sw.Write("Running : " + N + " ");
 
-                            sw.Write(AlfaYRes + " ");
-                            sw.Write(AlfaXRes + " ");
-                            sw.Write(EpLog + " ");
-                            sw.Write(EiLog + " ");
-                            sw.Write(EdLog + " ");
+                            sw.Write(AccXFl + " ");
+                            sw.Write(AccYFl + " ");
+                            sw.Write(AccZFl + " ");
+                            sw.Write(GyroXFl + " ");
+                            sw.Write(GyroYFl + " ");
+                            sw.Write(GyroZFl + " ");
                             sw.Write(PWM1 + " ");
-                            sw.Write(DateTime.Now.Hour + ":"+DateTime.Now.Minute +":"+ DateTime.Now.Millisecond);
+                            sw.Write(DateTime.Now.Hour + ":" + DateTime.Now.Minute + ":" + DateTime.Now.Millisecond);
                             sw.WriteLine("");
                             sw.Close();
                         }
@@ -7288,7 +7470,7 @@ namespace ControlBalance
                         break;
                     }
 
-                    CntSamples = PacketRec[Cnt++] + (((uint)PacketRec[Cnt++]) << 8) + (((uint)PacketRec[Cnt++]) << 16) + (((uint)PacketRec[Cnt++]) << 24);  
+                    CntSamples = PacketRec[Cnt++] + (((uint)PacketRec[Cnt++]) << 8) + (((uint)PacketRec[Cnt++]) << 16) + (((uint)PacketRec[Cnt++]) << 24);
 
                     Tmp = PacketRec[Cnt++] + (((int)PacketRec[Cnt++]) << 8);        //1
                     AlfaXRes = (short)Tmp;
@@ -7535,11 +7717,11 @@ namespace ControlBalance
 
                     wt = ((double)KdI) / (double)100;
 
-//                    GyroYAv = ((double)GyroYAv);// * wt;
+                    //                    GyroYAv = ((double)GyroYAv);// * wt;
 
                     Tmp = PacketRec[Cnt++] + (((int)PacketRec[Cnt++]) << 8);        //79
                     KdI = (float)(short)Tmp;
-                    KdI=KdI/10;
+                    KdI = KdI / 10;
 
                     Tmp = PacketRec[Cnt++] + (((int)PacketRec[Cnt++]) << 8);        //80
                     MaxSpdKMH = (short)Tmp;
@@ -7628,7 +7810,7 @@ namespace ControlBalance
 
                     Tmp = (PacketRec[Cnt++] + (((int)PacketRec[Cnt++]) << 8));        //108
                     Eid = (short)Tmp;
-                    
+
                     backgroundWorker1.ReportProgress(5);
 
 
@@ -8279,7 +8461,7 @@ namespace ControlBalance
 
 
 
-                    
+
 
 
                     backgroundWorker1.ReportProgress(3);
@@ -8619,13 +8801,13 @@ namespace ControlBalance
                     StatFlgs4 = (ushort)Tm;
 
                     KeyLightBrightness = (ushort)PacketRec[34];
-                    
+
 
                     Tm = PacketRec[36];
                     Tm = Tm << 8;
                     Tm = Tm + PacketRec[35];
                     ButtonBreakOnlyTime = (ushort)Tm;
-                    
+
                     Tm = PacketRec[38];
                     Tm = Tm << 8;
                     Tm = Tm + PacketRec[37];
@@ -8659,7 +8841,7 @@ namespace ControlBalance
                     KiMax = (ushort)Tm;
 
 
-                    
+
                     Tm = PacketRec[50];
                     Tm = Tm << 8;
                     Tm = Tm + PacketRec[49];
@@ -8717,7 +8899,7 @@ namespace ControlBalance
                     GyroVertical = (byte)PacketRec[67];
                     HighSpeed = (short)PacketRec[68];
                     GoalSpeed = (short)PacketRec[69];
-                
+
 
                     Tm = PacketRec[71];
                     Tm = Tm << 8;
@@ -8729,7 +8911,7 @@ namespace ControlBalance
                     Tm = Tm + PacketRec[72];
                     KRotHighSpeed = (short)Tm;
 
-        
+
                     Tm = PacketRec[75];
                     Tm = Tm << 8;
                     Tm = Tm + PacketRec[74];
@@ -8760,7 +8942,7 @@ namespace ControlBalance
                     Tm = Tm + PacketRec[84];
                     PWMChangedThreshold = (ushort)Tm;
 
-                    SpdKdMax=PacketRec[86];
+                    SpdKdMax = PacketRec[86];
 
                     Tm = PacketRec[88];
                     Tm = Tm << 8;
@@ -8776,17 +8958,17 @@ namespace ControlBalance
                     Tm = Tm << 8;
                     Tm = Tm + PacketRec[91];
                     KdMin = (short)Tm;
-                    
+
                     Tm = PacketRec[94];
                     Tm = Tm << 8;
                     Tm = Tm + PacketRec[93];
                     KiKd = (short)Tm;
-                    
+
                     Tm = PacketRec[96];
                     Tm = Tm << 8;
                     Tm = Tm + PacketRec[95];
                     VectorOnOffSpdLo = (short)Tm;
-                    
+
                     Tm = PacketRec[98];
                     Tm = Tm << 8;
                     Tm = Tm + PacketRec[97];
@@ -8812,18 +8994,18 @@ namespace ControlBalance
                     Tm = Tm << 8;
                     Tm = Tm + PacketRec[105];
                     ELimitedMem = (ushort)Tm;
-                    
+
                     Tm = PacketRec[108];
                     Tm = Tm << 8;
                     Tm = Tm + PacketRec[107];
                     KdNoManR = (short)Tm;
-                    
+
 
                     Tm = PacketRec[110];
                     Tm = Tm << 8;
                     Tm = Tm + PacketRec[109];
                     KpDeadZone = (short)Tm;
-                    
+
                     StopIfPWM100Time = PacketRec[111];
 
                     CntKdSwitchCONST = PacketRec[112];
@@ -8866,6 +9048,43 @@ namespace ControlBalance
                     backgroundWorker1.ReportProgress(20);
                     break;
 
+                case 21:
+
+                    int SizeSSID = PacketRec[2];
+                    int j;
+                    SSID = null;
+
+
+                    for (j = 0; j < SizeSSID; j++)
+                    {
+                        if (PacketRec[j + 3] != 0)
+                            SSID = SSID + (char)PacketRec[j + 3];
+                        else
+                            j = SizeSSID;
+                    }
+
+
+                    int SizePasswordWiFi = PacketRec[3 + SizeSSID];
+
+                    passwordWiFi = null;
+
+                    for (j = 0; j < SizePasswordWiFi; j++)
+                    {
+                        if (PacketRec[j + 4 + SizeSSID] != 0)
+                        {
+                            if (ShowPassword)
+                                passwordWiFi = passwordWiFi + (char)PacketRec[j + 4 + SizeSSID];
+                            else
+                                passwordWiFi = passwordWiFi + '*';
+                        }
+                        else
+                            j = SizePasswordWiFi;
+                    }
+
+
+
+                    backgroundWorker1.ReportProgress(21);
+                    break;
 
 
             }
@@ -8887,12 +9106,12 @@ namespace ControlBalance
             chart1.Series[9].Points.Clear();
             chart1.Series[10].Points.Clear();
 
-            
+
             CntSamples = 0;
             byte[] sendbuf = Encoding.ASCII.GetBytes("Is anybody there?");
 
             sendbuf[0] = SEND_Clear;
-            s.SendTo(sendbuf, ep);
+  //          s.SendTo(sendbuf, ep);
 
             CntTST = 0;
 
@@ -10007,7 +10226,7 @@ namespace ControlBalance
 
         private void checkBox50_CheckedChanged(object sender, EventArgs e)
         {
-          
+
         }
 
         private void checkBox51_CheckedChanged(object sender, EventArgs e)
@@ -10862,19 +11081,19 @@ namespace ControlBalance
 
         private void button40_Click(object sender, EventArgs e)
         {
-                TrmMass[0] = 0xff;
-                TrmMass[1] = 0xff;
-                TrmMass[2] = 1;//N
-                TrmMass[3] = SEND_GetPhase;
-                TrmMass[4] = CalcCheckSummTrm();
-                Trm();
+            TrmMass[0] = 0xff;
+            TrmMass[1] = 0xff;
+            TrmMass[2] = 1;//N
+            TrmMass[3] = SEND_GetPhase;
+            TrmMass[4] = CalcCheckSummTrm();
+            Trm();
 
             if (!GettinPhase)
                 GettinPhase = true;
             else
                 GettinPhase = false;
 
-            
+
         }
 
 
@@ -11944,7 +12163,7 @@ namespace ControlBalance
 
                 if (Sm != SaveOptionsMass[SaveOptionsMass[0] + 1])
                 {
-                    MessageBox.Show(MyStrings.CHKErr +" 2", MyStrings.ErrorMsg, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(MyStrings.CHKErr + " 2", MyStrings.ErrorMsg, MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
 
@@ -12492,7 +12711,7 @@ namespace ControlBalance
             else
             {
                 TrmMass[3] = SEND_AnalogBreakOff;
-//                checkBox86.Enabled = false;
+                //                checkBox86.Enabled = false;
                 panel41.Enabled = false;
                 //    checkBox86.Checked = false;
             }
@@ -12561,10 +12780,10 @@ namespace ControlBalance
             else
             {
                 TrmMass[3] = SEND_MonocycleOff;
-//                panel35.Enabled = false;
-  //              panel44.Enabled = false;
-    //            panel45.Enabled = false;
-      //          panel46.Enabled = false;
+                //                panel35.Enabled = false;
+                //              panel44.Enabled = false;
+                //            panel45.Enabled = false;
+                //          panel46.Enabled = false;
             }
 
             TrmMass[4] = CalcCheckSummTrm();
@@ -13716,7 +13935,7 @@ namespace ControlBalance
         {
             double Trmm = Decimal.ToInt32(numericUpDown198.Value);
 
-          
+
 
 
             TrmMass[0] = 0xff;
@@ -13743,7 +13962,7 @@ namespace ControlBalance
                     return;
                 }
 
-                
+
                 TrmMass[0] = 0xff;
                 TrmMass[1] = 0xff;
                 TrmMass[2] = 2;//N
@@ -13766,8 +13985,8 @@ namespace ControlBalance
                     return;
                 }
 
-                
-                
+
+
                 TrmMass[0] = 0xff;
                 TrmMass[1] = 0xff;
                 TrmMass[2] = 2;//N
@@ -13872,7 +14091,7 @@ namespace ControlBalance
             TrmMass[7] = CalcCheckSummTrm();
             Trm();
 
-            
+
 
         }
 
@@ -14069,7 +14288,7 @@ namespace ControlBalance
         private void numericUpDown209_ValueChanged(object sender, EventArgs e)
         {
             short Trmm = Decimal.ToInt16(numericUpDown209.Value);
-            Trmm = (short) (Trmm * 25);
+            Trmm = (short)(Trmm * 25);
 
             TrmMass[0] = 0xff;
             TrmMass[1] = 0xff;
@@ -14089,7 +14308,7 @@ namespace ControlBalance
             TrmMass[0] = 0xff;
             TrmMass[1] = 0xff;
             TrmMass[2] = 2;//N
-            TrmMass[3] = SEND_SecondCMD; 
+            TrmMass[3] = SEND_SecondCMD;
             if (checkBox102.Checked)
                 TrmMass[4] = SEND_KpKpMinusOn;
             else
@@ -14103,7 +14322,7 @@ namespace ControlBalance
         private void numericUpDown210_ValueChanged(object sender, EventArgs e)
         {
             ushort Trmm = (ushort)Decimal.ToInt32(numericUpDown210.Value);
-            
+
 
             TrmMass[0] = 0xff;
             TrmMass[1] = 0xff;
@@ -14384,7 +14603,7 @@ namespace ControlBalance
 
         private void checkBox104_CheckedChanged(object sender, EventArgs e)
         {
-            
+
             TrmMass[0] = 0xff;
             TrmMass[1] = 0xff;
             TrmMass[2] = 2;//N
@@ -14542,19 +14761,19 @@ namespace ControlBalance
 
         private void checkBox107_CheckedChanged(object sender, EventArgs e)
         {
-  /*          TrmMass[0] = 0xff;
-            TrmMass[1] = 0xff;
-            TrmMass[2] = 2;//N
-            TrmMass[3] = SEND_SecondCMD;
-            if (checkBox107.Checked)
-                TrmMass[4] = SEND_InvHallAOn;
-            else
-                TrmMass[4] = SEND_InvHallAOff;
+            /*          TrmMass[0] = 0xff;
+                      TrmMass[1] = 0xff;
+                      TrmMass[2] = 2;//N
+                      TrmMass[3] = SEND_SecondCMD;
+                      if (checkBox107.Checked)
+                          TrmMass[4] = SEND_InvHallAOn;
+                      else
+                          TrmMass[4] = SEND_InvHallAOff;
 
-            TrmMass[5] = CalcCheckSummTrm();
-            Trm();
+                      TrmMass[5] = CalcCheckSummTrm();
+                      Trm();
 
-*/
+          */
         }
 
         private void checkBox108_CheckedChanged(object sender, EventArgs e)
@@ -14575,39 +14794,39 @@ namespace ControlBalance
 
         private void checkBox109_CheckedChanged(object sender, EventArgs e)
         {
-  /*          TrmMass[0] = 0xff;
-            TrmMass[1] = 0xff;
-            TrmMass[2] = 2;//N
-            TrmMass[3] = SEND_SecondCMD;
-            if (checkBox109.Checked)
-                TrmMass[4] = SEND_InvHallCOn;
-            else
-                TrmMass[4] = SEND_InvHallCOff;
+            /*          TrmMass[0] = 0xff;
+                      TrmMass[1] = 0xff;
+                      TrmMass[2] = 2;//N
+                      TrmMass[3] = SEND_SecondCMD;
+                      if (checkBox109.Checked)
+                          TrmMass[4] = SEND_InvHallCOn;
+                      else
+                          TrmMass[4] = SEND_InvHallCOff;
 
-            TrmMass[5] = CalcCheckSummTrm();
-            Trm();
-*/
+                      TrmMass[5] = CalcCheckSummTrm();
+                      Trm();
+          */
         }
 
         private void checkBox107_CheckStateChanged(object sender, EventArgs e)
         {
-  /*          TrmMass[0] = 0xff;
-            TrmMass[1] = 0xff;
-            TrmMass[2] = 2;//N
-            TrmMass[3] = SEND_SecondCMD;
-            if (checkBox107.Checked)
-                TrmMass[4] = SEND_InvHallAOn;
-            else
-                TrmMass[4] = SEND_InvHallAOff;
+            /*          TrmMass[0] = 0xff;
+                      TrmMass[1] = 0xff;
+                      TrmMass[2] = 2;//N
+                      TrmMass[3] = SEND_SecondCMD;
+                      if (checkBox107.Checked)
+                          TrmMass[4] = SEND_InvHallAOn;
+                      else
+                          TrmMass[4] = SEND_InvHallAOff;
 
-            TrmMass[5] = CalcCheckSummTrm();
-            Trm();
-*/
+                      TrmMass[5] = CalcCheckSummTrm();
+                      Trm();
+          */
         }
 
         private void checkBox107_MouseEnter(object sender, EventArgs e)
         {
- 
+
         }
 
         private void panel50_MouseClick(object sender, MouseEventArgs e)
@@ -14680,7 +14899,7 @@ namespace ControlBalance
 
             TrmMass[5] = CalcCheckSummTrm();
             Trm();
-  
+
         }
 
         private void tabPage3_Click(object sender, EventArgs e)
@@ -14719,7 +14938,7 @@ namespace ControlBalance
             TrmMass[7] = CalcCheckSummTrm();
             Trm();
 
-            
+
 
         }
 
@@ -14736,7 +14955,7 @@ namespace ControlBalance
             TrmMass[6] = (byte)(Trmm >> 8);
             TrmMass[7] = CalcCheckSummTrm();
             Trm();
-            
+
         }
 
         private void numericUpDown231_ValueChanged(object sender, EventArgs e)
@@ -15066,13 +15285,13 @@ namespace ControlBalance
 
         private void button53_Click_1(object sender, EventArgs e)
         {
-         
+
         }
 
         private void comboBox26_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (StartCNT==0)
-            MessageBox.Show(MyStrings.CloseOpen, MyStrings.Inform, MessageBoxButtons.OK);
+            if (StartCNT == 0)
+                MessageBox.Show(MyStrings.CloseOpen, MyStrings.Inform, MessageBoxButtons.OK);
         }
         void GraphSeries()
         {
@@ -15899,6 +16118,41 @@ namespace ControlBalance
                 }
 
         }
+
+
+
+
+        private void UDPRead()
+        {
+            int i;
+            String Str;
+            UdpClient listener = new UdpClient(listenPort);
+            IPEndPoint EP = new IPEndPoint(IPAddress.Any, listenPort);
+
+
+            while (true)
+            {
+                byte[] bytes = listener.Receive(ref EP);
+
+                for (i = 0; i < bytes.Length - 2; i++)
+                    PacketRec[i] = bytes[i + 2];
+
+                IPaddr = EP.Address;
+
+                this.Invoke((MethodInvoker)delegate ()
+                {
+                    label14.Text = EP.Address.ToString();
+                });
+
+
+                if (CalcCheckSummRec() == PacketRec[PacketRec[0] + 1])
+                    RaspakHC05();
+            }
+
+        }
+
+
+
 
     }
 }

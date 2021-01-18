@@ -18,7 +18,7 @@
 #define BLE
 ////////////////////////////////////////#define CHAGER_VIA_MOTOR_VECTOR_M2
 
-#define SENSORLESS_TEST
+//#define SENSORLESS_TEST
 
 //#define NO_UBT
 //#define  SIN_MIDDLE 
@@ -44,8 +44,8 @@
 
 
 
-#define TST_PIN        LATFbits.LATF13
-#define TRIS_TST_PIN   TRISFbits.TRISF13     
+//#define TST_PIN        LATFbits.LATF13
+//#define TRIS_TST_PIN   TRISFbits.TRISF13     
 
 
 
@@ -632,7 +632,7 @@ typedef union {
 #define  BMS_V_Low               Flgs3.Fl12
 #define  Falling                 Flgs3.Fl13
 #define SendStorageDataToBMS     Flgs3.Fl14
-#define CanZeroCrossing          Flgs3.Fl15
+//#define CanZeroCrossing          Flgs3.Fl15
 #define SoundOUT                 Flgs3.Fl16
 #define GettingStorage           Flgs3.Fl17
 #define TestSIN_Ok               Flgs3.Fl18
@@ -2231,17 +2231,41 @@ extern void SensorlessInit(void);
 extern void SndDebugArrays(void);
 extern unsigned char CalcCheckSumm(unsigned int N, unsigned char *Mass);
 void Phases1(void);
+extern unsigned char ReadSensor1_F(void);
+extern unsigned char ReadSensor1_B(void);
+extern unsigned char ReadSensor1_B_V(void);
+extern unsigned char ReadSensor1_F_V(void);
+extern unsigned char InvHalls(unsigned char Sensors);
+extern unsigned char ChangeSensorOrder(unsigned char Sns, unsigned char SendOrder);
+extern void InitBLDCPorts(void);
+extern void SetPWM_ChagerViaMotor(); 
+extern void InitPWM_Vector(void);
+extern float GetTemperaturePTC_KTY84_130(unsigned int ResTemp);
+extern float GetTemperaturePTC_KTY81_210_FETs(unsigned int ResTemp);
+extern float GetTemperaturePTC_KTY83_122(unsigned int ResTemp);
+extern float GetTemperaturePTC_KTY83_110(unsigned int ResTemp);
+extern float GetTemperature_NCP18XH103F03RB(unsigned int ResTemp);
+extern float GetTemperature_MF58_G_10K(unsigned int ResTemp);
+extern float GetTemperature_MF58_B_5K(unsigned int ResTemp);
+extern float GetTemperature_NTCALUG03A103H(unsigned int ResTemp);
+extern float GetTemperaturePTC_KTY81_210(unsigned int ResTemp);
+extern void InitPort_U4(void);
+extern void UARTInit_U4(void);
+extern unsigned char CalcCheckSumm(unsigned int N, unsigned char *Mass);
+extern void ReceiveUDP(void);
+extern void ButtonsSlave(void);
+extern void RecSlave2WDControls(void);
+extern void SegAll(void);
 
 
 
 #if defined VECTORMS
-//extern const float CurrPerDigitDEF = 48.34;//41.25;//134;
-extern const float CurrPerDigitDEF; // = 48.34;//41.25;//134;
+extern const float CurrPerDigitDEF; 
 #else
 const float CurrPerDigitDEF = 96.68; //29.296;//14.648;
 #endif
-
-extern unsigned int StartingMoveCnt, CurrLimitWork, CurrLimit;
+extern unsigned int StartingMoveCnt, CurrLimitWork, CurrLimit,Hv2WDMasterCnt,SlaveADCThrottle,SlaveADCThrottleBreak;
+extern unsigned int Bt1LongCnt,Bt2LongCnt,Bt3LongCnt,Bt4LongCnt;
 extern STAT_FLAGS StatFlgs, StatFlgs1, StatFlgs2, StatFlgs3, StatFlgs4;
 extern FLAGS Flgs, Flgs1, Flgs2, Flgs3, Flgs4, Flgs5, Flgs6, Flgs7, Flgs8, FlgsErr, Flgs1Err, Flgs2Err;
 extern float TiltZad, KpAddSpd, TiltZadAdd, TiltZadTmp, TiltChng, TiltZadAddMustBe, TiltZadState5, TiltZadWheeling, SpdStartLevelFl;
@@ -2261,18 +2285,28 @@ extern float AccXFlPrev, AccYFlPrev, AccZFlPrev;
 extern float AlfaXRes, AlfaYRes, AlfaZRes, AlfaXResPrev, AlfaYResPrev, AlfaZResPrev;
 extern float KGYRO, KACC;
 extern float AccXFl, AccYFl, AccZFl;
-extern unsigned char MaxAngleStopBreak, Sounds, SoundNum, CriticalError, KdStateMachine;
-extern unsigned char CntKdSwitch, CntKdSwitchCONST,Sensor1_Prev,Sensor1;
-extern unsigned char HC05TrmMass[FLASHMASS_SIZE + 10],SndDebugArraysStateMachine;
+extern unsigned char MaxAngleStopBreak, Sounds, SoundNum, CriticalError, KdStateMachine,PhasePERMASS_SHFT,TestSIN_OkCnt;
+extern unsigned char CntKdSwitch, CntKdSwitchCONST,Sensor1_Prev,Sensor1,HallDelayCnt_1,Halls,SensOrder1,Theta1Zero;
+extern unsigned char HC05TrmMass[FLASHMASS_SIZE + 10],SndDebugArraysStateMachine,Sensor1_Prev_OP,PhasePERMASS;
+extern unsigned char CntTrmSteer,CntTrmSteer_N,TrmMass_U3[255],TiltTimoutCnt,TiltTimoutConst;
+extern unsigned char PacketTrm_U3[40],Bt1Cnt,Bt2Cnt,Bt3Cnt,Bt4Cnt,Bt1CntConst,Bt2CntConst,Bt3CntConst,Bt4CntConst;
+extern unsigned char PacketRec_U3[30];
+extern char TrmMassHC05[100];
+extern char RecMassHC05[100];
+extern BYTE RecBytes[254];
+extern char NearSensors[8][4],HallDelay1_F,HallDelay1_FMustBe,HallDelay1_B,HallDelay1_BMustBe;
 extern const unsigned char LowDrive[7],HiDrive[7];
 extern int Spd1Res, Spd1KpLevel, Spd1KdLevel, Spd1ResPrev, SpdPID, Spd1ResPlus, Spd1Cnt, SpdTmp, Spd1ResPlusTST;
-extern int XLimit, YLimit, GyroZFlTurn, CurrUst;
+extern int XLimit, YLimit, GyroZFlTurn, CurrUst,PWMMonocycleSlaveFmMaster;
 extern int BreakMonocycleSpd, TimeDecreaseKi, MAX_PWM_CONST;
-extern int OnDelayConst, OnDelayCnt, CurrUstWork;
-extern int TiltXThis, TiltYThis;
-extern unsigned int BuzzerOffTime;
-extern long int GyroZFilter, PWM1Temp, RotAddSumm,KFilterPrev,KFilter;
+extern int OnDelayConst, OnDelayCnt, CurrUstWork,Spd1Cnt;
+extern int TiltXThis, TiltYThis,MAX_PWM,PWM1Show;
+extern unsigned int SV_PWM1_0, SV_PWM1_1, SV_PWM1_2,BuzzerOffTime,Odometr10m,Theta1Cnt,PR8Temp,BackwardCnt,HallErrCnt;
+extern unsigned int Theta1CntPWM,Khard,CntU4TimeOut,SerNumber;
+extern long int GyroZFilter, PWM1Temp, RotAddSumm,KFilterPrev,KFilter,Phase1Period1,PI_Curr1Res;
+extern unsigned long int Odometr,Distance,Phase1PeriodSumm,Phase1PeriodMass[PhasePERMASS_DEF],PhasePWM;
+extern unsigned long int Amplitude1,Amplitude1Tmp;
 extern float EpLog, EiLog, EdLog;
-extern unsigned int MotorPhaseA, MotorPhaseB, MotorPhaseC, MotorNeutralVoltage;
+extern unsigned int MotorPhaseA, MotorPhaseB, MotorPhaseC, MotorNeutralVoltage,_1sCnt1,PWM_Sensorless;
 extern unsigned int MassTMPPhaseA[MassTMPSIZE],MassTMPPhaseB[MassTMPSIZE],MassTMPPhaseC[MassTMPSIZE], MassTMPNeutral[MassTMPSIZE], CntPhase;
-extern unsigned int Idx,BemfFilterHiCnt,BemfFilterHi,BEMFHallCntMax;
+extern unsigned int Idx,BemfFilterHiCnt,BemfFilterHi,BEMFHallCntMax,Phase1Period1Up,TimeOutHC05;

@@ -90,13 +90,26 @@
             this.checkBox15 = new System.Windows.Forms.CheckBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.button7 = new System.Windows.Forms.Button();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.checkBox6 = new System.Windows.Forms.CheckBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.comboBox26 = new System.Windows.Forms.ComboBox();
             this.button50 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button49 = new System.Windows.Forms.Button();
             this.button31 = new System.Windows.Forms.Button();
-            this.checkBox19 = new System.Windows.Forms.CheckBox();
             this.label264 = new System.Windows.Forms.Label();
             this.button13 = new System.Windows.Forms.Button();
             this.checkBox25 = new System.Windows.Forms.CheckBox();
@@ -1057,6 +1070,7 @@
             this.button19 = new System.Windows.Forms.Button();
             this.numericUpDown71 = new System.Windows.Forms.NumericUpDown();
             this.label570 = new System.Windows.Forms.Label();
+            this.checkBox19 = new System.Windows.Forms.CheckBox();
             this.label479 = new System.Windows.Forms.Label();
             this.label471 = new System.Windows.Forms.Label();
             this.label474 = new System.Windows.Forms.Label();
@@ -1105,6 +1119,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown27)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage3.SuspendLayout();
+            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabPage1.SuspendLayout();
             this.panel60.SuspendLayout();
@@ -1719,13 +1734,13 @@
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.panel2);
             this.tabPage3.Controls.Add(this.pictureBox1);
             this.tabPage3.Controls.Add(this.comboBox26);
             this.tabPage3.Controls.Add(this.button50);
             this.tabPage3.Controls.Add(this.textBox1);
             this.tabPage3.Controls.Add(this.button49);
             this.tabPage3.Controls.Add(this.button31);
-            this.tabPage3.Controls.Add(this.checkBox19);
             this.tabPage3.Controls.Add(this.label264);
             this.tabPage3.Controls.Add(this.button13);
             this.tabPage3.Controls.Add(this.checkBox25);
@@ -1737,6 +1752,107 @@
             this.tabPage3.ToolTipText = global::ControlBalance.MyStrings.About1333;
             this.tabPage3.UseVisualStyleBackColor = true;
             this.tabPage3.Click += new System.EventHandler(this.tabPage3_Click);
+            // 
+            // panel2
+            // 
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.button7);
+            this.panel2.Controls.Add(this.textBox4);
+            this.panel2.Controls.Add(this.label21);
+            this.panel2.Controls.Add(this.label20);
+            this.panel2.Controls.Add(this.button2);
+            this.panel2.Controls.Add(this.label18);
+            this.panel2.Controls.Add(this.label19);
+            this.panel2.Controls.Add(this.textBox3);
+            this.panel2.Controls.Add(this.label16);
+            this.panel2.Controls.Add(this.label17);
+            this.panel2.Controls.Add(this.label13);
+            this.panel2.Controls.Add(this.label14);
+            this.panel2.Controls.Add(this.checkBox6);
+            resources.ApplyResources(this.panel2, "panel2");
+            this.panel2.Name = "panel2";
+            // 
+            // button7
+            // 
+            this.button7.ImageKey = global::ControlBalance.MyStrings.About1333;
+            resources.ApplyResources(this.button7, "button7");
+            this.button7.Name = "button7";
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click_1);
+            // 
+            // textBox4
+            // 
+            resources.ApplyResources(this.textBox4, "textBox4");
+            this.textBox4.Name = "textBox4";
+            // 
+            // label21
+            // 
+            resources.ApplyResources(this.label21, "label21");
+            this.label21.ImageKey = global::ControlBalance.MyStrings.About1333;
+            this.label21.Name = "label21";
+            // 
+            // label20
+            // 
+            resources.ApplyResources(this.label20, "label20");
+            this.label20.ImageKey = global::ControlBalance.MyStrings.About1333;
+            this.label20.Name = "label20";
+            // 
+            // button2
+            // 
+            this.button2.ImageKey = global::ControlBalance.MyStrings.About1333;
+            resources.ApplyResources(this.button2, "button2");
+            this.button2.Name = "button2";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // label18
+            // 
+            resources.ApplyResources(this.label18, "label18");
+            this.label18.ImageKey = global::ControlBalance.MyStrings.About1333;
+            this.label18.Name = "label18";
+            // 
+            // label19
+            // 
+            resources.ApplyResources(this.label19, "label19");
+            this.label19.ImageKey = global::ControlBalance.MyStrings.About1333;
+            this.label19.Name = "label19";
+            // 
+            // textBox3
+            // 
+            resources.ApplyResources(this.textBox3, "textBox3");
+            this.textBox3.Name = "textBox3";
+            // 
+            // label16
+            // 
+            resources.ApplyResources(this.label16, "label16");
+            this.label16.ImageKey = global::ControlBalance.MyStrings.About1333;
+            this.label16.Name = "label16";
+            // 
+            // label17
+            // 
+            resources.ApplyResources(this.label17, "label17");
+            this.label17.ImageKey = global::ControlBalance.MyStrings.About1333;
+            this.label17.Name = "label17";
+            // 
+            // label13
+            // 
+            resources.ApplyResources(this.label13, "label13");
+            this.label13.ImageKey = global::ControlBalance.MyStrings.About1333;
+            this.label13.Name = "label13";
+            // 
+            // label14
+            // 
+            resources.ApplyResources(this.label14, "label14");
+            this.label14.ImageKey = global::ControlBalance.MyStrings.About1333;
+            this.label14.Name = "label14";
+            // 
+            // checkBox6
+            // 
+            resources.ApplyResources(this.checkBox6, "checkBox6");
+            this.checkBox6.ImageKey = global::ControlBalance.MyStrings.About1333;
+            this.checkBox6.Name = "checkBox6";
+            this.checkBox6.UseVisualStyleBackColor = true;
+            this.checkBox6.CheckedChanged += new System.EventHandler(this.checkBox6_CheckedChanged);
             // 
             // pictureBox1
             // 
@@ -1780,13 +1896,6 @@
             this.button31.Name = "button31";
             this.button31.UseVisualStyleBackColor = true;
             this.button31.Click += new System.EventHandler(this.button31_Click);
-            // 
-            // checkBox19
-            // 
-            resources.ApplyResources(this.checkBox19, "checkBox19");
-            this.checkBox19.ImageKey = global::ControlBalance.MyStrings.About1333;
-            this.checkBox19.Name = "checkBox19";
-            this.checkBox19.UseVisualStyleBackColor = true;
             // 
             // label264
             // 
@@ -11095,6 +11204,14 @@
             this.label570.ImageKey = global::ControlBalance.MyStrings.About1333;
             this.label570.Name = "label570";
             // 
+            // checkBox19
+            // 
+            resources.ApplyResources(this.checkBox19, "checkBox19");
+            this.checkBox19.ImageKey = global::ControlBalance.MyStrings.About1333;
+            this.checkBox19.Name = "checkBox19";
+            this.checkBox19.UseVisualStyleBackColor = true;
+            this.checkBox19.CheckedChanged += new System.EventHandler(this.checkBox19_CheckedChanged);
+            // 
             // label479
             // 
             resources.ApplyResources(this.label479, "label479");
@@ -11543,6 +11660,8 @@
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
+            this.Controls.Add(this.checkBox19);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.KeyPreview = true;
             this.Name = "Form1";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
@@ -11560,6 +11679,8 @@
             this.tabControl1.ResumeLayout(false);
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
@@ -12876,7 +12997,6 @@
         private System.Windows.Forms.CheckBox checkBox61;
         private System.Windows.Forms.ComboBox comboBox26;
         private System.Windows.Forms.CheckBox checkBox88;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
         private System.Windows.Forms.Label label2;
@@ -12892,6 +13012,21 @@
         private System.Windows.Forms.CheckBox checkBox4;
         private System.Windows.Forms.CheckBox checkBox3;
         private System.Windows.Forms.CheckBox checkBox2;
+        private System.Windows.Forms.CheckBox checkBox6;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.Button button7;
     }
 }
 
