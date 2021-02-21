@@ -22,5 +22,3 @@ PC application (Visual Studio 2019, C#):  PC folder
 PC application installer: Dist folder
 
 Instructions and pictures:               Doc folder
-
-Поддержать проект: https://sobe.ru/na/vektor_controller
