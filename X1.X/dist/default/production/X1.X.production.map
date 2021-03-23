@@ -3011,7 +3011,7 @@ usercode
 
 __FGS             0xf80004          0x2
  *(__FGS.sec*)
- __FGS.sec        0xf80004          0x2 /CW/_FGS°õ
+ __FGS.sec        0xf80004          0x2 /CW/_FGS@ž
                   0xf80004                  __FGS.sec
 
 __FOSCSEL
@@ -3038,15 +3038,15 @@ __FUID0
 .comment
  *(.comment)
 
-.debug_info       0x000000      0x1e115
+.debug_info       0x000000      0x1e1af
  *(.debug_info)
- .debug_info      0x000000      0x14502 build/default/production/X1Main.o
- .debug_info      0x014502       0x14e8 build/default/production/Monocycle.o
- .debug_info      0x0159ea       0x210f build/default/production/Sensorless.o
- .debug_info      0x017af9       0x2e97 build/default/production/MotorControl.o
- .debug_info      0x01a990        0x9ae build/default/production/Thermistors.o
- .debug_info      0x01b33e       0x15ab build/default/production/UART4.o
- .debug_info      0x01c8e9       0x182c build/default/production/_2WD.o
+ .debug_info      0x000000      0x14518 build/default/production/X1Main.o
+ .debug_info      0x014518       0x14fe build/default/production/Monocycle.o
+ .debug_info      0x015a16       0x2125 build/default/production/Sensorless.o
+ .debug_info      0x017b3b       0x2ead build/default/production/MotorControl.o
+ .debug_info      0x01a9e8        0x9c4 build/default/production/Thermistors.o
+ .debug_info      0x01b3ac       0x15c1 build/default/production/UART4.o
+ .debug_info      0x01c96d       0x1842 build/default/production/_2WD.o
  *(.gnu.linkonce.wi.*)
 
 .debug_abbrev     0x000000        0xa8c
@@ -6467,7 +6467,7 @@ LOAD c:/program files/microchip/xc16/v1.61/bin/bin/../../lib\libm-elf.a
 LOAD c:/program files/microchip/xc16/v1.61/bin/bin/../../lib\libc-elf.a
 END GROUP
 OUTPUT(dist/default/production/X1.X.production.elf elf32-pic30)
-LOAD /CW/_FGS°õ
+LOAD /CW/_FGS@ž
 LOAD default_isr
 LOAD data_init
 
@@ -7638,39 +7638,39 @@ __c30_signature
                     0x5496                  _BtRcPrev_U3
                     0x5497                  _CntRec_U3
 
-_0000000009B6FBE0_at_address_0000000000F80006
+_0000000009B89BE0_at_address_0000000000F80006
                   0xf80006          0x2
- _0000000009B6FBE0_at_address_0000000000F80006
+ _0000000009B89BE0_at_address_0000000000F80006
                   0xf80006          0x2 build/default/production/X1Main.o
                   0xf80006                  _FOSCSEL
 
-_0000000009B6FC80_at_address_0000000000F80008
+_0000000009B89C80_at_address_0000000000F80008
                   0xf80008          0x2
- _0000000009B6FC80_at_address_0000000000F80008
+ _0000000009B89C80_at_address_0000000000F80008
                   0xf80008          0x2 build/default/production/X1Main.o
                   0xf80008                  _FOSC
 
-_0000000009B6FD20_at_address_0000000000F8000A
+_0000000009B89D20_at_address_0000000000F8000A
                   0xf8000a          0x2
- _0000000009B6FD20_at_address_0000000000F8000A
+ _0000000009B89D20_at_address_0000000000F8000A
                   0xf8000a          0x2 build/default/production/X1Main.o
                   0xf8000a                  _FWDT
 
-_0000000009B6FDC0_at_address_0000000000F8000C
+_0000000009B89DC0_at_address_0000000000F8000C
                   0xf8000c          0x2
- _0000000009B6FDC0_at_address_0000000000F8000C
+ _0000000009B89DC0_at_address_0000000000F8000C
                   0xf8000c          0x2 build/default/production/X1Main.o
                   0xf8000c                  _FPOR
 
-_0000000009B6FE60_at_address_0000000000F8000E
+_0000000009B89E60_at_address_0000000000F8000E
                   0xf8000e          0x2
- _0000000009B6FE60_at_address_0000000000F8000E
+ _0000000009B89E60_at_address_0000000000F8000E
                   0xf8000e          0x2 build/default/production/X1Main.o
                   0xf8000e                  _FICD
 
-_0000000009B6FF00_at_address_0000000000F80010
+_0000000009B89F00_at_address_0000000000F80010
                   0xf80010          0x2
- _0000000009B6FF00_at_address_0000000000F80010
+ _0000000009B89F00_at_address_0000000000F80010
                   0xf80010          0x2 build/default/production/X1Main.o
                   0xf80010                  _FAS
 
