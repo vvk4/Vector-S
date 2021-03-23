@@ -35,14 +35,14 @@
 
 int FGS __attribute__((space(prog), address(0xF80004))) = 0xFFFD;
 #if defined INT_FRC
-int FOSCSEL __attribute__((space(prog), address(0xF80006))) = 0xFF79; 
+int FOSCSEL __attribute__((space(prog), address(0xF80006))) = 0xFF79;
 #else
 int FOSCSEL __attribute__((space(prog), address(0xF80006))) = 0xFF7B;
 #endif
-int FOSC __attribute__((space(prog), address(0xF80008))) = 0xff9a; 
-int FWDT __attribute__((space(prog), address(0xF8000A))) = 0xff7f; 
-int FPOR __attribute__((space(prog), address(0xF8000C))) = 0xFFE7; 
-int FICD __attribute__((space(prog), address(0xF8000E))) = 0xffdB; 
+int FOSC __attribute__((space(prog), address(0xF80008))) = 0xff9a;
+int FWDT __attribute__((space(prog), address(0xF8000A))) = 0xff7f;
+int FPOR __attribute__((space(prog), address(0xF8000C))) = 0xFFE7;
+int FICD __attribute__((space(prog), address(0xF8000E))) = 0xffdB;
 int FAS __attribute__((space(prog), address(0xF80010))) = 0xFFCF;
 
 
@@ -237,7 +237,7 @@ unsigned char PhasePERMASS, PhasePERMASS_SHFT, adcBackEMFFilter, MPU6050ReadStat
 
 
 unsigned char Sensor1_Prev_Const = 1, CntZero, CntZeroConst = 5, ChangeCurrStateMachine;
-unsigned int MassTMPPhaseA[MassTMPSIZE],MassTMPPhaseB[MassTMPSIZE],MassTMPPhaseC[MassTMPSIZE], MassTMPNeutral[MassTMPSIZE], CntPhase = 0, CntGyroAccSameOff, Phase1Period1Up;
+unsigned int MassTMPPhaseA[MassTMPSIZE], MassTMPPhaseB[MassTMPSIZE], MassTMPPhaseC[MassTMPSIZE], MassTMPNeutral[MassTMPSIZE], CntPhase = 0, CntGyroAccSameOff, Phase1Period1Up;
 float _3VFl, _5VFl, _12VFl, SlowSpeedForKpFl;
 
 unsigned char TrmMass_U3[255], SlowSpeedForKp;
@@ -776,7 +776,7 @@ unsigned char SlowStrtSpd, AntiPolicePower;
 //__eds__ unsigned char TSTMass1[17000]; __attribute__ ((eds));
 
 int main(void) {
-        
+
 #if !defined VECTOR
 #if defined ISOLATED    
     KEY_BT = 0;
@@ -801,7 +801,7 @@ int main(void) {
 
 
     InitSegAll();
-   
+
 
     MyTimeOut = 500;
     while (MyTimeOut);
@@ -823,7 +823,7 @@ int main(void) {
     MyTimeOut = 550;
     AT_Rec = 1;
     TrmHC05_AT("AT+UART?", sizeof ("AT+UART?")); //AT+NAME=RoboWell
- //   TrmHC05_AT("AT+BAUD38400", sizeof ("AT+BAUD38400")); //AT+NAME=RoboWell
+    //   TrmHC05_AT("AT+BAUD38400", sizeof ("AT+BAUD38400")); //AT+NAME=RoboWell
     while ((!HvReplyHC05)&&(MyTimeOut));
     AT_Rec = 0;
 
@@ -846,43 +846,43 @@ int main(void) {
 
 
 
-        Hv_HC05 = 1;
+    Hv_HC05 = 1;
 
 
 
-        while (1) {
-            Nop();
+    while (1) {
+        Nop();
 
-            LighrSensorFunc();
-            ClbrJOYSTICK();
+        LighrSensorFunc();
+        ClbrJOYSTICK();
 
-            //TrmControls_U3();
-            CalculateCalibrationHalls();
-            WrOdmtr();
-            writeFlash();
-            WriteErrors();
-            ReceiveUDP();
-            //TrmErrorsHC05();
-            Rbw();
-            SetPIN_HC05();
-            //ResetPIN_HC05();
-            GetRbw();
-            DataFrmBMS();
-            ErrorSound();
-            CountSpd();
-            UBT_To_V();
-            CriticalErrorLed();
+        //TrmControls_U3();
+        CalculateCalibrationHalls();
+        WrOdmtr();
+        writeFlash();
+        WriteErrors();
+        ReceiveUDP();
+        //TrmErrorsHC05();
+        Rbw();
+        SetPIN_HC05();
+        //ResetPIN_HC05();
+        GetRbw();
+        DataFrmBMS();
+        ErrorSound();
+        CountSpd();
+        UBT_To_V();
+        CriticalErrorLed();
 
-            if (MustTrmHC05) {
-                MustTrmHC05 = 0;
-                TrmHC05(HC05TrmMass);
-            }
-            FindGyroVerticalFunc();
-            Dbg();
-            TrmSteer();
-
+        if (MustTrmHC05) {
+            MustTrmHC05 = 0;
+            TrmHC05(HC05TrmMass);
         }
-    
+        FindGyroVerticalFunc();
+        Dbg();
+        TrmSteer();
+
+    }
+
 
 
 }
@@ -929,13 +929,13 @@ void SegMain(void) {
 
     ButtonBreakOnly = 0;
 
-    
-    
+
+
 #if !defined SENSORLESS_TEST
-        Sensorless2=0;
+    Sensorless2 = 0;
 #endif
 
-    
+
 
     if (ErrorCode != CriticalError) {
         if (CriticalError) {
@@ -981,8 +981,8 @@ void SegMain(void) {
 
 
 
-    
-    
+
+
 
     if (MODE_LED_Cnt)
         MODE_LED_Cnt--;
@@ -2751,7 +2751,7 @@ void SegMain(void) {
                             //        Spd1UST_Tmp=(float)((float)PWM1Temp/(float)MaxSpdCoeff);
                             Spd1UST_Tmp = ((float) (PWM1Temp * (long int) MaxSpd)) / (((float) MAX_PWM) * ImpToKmH1_t);
                         if (!Sensorless) {
-                                PWM1Temp = (((float) PWM1Temp) / 100) * MAX_PWM_MEM_WORK;
+                            PWM1Temp = (((float) PWM1Temp) / 100) * MAX_PWM_MEM_WORK;
                         }
                     }
                     if (DisconnectMotor)
@@ -3717,9 +3717,9 @@ void SegMain(void) {
 
     CntSamples++;
 
-    
+
     SndDebugArrays();
-    
+
 
 
     TrmFlashMass();
@@ -3761,10 +3761,10 @@ void SegMain(void) {
         BuzzerMacroOn//Buzzer=1;
     }
 
-    
 
 
-    
+
+
 
 
 
@@ -3828,7 +3828,7 @@ void InitSegAll(void) {
 #if defined HighDataSpdUART
     T6_7Init();
 #endif
-*/
+     */
 
     InitPort_U4();
     UARTInit_U4();
@@ -4191,7 +4191,7 @@ void InitSegAll(void) {
     if (Monocycle)
         SoundNum = 1;
 
-    
+
 
     SpeedControlPrev = SpeedControl;
 
@@ -4224,23 +4224,23 @@ void InitSegAll(void) {
 
 
 
-# if !defined TRIS_TST_PIN    
+#if !defined TRIS_TST_PIN    
     //    if (_2WDMode)
     {
         InitPort_U3();
         UARTInit_U3();
     }
 #else
-        TRIS_TST_PIN=0;
+    TRIS_TST_PIN = 0;
 #endif
-        
-        
+
+
     CalibrateJOYSTICK = 1;
     InitSensorsNear();
     TestU3ChangeSpd = 1;
 
-    HighDataSpdUART=0;
-    
+    HighDataSpdUART = 0;
+
     InitReady = 1;
 
 
@@ -4686,7 +4686,6 @@ void __attribute__((interrupt, auto_psv)) _AD1Interrupt(void) {
     HvADC1 = 1;
 
 }
-
 
 void SensorlessInitOld(void) {
 #if defined ISOLATED
@@ -5358,11 +5357,6 @@ void __attribute__((interrupt, auto_psv)) _T3Interrupt(void) {
 
 }
 
-
-
-
-
-
 void ChangePWM1(unsigned int PWM) {
     unsigned int DiffPWM;
     if (ChagerViaMotor) {
@@ -5370,8 +5364,8 @@ void ChangePWM1(unsigned int PWM) {
         return;
     }
 
-    PWM_Sensorless=PWM;
-    
+    PWM_Sensorless = PWM;
+
 
     if (!Monocycle) {
         if (PWMChanged && (!BreakPressed)) {
@@ -5430,8 +5424,6 @@ void ChangePWM1(unsigned int PWM) {
 
 }
 
-
-
 void TrmSteer(void) {
     unsigned char N;
 
@@ -5452,8 +5444,6 @@ void TrmSteer(void) {
 
 
 }
-
-
 
 unsigned char CalcCheckSumm(unsigned int N, unsigned char *Mass) {
     unsigned int Summ = 0, j, n = N;
@@ -5476,10 +5466,10 @@ void ReceiveUDP(void) {
         HvPacketU4_FL = 0;
         Cmmd = RecBytes[1];
     }
-/*#if defined HighDataSpdUART
-    Locked = 0;
-#endif
-*/
+    /*#if defined HighDataSpdUART
+        Locked = 0;
+    #endif
+     */
     if (Locked) {
         if (Cmmd != 113)
             Nop();
@@ -7906,7 +7896,7 @@ void ReceiveUDP(void) {
                 /*
                 SensorlessNotBEMF=1;
                 SensorlessInit();
-                */
+                 */
                 OptionsToMass();
                 MustTrmFlashMass = 1;
                 break;
@@ -7926,7 +7916,7 @@ void ReceiveUDP(void) {
                     TrapeziumInit();
                 ChangeCVR();
                 RdSensors();
-                */
+                 */
                 OptionsToMass();
                 MustTrmFlashMass = 1;
 
@@ -8085,8 +8075,8 @@ void ReceiveUDP(void) {
             case 247:
             {
                 SendingMass = 1;
-                SndDebugArraysStateMachine=1;
-                Idx=0;
+                SndDebugArraysStateMachine = 1;
+                Idx = 0;
                 break;
             }
 
@@ -8561,7 +8551,7 @@ void ReceiveUDP(void) {
 
                     case 55:
                         ShortCircuit = 1;
-//                        Mgnovenniy = 0;
+                        //                        Mgnovenniy = 0;
                         VectorInit();
                         Comparator2_Init();
                         OptionsToMass();
@@ -8570,7 +8560,7 @@ void ReceiveUDP(void) {
 
                     case 56:
                         ShortCircuit = 0;
-  //                      Mgnovenniy = 1;
+                        //                      Mgnovenniy = 1;
                         VectorInit();
                         Comparator2_Init();
                         OptionsToMass();
@@ -8579,7 +8569,7 @@ void ReceiveUDP(void) {
 
                     case 57:
                         ShortCircuit = 0;
-    //                    Mgnovenniy = 0;
+                        //                    Mgnovenniy = 0;
                         VectorInit();
                         Comparator2_Init();
                         OptionsToMass();
@@ -13933,8 +13923,22 @@ void Bt1Process(void) {
                 Sounds = 0;
                 Bt1Up = 0;
             }
-
-
+            break;
+        case 11:
+            if (HvBt1) 
+            {
+            if (!AlarmOn) {
+                if (!Spd1ResPlus)
+                    AlmOn();
+            } else {
+                AlmOff();
+                BreakPressed = 0;
+                AlmOffing = 1;
+            }
+            HvBt1 = 0;
+            MustTrmFlashMass = 1;
+            }
+            break;
 
 
     }
@@ -14213,6 +14217,23 @@ void Bt2Process(void) {
                 Sounds = 0;
                 Bt2Up = 0;
             }
+            break;
+        case 11:
+            if (HvBt2) 
+            {
+            if (!AlarmOn) {
+                if (!Spd1ResPlus)
+                    AlmOn();
+            } else {
+                AlmOff();
+                BreakPressed = 0;
+                AlmOffing = 1;
+            }
+            HvBt2 = 0;
+            MustTrmFlashMass = 1;
+            }
+            break;
+
 
 
 
@@ -14497,6 +14518,23 @@ void Bt3Process(void) {
                 Sounds = 0;
                 Bt3Up = 0;
             }
+            break;
+        case 11:
+            if (HvBt3) 
+            {
+            if (!AlarmOn) {
+                if (!Spd1ResPlus)
+                    AlmOn();
+            } else {
+                AlmOff();
+                BreakPressed = 0;
+                AlmOffing = 1;
+            }
+            HvBt3 = 0;
+            MustTrmFlashMass = 1;
+            }
+            break;
+
 
 
     }
@@ -14773,6 +14811,23 @@ void Bt4Process(void) {
                 Sounds = 0;
                 Bt4Up = 0;
             }
+            break;
+        case 11:
+            if (HvBt4) 
+            {
+            if (!AlarmOn) {
+                if (!Spd1ResPlus)
+                    AlmOn();
+            } else {
+                AlmOff();
+                BreakPressed = 0;
+                AlmOffing = 1;
+            }
+            HvBt4 = 0;
+            MustTrmFlashMass = 1;
+            }
+            break;
+
 
 
 
@@ -15065,80 +15120,79 @@ void TrmDataPacketHC05(void) {
 
     HC05TrmMass[3] = 5; //COMMAND
 
-    if (HighDataSpdUART)
-    {
-        
-        
-        
-    HC05TrmMass[CntBt++] = (unsigned char)CntSamples;
-//    HC05TrmMass[CntBt++] = CntSamples >> 8;
-//    HC05TrmMass[CntBt++] = CntSamples >> 16;
-//    HC05TrmMass[CntBt++] = CntSamples >> 24;
+    if (HighDataSpdUART) {
+
+
+
+        HC05TrmMass[CntBt++] = (unsigned char) CntSamples;
+        //    HC05TrmMass[CntBt++] = CntSamples >> 8;
+        //    HC05TrmMass[CntBt++] = CntSamples >> 16;
+        //    HC05TrmMass[CntBt++] = CntSamples >> 24;
+
+        /*
     
-    /*
-    
-    Tmp = (int) (AlfaXRes * 100);
-    HC05TrmMass[CntBt++] = Tmp;
-    HC05TrmMass[CntBt++] = Tmp >> 8;
+        Tmp = (int) (AlfaXRes * 100);
+        HC05TrmMass[CntBt++] = Tmp;
+        HC05TrmMass[CntBt++] = Tmp >> 8;
 
-    Tmp = (int) (AlfaYRes * 100);
-    HC05TrmMass[CntBt++] = Tmp;
-    HC05TrmMass[CntBt++] = Tmp >> 8;
+        Tmp = (int) (AlfaYRes * 100);
+        HC05TrmMass[CntBt++] = Tmp;
+        HC05TrmMass[CntBt++] = Tmp >> 8;
 
-    Tmp = (int) EpLog;
-    HC05TrmMass[CntBt++] = Tmp;
-    HC05TrmMass[CntBt++] = Tmp >> 8;
+        Tmp = (int) EpLog;
+        HC05TrmMass[CntBt++] = Tmp;
+        HC05TrmMass[CntBt++] = Tmp >> 8;
 
-    Tmp = (int) EiLog;
-    HC05TrmMass[CntBt++] = Tmp;
-    HC05TrmMass[CntBt++] = Tmp >> 8;
+        Tmp = (int) EiLog;
+        HC05TrmMass[CntBt++] = Tmp;
+        HC05TrmMass[CntBt++] = Tmp >> 8;
 
-    Tmp = (int) EdLog;
-    HC05TrmMass[CntBt++] = Tmp;
-    HC05TrmMass[CntBt++] = Tmp >> 8;
+        Tmp = (int) EdLog;
+        HC05TrmMass[CntBt++] = Tmp;
+        HC05TrmMass[CntBt++] = Tmp >> 8;
 
-    */
+         */
 
-    Tmp = (int) (AccXFl);
-    HC05TrmMass[CntBt++] = Tmp;
-    HC05TrmMass[CntBt++] = Tmp >> 8;
+        Tmp = (int) (AccXFl);
+        HC05TrmMass[CntBt++] = Tmp;
+        HC05TrmMass[CntBt++] = Tmp >> 8;
 
-    Tmp = (int) (AccYFl);
-    HC05TrmMass[CntBt++] = Tmp;
-    HC05TrmMass[CntBt++] = Tmp >> 8;
+        Tmp = (int) (AccYFl);
+        HC05TrmMass[CntBt++] = Tmp;
+        HC05TrmMass[CntBt++] = Tmp >> 8;
 
-    Tmp = (int) (AccZFl);
-    HC05TrmMass[CntBt++] = Tmp;
-    HC05TrmMass[CntBt++] = Tmp >> 8;
-    
+        Tmp = (int) (AccZFl);
+        HC05TrmMass[CntBt++] = Tmp;
+        HC05TrmMass[CntBt++] = Tmp >> 8;
 
-    Tmp = (int) (GyroXFl);
-    HC05TrmMass[CntBt++] = Tmp;
-    HC05TrmMass[CntBt++] = Tmp >> 8;
 
-    Tmp = (int) (GyroYFl);
-    HC05TrmMass[CntBt++] = Tmp;
-    HC05TrmMass[CntBt++] = Tmp >> 8;
+        Tmp = (int) (GyroXFl);
+        HC05TrmMass[CntBt++] = Tmp;
+        HC05TrmMass[CntBt++] = Tmp >> 8;
 
-    Tmp = (int) (GyroZFl);
-    HC05TrmMass[CntBt++] = Tmp;
-    HC05TrmMass[CntBt++] = Tmp >> 8;
+        Tmp = (int) (GyroYFl);
+        HC05TrmMass[CntBt++] = Tmp;
+        HC05TrmMass[CntBt++] = Tmp >> 8;
 
-    
-    if (PWM1Plus)
-        Tmp = PWM1Show; //PWM1;        8
-    else
-        Tmp = -PWM1Show;
-    HC05TrmMass[CntBt++] = Tmp;
-    HC05TrmMass[CntBt++] = Tmp >> 8;
+        Tmp = (int) (GyroZFl);
+        HC05TrmMass[CntBt++] = Tmp;
+        HC05TrmMass[CntBt++] = Tmp >> 8;
 
-    HC05TrmMass[2] = CntBt - 3;
 
-    HC05TrmMass[CntBt++] = CalcCheckSumm(HC05TrmMass[2] + 1, &HC05TrmMass[2]);
+        if (PWM1Plus)
+            Tmp = PWM1Show; //PWM1;        8
+        else
+            Tmp = -PWM1Show;
+        HC05TrmMass[CntBt++] = Tmp;
+        HC05TrmMass[CntBt++] = Tmp >> 8;
 
-    MustTrmHC05 = 1;
+        HC05TrmMass[2] = CntBt - 3;
 
-    return;
+        HC05TrmMass[CntBt++] = CalcCheckSumm(HC05TrmMass[2] + 1, &HC05TrmMass[2]);
+
+        MustTrmHC05 = 1;
+
+        return;
     }
 
 
@@ -15382,15 +15436,15 @@ void TrmDataPacketHC05(void) {
     HC05TrmMass[CntBt++] = Tmp;
     HC05TrmMass[CntBt++] = Tmp >> 8;
 
-    Tmp = (unsigned int) MotorPhaseA;//V8; //V8        50
+    Tmp = (unsigned int) MotorPhaseA; //V8; //V8        50
     HC05TrmMass[CntBt++] = Tmp;
     HC05TrmMass[CntBt++] = Tmp >> 8;
 
-    Tmp = (unsigned int) MotorNeutralVoltage;//BEMFHallCntMax;//MotorPhaseB;//V9; //V9        51
+    Tmp = (unsigned int) MotorNeutralVoltage; //BEMFHallCntMax;//MotorPhaseB;//V9; //V9        51
     HC05TrmMass[CntBt++] = Tmp;
     HC05TrmMass[CntBt++] = Tmp >> 8;
 
-    Tmp = (unsigned int) BemfFilterHi;//MotorPhaseC;//V10; //V10        52
+    Tmp = (unsigned int) BemfFilterHi; //MotorPhaseC;//V10; //V10        52
     HC05TrmMass[CntBt++] = Tmp;
     HC05TrmMass[CntBt++] = Tmp >> 8;
 
@@ -17118,7 +17172,6 @@ void Dbg(void) {
 
 }
 
-
 void CountSpd(void) {
 
     Trapezium10kHzLo = Round(((float) 38) / ImpToKmH1_t);
@@ -17229,15 +17282,15 @@ void __attribute__((interrupt, auto_psv)) _T5Interrupt(void) {
 
 void T6_7Init(void) {
 
-/*#if defined HighDataSpdUART
-    TMR6 = 0;
-    T6CON = 0x8000;
-    PR6 = 0xffff; //33333; //500 Hz Int
-    //    IPC12bits.T6IP = 6; //5;//6;//
-    IPC11bits.T6IP = 7;
-    IEC2bits.T6IE = 1;
-#else
-    */
+    /*#if defined HighDataSpdUART
+        TMR6 = 0;
+        T6CON = 0x8000;
+        PR6 = 0xffff; //33333; //500 Hz Int
+        //    IPC12bits.T6IP = 6; //5;//6;//
+        IPC11bits.T6IP = 7;
+        IEC2bits.T6IE = 1;
+    #else
+     */
     T7CONbits.TON = 0; // Stop any 16-bit Timer3 operation
     T6CONbits.TON = 0; // Stop any 16/32-bit Timer3 operation
     T6CONbits.T32 = 1; // Enable 32-bit Timer mode
@@ -17253,7 +17306,7 @@ void T6_7Init(void) {
     IEC3bits.T7IE = 1; // Enable Timer3 interrupt
     T6CONbits.TON = 1; // Start 32-bit Timer
 
-//#endif
+    //#endif
 
 }
 
@@ -17265,11 +17318,11 @@ void __attribute__((interrupt, auto_psv)) _T6Interrupt(void) {
 
 void __attribute__((interrupt, auto_psv)) _T7Interrupt(void) {
     IFS3bits.T7IF = 0;
-/*
-#if defined HighDataSpdUART
-    return;
-#endif
-*/
+    /*
+    #if defined HighDataSpdUART
+        return;
+    #endif
+     */
 
 
     if (Sensorless) {
@@ -17311,7 +17364,7 @@ void TrapeziumInit(void) {
     //InitPWM();
     InitPWM_Vector();
 
-//    AD2CON1 = 0;
+    //    AD2CON1 = 0;
 
 }
 
@@ -17434,7 +17487,6 @@ void __attribute__((interrupt, auto_psv)) _T8Interrupt(void) {
 
 
 }
-
 
 void SetHallDelay1_F_UP(void) {
     if (HallDelay1_F < HallDelay1_FMustBe)
@@ -17913,9 +17965,6 @@ void InitPWM(void) {
 
 }
 
-
-
-
 void TestBreak(void) {
     if (StrongModeBreakOff && StrongModeMem && StrongMode&&!SIN_MIDDLE&&!Monocycle) {
         HvBreak = 0;
@@ -18017,7 +18066,6 @@ void StateMachinePID(void) {
     }
 
 }
-
 
 void SensorlessMotorStartInit(void) {
     StateSensorlessMotorStart = 1;
@@ -22068,7 +22116,6 @@ void U4_9600_On(void) {
     MustTrm_U3 = 1;
 }
 
-
 unsigned char BreakFunc(void) {
     if (_2WDMode == 2)
         return (unsigned char) SlaveBreak;
@@ -22197,7 +22244,7 @@ void LighrSensorFunc(void) {
 #else
                     Horn = 0;
 #endif
-                else {
+else {
                     if (!CntMigStop) {
                         CntMigStop = CntMigStopConst;
 #if defined VECTORS

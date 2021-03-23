@@ -3898,7 +3898,8 @@
             resources.GetString("comboBox11.Items7"),
             resources.GetString("comboBox11.Items8"),
             resources.GetString("comboBox11.Items9"),
-            resources.GetString("comboBox11.Items10")});
+            resources.GetString("comboBox11.Items10"),
+            resources.GetString("comboBox11.Items11")});
             this.comboBox11.Name = "comboBox11";
             this.comboBox11.SelectedIndexChanged += new System.EventHandler(this.comboBox11_SelectedIndexChanged);
             this.comboBox11.SelectionChangeCommitted += new System.EventHandler(this.comboBox11_SelectionChangeCommitted);
@@ -3994,7 +3995,8 @@
             resources.GetString("comboBox12.Items7"),
             resources.GetString("comboBox12.Items8"),
             resources.GetString("comboBox12.Items9"),
-            resources.GetString("comboBox12.Items10")});
+            resources.GetString("comboBox12.Items10"),
+            resources.GetString("comboBox12.Items11")});
             this.comboBox12.Name = "comboBox12";
             this.comboBox12.SelectedIndexChanged += new System.EventHandler(this.comboBox12_SelectedIndexChanged);
             this.comboBox12.SelectionChangeCommitted += new System.EventHandler(this.comboBox12_SelectionChangeCommitted);
@@ -4120,7 +4122,8 @@
             resources.GetString("comboBox10.Items7"),
             resources.GetString("comboBox10.Items8"),
             resources.GetString("comboBox10.Items9"),
-            resources.GetString("comboBox10.Items10")});
+            resources.GetString("comboBox10.Items10"),
+            resources.GetString("comboBox10.Items11")});
             resources.ApplyResources(this.comboBox10, "comboBox10");
             this.comboBox10.Name = "comboBox10";
             this.comboBox10.SelectedIndexChanged += new System.EventHandler(this.comboBox10_SelectedIndexChanged);
@@ -4180,7 +4183,8 @@
             resources.GetString("comboBox7.Items7"),
             resources.GetString("comboBox7.Items8"),
             resources.GetString("comboBox7.Items9"),
-            resources.GetString("comboBox7.Items10")});
+            resources.GetString("comboBox7.Items10"),
+            resources.GetString("comboBox7.Items11")});
             resources.ApplyResources(this.comboBox7, "comboBox7");
             this.comboBox7.Name = "comboBox7";
             this.comboBox7.SelectedIndexChanged += new System.EventHandler(this.comboBox7_SelectedIndexChanged);

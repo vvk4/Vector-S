@@ -13017,6 +13017,9 @@
   <data name="comboBox11.Items10" xml:space="preserve">
     <value>Стоп мотор Моноцикл</value>
   </data>
+  <data name="comboBox11.Items11" xml:space="preserve">
+    <value>Сигнализация</value>
+  </data>
   <data name="comboBox11.Location" type="System.Drawing.Point, System.Drawing">
     <value>138, 217</value>
   </data>
@@ -13316,6 +13319,9 @@
   </data>
   <data name="comboBox12.Items10" xml:space="preserve">
     <value>Стоп мотор Моноцикл</value>
+  </data>
+  <data name="comboBox12.Items11" xml:space="preserve">
+    <value>Сигнализация</value>
   </data>
   <data name="comboBox12.Location" type="System.Drawing.Point, System.Drawing">
     <value>136, 30</value>
@@ -13764,6 +13770,9 @@
   <data name="comboBox10.Items10" xml:space="preserve">
     <value>Стоп мотор Моноцикл</value>
   </data>
+  <data name="comboBox10.Items11" xml:space="preserve">
+    <value>Сигнализация</value>
+  </data>
   <data name="comboBox10.Location" type="System.Drawing.Point, System.Drawing">
     <value>136, 30</value>
   </data>
@@ -13958,6 +13967,9 @@
   </data>
   <data name="comboBox7.Items10" xml:space="preserve">
     <value>Стоп мотор Моноцикл</value>
+  </data>
+  <data name="comboBox7.Items11" xml:space="preserve">
+    <value>Сигнализация</value>
   </data>
   <data name="comboBox7.Location" type="System.Drawing.Point, System.Drawing">
     <value>136, 30</value>
@@ -35947,7 +35959,7 @@
     <value>True</value>
   </metadata>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>25</value>
+    <value>89</value>
   </metadata>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
     <value>6, 13</value>

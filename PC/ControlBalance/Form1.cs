@@ -643,7 +643,7 @@ namespace ControlBalance
         const byte SEND_LogOff = 209;
 
         const bool REV1 = false;
-        const String Version = "4.06";//01.11.2020
+        const String Version = "4.07";//01.11.2020
         double CurrPerDigit = 111;//48.34;//64.45;//80.5664;//29.296;//14.648;
 
         int[] sine_array = new int[]/*{
