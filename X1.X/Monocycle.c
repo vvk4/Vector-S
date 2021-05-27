@@ -257,7 +257,8 @@ void MonoWheel(void) {
                 KpMustBe = 0;
                 PWM1Temp = 0;
                 EPrev = 0;
-                if ((Spd1ResPlus < 4)&&(!OnDelayCnt)&&(!StopMotorMonocycle)&&(AlfaXRes>-YLimit)&&(AlfaXRes < YLimit)&&(AlfaYRes > (TiltZad - 1))&&(AlfaYRes < (TiltZad + 1))&&(!CriticalError)&&!ChagerViaMotor) {
+                if ((Spd1ResPlus < 4)&&(!OnDelayCnt)&&(!StopMotorMonocycle)&&(AlfaXRes>-YLimit)&&(AlfaXRes < YLimit)&&(AlfaYRes > (TiltZad - 1))&&(AlfaYRes < (TiltZad + 1))&&(!CriticalError)&&!ChagerViaMotor) 
+                {
                     if (!Segway) {
                         NoBalance = 0;
                         RotAddSumm = 0;

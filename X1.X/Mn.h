@@ -885,7 +885,7 @@ typedef union {
 #define MixedMode              StatFlgs.Fl11
 #define AnalogBreak            StatFlgs.Fl12
 #define StrongModePID          StatFlgs.Fl13
-#define CalibrHalls            StatFlgs.Fl14
+#define RobotFl                StatFlgs.Fl14
 #define Monocycle              StatFlgs.Fl15
 
 

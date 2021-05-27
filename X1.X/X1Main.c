@@ -177,7 +177,7 @@ long int GyroZFilter;
 unsigned char Theta1Zero, Theta2Zero, HallDelayCnt_1, HallDelayCnt_2, Theta1CntPWMSND, Theta2CntPWMSND;
 unsigned char _3psnSwitchBtNotPressed, _3psnSwitchBt3, _3psnSwitchBt4, CriticalError, OrderCnt;
 unsigned char HighSpeed, GoalSpeed;
-int KRotHighSpeed, VectorOnOffSpdLo, VectorOnOffSpdHi;
+int KRotHighSpeed, VectorOnOffSpdLo, VectorOnOffSpdHi,PWMRobot,RobotRotGoal;
 
 
 unsigned char SensorllessSpdThreshold;
@@ -7541,12 +7541,12 @@ void ReceiveUDP(void) {
             }
             case 187:
             {
-                CalibrHalls = 1;
+                
                 break;
             }
             case 188:
             {
-                CalibrHalls = 0;
+                
                 break;
             }
             case 189:
@@ -10022,6 +10022,50 @@ void ReceiveUDP(void) {
                         MustTrmFlashMass = 1;
                         break;
                     }
+                    case 210:
+                    {
+                        int Tm;
+                        Tm = (int) RecBytes[4];
+                        Tm = Tm << 8;
+                        Tm = Tm + RecBytes[3];
+                        PWMRobot = Tm;
+
+                        Tm = (int) RecBytes[6];
+                        Tm = Tm << 8;
+                        Tm = Tm + RecBytes[5];
+                        RobotRotGoal = Tm;
+
+                        break;
+                    }
+                    case 211:
+                    {
+                        RobotFl = 1;
+                        
+                        NoBalance = 0;
+                        RotAddSumm = 0;
+                        SoundNum = 1;
+                        if (StrongModeMem)
+                            StrongMode = 1;
+                        EPrevFl = 1;
+                        if (!WheelingNew)
+                            ESumm = 0;
+
+                        if (DS) {
+                            DS = 0;
+                            RdSensors();
+                        }
+                        
+                        OptionsToMass();
+                        MustTrmFlashMass = 1;
+                        break;
+                    }
+                    case 212:
+                    {
+                        RobotFl = 0;
+                        OptionsToMass();
+                        MustTrmFlashMass = 1;
+                        break;
+                    }
 
 
                 }
@@ -11757,6 +11801,9 @@ void OptionsToMass2(void) {
     FlashMass2[112] = (unsigned char) Tm;
 
     FlashMass2[113] = PWMkHz;
+    
+    
+    
 
 }
 
@@ -13023,6 +13070,7 @@ void MassToOptions2(void) {
 
     PWMkHz = FlashMass2[113];
 
+    
 
 
 
@@ -16062,7 +16110,7 @@ void DefaultOptions(void) {
     UseTmr = 0;
     SmoothBreak = 1;
 
-    CalibrHalls = 0;
+    
 
     XLimit = 30;
     YLimit = 20;
@@ -18699,7 +18747,7 @@ void OptionsToMassProfile(void) {
 
 void MassToOptionsProfile(void) {
     unsigned int Prf = Profile - 1;
-    unsigned int Tm;
+    int Tm;
     unsigned char SpdCntrTmp = SpeedControl;
 
 
@@ -22738,6 +22786,10 @@ void SegAll(void) {
 
     UstRot = (long int) (TiltYRes * KRot1);
 
+    if (RobotFl)
+    {
+        UstRot=RobotRotGoal;
+    }
 
 
 
@@ -22770,10 +22822,13 @@ void SegAll(void) {
     }
 
 
-    //        RotAdd=RotAddP+RotAddI;
 
-    if ((PWM1 > 400) || (PWM1<-400))
-        Nop();
+    if (RobotFl)
+    {
+        PWM1=PWMRobot;
+    }
+    
+    
 
 
     PWM2 = PWM1 - RotAddP - RotAddI;
