@@ -30,19 +30,19 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series7 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series8 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series9 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series10 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series11 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series12 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series13 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series14 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series15 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series16 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series17 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series18 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series19 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series20 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series21 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series22 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
@@ -730,6 +730,11 @@
             this.label480 = new System.Windows.Forms.Label();
             this.tabPage10 = new System.Windows.Forms.TabPage();
             this.panel76 = new System.Windows.Forms.Panel();
+            this.numericUpDown5 = new System.Windows.Forms.NumericUpDown();
+            this.label22 = new System.Windows.Forms.Label();
+            this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
+            this.label15 = new System.Windows.Forms.Label();
+            this.checkBox7 = new System.Windows.Forms.CheckBox();
             this.panel77 = new System.Windows.Forms.Panel();
             this.numericUpDown214 = new System.Windows.Forms.NumericUpDown();
             this.label844 = new System.Windows.Forms.Label();
@@ -1273,6 +1278,8 @@
             this.panel58.SuspendLayout();
             this.tabPage10.SuspendLayout();
             this.panel76.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
             this.panel77.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown214)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown217)).BeginInit();
@@ -1833,6 +1840,7 @@
             resources.ApplyResources(this.label17, "label17");
             this.label17.ImageKey = global::ControlBalance.MyStrings.About1333;
             this.label17.Name = "label17";
+            this.label17.Click += new System.EventHandler(this.label17_Click);
             // 
             // label13
             // 
@@ -8055,6 +8063,11 @@
             // panel76
             // 
             this.panel76.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel76.Controls.Add(this.numericUpDown5);
+            this.panel76.Controls.Add(this.label22);
+            this.panel76.Controls.Add(this.numericUpDown3);
+            this.panel76.Controls.Add(this.label15);
+            this.panel76.Controls.Add(this.checkBox7);
             this.panel76.Controls.Add(this.panel77);
             this.panel76.Controls.Add(this.label846);
             this.panel76.Controls.Add(this.numericUpDown216);
@@ -8078,6 +8091,75 @@
             this.panel76.Controls.Add(this.label849);
             resources.ApplyResources(this.panel76, "panel76");
             this.panel76.Name = "panel76";
+            // 
+            // numericUpDown5
+            // 
+            this.numericUpDown5.Increment = new decimal(new int[] {
+            100,
+            0,
+            0,
+            0});
+            resources.ApplyResources(this.numericUpDown5, "numericUpDown5");
+            this.numericUpDown5.Maximum = new decimal(new int[] {
+            60000,
+            0,
+            0,
+            0});
+            this.numericUpDown5.Minimum = new decimal(new int[] {
+            60000,
+            0,
+            0,
+            -2147483648});
+            this.numericUpDown5.Name = "numericUpDown5";
+            this.numericUpDown5.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // label22
+            // 
+            resources.ApplyResources(this.label22, "label22");
+            this.label22.Name = "label22";
+            // 
+            // numericUpDown3
+            // 
+            this.numericUpDown3.Increment = new decimal(new int[] {
+            50,
+            0,
+            0,
+            0});
+            resources.ApplyResources(this.numericUpDown3, "numericUpDown3");
+            this.numericUpDown3.Maximum = new decimal(new int[] {
+            60000,
+            0,
+            0,
+            0});
+            this.numericUpDown3.Minimum = new decimal(new int[] {
+            60000,
+            0,
+            0,
+            -2147483648});
+            this.numericUpDown3.Name = "numericUpDown3";
+            this.numericUpDown3.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numericUpDown3.ValueChanged += new System.EventHandler(this.numericUpDown3_ValueChanged);
+            // 
+            // label15
+            // 
+            resources.ApplyResources(this.label15, "label15");
+            this.label15.Name = "label15";
+            // 
+            // checkBox7
+            // 
+            resources.ApplyResources(this.checkBox7, "checkBox7");
+            this.checkBox7.ImageKey = global::ControlBalance.MyStrings.About1333;
+            this.checkBox7.Name = "checkBox7";
+            this.checkBox7.UseVisualStyleBackColor = true;
+            this.checkBox7.CheckedChanged += new System.EventHandler(this.checkBox7_CheckedChanged);
             // 
             // panel77
             // 
@@ -11480,101 +11562,101 @@
             // 
             // chart1
             // 
-            chartArea1.AxisY.ScaleBreakStyle.Enabled = true;
-            chartArea1.CursorX.IsUserSelectionEnabled = true;
-            chartArea1.CursorY.IsUserSelectionEnabled = true;
-            chartArea1.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chart1.Legends.Add(legend1);
+            chartArea2.AxisY.ScaleBreakStyle.Enabled = true;
+            chartArea2.CursorX.IsUserSelectionEnabled = true;
+            chartArea2.CursorY.IsUserSelectionEnabled = true;
+            chartArea2.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.chart1.Legends.Add(legend2);
             resources.ApplyResources(this.chart1, "chart1");
             this.chart1.Name = "chart1";
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.FastLine;
-            series1.Color = System.Drawing.Color.Blue;
-            series1.IsVisibleInLegend = false;
-            series1.Legend = "Legend1";
-            series1.LegendText = "Tilt";
-            series1.Name = "Series1";
-            series2.ChartArea = "ChartArea1";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.FastLine;
-            series2.Color = System.Drawing.Color.Red;
-            series2.IsVisibleInLegend = false;
-            series2.Legend = "Legend1";
-            series2.LegendText = "Gyro4X";
-            series2.Name = "Series2";
-            series3.ChartArea = "ChartArea1";
-            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.FastLine;
-            series3.Color = System.Drawing.Color.Lime;
-            series3.IsVisibleInLegend = false;
-            series3.Legend = "Legend1";
-            series3.LegendText = "Ep";
-            series3.Name = "Series3";
-            series4.ChartArea = "ChartArea1";
-            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.FastLine;
-            series4.Color = System.Drawing.Color.Yellow;
-            series4.IsVisibleInLegend = false;
-            series4.Legend = "Legend1";
-            series4.LegendText = "Ed";
-            series4.Name = "Series4";
-            series5.ChartArea = "ChartArea1";
-            series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.FastLine;
-            series5.Color = System.Drawing.Color.Chartreuse;
-            series5.IsVisibleInLegend = false;
-            series5.Legend = "Legend1";
-            series5.LegendText = "PWM";
-            series5.Name = "Series5";
-            series6.ChartArea = "ChartArea1";
-            series6.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.FastLine;
-            series6.Color = System.Drawing.Color.RoyalBlue;
-            series6.IsVisibleInLegend = false;
-            series6.Legend = "Legend1";
-            series6.LegendText = "CntImp/Ei";
-            series6.Name = "Series6";
-            series7.ChartArea = "ChartArea1";
-            series7.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.FastLine;
-            series7.Color = System.Drawing.Color.Yellow;
-            series7.IsVisibleInLegend = false;
-            series7.Legend = "Legend1";
-            series7.LegendText = "EpPos";
-            series7.Name = "Series7";
-            series8.ChartArea = "ChartArea1";
-            series8.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.FastLine;
-            series8.Color = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            series8.IsVisibleInLegend = false;
-            series8.Legend = "Legend1";
-            series8.LegendText = "EdPos";
-            series8.Name = "Series8";
-            series9.ChartArea = "ChartArea1";
-            series9.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.FastLine;
-            series9.Color = System.Drawing.Color.Cyan;
-            series9.IsVisibleInLegend = false;
-            series9.Legend = "Legend1";
-            series9.LegendText = "Ediff";
-            series9.Name = "Series9";
-            series10.ChartArea = "ChartArea1";
-            series10.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.FastLine;
-            series10.Color = System.Drawing.Color.Red;
-            series10.IsVisibleInLegend = false;
-            series10.Legend = "Legend1";
-            series10.LegendText = "AnglePos";
-            series10.Name = "Series10";
-            series11.ChartArea = "ChartArea1";
-            series11.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.FastLine;
-            series11.IsVisibleInLegend = false;
-            series11.Legend = "Legend1";
-            series11.Name = "Series11";
-            this.chart1.Series.Add(series1);
-            this.chart1.Series.Add(series2);
-            this.chart1.Series.Add(series3);
-            this.chart1.Series.Add(series4);
-            this.chart1.Series.Add(series5);
-            this.chart1.Series.Add(series6);
-            this.chart1.Series.Add(series7);
-            this.chart1.Series.Add(series8);
-            this.chart1.Series.Add(series9);
-            this.chart1.Series.Add(series10);
-            this.chart1.Series.Add(series11);
+            series12.ChartArea = "ChartArea1";
+            series12.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.FastLine;
+            series12.Color = System.Drawing.Color.Blue;
+            series12.IsVisibleInLegend = false;
+            series12.Legend = "Legend1";
+            series12.LegendText = "Tilt";
+            series12.Name = "Series1";
+            series13.ChartArea = "ChartArea1";
+            series13.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.FastLine;
+            series13.Color = System.Drawing.Color.Red;
+            series13.IsVisibleInLegend = false;
+            series13.Legend = "Legend1";
+            series13.LegendText = "Gyro4X";
+            series13.Name = "Series2";
+            series14.ChartArea = "ChartArea1";
+            series14.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.FastLine;
+            series14.Color = System.Drawing.Color.Lime;
+            series14.IsVisibleInLegend = false;
+            series14.Legend = "Legend1";
+            series14.LegendText = "Ep";
+            series14.Name = "Series3";
+            series15.ChartArea = "ChartArea1";
+            series15.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.FastLine;
+            series15.Color = System.Drawing.Color.Yellow;
+            series15.IsVisibleInLegend = false;
+            series15.Legend = "Legend1";
+            series15.LegendText = "Ed";
+            series15.Name = "Series4";
+            series16.ChartArea = "ChartArea1";
+            series16.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.FastLine;
+            series16.Color = System.Drawing.Color.Chartreuse;
+            series16.IsVisibleInLegend = false;
+            series16.Legend = "Legend1";
+            series16.LegendText = "PWM";
+            series16.Name = "Series5";
+            series17.ChartArea = "ChartArea1";
+            series17.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.FastLine;
+            series17.Color = System.Drawing.Color.RoyalBlue;
+            series17.IsVisibleInLegend = false;
+            series17.Legend = "Legend1";
+            series17.LegendText = "CntImp/Ei";
+            series17.Name = "Series6";
+            series18.ChartArea = "ChartArea1";
+            series18.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.FastLine;
+            series18.Color = System.Drawing.Color.Yellow;
+            series18.IsVisibleInLegend = false;
+            series18.Legend = "Legend1";
+            series18.LegendText = "EpPos";
+            series18.Name = "Series7";
+            series19.ChartArea = "ChartArea1";
+            series19.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.FastLine;
+            series19.Color = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            series19.IsVisibleInLegend = false;
+            series19.Legend = "Legend1";
+            series19.LegendText = "EdPos";
+            series19.Name = "Series8";
+            series20.ChartArea = "ChartArea1";
+            series20.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.FastLine;
+            series20.Color = System.Drawing.Color.Cyan;
+            series20.IsVisibleInLegend = false;
+            series20.Legend = "Legend1";
+            series20.LegendText = "Ediff";
+            series20.Name = "Series9";
+            series21.ChartArea = "ChartArea1";
+            series21.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.FastLine;
+            series21.Color = System.Drawing.Color.Red;
+            series21.IsVisibleInLegend = false;
+            series21.Legend = "Legend1";
+            series21.LegendText = "AnglePos";
+            series21.Name = "Series10";
+            series22.ChartArea = "ChartArea1";
+            series22.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.FastLine;
+            series22.IsVisibleInLegend = false;
+            series22.Legend = "Legend1";
+            series22.Name = "Series11";
+            this.chart1.Series.Add(series12);
+            this.chart1.Series.Add(series13);
+            this.chart1.Series.Add(series14);
+            this.chart1.Series.Add(series15);
+            this.chart1.Series.Add(series16);
+            this.chart1.Series.Add(series17);
+            this.chart1.Series.Add(series18);
+            this.chart1.Series.Add(series19);
+            this.chart1.Series.Add(series20);
+            this.chart1.Series.Add(series21);
+            this.chart1.Series.Add(series22);
             // 
             // checkBox1
             // 
@@ -11883,6 +11965,8 @@
             this.tabPage10.PerformLayout();
             this.panel76.ResumeLayout(false);
             this.panel76.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
             this.panel77.ResumeLayout(false);
             this.panel77.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown214)).EndInit();
@@ -13031,6 +13115,11 @@
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.NumericUpDown numericUpDown5;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.NumericUpDown numericUpDown3;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.CheckBox checkBox7;
     }
 }
 

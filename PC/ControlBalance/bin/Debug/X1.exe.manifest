@@ -42,14 +42,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="X1.exe" size="2018816">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="X1.exe" size="2025984">
       <assemblyIdentity name="X1" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>zGKylITgNzB1DO1sbHUOPeR427o=</dsig:DigestValue>
+        <dsig:DigestValue>rhjzmV4lwTeRP8AS5RM4G7mVG6M=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -61,7 +61,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>w6NYlvd25zL+B+jNNBUq3smYtLU=</dsig:DigestValue>
+        <dsig:DigestValue>YVASEEx6hn7fEcj6Xqc3Vlokp9w=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -73,7 +73,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>1KbJbzOuH0DHpDY+8NijaNZxKyg=</dsig:DigestValue>
+        <dsig:DigestValue>r/i/twBD/07WEkCmovp11I1qdk8=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -85,7 +85,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>ns9CzWru3gmVmNgIYrgurG32NDM=</dsig:DigestValue>
+        <dsig:DigestValue>kuaRByBPUOEzymExICigm/42ODk=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -97,7 +97,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>OEXZyJOjgIm01u23RlBYU0tAuPM=</dsig:DigestValue>
+        <dsig:DigestValue>vieHwdaD1ArxyNqxQsVDqzv957E=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

@@ -641,6 +641,9 @@ namespace ControlBalance
         const byte SEND_PWMSignalTimer = 207;
         const byte SEND_LogOn = 208;
         const byte SEND_LogOff = 209;
+        const byte SEND_PWMRobot = 210;
+        const byte SEND_RobotOn = 211;
+        const byte SEND_RobotOff = 212;
 
         const bool REV1 = false;
         const String Version = "4.07";//01.11.2020
@@ -2499,6 +2502,12 @@ namespace ControlBalance
                         checkBox111.Checked = true;
                     else
                         checkBox111.Checked = false;
+
+
+                    if ((StatFlags & 0x4000) == 0x4000)
+                        checkBox7.Checked = true;
+                    else
+                        checkBox7.Checked = false;
 
 
 
@@ -6762,6 +6771,47 @@ namespace ControlBalance
 
 
 
+
+        }
+
+        private void label17_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void numericUpDown3_ValueChanged(object sender, EventArgs e)
+        {
+            short Trmm = Decimal.ToInt16(numericUpDown3.Value);
+
+            TrmMass[0] = 0xff;
+            TrmMass[1] = 0xff;
+            TrmMass[2] = 6;//N
+            TrmMass[3] = SEND_SecondCMD;
+            TrmMass[4] = SEND_PWMRobot;
+            TrmMass[5] = (byte)Trmm;
+            TrmMass[6] = (byte)(Trmm >> 8);
+            Trmm = Decimal.ToInt16(numericUpDown5.Value);
+            TrmMass[7] = (byte)Trmm;
+            TrmMass[8] = (byte)(Trmm >> 8);
+            TrmMass[9] = CalcCheckSummTrm();
+
+            Trm();
+
+        }
+
+        private void checkBox7_CheckedChanged(object sender, EventArgs e)
+        {
+            TrmMass[0] = 0xff;
+            TrmMass[1] = 0xff;
+            TrmMass[2] = 2;//N
+            TrmMass[3] = SEND_SecondCMD;
+            if (checkBox7.Checked)
+                TrmMass[4] = SEND_RobotOn;
+            else
+                TrmMass[4] = SEND_RobotOff;
+
+            TrmMass[5] = CalcCheckSummTrm();
+            Trm();
 
         }
 
