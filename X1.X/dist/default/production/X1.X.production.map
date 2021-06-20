@@ -3015,7 +3015,7 @@ usercode
 
 __FGS             0xf80004          0x2
  *(__FGS.sec*)
- __FGS.sec        0xf80004          0x2 /CW/_FGS†6
+ __FGS.sec        0xf80004          0x2 /CW/_FGSê&
                   0xf80004                  __FGS.sec
 
 __FOSCSEL
@@ -6471,7 +6471,7 @@ LOAD c:/program files/microchip/xc16/v1.70/bin/bin/../../lib\libm-elf.a
 LOAD c:/program files/microchip/xc16/v1.70/bin/bin/../../lib\libc-elf.a
 END GROUP
 OUTPUT(dist/default/production/X1.X.production.elf elf32-pic30)
-LOAD /CW/_FGS†6
+LOAD /CW/_FGSê&
 LOAD default_isr
 LOAD data_init
 
@@ -7644,39 +7644,39 @@ __c30_signature
                     0x549a                  _BtRcPrev_U3
                     0x549b                  _CntRec_U3
 
-_0000000007CE4BE0_at_address_0000000000F80006
+_0000000007B01BE0_at_address_0000000000F80006
                   0xf80006          0x2
- _0000000007CE4BE0_at_address_0000000000F80006
+ _0000000007B01BE0_at_address_0000000000F80006
                   0xf80006          0x2 build/default/production/X1Main.o
                   0xf80006                  _FOSCSEL
 
-_0000000007CE4C80_at_address_0000000000F80008
+_0000000007B01C80_at_address_0000000000F80008
                   0xf80008          0x2
- _0000000007CE4C80_at_address_0000000000F80008
+ _0000000007B01C80_at_address_0000000000F80008
                   0xf80008          0x2 build/default/production/X1Main.o
                   0xf80008                  _FOSC
 
-_0000000007CE4D20_at_address_0000000000F8000A
+_0000000007B01D20_at_address_0000000000F8000A
                   0xf8000a          0x2
- _0000000007CE4D20_at_address_0000000000F8000A
+ _0000000007B01D20_at_address_0000000000F8000A
                   0xf8000a          0x2 build/default/production/X1Main.o
                   0xf8000a                  _FWDT
 
-_0000000007CE4DC0_at_address_0000000000F8000C
+_0000000007B01DC0_at_address_0000000000F8000C
                   0xf8000c          0x2
- _0000000007CE4DC0_at_address_0000000000F8000C
+ _0000000007B01DC0_at_address_0000000000F8000C
                   0xf8000c          0x2 build/default/production/X1Main.o
                   0xf8000c                  _FPOR
 
-_0000000007CE4E60_at_address_0000000000F8000E
+_0000000007B01E60_at_address_0000000000F8000E
                   0xf8000e          0x2
- _0000000007CE4E60_at_address_0000000000F8000E
+ _0000000007B01E60_at_address_0000000000F8000E
                   0xf8000e          0x2 build/default/production/X1Main.o
                   0xf8000e                  _FICD
 
-_0000000007CE4F00_at_address_0000000000F80010
+_0000000007B01F00_at_address_0000000000F80010
                   0xf80010          0x2
- _0000000007CE4F00_at_address_0000000000F80010
+ _0000000007B01F00_at_address_0000000000F80010
                   0xf80010          0x2 build/default/production/X1Main.o
                   0xf80010                  _FAS
 
